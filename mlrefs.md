@@ -23,6 +23,7 @@
 - **Mostapha Benhenda**, *ChemGAN challenge for drug discovery: can AI reproduce natural chemical  diversity?*, [1708.08227](https://arxiv.org/abs/1708.08227) 
 - **A. Ziletti, D. Kumar, M. Scheffler, L. M. Ghiringhelli**, *The face of crystals: insightful classification using deep learning*, [1709.02298](https://arxiv.org/abs/1709.02298) 
 - **Atsuto Seko, Hiroyuki Hayashi, Hisashi Kashima, Isao Tanaka**, *Matrix- and tensor-based recommender systems for the discovery of  currently unknown inorganic compounds*, [1710.00659](https://arxiv.org/abs/1710.00659) 
+- **Julius P. P. Zauleck, Regina de Vivie-Riedle**, Constructing grids for molecular quantum dynamics using an autoencoder, [1710.04535](https://arxiv.org/abs/1710.04535) 
 
 ### Inverse Problems
 
@@ -71,29 +72,22 @@
 
    ​
 
-### Variational Ansatz and Its Representational Power
+### Representing Quantum States
 
 - **Guiseppe Carleo, Matthias Troyer**, *Solving the Quantum Many-Body Problem with Artificial Neural Networks*, [1606.02318](https://arxiv.org/abs/1606.02318)
 - **Zi Cai**, *Approximating quantum many-body wave-functions using artificial neural networks*, [1704.05148](https://arxiv.org/abs/1704.05148)
 
 
 - **Jing Chen, Song Cheng, Haidong Xie, Lei Wang, Tao Xiang**, *On the Equivalence of Restricted Boltzmann Machines and Tensor Network States*, [1701.04831](https://arxiv.org/abs/1701.04831)
-
 - **Dong-Ling Deng, Xiaopeng Li, S. Das Sarma**, *Quantum Entanglement in Neural Network States*, [1701.04844](https://arxiv.org/abs/1701.04844)
-
 - **Xun Gao, Lu-Ming Duan**, *Efficient Representation of Quantum Many-body States with Deep Neural Networks*, [1701.05039](https://arxiv.org/abs/1701.05039)
-
 - **Yichen Huang, Joel E. Moore**, *Neural network representation of tensor network and chiral states*, [1701.06246](https://arxiv.org/abs/1701.06246)
-
 - **Markus Schmitt, Markus Heyl**, *Quantum dynamics in transverse-field Ising models from classical networks*, [1707.06656](https://arxiv.org/abs/1707.06656)
-
 - **Yusuke Nomura, Andrew Darmawan, Youhei Yamaji, Masatoshi Imada**, *Restricted-Boltzmann-Machine Learning for Solving Strongly Correlated  Quantum Systems*, [1709.06475](https://arxiv.org/abs/1709.06475)
-
 - **Stephen R. Clark**, *Unifying Neural-network Quantum States and Correlator Product States via Tensor Networks*, [1710.03545](https://arxiv.org/abs/1710.03545)
-
 - **Ivan Glasser, Nicola Pancotti, Moritz August, Ivan D. Rodriguez, J. Ignacio Cirac **, *Neural Networks Quantum States, String-Bond States and chiral  topological states*, [1710.04045](https://arxiv.org/abs/1710.04045) 
+- **Raphael Kaubruegger, Lorenzo Pastori, Jan Carl Budich**, *Chiral Topological Phases from Artificial Neural Networks*, [1710.04713](https://arxiv.org/abs/1710.04713)
 
-   							
 
 
 ### Quantum Information and Computation
@@ -116,7 +110,8 @@
 
 - **Steven Weinstein **, *Learning the Einstein-Podolsky-Rosen correlations on a Restricted  Boltzmann Machine*, [1707.03114](https://arxiv.org/abs/1707.03114)
 
-  ​
+- **Dong-Ling Deng**, *Machine Learning Bell Nonlocality in Quantum Many-body Systems*, [1710.04226](https://arxiv.org/abs/1710.04226)
+
 
 
 ### Quantum Control
@@ -132,6 +127,7 @@
 - **Li Huang, Lei Wang**, *Accelerate Monte Carlo Simulations with Restricted Boltzmann Machines*, [1610.02746](http://arxiv.org/abs/1610.02746)
 - **Li Huang, Yi-feng Yang, Lei Wang**, *Recommender Engine for Continuous Time Quantum Monte Carlo Methods*, [1612.01871](https://arxiv.org/abs/1612.01871)
 - **Lei Wang**, *Can Boltzmann Machines Discover Cluster Updates?* [1702.08586](https://arxiv.org/abs/1702.08586) 
+- **Zhaocheng Liu, Sean P. Rodrigues, Wenshan Cai**, *Simulating the Ising Model with a Deep Convolutional Generative  Adversarial Network*, [1710.04987](https://arxiv.org/abs/1710.04987)
 
 
 ###  Connection to Renormalization Groups
@@ -157,5 +153,13 @@
 - **David Rolnick, Max Tegmark**, *The power of deeper networks for expressing natural functions*, [1705.05502](https://arxiv.org/abs/1705.05502) 
 - **Yoav Levine, David Yakira, Nadav Cohen, and Amnon Shashua**, *Deep learning and quantum entanglement: Fundamental connections with implications to network design*, [1704.01552](https://arxiv.org/abs/1704.01552)
 - **Zhao-Yu Han, Jun Wang, Heng Fan, Lei Wang, Pan Zhang**, *Unsupervised Generative Modeling Using Matrix Product States*, [1709.01662](https://arxiv.org/abs/1709.01662)
+- **Ding Liu, Shi-Ju Ran, Peter Wittek, Cheng Peng, Raul Blázquez García, Gang Su, Maciej Lewenstein**, *Machine Learning by Two-Dimensional Hierarchical Tensor Networks: A Quantum Information Theoretic Perspective on Deep Architectures*, https://arxiv.org/abs/1710.04833
+- **Ya-Hui Zhang**, Entanglement Entropy of Target Functions for Image Classification and  Convolutional Neural Network, [1710.05520](https://arxiv.org/abs/1710.05520) 
+
+
+
+  ​			
+  ​		
+  ​	
 
 
