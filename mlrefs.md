@@ -10,20 +10,42 @@
 
 
 - **Marwin Segler, Mike Preuß, Mark P. Waller**, *Towards "AlphaChem": Chemical Synthesis Planning with Tree Search and Deep Neural Network Policies*, [1702.00020](https://arxiv.org/abs/1702.00020)
+
 - **Haoyan Huo, Matthias Rupp**, *Unified Representation for Machine Learning of Molecules and Crystals*, [1704.06439](https://arxiv.org/abs/1704.06439) 
+
 - **Albert P. Bartok, Sandip De, Carl Poelking, Noam Bernstein, James Kermode, Gabor Csanyi, Michele Ceriotti**, *Machine Learning Unifies the Modelling of Materials and Molecules*, [1706.00179](https://arxiv.org/abs/1706.00179) 
+
 - **Fleur Legrain, Jesús Carrete, Ambroise van Roekeghem, Georg K.H. Madsen, Natalio Mingo**, *Materials Screening for the Discovery of New Half-Heuslers: Machine  Learning versus Ab Initio Methods*, [1706.00192](https://arxiv.org/abs/1706.00192)
+
 - **Nicholas Rajen, Sinisa Coh**, *What can a machine learn from a single first-principles calculation?* [1706.02012](https://arxiv.org/abs/1706.02012) 
+
+- **Bing Huang, O. Anatole von Lilienfeld**, *The "DNA" of chemistry: Scalable quantum machine learning with "amons"*, [1707.04146](https://arxiv.org/abs/1707.04146) 
+
 - **Nongnuch Artrith, Alexander Urban, Gerbrand Ceder**, *Efficient and Accurate Machine-Learning Interpolation of Atomic Energies  in Compositions with Many Species*, [1706.06293](https://arxiv.org/abs/1706.06293) 
+
 - **Seyed Majid Azimi, Dominik Britz, Michael Engstler, Mario Fritz, Frank Mücklich**, *Advanced Steel Microstructure Classification by Deep Learning Methods*, [1706.06480](https://arxiv.org/abs/1706.06480)
+
 - **Florian Häse, Christoph Kreisbeck, Alán Aspuru-Guzik**, *Machine Learning for Quantum Dynamics: Deep Learning of Excitation Energy Transfer Properties*, [1707.06338](https://arxiv.org/abs/1707.06338)
+
 - **Rampi Ramprasad, Rohit Batra, Ghanshyam Pilania, Arun Mannodi-Kanakkithodi, Chiho Kim**, *Machine Learning and Materials Informatics: Recent Applications and Prospects*, [1707.07294](https://arxiv.org/abs/1707.07294)
+
 - **Bing Huang, O. Anatole von Lilienfeld**, Chemical space exploration with molecular genes and machine learning, [1707.04146](https://arxiv.org/abs/1707.04146) 
+
 - **Marwin H.S. Segler, Mike Preuss, Mark P. Waller**, *Learning to Plan Chemical Syntheses*, [1708.04202](https://arxiv.org/abs/1708.04202)
+
 - **Mostapha Benhenda**, *ChemGAN challenge for drug discovery: can AI reproduce natural chemical  diversity?*, [1708.08227](https://arxiv.org/abs/1708.08227) 
+
 - **A. Ziletti, D. Kumar, M. Scheffler, L. M. Ghiringhelli**, *The face of crystals: insightful classification using deep learning*, [1709.02298](https://arxiv.org/abs/1709.02298) 
+
 - **Atsuto Seko, Hiroyuki Hayashi, Hisashi Kashima, Isao Tanaka**, *Matrix- and tensor-based recommender systems for the discovery of  currently unknown inorganic compounds*, [1710.00659](https://arxiv.org/abs/1710.00659) 
+
 - **Julius P. P. Zauleck, Regina de Vivie-Riedle**, Constructing grids for molecular quantum dynamics using an autoencoder, [1710.04535](https://arxiv.org/abs/1710.04535) 
+
+- **Matthew Spellings, Sharon C Glotzer**, *Machine learning for crystal identification and discovery*, [1710.09861](https://arxiv.org/abs/1710.09861) 
+
+- **Tian Xie, Jeffrey C. Grossman**, *Crystal Graph Convolutional Neural Networks for Accurate and  Interpretable Prediction of Material Properties*, [1710.10324](https://arxiv.org/abs/1710.10324) 
+
+   
 
 ### Inverse Problems
 
@@ -70,7 +92,12 @@
 
 - **Natanael C. Costa, Wenjian Hu, Z. J. Bai, Richard T. Scalettar, Rajiv R. P. Singh**, *Learning Fermionic Critical Points*, [1708.04762](https://arxiv.org/abs/1708.04762) 
 
+- **Patrick Huembeli, Alexandre Dauphin, Peter Wittek**, *Adversarial Domain Adaptation for Identifying Phase Transitions*, [1710.08382](https://arxiv.org/abs/1710.08382) 
+
+- **Matthew J. S. Beach, Anna Golubeva, Roger G. Melko** , *Machine learning vortices at the Kosterlitz-Thouless transition*, [1710.09842](https://arxiv.org/abs/1710.09842)
+
    ​
+
 
 ### Representing Quantum States
 
@@ -93,24 +120,16 @@
 ### Quantum Information and Computation
 
 - **Giacomo Torlai, Roger G. Melko**, *A Neural Decoder for Topological Codes*,[1610.04238](http://arxiv.org/abs/1610.04238)
-
 - **Jonathan Romero, Jonathan P. Olson, Alan Aspuru-Guzik**, *Quantum autoencoders for efficient compression of quantum data*, [1612.02806](https://arxiv.org/abs/1612.02806)
-
 - **Savvas Varsamopoulos, Ben Criger, Koen Bertels**, *Decoding Small Surface Codes with Feedforward Neural Networks*, [1705.00857](https://arxiv.org/abs/1705.00857)
-
 - **Giacomo Torlai, Guglielmo Mazzola, Juan Carrasquilla, Matthias Troyer, Roger Melko, Giuseppe Carleo**, *Many-body quantum state tomography with neural networks*,[1703.05334](https://arxiv.org/abs/1703.05334)
-
 - **Yue-Chi Ma, Man-Hong Yung**, *Transforming Bell's Inequalities into State Classifiers with Machine  Learning*,[1705.00813](https://arxiv.org/abs/1705.00813) 
-
 - **Sirui Lu, Shilin Huang, Keren Li, Jun Li, Jianxin Chen, Dawei Lu, Zhengfeng Ji, Yi Shen, Duanlu Zhou, Bei Zeng**, *A Separability-Entanglement Classifier via Machine Learning*, [1705.01523](https://arxiv.org/abs/1705.01523) 
-
 - **P. Baireuther, T. E. O'Brien, B. Tarasinski, C. W. J. Beenakker**, *Machine-learning-assisted correction of correlated qubit errors in a  topological code*, [1705.07855](https://arxiv.org/abs/1705.07855) 
-
 - **Stefan Krastanov, Liang Jiang**, *Deep Neural Network Probabilistic Decoder for Stabilizer Codes*, [1705.09334](https://arxiv.org/abs/1705.09334) 
-
 - **Steven Weinstein **, *Learning the Einstein-Podolsky-Rosen correlations on a Restricted  Boltzmann Machine*, [1707.03114](https://arxiv.org/abs/1707.03114)
-
 - **Dong-Ling Deng**, *Machine Learning Bell Nonlocality in Quantum Many-body Systems*, [1710.04226](https://arxiv.org/abs/1710.04226)
+- **Nikolas P. Breuckmann, Xiaotong Ni**, *Scalable Neural Network Decoders for Higher Dimensional Quantum Codes*, [1710.09489](https://arxiv.org/abs/1710.09489) 
 
 
 
@@ -127,7 +146,7 @@
 - **Li Huang, Lei Wang**, *Accelerate Monte Carlo Simulations with Restricted Boltzmann Machines*, [1610.02746](http://arxiv.org/abs/1610.02746)
 - **Li Huang, Yi-feng Yang, Lei Wang**, *Recommender Engine for Continuous Time Quantum Monte Carlo Methods*, [1612.01871](https://arxiv.org/abs/1612.01871)
 - **Lei Wang**, *Can Boltzmann Machines Discover Cluster Updates?* [1702.08586](https://arxiv.org/abs/1702.08586) 
-- **Zhaocheng Liu, Sean P. Rodrigues, Wenshan Cai**, *Simulating the Ising Model with a Deep Convolutional Generative  Adversarial Network*, [1710.04987](https://arxiv.org/abs/1710.04987)
+- **Zhaocheng Liu, Sean P. Rodrigues, Wenshan Cai**, *Simulating the Ising Model with a Deep Convolutional Generative Adversarial Network*, [1710.04987](https://arxiv.org/abs/1710.04987)
 
 
 ###  Connection to Renormalization Groups
@@ -155,11 +174,12 @@
 - **Zhao-Yu Han, Jun Wang, Heng Fan, Lei Wang, Pan Zhang**, *Unsupervised Generative Modeling Using Matrix Product States*, [1709.01662](https://arxiv.org/abs/1709.01662)
 - **Ding Liu, Shi-Ju Ran, Peter Wittek, Cheng Peng, Raul Blázquez García, Gang Su, Maciej Lewenstein**, *Machine Learning by Two-Dimensional Hierarchical Tensor Networks: A Quantum Information Theoretic Perspective on Deep Architectures*, https://arxiv.org/abs/1710.04833
 - **Ya-Hui Zhang**, Entanglement Entropy of Target Functions for Image Classification and  Convolutional Neural Network, [1710.05520](https://arxiv.org/abs/1710.05520) 
+- **Vasily Pestun, Yiannis Vlassopoulos**, *Tensor network language model*，[1710.10248](https://arxiv.org/abs/1710.10248) 
 
 
 
-  ​			
-  ​		
-  ​	
+  			
+  		
+  	
 
 
