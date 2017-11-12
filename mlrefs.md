@@ -45,7 +45,6 @@
 
 - **Tian Xie, Jeffrey C. Grossman**, *Crystal Graph Convolutional Neural Networks for Accurate and  Interpretable Prediction of Material Properties*, [1710.10324](https://arxiv.org/abs/1710.10324) 
 
-   
 
 ### Inverse Problems
 
@@ -163,6 +162,7 @@
 - **Jacob Biamonte, Peter Wittek, Nicola Pancotti, Patrick Rebentrost, Nathan Wiebe, Seth Lloyd**, *Quantum Machine Learning*, [1611.09347](http://arxiv.org/abs/1611.09347)
 - **Alejandro Perdomo-Ortiz, Marcello Benedetti, John Realpe-Gómez, Rupak Biswas**, *Opportunities and challenges for quantum-assisted machine learning in near-term quantum computers*, [1708.09757](https://arxiv.org/abs/1708.09757) 
 - **Vedran Dunjko, Hans J. Briegel**, *Machine learning & artificial intelligence in the quantum domain*, [1709.02779](https://arxiv.org/abs/1709.02779) 
+- **Xun Gao, Zhengyu Zhang, Luming Duan**, *An efficient quantum algorithm for generative machine learning*, [1711.02038](https://arxiv.org/abs/1711.02038) 
 
 
 ## 3. Physics Perspective/Techniques to Deep Learning
