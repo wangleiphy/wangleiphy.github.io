@@ -95,13 +95,18 @@
 
 - **Matthew J. S. Beach, Anna Golubeva, Roger G. Melko** , *Machine learning vortices at the Kosterlitz-Thouless transition*, [1710.09842](https://arxiv.org/abs/1710.09842)
 
-   ​
+- **Zhenyu Li, Mingxing Luo, Xin Wan**, *Extracting Critical Exponent by Finite-Size Scaling with Convolutional Neural Networks*, [1711.04252](https://arxiv.org/abs/1711.04252) 
+
+- **Evert van Nieuwenburg, Eyal Bairey, Gil Refael**, *Learning phase transitions from dynamics*, [1712.00450](https://arxiv.org/abs/1712.00450) 
+
+  ​
+
 
 
 ### Representing Quantum States
 
 - **Guiseppe Carleo, Matthias Troyer**, *Solving the Quantum Many-Body Problem with Artificial Neural Networks*, [1606.02318](https://arxiv.org/abs/1606.02318)
-- **Zi Cai**, *Approximating quantum many-body wave-functions using artificial neural networks*, [1704.05148](https://arxiv.org/abs/1704.05148)
+- **Zi Cai, Jinguo Liu**, *Approximating quantum many-body wave-functions using artificial neural networks*, [1704.05148](https://arxiv.org/abs/1704.05148)
 
 
 - **Jing Chen, Song Cheng, Haidong Xie, Lei Wang, Tao Xiang**, *On the Equivalence of Restricted Boltzmann Machines and Tensor Network States*, [1701.04831](https://arxiv.org/abs/1701.04831)
@@ -126,7 +131,7 @@
 - **Sirui Lu, Shilin Huang, Keren Li, Jun Li, Jianxin Chen, Dawei Lu, Zhengfeng Ji, Yi Shen, Duanlu Zhou, Bei Zeng**, *A Separability-Entanglement Classifier via Machine Learning*, [1705.01523](https://arxiv.org/abs/1705.01523) 
 - **P. Baireuther, T. E. O'Brien, B. Tarasinski, C. W. J. Beenakker**, *Machine-learning-assisted correction of correlated qubit errors in a  topological code*, [1705.07855](https://arxiv.org/abs/1705.07855) 
 - **Stefan Krastanov, Liang Jiang**, *Deep Neural Network Probabilistic Decoder for Stabilizer Codes*, [1705.09334](https://arxiv.org/abs/1705.09334) 
-- **Steven Weinstein **, *Learning the Einstein-Podolsky-Rosen correlations on a Restricted  Boltzmann Machine*, [1707.03114](https://arxiv.org/abs/1707.03114)
+- **Steven Weinstein**, *Learning the Einstein-Podolsky-Rosen correlations on a Restricted  Boltzmann Machine*, [1707.03114](https://arxiv.org/abs/1707.03114)
 - **Dong-Ling Deng**, *Machine Learning Bell Nonlocality in Quantum Many-body Systems*, [1710.04226](https://arxiv.org/abs/1710.04226)
 - **Nikolas P. Breuckmann, Xiaotong Ni**, *Scalable Neural Network Decoders for Higher Dimensional Quantum Codes*, [1710.09489](https://arxiv.org/abs/1710.09489) 
 
@@ -146,6 +151,8 @@
 - **Li Huang, Yi-feng Yang, Lei Wang**, *Recommender Engine for Continuous Time Quantum Monte Carlo Methods*, [1612.01871](https://arxiv.org/abs/1612.01871)
 - **Lei Wang**, *Can Boltzmann Machines Discover Cluster Updates?* [1702.08586](https://arxiv.org/abs/1702.08586) 
 - **Zhaocheng Liu, Sean P. Rodrigues, Wenshan Cai**, *Simulating the Ising Model with a Deep Convolutional Generative Adversarial Network*, [1710.04987](https://arxiv.org/abs/1710.04987)
+- **Akinori Tanaka, Akio Tomiya**, *Towards reduction of autocorrelation in HMC by machine learning*, [1712.03893](https://arxiv.org/abs/1712.03893)  					
+
 
 
 ###  Connection to Renormalization Groups
@@ -163,6 +170,7 @@
 - **Alejandro Perdomo-Ortiz, Marcello Benedetti, John Realpe-Gómez, Rupak Biswas**, *Opportunities and challenges for quantum-assisted machine learning in near-term quantum computers*, [1708.09757](https://arxiv.org/abs/1708.09757) 
 - **Vedran Dunjko, Hans J. Briegel**, *Machine learning & artificial intelligence in the quantum domain*, [1709.02779](https://arxiv.org/abs/1709.02779) 
 - **Xun Gao, Zhengyu Zhang, Luming Duan**, *An efficient quantum algorithm for generative machine learning*, [1711.02038](https://arxiv.org/abs/1711.02038) 
+- **Rigetti Computing**, *Unsupervised Machine Learning on a Hybrid Quantum Computer*, [1712.05771](https://arxiv.org/abs/1712.05771)
 
 
 ## 3. Physics Perspective/Techniques to Deep Learning
@@ -172,9 +180,14 @@
 - **David Rolnick, Max Tegmark**, *The power of deeper networks for expressing natural functions*, [1705.05502](https://arxiv.org/abs/1705.05502) 
 - **Yoav Levine, David Yakira, Nadav Cohen, and Amnon Shashua**, *Deep learning and quantum entanglement: Fundamental connections with implications to network design*, [1704.01552](https://arxiv.org/abs/1704.01552)
 - **Zhao-Yu Han, Jun Wang, Heng Fan, Lei Wang, Pan Zhang**, *Unsupervised Generative Modeling Using Matrix Product States*, [1709.01662](https://arxiv.org/abs/1709.01662)
-- **Ding Liu, Shi-Ju Ran, Peter Wittek, Cheng Peng, Raul Blázquez García, Gang Su, Maciej Lewenstein**, *Machine Learning by Two-Dimensional Hierarchical Tensor Networks: A Quantum Information Theoretic Perspective on Deep Architectures*, https://arxiv.org/abs/1710.04833
-- **Ya-Hui Zhang**, Entanglement Entropy of Target Functions for Image Classification and  Convolutional Neural Network, [1710.05520](https://arxiv.org/abs/1710.05520) 
-- **Vasily Pestun, Yiannis Vlassopoulos**, *Tensor network language model*，[1710.10248](https://arxiv.org/abs/1710.10248) 
+- **Ding Liu, Shi-Ju Ran, Peter Wittek, Cheng Peng, Raul Blázquez García, Gang Su, Maciej Lewenstein**, *Machine Learning by Two-Dimensional Hierarchical Tensor Networks: A Quantum Information Theoretic Perspective on Deep Architectures*, [1710.04833](https://arxiv.org/abs/1710.04833)
+- **Ya-Hui Zhang**, Entanglement Entropy of Target Functions for Image Classification and Convolutional Neural Network, [1710.05520](https://arxiv.org/abs/1710.05520) 
+- **Vasily Pestun, Yiannis Vlassopoulos**, *Tensor network language model*, [1710.10248](https://arxiv.org/abs/1710.10248) 
+- **Andrew Hallam, Edward Grant, Vid Stojevic, Simone Severini, Andrew G. Green**, *Compact Neural Networks based on the Multiscale Entanglement Renormalization Ansatz* , [1711.03357](https://arxiv.org/abs/1711.03357) 
+- **Yichen Huang**, *Provably efficient neural network representation for image classification*, [1711.04606](https://arxiv.org/abs/1711.04606)
+- **Song Cheng, Jing Chen, Lei Wang**, *Information Perspective to Probabilistic Modeling: Boltzmann Machines  versus Born Machines*, [1712.04144](https://arxiv.org/abs/1712.04144)
+- **Hideyuki Miyahara, Yuki Sughiyama**, *A Quantum Extension of Variational Bayes Inference*, [1712.04709](https://arxiv.org/abs/1712.04709) 
+- **Guillaume Verdon, Michael Broughton, Jacob Biamonte**, *A quantum algorithm to train neural networks using low-depth circuits*, [1712.05304](https://arxiv.org/abs/1712.05304)
 
 
 
