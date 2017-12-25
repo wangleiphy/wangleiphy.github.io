@@ -167,7 +167,8 @@
 ## 2. Quantum Machine Learning
 
 - **Jacob Biamonte, Peter Wittek, Nicola Pancotti, Patrick Rebentrost, Nathan Wiebe, Seth Lloyd**, *Quantum Machine Learning*, [1611.09347](http://arxiv.org/abs/1611.09347)
-- **Alejandro Perdomo-Ortiz, Marcello Benedetti, John Realpe-Gómez, Rupak Biswas**, *Opportunities and challenges for quantum-assisted machine learning in near-term quantum computers*, [1708.09757](https://arxiv.org/abs/1708.09757) 
+- **Alejandro Perdomo-Ortiz, Marcello Benedetti, John Realpe-Gómez, Rupak Biswas**, *Opportunities and challenges for quantum-assisted machine learning in near-term quantum computers*, [1708.09757](https://arxiv.org/abs/1708.09757)
+- **Marcello Benedetti, John Realpe-Gómez, Alejandro Perdomo-Ortiz**, *Quantum-assisted Helmholtz machines: A quantum-classical deep learning framework for industrial datasets in near-term devices*, [1708.09784](https://arxiv.org/abs/1708.09784) 
 - **Vedran Dunjko, Hans J. Briegel**, *Machine learning & artificial intelligence in the quantum domain*, [1709.02779](https://arxiv.org/abs/1709.02779) 
 - **Xun Gao, Zhengyu Zhang, Luming Duan**, *An efficient quantum algorithm for generative machine learning*, [1711.02038](https://arxiv.org/abs/1711.02038) 
 - **Rigetti Computing**, *Unsupervised Machine Learning on a Hybrid Quantum Computer*, [1712.05771](https://arxiv.org/abs/1712.05771)
@@ -188,6 +189,7 @@
 - **Song Cheng, Jing Chen, Lei Wang**, *Information Perspective to Probabilistic Modeling: Boltzmann Machines  versus Born Machines*, [1712.04144](https://arxiv.org/abs/1712.04144)
 - **Hideyuki Miyahara, Yuki Sughiyama**, *A Quantum Extension of Variational Bayes Inference*, [1712.04709](https://arxiv.org/abs/1712.04709) 
 - **Guillaume Verdon, Michael Broughton, Jacob Biamonte**, *A quantum algorithm to train neural networks using low-depth circuits*, [1712.05304](https://arxiv.org/abs/1712.05304)
+- **Andrew Hallam, Edward Grant, Vid Stojevic, Simone Severini, Andrew G. Green**, *Compact Neural Networks based on the Multiscale Entanglement Renormalization Ansatz*, [1711.03357](https://arxiv.org/abs/1711.03357)
 
 
 
