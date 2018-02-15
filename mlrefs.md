@@ -45,6 +45,13 @@
 
 - **Tian Xie, Jeffrey C. Grossman**, *Crystal Graph Convolutional Neural Networks for Accurate and  Interpretable Prediction of Material Properties*, [1710.10324](https://arxiv.org/abs/1710.10324) 
 
+- https://arxiv.org/abs/1802.02944
+
+
+  ​				
+  ​		
+  ​	
+
 
 ### Inverse Problems
 
@@ -99,6 +106,8 @@
 
 - **Evert van Nieuwenburg, Eyal Bairey, Gil Refael**, *Learning phase transitions from dynamics*, [1712.00450](https://arxiv.org/abs/1712.00450) 
 
+-  Extracting Critical Exponent by Finite-Size Scaling with Convolutional  Neural Networks, https://arxiv.org/abs/1711.04252v1
+
   ​
 
 
@@ -151,17 +160,19 @@
 - **Li Huang, Yi-feng Yang, Lei Wang**, *Recommender Engine for Continuous Time Quantum Monte Carlo Methods*, [1612.01871](https://arxiv.org/abs/1612.01871)
 - **Lei Wang**, *Can Boltzmann Machines Discover Cluster Updates?* [1702.08586](https://arxiv.org/abs/1702.08586) 
 - **Zhaocheng Liu, Sean P. Rodrigues, Wenshan Cai**, *Simulating the Ising Model with a Deep Convolutional Generative Adversarial Network*, [1710.04987](https://arxiv.org/abs/1710.04987)
-- **Akinori Tanaka, Akio Tomiya**, *Towards reduction of autocorrelation in HMC by machine learning*, [1712.03893](https://arxiv.org/abs/1712.03893)  					
+  - **Akinori Tanaka, Akio Tomiya**, *Towards reduction of autocorrelation in HMC by machine learning*, [1712.03893](https://arxiv.org/abs/1712.03893)  			
 
 
 
 ###  Connection to Renormalization Groups
 
+- Beny, 
 - **Pankaj Mehta, David J. Schwab**, *An exact mapping between the Variational Renormalization Group and Deep Learning*, [1410.3831](http://arxiv.org/abs/1410.3831)
 - **Serena Bradde, William Bialek**, *PCA meets RG*, [1610.09733](https://arxiv.org/abs/1610.09733)
 - **Maciej Koch-Janusz, Zohar Ringel**, *Mutual Information, Neural Networks and the Renormalization Group*, [1704.06279](https://arxiv.org/abs/1704.06279)
 - **Wen-Cong Gan, Fu-Wen Shu**, *Holography as deep learning*, [1705.05750](https://arxiv.org/abs/1705.05750) 
 - **Yi-Zhuang You, Zhao Yang, Xiao-Liang Qi**,  *Machine Learning Spatial Geometry from Entanglement Features,* [1709.01223](https://arxiv.org/abs/1709.01223)
+- https://arxiv.org/abs/1802.02840
 
 
 ## 2. Quantum Machine Learning
@@ -172,6 +183,8 @@
 - **Vedran Dunjko, Hans J. Briegel**, *Machine learning & artificial intelligence in the quantum domain*, [1709.02779](https://arxiv.org/abs/1709.02779) 
 - **Xun Gao, Zhengyu Zhang, Luming Duan**, *An efficient quantum algorithm for generative machine learning*, [1711.02038](https://arxiv.org/abs/1711.02038) 
 - **Rigetti Computing**, *Unsupervised Machine Learning on a Hybrid Quantum Computer*, [1712.05771](https://arxiv.org/abs/1712.05771)
+- [arXiv:1802.05267](https://arxiv.org/abs/1802.05267)
+- [arXiv:1802.04063](https://arxiv.org/abs/1802.04063) 
 
 
 ## 3. Physics Perspective/Techniques to Deep Learning
