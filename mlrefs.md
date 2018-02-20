@@ -71,44 +71,24 @@
 ### Phase Transitions
 
 - **Juan Carrasquilla, Roger G. Melko**, *Machine learning phases of matter*, [1605.01735](http://arxiv.org/abs/1605.01735)
-
 - **Evert P.L. van Nieuwenburg, Ye-Hua Liu, Sebastian D. Huber**, *Learning phase transitions by confusion*,[1610.02048](https://arxiv.org/abs/1610.02048)
-
 - **Lei Wang**, *Discovering Phase Transitions with Unsupervised Learning*, [1606.00318](http://arxiv.org/abs/1606.00318)
-
 - **Sebastian Wetzel**, *Unsupervised learning of phase transitions: from principal component analysis to variational autoencoders*, [1703.02435](https://arxiv.org/abs/1703.02435)
-
 - **Wenjian Hu, Rajiv R.P. Singh, Richard T. Scalettar**, *Discovering Phases, Phase Transitions and Crossovers through Unsupervised Machine Learning: A critical examination*, [1704.00080](https://arxiv.org/abs/1704.00080)
-
 - **Pedro Ponte, Roger G. Melko**, *Kernel methods for interpretable machine learning of order parameters*, [1704.05848](https://arxiv.org/abs/1704.05848)
-
 - **Sebastian Johann Wetzel, Manuel Scherzer**, *Machine Learning of Explicit Order Parameters: From the Ising Model to SU(2) Lattice Gauge Theory*, [1705.05582](https://arxiv.org/abs/1705.05582)
-
 - **Marco Cristoforetti, Giuseppe Jurman, Andrea I. Nardelli, Cesare Furlanello**, *Towards meaningful physics from generative models*, [1705.09524](https://arxiv.org/abs/1705.09524) 
-
 - **Ye-Hua Liu, Evert P.L. van Nieuwenburg**, *Self-Learning Phase Boundaries by Active Contours*, [1706.08111](https://arxiv.org/abs/1706.08111)
-
 - **Ce Wang, Hui Zhai**, *Machine Learning Studies of Frustrated Classical Spin Models*, [1706.07977](https://arxiv.org/abs/1706.07977) 
-
 - **Peter Broecker, Fakher F. Assaad, Simon Trebst**, *Quantum phase recognition via unsupervised machine learning*, [1707.00663](https://arxiv.org/abs/1707.00663) 
-
 - **Adrián Soto, Deyu Lu, Shinjae Yoo, Mariví Fernández-Serra**, *Unveiling two types of local order in liquid water using machine learning*, [1707.04593](https://arxiv.org/abs/1707.04593) 
-
 - **Alan Morningstar, Roger G. Melko**, *Deep Learning the Ising Model Near Criticality*, [1708.04622](https://arxiv.org/abs/1708.04622) 
-
 - **Natanael C. Costa, Wenjian Hu, Z. J. Bai, Richard T. Scalettar, Rajiv R. P. Singh**, *Learning Fermionic Critical Points*, [1708.04762](https://arxiv.org/abs/1708.04762) 
-
 - **Patrick Huembeli, Alexandre Dauphin, Peter Wittek**, *Adversarial Domain Adaptation for Identifying Phase Transitions*, [1710.08382](https://arxiv.org/abs/1710.08382) 
-
 - **Matthew J. S. Beach, Anna Golubeva, Roger G. Melko** , *Machine learning vortices at the Kosterlitz-Thouless transition*, [1710.09842](https://arxiv.org/abs/1710.09842)
-
 - **Zhenyu Li, Mingxing Luo, Xin Wan**, *Extracting Critical Exponent by Finite-Size Scaling with Convolutional Neural Networks*, [1711.04252](https://arxiv.org/abs/1711.04252) 
-
 - **Evert van Nieuwenburg, Eyal Bairey, Gil Refael**, *Learning phase transitions from dynamics*, [1712.00450](https://arxiv.org/abs/1712.00450) 
-
--  Extracting Critical Exponent by Finite-Size Scaling with Convolutional  Neural Networks, https://arxiv.org/abs/1711.04252v1
-
-  ​
+- **Zhenyu Li, Mingxing Luo, Xin Wan**, *Extracting Critical Exponent by Finite-Size Scaling with Convolutional  Neural Networks*, [1711.04252](https://arxiv.org/abs/1711.04252)
 
 
 
@@ -160,19 +140,20 @@
 - **Li Huang, Yi-feng Yang, Lei Wang**, *Recommender Engine for Continuous Time Quantum Monte Carlo Methods*, [1612.01871](https://arxiv.org/abs/1612.01871)
 - **Lei Wang**, *Can Boltzmann Machines Discover Cluster Updates?* [1702.08586](https://arxiv.org/abs/1702.08586) 
 - **Zhaocheng Liu, Sean P. Rodrigues, Wenshan Cai**, *Simulating the Ising Model with a Deep Convolutional Generative Adversarial Network*, [1710.04987](https://arxiv.org/abs/1710.04987)
-  - **Akinori Tanaka, Akio Tomiya**, *Towards reduction of autocorrelation in HMC by machine learning*, [1712.03893](https://arxiv.org/abs/1712.03893)  			
+- **Akinori Tanaka, Akio Tomiya**, *Towards reduction of autocorrelation in HMC by machine learning*, [1712.03893](https://arxiv.org/abs/1712.03893)  			
 
 
 
 ###  Connection to Renormalization Groups
 
-- Beny, 
+- **Cédric Bény**, *Deep learning and the renormalization group*, [1301.3124](https://arxiv.org/abs/1301.3124) 
 - **Pankaj Mehta, David J. Schwab**, *An exact mapping between the Variational Renormalization Group and Deep Learning*, [1410.3831](http://arxiv.org/abs/1410.3831)
 - **Serena Bradde, William Bialek**, *PCA meets RG*, [1610.09733](https://arxiv.org/abs/1610.09733)
 - **Maciej Koch-Janusz, Zohar Ringel**, *Mutual Information, Neural Networks and the Renormalization Group*, [1704.06279](https://arxiv.org/abs/1704.06279)
 - **Wen-Cong Gan, Fu-Wen Shu**, *Holography as deep learning*, [1705.05750](https://arxiv.org/abs/1705.05750) 
 - **Yi-Zhuang You, Zhao Yang, Xiao-Liang Qi**,  *Machine Learning Spatial Geometry from Entanglement Features,* [1709.01223](https://arxiv.org/abs/1709.01223)
-- https://arxiv.org/abs/1802.02840
+- **Shuo-Hui Li, Lei Wang**, *Neural Network Renormalization Group*, [1802.02840](https://arxiv.org/abs/1802.02840) 
+- **Cédric Bény**, *Inferring relevant features: from QFT to PCA*, [1802.05756](https://arxiv.org/abs/1802.05756) 
 
 
 ## 2. Quantum Machine Learning
@@ -183,8 +164,10 @@
 - **Vedran Dunjko, Hans J. Briegel**, *Machine learning & artificial intelligence in the quantum domain*, [1709.02779](https://arxiv.org/abs/1709.02779) 
 - **Xun Gao, Zhengyu Zhang, Luming Duan**, *An efficient quantum algorithm for generative machine learning*, [1711.02038](https://arxiv.org/abs/1711.02038) 
 - **Rigetti Computing**, *Unsupervised Machine Learning on a Hybrid Quantum Computer*, [1712.05771](https://arxiv.org/abs/1712.05771)
-- [arXiv:1802.05267](https://arxiv.org/abs/1802.05267)
-- [arXiv:1802.04063](https://arxiv.org/abs/1802.04063) 
+-  **Thomas Fösel, Petru Tighineanu, Talitha Weiss, Florian Marquardt**, *Reinforcement Learning with Neural Networks for Quantum Feedback*, [1802.05267](https://arxiv.org/abs/1802.05267)
+- **Moritz August, José Miguel Hernández-Lobato**, *Taking gradients through experiments: LSTMs and memory proximal policy  optimization for black-box quantum control*, [1802.04063](https://arxiv.org/abs/1802.04063) 
+- **Amir Khoshaman, Walter Vinci, Brandon Denis, Evgeny Andriyash, Mohammad H. Amin**, *Quantum Variational Autoencoder*, [1802.05779](https://arxiv.org/abs/1802.05779) 
+- **Edward Farhi, Hartmut Neven**, *Classification with Quantum Neural Networks on Near Term Processors*, [1802.06002](https://arxiv.org/abs/1802.06002)
 
 
 ## 3. Physics Perspective/Techniques to Deep Learning
