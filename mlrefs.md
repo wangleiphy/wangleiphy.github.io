@@ -2,6 +2,12 @@
 
 
 
+## 0. General Review
+
+A high-bias, low-variance introduction to Machine Learning for  physicists
+
+
+
 ## 1. ML applied to physical problems
 
 ### Material and Chemistry Discovery 
