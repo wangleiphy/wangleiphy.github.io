@@ -45,12 +45,10 @@
 
 - **Tian Xie, Jeffrey C. Grossman**, *Crystal Graph Convolutional Neural Networks for Accurate and  Interpretable Prediction of Material Properties*, [1710.10324](https://arxiv.org/abs/1710.10324) 
 
-- https://arxiv.org/abs/1802.02944
+- **Ryo Nagai, Ryosuke Akashi, Shu Sasaki, Shinji Tsuneyuki**, *Neural-network Kohn-Sham exchange-correlation potential and its  out-of-training transferability*, [1802.02944](https://arxiv.org/abs/1802.02944) 
 
+  ​
 
-  ​				
-  ​		
-  ​	
 
 
 ### Inverse Problems
@@ -99,14 +97,27 @@
 
 
 - **Jing Chen, Song Cheng, Haidong Xie, Lei Wang, Tao Xiang**, *On the Equivalence of Restricted Boltzmann Machines and Tensor Network States*, [1701.04831](https://arxiv.org/abs/1701.04831)
+
 - **Dong-Ling Deng, Xiaopeng Li, S. Das Sarma**, *Quantum Entanglement in Neural Network States*, [1701.04844](https://arxiv.org/abs/1701.04844)
+
 - **Xun Gao, Lu-Ming Duan**, *Efficient Representation of Quantum Many-body States with Deep Neural Networks*, [1701.05039](https://arxiv.org/abs/1701.05039)
+
 - **Yichen Huang, Joel E. Moore**, *Neural network representation of tensor network and chiral states*, [1701.06246](https://arxiv.org/abs/1701.06246)
+
 - **Markus Schmitt, Markus Heyl**, *Quantum dynamics in transverse-field Ising models from classical networks*, [1707.06656](https://arxiv.org/abs/1707.06656)
+
 - **Yusuke Nomura, Andrew Darmawan, Youhei Yamaji, Masatoshi Imada**, *Restricted-Boltzmann-Machine Learning for Solving Strongly Correlated  Quantum Systems*, [1709.06475](https://arxiv.org/abs/1709.06475)
+
 - **Stephen R. Clark**, *Unifying Neural-network Quantum States and Correlator Product States via Tensor Networks*, [1710.03545](https://arxiv.org/abs/1710.03545)
+
 - **Ivan Glasser, Nicola Pancotti, Moritz August, Ivan D. Rodriguez, J. Ignacio Cirac **, *Neural Networks Quantum States, String-Bond States and chiral  topological states*, [1710.04045](https://arxiv.org/abs/1710.04045) 
+
 - **Raphael Kaubruegger, Lorenzo Pastori, Jan Carl Budich**, *Chiral Topological Phases from Artificial Neural Networks*, [1710.04713](https://arxiv.org/abs/1710.04713)
+
+- **Nahuel Freitas, ∗ Giovanna Morigi, and Vedran Dunjko**, *Neural Network Operations and Susuki-Trotter evolution of Neural Network States*, 1803.02118
+
+
+  ​			
 
 
 
@@ -140,7 +151,7 @@
 - **Li Huang, Yi-feng Yang, Lei Wang**, *Recommender Engine for Continuous Time Quantum Monte Carlo Methods*, [1612.01871](https://arxiv.org/abs/1612.01871)
 - **Lei Wang**, *Can Boltzmann Machines Discover Cluster Updates?* [1702.08586](https://arxiv.org/abs/1702.08586) 
 - **Zhaocheng Liu, Sean P. Rodrigues, Wenshan Cai**, *Simulating the Ising Model with a Deep Convolutional Generative Adversarial Network*, [1710.04987](https://arxiv.org/abs/1710.04987)
-- **Akinori Tanaka, Akio Tomiya**, *Towards reduction of autocorrelation in HMC by machine learning*, [1712.03893](https://arxiv.org/abs/1712.03893)  			
+	 **Akinori Tanaka, Akio Tomiya**, *Towards reduction of autocorrelation in HMC by machine learning*, [1712.03893](https://arxiv.org/abs/1712.03893)  			
 
 
 
@@ -159,15 +170,20 @@
 ## 2. Quantum Machine Learning
 
 - **Jacob Biamonte, Peter Wittek, Nicola Pancotti, Patrick Rebentrost, Nathan Wiebe, Seth Lloyd**, *Quantum Machine Learning*, [1611.09347](http://arxiv.org/abs/1611.09347)
+- **Marcello Benedetti, John Realpe-Gómez, Rupak Biswas, Alejandro Perdomo-Ortiz**, Quantum-Assisted Learning of Hardware-Embedded Probabilistic Graphical Models*, [1609.02542](https://arxiv.org/abs/1609.02542) 
+
+
 - **Alejandro Perdomo-Ortiz, Marcello Benedetti, John Realpe-Gómez, Rupak Biswas**, *Opportunities and challenges for quantum-assisted machine learning in near-term quantum computers*, [1708.09757](https://arxiv.org/abs/1708.09757)
 - **Marcello Benedetti, John Realpe-Gómez, Alejandro Perdomo-Ortiz**, *Quantum-assisted Helmholtz machines: A quantum-classical deep learning framework for industrial datasets in near-term devices*, [1708.09784](https://arxiv.org/abs/1708.09784) 
 - **Vedran Dunjko, Hans J. Briegel**, *Machine learning & artificial intelligence in the quantum domain*, [1709.02779](https://arxiv.org/abs/1709.02779) 
 - **Xun Gao, Zhengyu Zhang, Luming Duan**, *An efficient quantum algorithm for generative machine learning*, [1711.02038](https://arxiv.org/abs/1711.02038) 
 - **Rigetti Computing**, *Unsupervised Machine Learning on a Hybrid Quantum Computer*, [1712.05771](https://arxiv.org/abs/1712.05771)
+- **Marcello Benedetti, Delfina Garcia-Pintos, Yunseong Nam, Alejandro Perdomo-Ortiz**, A generative modeling approach for benchmarking and training shallow quantum circuits*, [1801.07686](https://arxiv.org/abs/1801.07686)
 -  **Thomas Fösel, Petru Tighineanu, Talitha Weiss, Florian Marquardt**, *Reinforcement Learning with Neural Networks for Quantum Feedback*, [1802.05267](https://arxiv.org/abs/1802.05267)
-- **Moritz August, José Miguel Hernández-Lobato**, *Taking gradients through experiments: LSTMs and memory proximal policy  optimization for black-box quantum control*, [1802.04063](https://arxiv.org/abs/1802.04063) 
+- **Moritz August, José Miguel Hernández-Lobato**, *Taking gradients through experiments: LSTMs and memory proximal policy optimization for black-box quantum control*, [1802.04063](https://arxiv.org/abs/1802.04063) 
 - **Amir Khoshaman, Walter Vinci, Brandon Denis, Evgeny Andriyash, Mohammad H. Amin**, *Quantum Variational Autoencoder*, [1802.05779](https://arxiv.org/abs/1802.05779) 
 - **Edward Farhi, Hartmut Neven**, *Classification with Quantum Neural Networks on Near Term Processors*, [1802.06002](https://arxiv.org/abs/1802.06002)
+- [1802.09248](https://arxiv.org/abs/1802.09248) 
 
 
 ## 3. Physics Perspective/Techniques to Deep Learning
