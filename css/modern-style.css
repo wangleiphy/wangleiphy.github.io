@@ -247,8 +247,8 @@ main a:not(.nav-links a):hover {
 /* Footer */
 footer {
     background: var(--bg-secondary);
-    padding: var(--spacing-lg) 0;
-    margin-top: var(--spacing-xl);
+    padding: var(--spacing-md) 0;
+    margin-top: var(--spacing-lg);
     border-top: 1px solid var(--border-color);
     text-align: center;
     color: var(--text-light);
