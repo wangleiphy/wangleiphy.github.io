@@ -1,48 +1,37 @@
-<html>
-  <body style="background-color:white">
-  <head>
-    <title>Lei Wang</title>
-    <link href="css/general.css" rel="stylesheet" type="text/css"/>
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Research Talks by Lei Wang">
+    <title>Talks - Lei Wang</title>
+    <link href="css/modern-style.css" rel="stylesheet">
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <h1>Research Talks</h1>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="lectures.html">Lectures</a>
+                <a href="conferences.html">Events</a>
+            </nav>
+        </div>
+    </header>
 
-    <h2><a href="talks/Ishikawa2.pdf">Interaction effect on topological insulator: studies based on interacting Greens functions, Singapore, 2011 Aug</a></h2> 
-    <h2><a href="talks/DFT_MonteVerita_ligher.pdf">Density functional theory for static and dynamical properties of cold atomic gases, Monte Verita, 2012 June</a></h2> 
-    <h2><a href="talks/FINESS.pdf">Simulating dynamics and topological phases of cold fermionic gases, Queenstown, 2013 Feb</a></h2> 
-    <h2><a href="talks/CargeseJune.pdf">Topological charge pumping of cold atoms, Cargese, 2013 June</a></h2> 
-    <h2><a href="talks/SpinlessCTQMC.pdf">Spinless Fermions on a Honeycomb Lattice, KITPC, Beijing, 2014 May</a></h2>
-    <h2><a href="talks/Trento.pdf">Recent progresses on diagrammatic determinant QMC, ECT* Trento, 2015 Oct</a></h2>       
-    <h2><a href="talks/ETH.pdf">My years at ETH, Farewell group meeting, 26.02.2016</a></h2>       
-    <h2><a href="talks/CSRC.pdf">How did I earn an Erdos number of 2? CSRC, Beijing, 2016 April</a></h2>
-    <h2><a href="talks/Wuhan16.pdf">Simulation of Hubbard Models in the Era of Synthetic Gauge Field, Wuhan, 2016 July</a></h2>
-    <h2><a href="talks/FS-CUHK.pdf">From Fidelity Susceptibility to Recommender Engines, CUHK, HongKong, 2016 Nov</a></h2>
-    <h2><a href="talks/RBM_Seattle.pdf">Can machine learning teach us cluster updates? INT, Seattle, 2017 March</a></h2>
-    <h2><a href="talks/XiAn.pdf">Machine Learning for Many-Body Physics, Xi'an, 2017 July</a></h2>
-    <h2><a href="talks/AIQ-CSRC.pdf">Artificial Intelligence and Quantum Physics, CSRC, 2017 September</a></h2>
-     <!--
-    <h2><a href="talks/BornMachine.pdf">Generative Modeling: From Boltzmann Machines to Born Machines, Anqing, Anhui, 2017 Nov</a></h2>
-    <h2><a href="talks/NeuralRG-IOP.pdf">Neural Network Renormalization Group, IOP, Beijing, 2018 Jan</a></h2>
-    <h2><a href="talks/BornMachine-APS18.pdf">From Boltzmann Machines to Born Machines, Los Angeles, 2018 March</a></h2>
-    -->
-    <h2><a href="talks/BornMachine-Dresden.pdf">From Boltzmann Machines to Born Machines, MPI-PKS, 2018 June</a></h2>
-    <h2><a href="talks/NeuralRG-Dresden.pdf">Neural Network Renormalization Group, MPI-PKS, 2018 June</a></h2>
-    <h2><a href="talks/BornMachine-TNSAA.pdf">Tensor Networks for Generative Modeling, RIKEN R-CCS, 2018 Dec</a></h2>
-    <h2><a href="talks/MongeAmpere-Tinghua.pdf">Math and Physics of Deep Learning, Tsinghua, 2018 Dec</a></h2>
-    <h2><a href="talks/BornMachine-USTC.pdf">Born Machines: A fresh approach to quantum machine learning, USTC, 2019 Jan</a></h2>
-    <h2><a href="talks/QMPS-Tsinghua.pdf">Quantum Many-Body Computation on a Smaller Quantum Computer, Tsinghua IIIS, 2019 April</a></h2>
-    <h2><a href="talks/diffProgram-PI.pdf">Differentiable Programming Tensor Networks and Quantum Circuits, Perimeter Institute, 2019 July</a></h2>
-    <h2><a href="talks/NeuralCT-Tokyo.pdf">Neural Canonical Transformations, U. Tokyo, 2019 Oct</a></h2>
-    <h2><a href="talks/Yao-IOP.pdf">Yao.jl: Extensible, Efficient Framework for Quantum Algorithm Design, IOP, 2019 Dec</a></h2>
-    <h2><a href="talks/Coulomb_gas-TNSAA.pdf">Neural canonical transformation 
-for m* of electron gases, TNSAA online, 2022 Jan</a></h2>
-    <h2><a href="talks/GenerativeAI-RUC.pdf">Generative AI for Sciences, Gaoling School of Artificial Intelligence RUC, 2022 Nov </a></h2>
-    <h2><a href="talks/hydrogen-PI.pdf">A deep variational free energy approach to dense hydrogen, Perimeter Institute, 2023 June </a></h2>
-    <h2><a href="talks/deepvariationalfreenergy-SpaML23.pdf">Unlocking the Power of the Variational Free-Energy Principle with Deep Generative Models, Leipzig, 2023 Sep </a></h2>
-    <h2><a href="talks/CrystalFormer-Tokyo.pdf">CrystalFormer, Tokyo, 2024 March </a></h2>
-    <h2><a href="talks/NeuralCT-Dresden.pdf">Neural Canonical Transformations (classical and lattice vibration), Dresden, 2025 Feb</a></h2>
-    <h2><a href="talks/NeuralCT-Paris.pdf">Neural Canonical Transformations (fermions), Paris, 2025 December</a></h2>
-    <h2><a href="talks/CrystalFormer-ITP.pdf">CrystalFormer, ITP Beijing, 2025 December</a></h2>
-    <h2><a href="talks/minF-NJU.pdf">Free Energy Minimization: from Nature to LLM, Nanjing Univ, 2025 December</a></h2>
-  </body>
+    <main>
+        <div class="container-narrow">
+            <div id="markdown-content"></div>
+        </div>
+    </main>
 
+    <footer>
+        <p>&copy; Lei Wang. All rights reserved.</p>
+    </footer>
+
+    <!-- Markdown Loader -->
+    <script src="js/markdown-loader.js"></script>
+</body>
 </html>
