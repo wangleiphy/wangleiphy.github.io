@@ -86,6 +86,7 @@ header {
     font-weight: 700;
     margin-bottom: var(--spacing-md);
     letter-spacing: -0.5px;
+    color: white;
 }
 
 .hero h2 {
