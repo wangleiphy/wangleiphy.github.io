@@ -1,4 +1,8 @@
-# Lectures & Teaching
+# Teaching
+
+## 2026
+
+- [AI Agents for Research: A Practical Introduction, January 2026](lectures/AI_Agents_for_Research.pdf)
 
 ## 2025
 

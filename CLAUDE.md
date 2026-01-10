@@ -13,7 +13,7 @@ Personal academic website for Lei Wang (Computational Quantum Physicist, IOP CAS
 ```
 content/           ← Edit these to update website content
 ├── talks.md       → talks.html
-├── lectures.md    → lectures.html
+├── teaching.md    → teaching.html
 └── conferences.md → conferences.html
 
 index.html         ← Homepage (static HTML, not Markdown-driven)
