@@ -2,7 +2,7 @@
 
 ## 2026
 
-- [AI Agents for Research: A Practical Introduction, January 2026](lectures/AI_Agents_for_Research.pdf)
+- [AI Agents and Your Research, IOP, January 2026](teaching-post.html?p=ai-agent-research)
 
 ## 2025
 

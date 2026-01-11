@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+      <feOffset dx="1" dy="1" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="350" fill="#fafafa"/>
+
+  <!-- Layer 3: User-provided Contexts (Outer) -->
+  <rect x="50" y="40" width="400" height="250" rx="10" fill="#e8f4fd" stroke="#3498db" stroke-width="2" stroke-dasharray="5,5" filter="url(#shadow)"/>
+  <text x="70" y="70" fill="#2980b9" font-family="Arial, sans-serif" font-size="16" font-weight="bold">User-provided Contexts</text>
+  <text x="70" y="90" fill="#2980b9" font-family="Arial, sans-serif" font-size="12" font-style="italic">CLAUDE.md, Project Structure, Test Suites, Custom Instructions</text>
+
+  <!-- Layer 2: Agent System (Middle) -->
+  <rect x="90" y="110" width="320" height="150" rx="8" fill="#fdf2e9" stroke="#e67e22" stroke-width="2" filter="url(#shadow)"/>
+  <text x="110" y="140" fill="#d35400" font-family="Arial, sans-serif" font-size="15" font-weight="bold">Agent System</text>
+  <text x="110" y="160" fill="#d35400" font-family="Arial, sans-serif" font-size="11" font-style="italic">Tools, Memory, Planning, Feedback Loop</text>
+
+  <!-- Layer 1: LLM (Inner) -->
+  <rect x="130" y="180" width="240" height="60" rx="6" fill="#f4ecf7" stroke="#8e44ad" stroke-width="2" filter="url(#shadow)"/>
+  <text x="250" y="210" text-anchor="middle" fill="#6c3483" font-family="Arial, sans-serif" font-size="18" font-weight="bold">LLM</text>
+  <text x="250" y="230" text-anchor="middle" fill="#6c3483" font-family="Arial, sans-serif" font-size="12">Core Engine</text>
+
+</svg>

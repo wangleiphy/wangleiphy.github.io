@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Teaching Material by Lei Wang">
+    <title>Teaching - Lei Wang</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="css/modern-style.css" rel="stylesheet">
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <h1>Teaching</h1>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="teaching.html">All Materials</a>
+                <a href="talks.html">Talks</a>
+                <a href="conferences.html">Events</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-narrow">
+            <div id="markdown-content"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Lei Wang. All rights reserved.</p>
+    </footer>
+
+    <script>
+    // Teaching post viewer - renders markdown from ?p= query parameter
+    async function loadPost() {
+        const container = document.getElementById('markdown-content');
+        const params = new URLSearchParams(window.location.search);
+        const postName = params.get('p');
+
+        if (!postName) {
+            container.innerHTML = '<p>No material specified. <a href="teaching.html">View all materials</a></p>';
+            return;
+        }
+
+        // Wait for marked.js
+        let attempts = 0;
+        while (!window.marked && attempts < 50) {
+            await new Promise(resolve => setTimeout(resolve, 100));
+            attempts++;
+        }
+
+        if (!window.marked) {
+            container.innerHTML = '<p>Error: Markdown parser not loaded.</p>';
+            return;
+        }
+
+        try {
+            container.innerHTML = '<div class="loading">Loading content...</div>';
+
+            const response = await fetch(`content/teaching/${postName}.md`);
+            if (!response.ok) {
+                throw new Error(`Material not found: ${postName}`);
+            }
+
+            const markdown = await response.text();
+            const html = marked.parse(markdown);
+
+            container.style.opacity = '0';
+            container.innerHTML = html;
+
+            // Update page title from first h1
+            const h1 = container.querySelector('h1');
+            if (h1) {
+                document.title = h1.textContent + ' - Lei Wang';
+            }
+
+            // Make external links open in new tab
+            container.querySelectorAll('a[href^="http"]').forEach(link => {
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener noreferrer');
+            });
+
+            setTimeout(() => {
+                container.style.transition = 'opacity 0.3s ease';
+                container.style.opacity = '1';
+            }, 10);
+
+        } catch (error) {
+            container.innerHTML = `
+                <div class="error-message">
+                    <h2>Error Loading Material</h2>
+                    <p>${error.message}</p>
+                    <p><a href="teaching.html">← Back to all materials</a></p>
+                </div>
+            `;
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadPost);
+    } else {
+        loadPost();
+    }
+    </script>
+</body>
+</html>

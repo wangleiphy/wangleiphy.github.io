@@ -406,23 +406,83 @@ img {
 }
 
 /* Markdown Content Styling */
+#markdown-content {
+    font-size: 1.15rem;
+    line-height: 1.75;
+}
+
+#markdown-content p {
+    margin-bottom: var(--spacing-md);
+}
+
+#markdown-content h1 {
+    font-size: 2.25rem;
+    margin-bottom: var(--spacing-md);
+}
+
 #markdown-content h2 {
+    font-size: 1.75rem;
     margin-top: var(--spacing-lg);
     padding-bottom: var(--spacing-xs);
     border-bottom: 2px solid var(--border-color);
 }
 
 #markdown-content h3 {
+    font-size: 1.35rem;
     margin-top: var(--spacing-md);
     color: var(--text-color);
 }
 
-#markdown-content ul:not(.content-list) {
+#markdown-content ul:not(.content-list),
+#markdown-content ol {
     margin-left: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
 }
 
-#markdown-content ul:not(.content-list) li {
+#markdown-content ul:not(.content-list) li,
+#markdown-content ol li {
     margin-bottom: var(--spacing-xs);
+}
+
+#markdown-content code {
+    font-size: 1rem;
+    background: var(--bg-secondary);
+    padding: 0.15em 0.4em;
+    border-radius: var(--radius-sm);
+}
+
+#markdown-content pre {
+    background: var(--bg-secondary);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    margin-bottom: var(--spacing-md);
+}
+
+#markdown-content pre code {
+    background: none;
+    padding: 0;
+}
+
+#markdown-content blockquote {
+    border-left: 4px solid var(--secondary-color);
+    padding-left: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+#markdown-content img {
+    display: block;
+    margin: var(--spacing-lg) auto;
+    max-width: 100%;
+    border-radius: var(--radius-md);
+}
+
+#markdown-content hr {
+    border: none;
+    border-top: 2px solid var(--border-color);
+    margin: var(--spacing-lg) 0;
 }
 
 /* Supplementary Links Styling (links in brackets) */
