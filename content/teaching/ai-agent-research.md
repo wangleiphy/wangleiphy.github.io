@@ -50,52 +50,37 @@ The workflow:
 5. **Run** → Compute spectrum for q_max=50 in ~2 seconds
 6. **Visualize** → Generate the butterfly plot
 
-## Agile Development in the Agentic Era
+## Working Effectively with AI Agents
 
-Agile development encompasses several core engineering practices—documentation, automated testing, and version control—woven into iterative development cycles.[^1] In the era of AI agents, these practices have been even more enssential for your success, but for interesting new reasons.
+To get the most out of AI agents, you need both solid engineering practices and good interaction habits. Let me share what I've learned.
 
-### 1. Documentation — for Humans AND AI
+### Engineering Foundations
 
-I now maintain a `CLAUDE.md` file in every project. It serves as a memory file that tells the AI about the project structure, key files, common commands, and workflows. Over time, I add lessons learned from past mistakes, performance tips, and gotchas. The AI reads this at the start of each session. It's like onboarding a new collaborator—except this one has perfect recall.
+Agile development encompasses several core engineering practices—documentation, automated testing, and version control—woven into iterative development cycles.[^1] In the era of AI agents, these practices become even more essential, but for interesting new reasons.
 
-### 2. Version Control — Your Safety Net
+**Test-Driven Development (TDD)—verifications for AI.** Traditionally, TDD ensures code correctness by writing tests before implementation—catching bugs early and enabling confident refactoring. With AI agents, this practice becomes even more critical. AI-generated code is not automatically correct; the only way to trust it is to **test it**. Jinguo Liu has a [nice take on it](https://www.jinguo-group.science/vibe-coding/). You can build confidence and trust in AI incrementally: unit tests for functions, integration tests for modules, end-to-end tests for the full pipeline, and validation against known benchmarks.
 
-Git becomes even more essential when working with AI. The agent will make mistakes. It will sometimes break things. With frequent commits, you can easily roll back when something goes wrong. Branches let you explore experimental approaches without risk. And you always have a clear history of what changed and why.
+**Documentation — context for Humans AND AI.** In Agile, documentation keeps team members aligned on project structure, workflows, and conventions. With AI agents, documentation takes on a new role: it becomes the AI's long-term memory. Documents such as `CLAUDE.md` tells the AI agent about project goals, key files, gochas, and lessons learned. AI reads those files to provide contexts at run time. 
 
-### 3. Test-Driven Development
+**Version Control — Your Safety Net.** Git has always been essential for tracking changes and enabling collaboration. With AI agents, it becomes your safety net. The agent will make mistakes—it will sometimes break things. Frequent commits let you easily roll back when something goes wrong. Branches let you explore experimental approaches without risk. And you always have a clear history of what has changed and why. 
 
-Test-driven development is arguably the most important practices nowadays. Jinguo Liu has a [nice take on it](https://www.jinguo-group.science/vibe-coding/). AI-generated code is not automatically correct. The only way to trust it is to **test it**.
+### Interaction Habits
 
-Build confidence incrementally. Start with unit tests for individual functions, then integration tests for modules, then end-to-end tests for the full pipeline. Finally, compare against known benchmarks for validation. If it's not tested, it's not trusted.
+Beyond engineering practices, how you interact with AI agents matters.
 
-In modern terms: tests provide **verification** for the AI, while documentation and version control provide **context**. Both play a major role in guiding AI behavior.
+**From "?" to "!".** How we interact with AI is shifting. We typically start by asking questions—to gain understanding and context. But increasingly, we'll use imperative commands to have AI complete tasks directly.
 
-## Practical Tips
+**Build step by step.** Don't ask for everything at once. Start small, verify, then expand. Each step should be testable before moving to the next. Most AI agents have a "plan mode" that enforces this discipline.
 
-### From "?" to "!"
+**Learn from mistakes.** AI will make errors—this is expected. But don't just retry blindly. Diagnose first: ask "Why did this fail?", check assumptions about paths, formats, and types, then record lessons in your memory file. Watch for patterns—the AI improves over the session. Claude Code lets you store lessons in `CLAUDE.md`, creating persistent memory across sessions.
 
-How we interact with AI is shifting. We typically start by asking questions—to gain understanding and context. But increasingly, we'll use imperative commands to have AI complete tasks directly.
+### Building Your Personal System
 
-### Build Step by Step
-
-Don't ask for everything at once. Start small, verify, then expand. Each step should be testable before moving to the next. Most AI agents have a "plan mode" that enforces this discipline.
-
-### Learn from Mistakes
-
-AI will make errors—this is expected. But don't just retry blindly. Diagnose first:
-
-- Ask: "Why did this fail?"
-- Check assumptions: paths, formats, types
-- Record lessons in your memory file
-- Watch for patterns → the AI improves over the session
-
-Claude Code lets you store lessons in `CLAUDE.md`, creating persistent memory across sessions.
-
-As you develop your workflow, you'll accumulate tools, lessons, and skills. The system you interact with becomes personalized as illustrated in this figure.
+As you develop your workflow, you'll accumulate tools, lessons, and skills. The system you interact with becomes personalized:
 
 ![Three-layer architecture](three-layer.svg)
 
-Even though everyone is interacting with the same underlying LLM and agent, the power one can unleash depends on the the contexts and cultivation.
+Even though everyone is interacting with the same underlying LLM and agent, the power one can unleash depends on the contexts and cultivation you bring.
 
 ## The "Center of Mass" of Human-AI Collaboration
 
@@ -135,6 +120,6 @@ This could be a golden age for those who are theoretically oriented and imaginat
 
 **Acknowledgments**
 
-Thanks to Jinguo Liu, Kun Chen, Linfeng Zhang, Hiroshi Shinaoka, Qi Yang, and Ruisi Wang for discussions and sharing their perspectives.
+Thanks to Jinguo Liu, Kun Chen, Linfeng Zhang, Hiroshi Shinaoka, Qi Yang, Zhendong Cao, and Ruisi Wang for discussions and sharing their perspectives.
 
 [^1]: I first learned those things systematically in [Matthias Troyer's PT2 lecture](https://github.com/DanielMarchand/progtech2/tree/master/wiki). The [MIT Missing Semester](https://missing.csail.mit.edu/) is another excellent resource.
