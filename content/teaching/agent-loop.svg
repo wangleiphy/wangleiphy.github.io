@@ -62,10 +62,9 @@
   <line x1="220" y1="200" x2="185" y2="235" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arrowhead)"/>
   <line x1="430" y1="200" x2="465" y2="235" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arrowhead)"/>
 
-  <!-- The Agent Central Unit -->
+  <!-- The LLM Central Unit -->
   <rect x="215" y="115" width="220" height="90" rx="16" fill="url(#agentGradient)" filter="url(#softShadow)"/>
-  <text x="325" y="158" text-anchor="middle" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700">AGENT</text>
-  <text x="325" y="182" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="system-ui, -apple-system, sans-serif" font-size="12">LLM + Tools + Autonomy</text>
+  <text x="325" y="165" text-anchor="middle" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700">LLM</text>
 
   <!-- User Node (top) -->
   <rect x="265" y="25" width="120" height="50" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5" filter="url(#softShadow)"/>

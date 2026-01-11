@@ -83,6 +83,14 @@
                 link.setAttribute('rel', 'noopener noreferrer');
             });
 
+            // Fix image paths (relative to markdown file -> relative to HTML)
+            container.querySelectorAll('img').forEach(img => {
+                const src = img.getAttribute('src');
+                if (src && !src.startsWith('http') && !src.startsWith('/') && !src.startsWith('content/')) {
+                    img.setAttribute('src', `content/teaching/${src}`);
+                }
+            });
+
             setTimeout(() => {
                 container.style.transition = 'opacity 0.3s ease';
                 container.style.opacity = '1';

@@ -22,7 +22,7 @@ Agent = LLM + Tools + Memory + Autonomy
 
 The key is the loop: **Observe → Think → Act → Reflect → Repeat**. Unlike a chatbot that responds once and waits, an agent keeps going until the task is done.
 
-![Agent Loop](content/teaching/agent-loop.svg)
+![Agent Loop](agent-loop.svg)
 
 ## What Can Agents Do for Your Research?
 
@@ -95,7 +95,7 @@ Claude Code lets you store lessons in `CLAUDE.md`, creating persistent memory ac
 
 As you develop your workflow, you'll accumulate tools, lessons, and skills. The system you interact with becomes personalized:
 
-![Three-layer architecture](content/teaching/three-layer.svg)
+![Three-layer architecture](three-layer.svg)
 
 Even though everyone accesses the same underlying LLM, the effectiveness differs based on the context and scaffolding you build around it.
 
