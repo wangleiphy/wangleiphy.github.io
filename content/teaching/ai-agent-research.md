@@ -6,27 +6,29 @@
 
 ---
 
-AI agents are transforming research in unprecedented ways, especially in computational fields like physics and chemistry. The way we work—and what we focus on—is changing rapidly. In this note, I'll share some practical experiences and thoughts.
+AI agents are transforming scientific research in unprecedented ways. Among many things, vibe coding is particularly relevant to computational physics. The way we work—and what we should focus on—is changing rapidly. In this note, I'll share some practical experiences and thoughts with you. 
 
 ## From Chatbot to Agent
 
-A Large Language Model (LLM) is an autoregressive neural network that predicts the next token. Impressive, but limited. An **AI agent** is something more:
+A Large Language Model (LLM) is an autoregressive neural network that predicts the next token. Chatbots building on this techniques are impressive, but fundamentally limited when used in isolation. 
+
+An **AI agent** is something more:
 
 ```
 Agent = LLM + Tools + Memory + Autonomy
 ```
 
-- **Tools**: Interact with the environment—read/write files, run code, search the web
+- **Tools**: Interact with the environment—read/write files, run bash command and codes, search the web
 - **Memory**: Retain context within and across sessions
 - **Autonomy**: Observe outcomes, decide next steps, iterate toward a goal
 
-The key is the loop: **Observe → Think → Act → Reflect → Repeat**. Unlike a chatbot that responds once and waits, an agent keeps going until the task is done.
+The key is the loop: **Observe → Reason → Act → Reflect → Repeat**. Unlike a chatbot that responds once and waits, an agent keeps going until the task is done.
 
 ![Agent Loop](agent-loop.svg)
 
 ## What Can Agents Do for Your Research?
 
-Current AI agents (Claude Code, Cursor, etc.) are remarkably useful for computational research. With direct access to files and commands on your computer, there's no more copying and pasting between a chat window and your terminal.
+Current AI agents (Cursor, Claude Code, Codex, etc) are remarkably useful for computational research. With direct access to files and programs on your computer, there's no more copying and pasting in from you dialog with a chatbot.
 
 Here's what they can help with:
 
@@ -50,13 +52,9 @@ The workflow:
 
 ## Agile Development in the Agentic Era
 
-Agile development encompasses key engineering practices: documentation, automated testing, and version control, all woven into iterative development cycles.
+Agile development encompasses several core engineering practices—documentation, automated testing, and version control—woven into iterative development cycles.[^1] In the era of AI agents, these practices have been even more enssential for your success, but for interesting new reasons.
 
-These are classic software engineering topics. I first learned them systematically from [Matthias Troyer's PT2 lecture](https://github.com/DanielMarchand/progtech2/tree/master/wiki). The [MIT Missing Semester](https://missing.csail.mit.edu/) is another excellent resource.
-
-Working with AI agents has only reinforced how essential these practices are:
-
-### 1. Documentation — For Humans AND AI
+### 1. Documentation — for Humans AND AI
 
 I now maintain a `CLAUDE.md` file in every project. It serves as a memory file that tells the AI about the project structure, key files, common commands, and workflows. Over time, I add lessons learned from past mistakes, performance tips, and gotchas. The AI reads this at the start of each session. It's like onboarding a new collaborator—except this one has perfect recall.
 
@@ -66,7 +64,7 @@ Git becomes even more essential when working with AI. The agent will make mistak
 
 ### 3. Test-Driven Development
 
-This is the most important practice. Jinguo Liu has a [nice take on it](https://www.jinguo-group.science/vibe-coding/). AI-generated code is not automatically correct. The only way to trust it is to **test it**.
+Test-driven development is arguably the most important practices nowadays. Jinguo Liu has a [nice take on it](https://www.jinguo-group.science/vibe-coding/). AI-generated code is not automatically correct. The only way to trust it is to **test it**.
 
 Build confidence incrementally. Start with unit tests for individual functions, then integration tests for modules, then end-to-end tests for the full pipeline. Finally, compare against known benchmarks for validation. If it's not tested, it's not trusted.
 
@@ -93,32 +91,32 @@ AI will make errors—this is expected. But don't just retry blindly. Diagnose f
 
 Claude Code lets you store lessons in `CLAUDE.md`, creating persistent memory across sessions.
 
-As you develop your workflow, you'll accumulate tools, lessons, and skills. The system you interact with becomes personalized:
+As you develop your workflow, you'll accumulate tools, lessons, and skills. The system you interact with becomes personalized as illustrated in this figure.
 
 ![Three-layer architecture](three-layer.svg)
 
-Even though everyone accesses the same underlying LLM, the effectiveness differs based on the context and scaffolding you build around it.
+Even though everyone is interacting with the same underlying LLM and agent, the power one can unleash depends on the the contexts and cultivation.
 
-## The Center of Mass in Human-AI Collaboration
+## The "Center of Mass" of Human-AI Collaboration
 
-There used to be the "10,000-hour rule"—the idea that mastery requires 10,000 hours of deliberate practice. Now that AI can shortcut parts of that learning curve, are those hours still necessary? A thought-provoking essay, ["The Disappearing Apprentice"](https://mp.weixin.qq.com/s/XySs_pdwA7Nd7Sw28qujWA), argues that AI is sawing off the very ladder that traditionally led from novice to expert. When companies hire only senior people plus AI, the path for juniors to accumulate tacit knowledge disappears.
-
-Here's what I've observed: in human-AI collaboration, there's a "center of mass" problem.
+In human-AI collaboration, the "center of mass" (CoM) can be different depending on the the experiences of the user.
 
 1. **Novices** tend to let the AI lead. The center of knowledge sits with the AI, and the human follows.
 2. **Experienced researchers** maintain initiative. They direct the AI, and the center of mass stays with the human.
 
-My suggestion: actively explore the boundaries of what AI can and cannot do. This is a moving target as the technology evolves, but you need a working mental model. Think of tasks in [three categories](https://youtu.be/iF9iV4xponk?t=1069):
+This may causes a problem. There used to be the "10,000-hour rule"—the idea that mastery requires 10,000 hours of deliberate practice. If one always use AI to shortcut parts of that learning curve, how can one gain experience, intuitive, and therefore, taste?  Or, are those hours still necessary in the age of AI agents ? A thought-provoking essay, ["The Disappearing Apprentice"](https://mp.weixin.qq.com/s/XySs_pdwA7Nd7Sw28qujWA), argues that AI is sawing off the very ladder that traditionally led from novice to expert. 
+
+Boris Cherny, the creator of Claude Code has made two suggestions on using it. The first one, sup rinsing enough, it is actually not using it to write code. But askying Claude Code to explain stuff to you. His second advices is to actively explore the boundaries of what AI can and cannot do. This is a moving target as the technology evolves, but you need a working mental model. Think of tasks in [three categories](https://youtu.be/iF9iV4xponk?t=1069):
 
 - **Delegate entirely**: routine tasks where AI handles everything
 - **Collaborate**: tasks where you and AI work together
 - **Lead yourself**: tasks too nuanced or novel for AI to handle alone
 
-Knowing about the boundaries greatly unleashes the power of you and AI!
+Knowing about the limitation of the state of the art AI agent, In this way you can freely control the CoM of human-AI collaboration.
 
 ## The Future
 
-Computational research is changing rapidly. The future is hard to predict, but here are some trends I see emerging:
+Computational research is changing rapidly. Here are some trends I see emerging:
 
 **"Code is cheap. Show me the idea."** The bottleneck in computational science is shifting from implementation to ideas and understanding. Code is becoming commodity—anyone can generate it. Hamming's timeless advice about problem selection becomes even more critical. As he said, "The purpose of computing is insight, not numbers." What matters now is what he emphasized in ["You and Your Research"](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html):
 
@@ -127,7 +125,7 @@ Computational research is changing rapidly. The future is hard to predict, but h
 - Understanding why it matters
 - Interpreting the results
 
-This could be a golden age for those who are theoretically oriented and imaginative.
+This could be a golden age for those who are theoretically oriented and imaginative. In this sense, AI agents do not replace scientific thinking—they expose it.
 
 **The terminal is back.** The terminal is the oldest way we interact with computers, and it's making a comeback. AI agents work naturally in terminal environments, where text commands flow seamlessly between human and machine.
 
@@ -138,3 +136,5 @@ This could be a golden age for those who are theoretically oriented and imaginat
 **Acknowledgments**
 
 Thanks to Jinguo Liu, Kun Chen, Linfeng Zhang, Hiroshi Shinaoka, Qi Yang, and Ruisi Wang for discussions and sharing their perspectives.
+
+[^1]: I first learned those things systematically in [Matthias Troyer's PT2 lecture](https://github.com/DanielMarchand/progtech2/tree/master/wiki). The [MIT Missing Semester](https://missing.csail.mit.edu/) is another excellent resource.
