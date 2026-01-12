@@ -71,19 +71,19 @@ Agile development encompasses several core engineering practices—documentation
 
 Understanding the working mechanism and limitations of autoregressive LLMs also tells us about good habits for using AI agents. 
 
-**From "?" to "!".**  You can always start by asking questions—either to gain understanding yourself or to provide AI agents the necessary contexts. This step also aligns and calibrates the AI system: If things go wrong it may already show up in this step. Some AI agents have an explicit "Ask" mode, use them. Once you are confident about youself and the agent, you can send imperative commands to let AI complete tasks. 
+**From "?" to "!".**  You can always start by asking questions—either to gain understanding yourself or to provide AI agents the necessary context. This step also aligns and calibrates the AI system: if things go wrong, it may already show up in this step. Some AI agents have an explicit "Ask" mode—use it. Once you are confident about yourself and the agent, you can send imperative commands to let AI complete tasks. 
 
 **Build step by step.** Don't ask for everything at once. Start small, verify, then expand. Each step should be testable before moving to the next. Most AI agents have a "Plan" mode that enforces this discipline.
 
-**Learn from mistakes.** AI will make errors—this is expected. But don't just retry blindly. Diagnose first: ask "Why did this fail?", check assumptions about paths, formats, and types, then record lessons in the documentations. In this way, AI can improve over time with persistent memory across sessions. 
+**Learn from mistakes.** AI will make errors—this is expected. But don't just retry blindly. Diagnose first: ask "Why did this fail?", check assumptions about paths, formats, and types, then record lessons in the documentation. In this way, AI can improve over time with persistent memory across sessions. 
 
 ### Cultivating Your Personal AI
 
-As you collaborate more and more with AI, you'll accumulate tools, skills, and lessons. The system you interact with becomes more and more personalized. 
+As you collaborate more and more with AI, you'll accumulate tools, skills, and lessons. The system you interact with becomes more and more personalized.  
 
 ![Three-layer architecture](three-layer.svg)
 
-The figure above shows a three-layer architecture. At the core sits the **LLM**—the same foundation model everyone uses. Wrapped around it is the **Agent System** (Cursor, Claude Code, Codex, etc.), which provides tools, memory, planning, and the feedback loop. The outermost layer is **your context**—the CLAUDE.md files, documentation, custom skills, and accumulated lessons that make the system uniquely yours. Even though everyone shares the same inner layers, the power you can unleash depends on your cultivation.
+The figure shows a three-layer architecture. At the core sits the **LLM**—the same foundation model everyone uses. Wrapped around it is the **Agent System** (Cursor, Claude Code, Codex, etc.), which provides tools, memory, planning, and the feedback loop. The outermost layer is **your context**—the CLAUDE.md files, documentation, custom skills, and accumulated lessons that make the system uniquely yours. Even though everyone shares the same inner layers, the power you can unleash depends on your cultivation.
 
 ## The "Center of Mass" of Human-AI Collaboration
 
@@ -92,32 +92,32 @@ In human-AI collaboration, the "center of mass" (CoM) can be different depending
 1. **Novices** tend to let the AI lead. The center of knowledge sits with the AI, and the human follows.
 2. **Experienced researchers** maintain initiative. They direct the AI, and the center of mass stays with the human.
 
-This may cause a problem. The "10,000-hour rule" says that mastery requires 10,000 hours of deliberate practice. If novices always use AI to short circuit the learning cycle, how can one gain experience, and therefore, intuition and taste on the subject? Or, are those hours still necessary in the age of AI agents? A thoughtful essay, ["The Disappearing Apprentice"](https://mp.weixin.qq.com/s/XySs_pdwA7Nd7Sw28qujWA), argues that AI may block the pathway from novices to experts.
+This may cause a problem. The "10,000-hour rule" says that mastery requires 10,000 hours of deliberate practice. If novices always use AI to short-circuit the learning cycle, how can one gain experience, and therefore, intuition and taste? Or, are those hours still necessary in the age of AI agents? A thoughtful essay, ["The Disappearing Apprentice"](https://mp.weixin.qq.com/s/XySs_pdwA7Nd7Sw28qujWA), argues that AI may block the pathway from novices to experts.
 
-The following [two suggestions](https://youtu.be/iF9iV4xponk?t=1069) by Boris Cherny, the creator of Claude Code about how to use it may be relevant here. His first suggestion, surprisingly enough, it is actually not using Claude Code to write code. Instead, he suggests asking Claude Code to explain things to you. His second advice is to actively explore the boundaries of what AI can and cannot do[^2]. Then, thinking of tasks in three categories:
+The following [two suggestions](https://youtu.be/iF9iV4xponk?t=1069) by Boris Cherny, the creator of Claude Code, on how to use the product may be relevant here. His first suggestion, surprisingly, is actually not to use Claude Code to write code. Instead, he suggests asking Claude Code to explain things to you. His second advice is to actively explore the boundaries of what AI can and cannot do[^2]. With that, you can divide tasks into three categories:
 
 - **Delegate entirely**: routine tasks where AI handles everything
 - **Collaborate**: tasks where you and AI work together
 - **Lead yourself**: tasks too nuanced or novel for AI to handle alone
 
-It takes practice to gain the wisdom to know the difference between these. But only in this way can you freely control the CoM of human-AI collaboration and maximize productivity. 
+It takes practice to gain the wisdom to know the difference between these categories. But only in this way can you freely control the CoM of human-AI collaboration and maximize your productivity. Perhaps that is where the next generation will spend their 10,000 hours! 
 
 ## The Change
 
 Computational research is changing rapidly. Here are some trends I and friends are observing:
 
-**"Code is cheap. Show me the idea."** The bottleneck in computational science is shifting from implementation to ideas and understanding. Code is becoming commodity—anyone can generate it. Hamming's timeless advice about problem selection becomes even more critical. As he said, "The purpose of computing is insight, not numbers." What matters now is what he emphasized in ["You and Your Research"](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html):
+**"Code is cheap. Show me the idea."** The bottleneck in computational science is shifting from implementation to ideas and understanding. Code is becoming commodity—anyone can generate it. Hamming's timeless advice about human insights and problem selection becomes even more critical. As he said, "The purpose of computing is insight, not numbers." What matters now is what he emphasized in ["You and Your Research"](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html):
 
 - Asking the right questions
 - Knowing what to compute
 - Understanding why it matters
-- Interpreting the results with a clear physical picture
+- Interpreting the results of computation
 
 This could be a golden age for those who are theoretically oriented and imaginative. Your analytical skills can provide valuable guidance to AI agents. In this way, AI agents do not replace rigorous scientific thinking—they expose it.
 
-**The terminal is back.** The terminal is the oldest way humans interact with computers, and it's making a comeback. AI agents work naturally in terminal environments, where text commands flow seamlessly between human and machine. With direct access to files and programs in the terminal, there's no more copying and pasting in from your dialog with a chatbot. 
+**The terminal is back.** The terminal is the oldest way humans interact with computers, and it's making a comeback. AI agents work naturally in terminal environments, where text commands flow seamlessly between human and machine. With direct access to files and programs in the terminal, there's no more copying and pasting from your dialog with a chatbot. 
 
-**Two-language problem is solved.** We've long faced the "two-language problem" in scientific computing: a slow dynamic language for prototyping, a fast static language for production. Now, as Andrej Karpathy [put it](https://x.com/karpathy/status/1617979122625712128), "The hottest new programming language is English." With natural language becoming the front-end that compiles down to optimized low-level code, the "two-language problem" is essentially solved. This actually has great implications about [what to learn and build](https://zenn.dev/h_shinaoka/articles/fcba75dc2e00a0) with current technology. 
+**The two-language problem is solved.** We've long faced the "two-language problem" in scientific computing: a slow dynamic language for prototyping, a fast static language for production. Now, as Andrej Karpathy [put it](https://x.com/karpathy/status/1617979122625712128), "The hottest new programming language is English." With natural language becoming the front-end that compiles down to optimized low-level code, the "two-language problem" is essentially solved. This has great implications for [what to learn and build](https://zenn.dev/h_shinaoka/articles/fcba75dc2e00a0) with current technology. 
 
 
 
@@ -127,4 +127,4 @@ Thanks to Jinguo Liu, Kun Chen, Linfeng Zhang, Hiroshi Shinaoka, Qi Yang, Zhendo
 
 [^1]: I first learned those things systematically in [Matthias Troyer's PT2 lecture](https://github.com/DanielMarchand/progtech2/tree/master/wiki). The [MIT Missing Semester](https://missing.csail.mit.edu/) is another excellent resource.
 
-[^2]: This is certainly a moving target as the technology evolves rapidly, but one always needs to maintain a mental model about the limitation of the state of the art AI agent. 
+[^2]: This is certainly a moving target as the technology evolves rapidly, but one always needs to maintain a mental model about the limitations of state-of-the-art AI agents. 
