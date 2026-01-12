@@ -10,25 +10,29 @@ AI agents are transforming scientific research in unprecedented ways. Among many
 
 ## From Chatbot to Agent
 
-A Large Language Model (LLM) is an autoregressive neural network that predicts the next token. Chatbots building on this techniques are impressive, but fundamentally limited when used in isolation. 
+A Large Language Model (LLM) is an autoregressive neural network. Given a sequence of tokens (words or subwords), it predicts the probability distribution of the next token, samples from that distribution, appends the new token, and repeats. This simple loop generates coherent text one token at a time.
 
-An **AI agent** is something more:
+The model's predictions depend entirely on its **context**: the tokens it can "see" when making each prediction. This context has a finite size (the "context window"—ranging from thousands to millions of tokens in modern models). Everything the model knows about your task must fit in this window: your question, relevant background, previous conversation turns, and any documents you've provided. Crucially, **the model has no persistent state**—each API call starts fresh, and it cannot verify whether its outputs are correct. It simply predicts what tokens are likely to come next, based on patterns learned during training.
+
+An **AI agent** extends the raw LLM to address these limitations:
 
 ```
 Agent = LLM + Tools + Memory + Autonomy
 ```
 
-- **Tools**: Interact with the environment—read/write files, run bash command and codes, search the web
-- **Memory**: Retain context within and across sessions
+- **Tools**: Interact with the environment—read/write files, execute code, search the web, run tests
+- **Memory**: Manage context within sessions and persist knowledge across sessions
 - **Autonomy**: Observe outcomes, decide next steps, iterate toward a goal
 
-The key is the loop: **Observe → Reason → Act → Reflect → Repeat**. Unlike a chatbot that responds once and waits, an agent keeps going until the task is done.
+The key is the **reflection cycle**: **Observe → Reason → Act → Verify → Repeat**.
 
 ![Agent Loop](agent-loop.svg)
 
+Unlike a chatbot that responds once and waits, an agent operates in a loop. After taking an action, it observes the result (Did the code run? Did the test pass? What error appeared?), reasons about what to do next, and continues. This is where **verification** enters: the agent can check its own work by running tests, examining outputs, or comparing against expected results. **Context management** also becomes crucial—the agent must decide what information to keep in its limited context window: the current goal, relevant code, error messages, and lessons learned. This observe-act-verify loop, combined with careful context management, is what transforms a one-shot predictor into something that can actually *get things done*.
+
 ## What Can Agents Do for Your Research?
 
-Current AI agents (Cursor, Claude Code, Codex, etc) are remarkably useful for computational research. With direct access to files and programs on your computer, there's no more copying and pasting in from you dialog with a chatbot.
+Current AI agents (Cursor, Claude Code, Codex, etc) are remarkably useful for computational research. 
 
 Here's what they can help with:
 
@@ -41,7 +45,7 @@ Here's what they can help with:
 
 Let's see this in action. We ask an AI agent to compute the [Hofstadter Butterfly](https://en.wikipedia.org/wiki/Hofstadter%27s_butterfly)—the fractal energy spectrum of electrons on a 2D lattice in a magnetic field.
 
-The workflow:
+The workflow demostrates:
 
 1. **Read** → Understand the Harper equation from Hofstadter's 1976 paper
 2. **Plan** → Design the parameter sweep over magnetic flux values
@@ -49,6 +53,7 @@ The workflow:
 4. **Test** → Run 9 unit tests, all passing
 5. **Run** → Compute spectrum for q_max=50 in ~2 seconds
 6. **Visualize** → Generate the butterfly plot
+7. **Summarize**  → Write a report about its findings.
 
 ## Working Effectively with AI Agents
 
@@ -74,7 +79,7 @@ Beyond engineering practices, how you interact with AI agents matters.
 
 **Learn from mistakes.** AI will make errors—this is expected. But don't just retry blindly. Diagnose first: ask "Why did this fail?", check assumptions about paths, formats, and types, then record lessons in your memory file. Watch for patterns—the AI improves over the session. Claude Code lets you store lessons in `CLAUDE.md`, creating persistent memory across sessions.
 
-### Building Your Personal System
+### Cultivating Your Personal AI
 
 As you develop your workflow, you'll accumulate tools, lessons, and skills. The system you interact with becomes personalized:
 
@@ -89,19 +94,19 @@ In human-AI collaboration, the "center of mass" (CoM) can be different depending
 1. **Novices** tend to let the AI lead. The center of knowledge sits with the AI, and the human follows.
 2. **Experienced researchers** maintain initiative. They direct the AI, and the center of mass stays with the human.
 
-This may causes a problem. There used to be the "10,000-hour rule"—the idea that mastery requires 10,000 hours of deliberate practice. If one always use AI to shortcut parts of that learning curve, how can one gain experience, intuitive, and therefore, taste?  Or, are those hours still necessary in the age of AI agents ? A thought-provoking essay, ["The Disappearing Apprentice"](https://mp.weixin.qq.com/s/XySs_pdwA7Nd7Sw28qujWA), argues that AI is sawing off the very ladder that traditionally led from novice to expert. 
+This may cause a problem. The "10,000-hour rule" says that mastery requires 10,000 hours of deliberate practice. If novices always use AI to short circuit the learning cycle, how can one gain experience, and therefore, intution and taste on the subject?  Or, are those hours still necessary in the age of AI agents ? A thoughtfu essay, ["The Disappearing Apprentice"](https://mp.weixin.qq.com/s/XySs_pdwA7Nd7Sw28qujWA), argues that AI may block the  pathway from novice to experts.
 
-Boris Cherny, the creator of Claude Code has made two suggestions on using it. The first one, sup rinsing enough, it is actually not using it to write code. But askying Claude Code to explain stuff to you. His second advices is to actively explore the boundaries of what AI can and cannot do. This is a moving target as the technology evolves, but you need a working mental model. Think of tasks in [three categories](https://youtu.be/iF9iV4xponk?t=1069):
+The following [two suggestions](https://youtu.be/iF9iV4xponk?t=1069) by Boris Cherny, the creator of Claude Code about how to use it maybe relevant here. His first suggestion, suprisingly enough, it is actually not using Claude Code to write code. Instead, he suggest to ask Claude Code to explain things to you. His second advice is to actively explore the boundaries of what AI can and can not do[^2]. Then, thinking of tasks in three categories:
 
 - **Delegate entirely**: routine tasks where AI handles everything
 - **Collaborate**: tasks where you and AI work together
 - **Lead yourself**: tasks too nuanced or novel for AI to handle alone
 
-Knowing about the limitation of the state of the art AI agent, In this way you can freely control the CoM of human-AI collaboration.
+It takes practice to gain the wisdom to know the difference of those things. But, only in this way you can freely control the CoM of human-AI collaboration, therefore to maximize the productivity. 
 
-## The Future
+## The Change
 
-Computational research is changing rapidly. Here are some trends I see emerging:
+Computational research is changing rapidly. Here are some trends I and friends are observing:
 
 **"Code is cheap. Show me the idea."** The bottleneck in computational science is shifting from implementation to ideas and understanding. Code is becoming commodity—anyone can generate it. Hamming's timeless advice about problem selection becomes even more critical. As he said, "The purpose of computing is insight, not numbers." What matters now is what he emphasized in ["You and Your Research"](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html):
 
@@ -112,14 +117,16 @@ Computational research is changing rapidly. Here are some trends I see emerging:
 
 This could be a golden age for those who are theoretically oriented and imaginative. In this sense, AI agents do not replace scientific thinking—they expose it.
 
-**The terminal is back.** The terminal is the oldest way we interact with computers, and it's making a comeback. AI agents work naturally in terminal environments, where text commands flow seamlessly between human and machine.
+**The terminal is back.** The terminal is the oldest way humans interact with computers, and it's making a comeback. AI agents work naturally in terminal environments, where text commands flow seamlessly between human and machine. With direct access to files and programs in the terminal, there's no more copying and pasting in from your dialog with a chatbot. 
 
-**Natural language as the most dynamic programming language.** We've long faced the "two-language problem" in scientific computing: a slow dynamic language for prototyping, a fast static language for production. Natural language is becoming the front-end that compiles down to optimized low-level code. As Andrej Karpathy [put it](https://x.com/karpathy/status/1617979122625712128), "The hottest new programming language is English."
+**Two-language problem is solved.** We've long faced the "two-language problem" in scientific computing: a slow dynamic language for prototyping, a fast static language for production. Now, as Andrej Karpathy [put it](https://x.com/karpathy/status/1617979122625712128), "The hottest new programming language is English." With natural language becoming the front-end that compiles down to optimized low-level code, the "two-language problem" is enssentially solved. This actually has great implications about [what to learn and build](https://zenn.dev/h_shinaoka/articles/fcba75dc2e00a0) with current technology. 
 
----
+
 
 **Acknowledgments**
 
 Thanks to Jinguo Liu, Kun Chen, Linfeng Zhang, Hiroshi Shinaoka, Qi Yang, Zhendong Cao, and Ruisi Wang for discussions and sharing their perspectives.
 
 [^1]: I first learned those things systematically in [Matthias Troyer's PT2 lecture](https://github.com/DanielMarchand/progtech2/tree/master/wiki). The [MIT Missing Semester](https://missing.csail.mit.edu/) is another excellent resource.
+
+[^2]: This is certainly a moving target as the technology evolves rapidly, but one always needs to maintain a mental model about the limitation of the state of the art AI agent. 
