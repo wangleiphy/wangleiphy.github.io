@@ -11,15 +11,18 @@ Personal academic website for Lei Wang (Computational Quantum Physicist, IOP CAS
 **Markdown-driven content system**: Content lives in Markdown files (`content/*.md`) and is rendered client-side using marked.js. No build step required.
 
 ```
-content/           ← Edit these to update website content
-├── talks.md       → talks.html
-├── teaching.md    → teaching.html
-└── conferences.md → conferences.html
+content/                  ← Edit these to update website content
+├── talks.md              → talks.html
+├── teaching.md           → teaching.html (list of materials)
+├── teaching/             ← Individual teaching materials (.md)
+│   └── ai-agent-research.md
+└── conferences.md        → conferences.html
 
-index.html         ← Homepage (static HTML, not Markdown-driven)
+teaching-post.html        ← Viewer for content/teaching/*.md (via ?p= parameter)
+index.html                ← Homepage (static HTML, not Markdown-driven)
 
-js/markdown-loader.js  ← Fetches and renders Markdown via marked.js
-css/modern-style.css   ← All styling (uses CSS variables in :root)
+js/markdown-loader.js     ← Fetches and renders Markdown via marked.js
+css/modern-style.css      ← All styling (uses CSS variables in :root)
 ```
 
 The `MarkdownLoader` class auto-detects the current page, fetches the corresponding Markdown file, and renders it into the `#markdown-content` container.
@@ -40,6 +43,15 @@ python -m http.server 8000
 - [Talk Title, Location, Date](talks/filename.pdf)
 - [Lecture Title](lectures/slides.pdf) ([notes](lectures/notes.pdf), [video](https://url))
 ```
+
+## Teaching Materials (Markdown-based)
+
+To add a new markdown-based teaching material:
+1. Create `content/teaching/my-topic.md`
+2. Add entry in `content/teaching.md`:
+   ```markdown
+   - [Topic Title](teaching-post.html?p=my-topic)
+   ```
 
 ## Deployment
 

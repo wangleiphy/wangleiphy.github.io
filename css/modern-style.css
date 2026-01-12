@@ -421,16 +421,22 @@ img {
 }
 
 #markdown-content h2 {
-    font-size: 1.75rem;
-    margin-top: var(--spacing-lg);
-    padding-bottom: var(--spacing-xs);
-    border-bottom: 2px solid var(--border-color);
+    font-size: 1.85rem;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+    padding-left: 0.75rem;
+    border-left: 4px solid var(--secondary-color);
 }
 
 #markdown-content h3 {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
+    font-weight: 600;
     margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
     color: var(--text-color);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--border-color);
 }
 
 #markdown-content ul:not(.content-list),
@@ -552,5 +558,40 @@ img {
 
 #markdown-content .content-list li a:not(:first-of-type)[href$=".pdf"]:before {
     content: "📄 ";
+}
+
+/* Footnote Styling */
+#markdown-content .footnotes {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+#markdown-content .footnotes ol {
+    margin-left: var(--spacing-md);
+}
+
+#markdown-content .footnotes li {
+    margin-bottom: var(--spacing-sm);
+}
+
+#markdown-content sup a,
+#markdown-content .footnote-ref a {
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 0.2em;
+}
+
+#markdown-content sup a:hover,
+#markdown-content .footnote-ref a:hover {
+    color: var(--accent-color);
+}
+
+#markdown-content .footnote-backref {
+    text-decoration: none;
+    margin-left: 0.3em;
 }
 

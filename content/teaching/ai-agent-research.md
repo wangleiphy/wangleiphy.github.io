@@ -63,19 +63,19 @@ Agile development encompasses several core engineering practices—documentation
 
 **Test-Driven Development (TDD)—verifications for AI.** Traditionally, TDD ensures code correctness by writing tests before implementation—catching bugs early and enabling confident refactoring. With AI agents, this practice becomes even more critical. AI-generated code is not automatically correct; the only way to trust it is to **test it**. Jinguo Liu has a [nice take on it](https://www.jinguo-group.science/vibe-coding/). You can build confidence and trust in AI incrementally: unit tests for functions, integration tests for modules, end-to-end tests for the full pipeline, and validation against known benchmarks.
 
-**Documentation — context for Humans AND AI.** In Agile, documentation keeps team members aligned on project structure, workflows, and conventions. With AI agents, documentation takes on a new role: it becomes the AI's long-term memory. Documents such as `CLAUDE.md` tell the AI agent about project goals, key files, gotchas, and lessons learned. AI reads those files to provide contexts at run time. 
+**Documentation — context for Humans AND AI.** In Agile, documentation keeps team members aligned on project structure, workflows, and conventions. With AI agents, documentation takes on a new role: it becomes the AI's long-term memory. Documents such as `CLAUDE.md` tell the AI agent about project goals, key files, and gotchas. AI reads those files to provide contexts in future sessions. 
 
-**Version Control — Your Safety Net.** Git has always been essential for tracking changes and enabling collaboration. With AI agents, it becomes your safety net. The agent will make mistakes—it will sometimes break things. Frequent commits let you easily roll back when something goes wrong. Branches let you explore experimental approaches without risk. And you always have a clear history of what has changed and why. 
+**Version Control — Your Safety Net.** Git has always been essential for tracking changes and enabling collaboration. With AI agents, it becomes your safety net. The agent will make mistakes—it will sometimes break things. Frequent commits let you easily roll back when something goes wrong. Branches let you explore experimental approaches without risk. Via version control, both you and AI always have a clear history of what has changed and why. 
 
 ### Interaction Habits
 
-Understanding the working mechanism and limitations of autoregressive LLMs also tells us about good habits when using AI agents. 
+Understanding the working mechanism and limitations of autoregressive LLMs also tells us about good habits for using AI agents. 
 
-**From "?" to "!".**  You can always start by asking questions—either to gain understanding yourself or to provide AI agents the necessary contexts. This step also aligns and calibrates the AI system: If things go wrong it may already show up in this step. Some AI agents have an explicit "Ask" mode, use them. Once you are confident, you can send imperative commands to let AI complete tasks. 
+**From "?" to "!".**  You can always start by asking questions—either to gain understanding yourself or to provide AI agents the necessary contexts. This step also aligns and calibrates the AI system: If things go wrong it may already show up in this step. Some AI agents have an explicit "Ask" mode, use them. Once you are confident about youself and the agent, you can send imperative commands to let AI complete tasks. 
 
 **Build step by step.** Don't ask for everything at once. Start small, verify, then expand. Each step should be testable before moving to the next. Most AI agents have a "Plan" mode that enforces this discipline.
 
-**Learn from mistakes.** AI will make errors—this is expected. But don't just retry blindly. Diagnose first: ask "Why did this fail?", check assumptions about paths, formats, and types, then record lessons in your memory file. Watch for patterns—the AI improves over the session. Claude Code lets you store lessons in `CLAUDE.md`, creating persistent memory across sessions.
+**Learn from mistakes.** AI will make errors—this is expected. But don't just retry blindly. Diagnose first: ask "Why did this fail?", check assumptions about paths, formats, and types, then record lessons in the documentations. In this way, AI can improve over time with persistent memory across sessions. 
 
 ### Cultivating Your Personal AI
 

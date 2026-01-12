@@ -9,6 +9,8 @@
     <link href="css/modern-style.css" rel="stylesheet">
     <!-- Marked.js for Markdown parsing -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Footnote support for marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked-footnote/dist/index.umd.min.js"></script>
 </head>
 <body>
     <header>
@@ -55,6 +57,11 @@
         if (!window.marked) {
             container.innerHTML = '<p>Error: Markdown parser not loaded.</p>';
             return;
+        }
+
+        // Configure marked with footnote extension
+        if (window.markedFootnote) {
+            marked.use(markedFootnote());
         }
 
         try {
