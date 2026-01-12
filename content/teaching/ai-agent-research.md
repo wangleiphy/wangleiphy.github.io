@@ -6,13 +6,13 @@
 
 ---
 
-AI agents are transforming scientific research in unprecedented ways. Among many things, vibe coding is particularly relevant to computational physics. The way we work—and what we should focus on—is changing rapidly. In this note, I'll share some practical experiences and thoughts with you. 
+AI agents are transforming scientific research in unprecedented ways. Among many things, vibe coding is particularly relevant to computational physics. The way we work—and what we should focus on—is changing rapidly. In this note, I'll share some practical experiences and thoughts with you: graduate students at IOP. 
 
 ## From Chatbot to Agent
 
-A Large Language Model (LLM) is an autoregressive neural network. Given a sequence of tokens (words or subwords), it predicts the probability distribution of the next token, samples from that distribution, appends the new token, and repeats. This simple loop generates coherent text one token at a time.
+A Large Language Model (LLM) is an autoregressive neural network. Given a sequence of tokens, it predicts the probability distribution of the next token, samples from that distribution, appends the new token, and repeats. This simple loop generates coherent text one token at a time.
 
-The model's predictions depend entirely on its **context**: the tokens it can "see" when making each prediction. This context has a finite size (the "context window"—ranging from thousands to millions of tokens in modern models). Everything the model knows about your task must fit in this window: your question, relevant background, previous conversation turns, and any documents you've provided. Crucially, **the model has no persistent state**—each API call starts fresh, and it cannot verify whether its outputs are correct. It simply predicts what tokens are likely to come next, based on patterns learned during training.
+The model's predictions depend entirely on its **context**: the tokens it can "see" when making each prediction. This context has a finite size (the "context window"—ranging from thousands to millions of tokens in modern models). Everything the model knows about your task must fit in this window: your question, relevant background, previous conversation turns, and any documents you've provided. Crucially, **the LLM has no persistent state**—each conversation starts fresh, and it cannot verify whether its outputs are correct. It simply predicts what tokens are likely to come next, based on patterns learned during training.
 
 An **AI agent** extends the raw LLM to address these limitations:
 
@@ -28,13 +28,11 @@ The key is the **reflection cycle**: **Observe → Reason → Act → Verify →
 
 ![Agent Loop](agent-loop.svg)
 
-Unlike a chatbot that responds once and waits, an agent operates in a loop. After taking an action, it observes the result (Did the code run? Did the test pass? What error appeared?), reasons about what to do next, and continues. This is where **verification** enters: the agent can check its own work by running tests, examining outputs, or comparing against expected results. **Context management** also becomes crucial—the agent must decide what information to keep in its limited context window: the current goal, relevant code, error messages, and lessons learned. This observe-act-verify loop, combined with careful context management, is what transforms a one-shot predictor into something that can actually *get things done*.
+Unlike a chatbot that responds once and waits, an agent operates in a loop. After taking an action, it observes the result (Did the code run? Did the test pass? What error appeared?), reasons about what to do next, and continues. This is where **verification** enters: the agent can check its own work by running tests, examining outputs, or comparing against expected results. **Context management** also becomes crucial—the agent must decide what information to keep in its limited context window: the current goal, execution plan, relevant code, error messages, and lessons learned. This observe-act-verify loop, combined with careful context management, is what transforms a one-shot predictor into something that can actually *get things done*.
 
 ## What Can Agents Do for Your Research?
 
-Current AI agents (Cursor, Claude Code, Codex, etc) are remarkably useful for computational research. 
-
-Here's what they can help with:
+Current AI agents (Cursor, Claude Code, Codex, etc) are remarkably useful for computational research. Here's what they can help with:
 
 - **Onboarding**: Read papers, code, and documentation to quickly understand a topic
 - **Brainstorming**: Explore different approaches and catch edge cases you might miss
@@ -45,7 +43,7 @@ Here's what they can help with:
 
 Let's see this in action. We ask an AI agent to compute the [Hofstadter Butterfly](https://en.wikipedia.org/wiki/Hofstadter%27s_butterfly)—the fractal energy spectrum of electrons on a 2D lattice in a magnetic field.
 
-The workflow demostrates:
+The workflow demonstrates:
 
 1. **Read** → Understand the Harper equation from Hofstadter's 1976 paper
 2. **Plan** → Design the parameter sweep over magnetic flux values
@@ -57,52 +55,52 @@ The workflow demostrates:
 
 ## Working Effectively with AI Agents
 
-To get the most out of AI agents, you need both solid engineering practices and good interaction habits. Let me share what I've learned.
+To get the most out of AI agents, some engineering practices are useful. Then, you can build up good interaction habits. Let me share what I've learned.
 
-### Engineering Foundations
+### Engineering Practices
 
 Agile development encompasses several core engineering practices—documentation, automated testing, and version control—woven into iterative development cycles.[^1] In the era of AI agents, these practices become even more essential, but for interesting new reasons.
 
 **Test-Driven Development (TDD)—verifications for AI.** Traditionally, TDD ensures code correctness by writing tests before implementation—catching bugs early and enabling confident refactoring. With AI agents, this practice becomes even more critical. AI-generated code is not automatically correct; the only way to trust it is to **test it**. Jinguo Liu has a [nice take on it](https://www.jinguo-group.science/vibe-coding/). You can build confidence and trust in AI incrementally: unit tests for functions, integration tests for modules, end-to-end tests for the full pipeline, and validation against known benchmarks.
 
-**Documentation — context for Humans AND AI.** In Agile, documentation keeps team members aligned on project structure, workflows, and conventions. With AI agents, documentation takes on a new role: it becomes the AI's long-term memory. Documents such as `CLAUDE.md` tells the AI agent about project goals, key files, gochas, and lessons learned. AI reads those files to provide contexts at run time. 
+**Documentation — context for Humans AND AI.** In Agile, documentation keeps team members aligned on project structure, workflows, and conventions. With AI agents, documentation takes on a new role: it becomes the AI's long-term memory. Documents such as `CLAUDE.md` tell the AI agent about project goals, key files, gotchas, and lessons learned. AI reads those files to provide contexts at run time. 
 
 **Version Control — Your Safety Net.** Git has always been essential for tracking changes and enabling collaboration. With AI agents, it becomes your safety net. The agent will make mistakes—it will sometimes break things. Frequent commits let you easily roll back when something goes wrong. Branches let you explore experimental approaches without risk. And you always have a clear history of what has changed and why. 
 
 ### Interaction Habits
 
-Beyond engineering practices, how you interact with AI agents matters.
+Understanding the working mechanism and limitations of autoregressive LLMs also tells us about good habits when using AI agents. 
 
-**From "?" to "!".** How we interact with AI is shifting. We typically start by asking questions—to gain understanding and context. But increasingly, we'll use imperative commands to have AI complete tasks directly.
+**From "?" to "!".**  You can always start by asking questions—either to gain understanding yourself or to provide AI agents the necessary contexts. This step also aligns and calibrates the AI system: If things go wrong it may already show up in this step. Some AI agents have an explicit "Ask" mode, use them. Once you are confident, you can send imperative commands to let AI complete tasks. 
 
-**Build step by step.** Don't ask for everything at once. Start small, verify, then expand. Each step should be testable before moving to the next. Most AI agents have a "plan mode" that enforces this discipline.
+**Build step by step.** Don't ask for everything at once. Start small, verify, then expand. Each step should be testable before moving to the next. Most AI agents have a "Plan" mode that enforces this discipline.
 
 **Learn from mistakes.** AI will make errors—this is expected. But don't just retry blindly. Diagnose first: ask "Why did this fail?", check assumptions about paths, formats, and types, then record lessons in your memory file. Watch for patterns—the AI improves over the session. Claude Code lets you store lessons in `CLAUDE.md`, creating persistent memory across sessions.
 
 ### Cultivating Your Personal AI
 
-As you develop your workflow, you'll accumulate tools, lessons, and skills. The system you interact with becomes personalized:
+As you collaborate more and more with AI, you'll accumulate tools, skills, and lessons. The system you interact with becomes more and more personalized. 
 
 ![Three-layer architecture](three-layer.svg)
 
-Even though everyone is interacting with the same underlying LLM and agent, the power one can unleash depends on the contexts and cultivation you bring.
+The figure above shows a three-layer architecture. At the core sits the **LLM**—the same foundation model everyone uses. Wrapped around it is the **Agent System** (Cursor, Claude Code, Codex, etc.), which provides tools, memory, planning, and the feedback loop. The outermost layer is **your context**—the CLAUDE.md files, documentation, custom skills, and accumulated lessons that make the system uniquely yours. Even though everyone shares the same inner layers, the power you can unleash depends on your cultivation.
 
 ## The "Center of Mass" of Human-AI Collaboration
 
-In human-AI collaboration, the "center of mass" (CoM) can be different depending on the the experiences of the user.
+In human-AI collaboration, the "center of mass" (CoM) can be different depending on the experiences of the user.
 
 1. **Novices** tend to let the AI lead. The center of knowledge sits with the AI, and the human follows.
 2. **Experienced researchers** maintain initiative. They direct the AI, and the center of mass stays with the human.
 
-This may cause a problem. The "10,000-hour rule" says that mastery requires 10,000 hours of deliberate practice. If novices always use AI to short circuit the learning cycle, how can one gain experience, and therefore, intution and taste on the subject?  Or, are those hours still necessary in the age of AI agents ? A thoughtfu essay, ["The Disappearing Apprentice"](https://mp.weixin.qq.com/s/XySs_pdwA7Nd7Sw28qujWA), argues that AI may block the  pathway from novice to experts.
+This may cause a problem. The "10,000-hour rule" says that mastery requires 10,000 hours of deliberate practice. If novices always use AI to short circuit the learning cycle, how can one gain experience, and therefore, intuition and taste on the subject? Or, are those hours still necessary in the age of AI agents? A thoughtful essay, ["The Disappearing Apprentice"](https://mp.weixin.qq.com/s/XySs_pdwA7Nd7Sw28qujWA), argues that AI may block the pathway from novices to experts.
 
-The following [two suggestions](https://youtu.be/iF9iV4xponk?t=1069) by Boris Cherny, the creator of Claude Code about how to use it maybe relevant here. His first suggestion, suprisingly enough, it is actually not using Claude Code to write code. Instead, he suggest to ask Claude Code to explain things to you. His second advice is to actively explore the boundaries of what AI can and can not do[^2]. Then, thinking of tasks in three categories:
+The following [two suggestions](https://youtu.be/iF9iV4xponk?t=1069) by Boris Cherny, the creator of Claude Code about how to use it may be relevant here. His first suggestion, surprisingly enough, it is actually not using Claude Code to write code. Instead, he suggests asking Claude Code to explain things to you. His second advice is to actively explore the boundaries of what AI can and cannot do[^2]. Then, thinking of tasks in three categories:
 
 - **Delegate entirely**: routine tasks where AI handles everything
 - **Collaborate**: tasks where you and AI work together
 - **Lead yourself**: tasks too nuanced or novel for AI to handle alone
 
-It takes practice to gain the wisdom to know the difference of those things. But, only in this way you can freely control the CoM of human-AI collaboration, therefore to maximize the productivity. 
+It takes practice to gain the wisdom to know the difference between these. But only in this way can you freely control the CoM of human-AI collaboration and maximize productivity. 
 
 ## The Change
 
@@ -113,13 +111,13 @@ Computational research is changing rapidly. Here are some trends I and friends a
 - Asking the right questions
 - Knowing what to compute
 - Understanding why it matters
-- Interpreting the results
+- Interpreting the results with a clear physical picture
 
-This could be a golden age for those who are theoretically oriented and imaginative. In this sense, AI agents do not replace scientific thinking—they expose it.
+This could be a golden age for those who are theoretically oriented and imaginative. Your analytical skills can provide valuable guidance to AI agents. In this way, AI agents do not replace rigorous scientific thinking—they expose it.
 
 **The terminal is back.** The terminal is the oldest way humans interact with computers, and it's making a comeback. AI agents work naturally in terminal environments, where text commands flow seamlessly between human and machine. With direct access to files and programs in the terminal, there's no more copying and pasting in from your dialog with a chatbot. 
 
-**Two-language problem is solved.** We've long faced the "two-language problem" in scientific computing: a slow dynamic language for prototyping, a fast static language for production. Now, as Andrej Karpathy [put it](https://x.com/karpathy/status/1617979122625712128), "The hottest new programming language is English." With natural language becoming the front-end that compiles down to optimized low-level code, the "two-language problem" is enssentially solved. This actually has great implications about [what to learn and build](https://zenn.dev/h_shinaoka/articles/fcba75dc2e00a0) with current technology. 
+**Two-language problem is solved.** We've long faced the "two-language problem" in scientific computing: a slow dynamic language for prototyping, a fast static language for production. Now, as Andrej Karpathy [put it](https://x.com/karpathy/status/1617979122625712128), "The hottest new programming language is English." With natural language becoming the front-end that compiles down to optimized low-level code, the "two-language problem" is essentially solved. This actually has great implications about [what to learn and build](https://zenn.dev/h_shinaoka/articles/fcba75dc2e00a0) with current technology. 
 
 
 
