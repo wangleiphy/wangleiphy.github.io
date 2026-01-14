@@ -6,13 +6,13 @@
 
 ---
 
-AI agents are transforming scientific research in unprecedented ways. Among many things, vibe coding is particularly relevant to computational physics. The way we work—and what we should focus on—is changing rapidly. In this note, I'll share some practical experiences and thoughts with you: graduate students at IOP. 
+AI agents are transforming scientific research in unprecedented ways. Among many things, vibe coding is particularly relevant to computational physics research. The way we work—and what we should focus on—is changing rapidly. In this note, I'll share some practical experiences and thoughts with you: graduate students at IOP. 
 
 ## From Chatbot to Agent
 
-A Large Language Model (LLM) is an autoregressive neural network. Given a sequence of tokens, it predicts the probability distribution of the next token, samples from that distribution, appends the new token, and repeats. This simple loop generates coherent text one token at a time.
+A Large Language Model (LLM) is an autoregressive generative model for text tokens. Given a sequence of tokens, it predicts the probability distribution of the next token, samples from that distribution, appends the new token, and repeats. This simple loop generates coherent text one token at a time.
 
-The model's predictions depend entirely on its **context**: the tokens it can "see" when making each prediction. This context has a finite size (the "context window"—ranging from thousands to millions of tokens in modern models). Everything the model knows about your task must fit in this window: your question, relevant background, previous conversation turns, and any documents you've provided. Crucially, **the LLM has no persistent state**—each conversation starts fresh, and it cannot verify whether its outputs are correct. It simply predicts what tokens are likely to come next, based on patterns learned during training.
+Mathematically, this amounts to sampling the response $y$ from the conditional distribution $p_{\theta}(y|x)$. Here, $\theta$ denotes the model parameters—there can be hundreds of billions of them, encoding a [blurry compression](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web) of the training data. What you can control is the **context** $x$: those tokens the model can "see" when making the prediction. This context has a finite size (the "context window"—ranging from thousands to millions of tokens in modern models). Everything the model knows about your task must fit in this window: your question, relevant background, previous conversation turns, and any documents you've provided. Crucially, **the LLM has no persistent state**—each conversation starts fresh, and it cannot verify whether its outputs are correct. It simply predicts what tokens are likely to come next, based on patterns learned during training.
 
 An **AI agent** extends the raw LLM to address these limitations:
 
@@ -125,6 +125,6 @@ This could be a golden age for those who are theoretically oriented and imaginat
 
 Thanks to Jinguo Liu, Kun Chen, Linfeng Zhang, Hiroshi Shinaoka, Qi Yang, Zhendong Cao, and Ruisi Wang for discussions and sharing their perspectives.
 
-[^1]: I first learned those things systematically in [Matthias Troyer's PT2 lecture](https://github.com/DanielMarchand/progtech2/tree/master/wiki). The [MIT Missing Semester](https://missing.csail.mit.edu/) is another excellent resource.
+[^1]: I first learned those things systematically in [Matthias Troyer's PT2 lecture](https://github.com/DanielMarchand/progtech2/tree/master/wiki). The [MIT Missing Semester](https://missing.csail.mit.edu/) is another excellent resource. 
 
-[^2]: This is certainly a moving target as the technology evolves rapidly, but one always needs to maintain a mental model about the limitations of state-of-the-art AI agents. 
+[^2]: This is certainly a moving target as the technology evolves rapidly. But it is always good to maintain a mental model about the ability of frontier AI agents. 
