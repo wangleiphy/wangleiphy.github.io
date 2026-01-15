@@ -51,7 +51,7 @@ The workflow demonstrates:
 4. **Test** → Run 9 unit tests, all passing
 5. **Run** → Compute spectrum for q_max=50 in ~2 seconds
 6. **Visualize** → Generate the butterfly plot
-7. **Summarize**  → Write a report about its findings.
+7. **Summarize** → Write a report about its findings.
 
 ## Working Effectively with AI Agents
 
@@ -66,6 +66,8 @@ Agile development encompasses several core engineering practices—documentation
 **Documentation — context for Humans AND AI.** In Agile, documentation keeps team members aligned on project structure, workflows, and conventions. With AI agents, documentation takes on a new role: it becomes the AI's long-term memory. Documents such as `CLAUDE.md` tell the AI agent about project goals, key files, and gotchas. AI reads those files to provide contexts in future sessions. 
 
 **Version Control — Your Safety Net.** Git has always been essential for tracking changes and enabling collaboration. With AI agents, it becomes your safety net. The agent will make mistakes—it will sometimes break things. Frequent commits let you easily roll back when something goes wrong. Branches let you explore experimental approaches without risk. Via version control, both you and AI always have a clear history of what has changed and why. 
+
+Overall, I find the advice in the timeless [The Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052) are still (perhaps even more) relevant with AI agents. 
 
 ### Interaction Habits
 
