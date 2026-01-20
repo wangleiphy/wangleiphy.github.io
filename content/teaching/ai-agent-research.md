@@ -36,10 +36,10 @@ Current AI agents (Cursor, Claude Code, Codex, etc) are remarkably useful for co
 
 - **Onboarding**: Read papers, code, and documentation to quickly understand a topic
 - **Brainstorming**: Explore different approaches and catch edge cases you might miss
-- **Prototyping**: Write code fast, iterate until it works
+- **Prototyping**: Setup programming environment, write code fast, iterate until it works
 - **Monitoring**: Babysit jobs, parse logs, restart on failure
-- **Analysis**: Compute statistics, generate publication-quality figures
-- **Reporting**: Summarize research logs, draft progress reports
+- **Analysis**: Compute statistics, analyse results via different angles
+- **Reporting**: Summarize research logs 
 
 Let's see this in action. We ask an AI agent to compute the [Hofstadter Butterfly](https://en.wikipedia.org/wiki/Hofstadter%27s_butterfly)—the fractal energy spectrum of electrons on a 2D lattice in a magnetic field.
 
