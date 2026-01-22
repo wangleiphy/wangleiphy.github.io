@@ -6,7 +6,7 @@
 
 ## 2025
 
-- <a id="aaa-hangzhou2025"></a>[Autoregressive model: alphabets, actions, and atoms, Hangzhou, April 2025](lectures/AAA-hangzhou2025.pdf) ([recording](https://www.koushare.com/live/details/41976))
+- <span id="aaa-hangzhou2025"></span>[Autoregressive model: alphabets, actions, and atoms, Hangzhou, April 2025](lectures/AAA-hangzhou2025.pdf) ([recording](https://www.koushare.com/live/details/41976))
 
 ## 2023
 
