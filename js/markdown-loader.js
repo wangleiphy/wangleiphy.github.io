@@ -72,15 +72,17 @@ class MarkdownLoader {
             setTimeout(() => {
                 container.style.transition = 'opacity 0.3s ease';
                 container.style.opacity = '1';
+            }, 10);
 
-                // Scroll to anchor if present in URL (after content is visible)
-                if (window.location.hash) {
+            // Scroll to anchor if present in URL (after fade-in completes)
+            if (window.location.hash) {
+                setTimeout(() => {
                     const target = document.querySelector(window.location.hash);
                     if (target) {
                         target.scrollIntoView({ behavior: 'smooth' });
                     }
-                }
-            }, 10);
+                }, 350);
+            }
 
         } catch (error) {
             console.error('Error loading markdown:', error);
