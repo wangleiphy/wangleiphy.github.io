@@ -10,7 +10,7 @@ AI agents are transforming scientific research in unprecedented ways. Among many
 
 ## From Chatbot to Agent
 
-A Large Language Model (LLM) is an autoregressive generative model for text tokens. Given a sequence of tokens, it predicts the probability distribution of the next token, samples from that distribution, appends the new token, and repeats. This simple loop generates coherent text one token at a time.
+A Large Language Model (LLM) is an autoregressive generative model for text tokens. Given a sequence of tokens, it predicts the probability distribution of the next token, samples from that distribution, appends the new token, and repeats. This simple loop generates coherent text one token at a time. For more on autoregressive generative models, see [this tutorial](https://wangleiphy.github.io/teaching.html#aaa-hangzhou2025).
 
 Mathematically, this amounts to sampling the response $y$ from the conditional distribution $p_{\theta}(y|x)$. Here, $\theta$ denotes the model parameters—there can be hundreds of billions of them, encoding a [blurry compression](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web) of the training data. What you can control is the **context** $x$: those tokens the model can "see" when making the prediction. This context has a finite size (the "context window"—ranging from thousands to millions of tokens in modern models). Everything the model knows about your task must fit in this window: your question, relevant background, previous conversation turns, and any documents you've provided. Crucially, **the LLM has no persistent state**—each conversation starts fresh, and it cannot verify whether its outputs are correct. It simply predicts what tokens are likely to come next, based on patterns learned during training.
 
@@ -28,7 +28,7 @@ The key is the **reflection cycle**: **Observe → Reason → Act → Verify →
 
 ![Agent Loop](agent-loop.svg)
 
-Unlike a chatbot that responds once and waits, an agent operates in a loop. After taking an action, it observes the result (Did the code run? Did the test pass? What error appeared?), reasons about what to do next, and continues. This is where **verification** enters: the agent can check its own work by running tests, examining outputs, or comparing against expected results. **Context management** also becomes crucial—the agent must decide what information to keep in its limited context window: the current goal, execution plan, relevant code, error messages, and lessons learned. This observe-act-verify loop, combined with careful context management, is what transforms a one-shot predictor into something that can actually *get things done*.
+Unlike a chatbot that responds once and waits, an agent operates in a loop. After taking an action, it observes the result (Did the code run? Did the test pass? What error appeared?), reasons about what to do next, and continues. This is where **verification** enters: the agent can check its own work by running tests, examining outputs, or comparing against expected results. **Context management** also becomes crucial—the agent must decide what information to keep in its limited context window: the current goal, execution plan, relevant code, error messages, and lessons learned. This observe-act-verify loop, combined with careful context management, is what transforms a one-shot predictor into something that can actually *get things done*. To see how this agent loop is implemented in practice, check out [learn-claude-code](https://github.com/shareAI-lab/learn-claude-code), which builds an agent from scratch in ~50 lines of code.
 
 ## What Can Agents Do for Your Research?
 
@@ -75,7 +75,7 @@ Understanding the working mechanism and limitations of autoregressive LLMs also 
 
 **From "?" to "!".**  You can always start by asking questions—either to gain understanding yourself or to provide AI agents the necessary context. This step also aligns and calibrates the AI system: if things go wrong, it may already show up in this step. Some AI agents have an explicit "Ask" mode—use it. Once you are confident about yourself and the agent, you can send imperative commands to let AI complete tasks. 
 
-**Build step by step.** Don't ask for everything at once. Start small, verify, then expand. Each step should be testable before moving to the next. Most AI agents have a "Plan" mode that enforces this discipline.
+**Build step by step.** Start small, verify, then expand—each step testable before moving to the next. This mirrors [Chain-of-Thought (CoT)](https://arxiv.org/abs/2201.11903) prompting, where "think step by step" improves LLM reasoning. Agent-level planning is the same principle at larger scale. 
 
 **Learn from mistakes.** AI will make errors—this is expected. But don't just retry blindly. Diagnose first: ask "Why did this fail?", check assumptions about paths, formats, and types, then record lessons in the documentation. In this way, AI can improve over time with persistent memory across sessions. 
 
