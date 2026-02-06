@@ -108,7 +108,7 @@ It takes practice to gain the wisdom to know the difference between these catego
 
 Computational research is changing rapidly. Here are some trends I and friends are observing:
 
-**"Code is cheap. Show me the idea."** The bottleneck in computational science is shifting from implementation to ideas and understanding. Code is becoming commodity—anyone can generate it. Hamming's timeless advice about human insights and problem selection becomes even more critical. As he said, "The purpose of computing is insight, not numbers." What matters now is what he emphasized in ["You and Your Research"](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html):
+**"Code is cheap. Show me the idea."** The bottleneck in computational science is shifting from implementation to ideas and understanding. Code is becoming commodity—anyone can generate it. One of my favourite quotes by Richard Hamming is "The purpose of computing is insight, not numbers." His timeless advice about human insights becomes even more critical now. What matters is what he emphasized in ["You and Your Research"](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html):
 
 - Asking the right questions
 - Knowing what to compute
