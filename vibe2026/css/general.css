@@ -1,0 +1,59 @@
+html,body {
+    background-color: #FCFCFF;
+    font-size: 16px;
+    color: #000000;
+    font-family: Helvetica
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 14px;
+    font-family: Helvetica
+}
+
+a {
+    font-size: 14px;
+    color: #00688B;
+    font-family: Helvetica;
+    text-decoration: none;
+}
+
+a.menu {
+    color: #00688B;
+    font-family: Helvetica;
+    margin-left: 35px;
+    margin-right: 35px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+p.speakers {
+    line-height: 150%;
+    display: block;
+    width: 580px;
+    font-family: Helvetica;
+    text-align: left;
+}
+
+table.program {
+    width: 700px;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+    font-family: Helvetica;
+}
+
+table.program th {
+    background-color: #00688B;
+    color: white;
+    padding: 8px 12px;
+}
+
+table.program td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+table.program tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
