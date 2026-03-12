@@ -57,3 +57,30 @@ table.program td {
 table.program tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
+#markdown-content {
+    font-size: 14px;
+    font-family: Helvetica;
+    text-align: justify;
+}
+
+#markdown-content p {
+    text-indent: 2em;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+#markdown-content ul {
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+#markdown-content h3 {
+    text-indent: 0;
+}
+
+#markdown-content a {
+    font-size: 14px;
+    color: #00688B;
+    text-decoration: none;
+}
