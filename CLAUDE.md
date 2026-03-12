@@ -8,7 +8,7 @@ Personal academic website for Lei Wang (Computational Quantum Physicist, IOP CAS
 
 ## Architecture
 
-**Markdown-driven content system**: Content lives in Markdown files (`content/*.md`) and is rendered client-side using marked.js. No build step required.
+#### **Markdown-driven content system**: Content lives in Markdown files (`content/*.md`) and is rendered client-side using marked.js. No build step required.
 
 ```
 content/                  ← Edit these to update website content
@@ -56,3 +56,13 @@ To add a new markdown-based teaching material:
 ## Deployment
 
 Edit content → commit → push. GitHub Pages deploys automatically (~1 minute).
+
+## Editing Content Guidelines
+
+**Be EXTREMELY conservative when editing teaching materials and academic content.**
+
+- **Preserve specific details**: Never remove concrete numbers, specific examples, or technical details unless explicitly asked
+- **Keep original wording**: If asked to "fix typos" or "combine citations," only change what's broken—don't rephrase or "improve"
+- **Verify all changes**: Re-read edits to ensure no valuable information was removed
+- **When in doubt, ask first**: If the scope of changes is unclear, ask for clarification rather than making assumptions
+- **Respect the author's voice**: Academic writing has deliberate structure and phrasing—preserve it
