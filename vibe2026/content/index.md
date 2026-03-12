@@ -15,6 +15,6 @@
 
 [Lei Wang](mailto:wanglei@iphy.ac.cn) (Institute of Physics, CAS)
 
-Chen Fang (Institute of Physics, CAS)
+[Chen Fang](mailto:cfang@iphy.ac.cn) (Institute of Physics, CAS)
 
-Shixin Zhang (Institute of Physics, CAS)
+[Shixin Zhang](mailto:shixinzhang@iphy.ac.cn) (Institute of Physics, CAS)
