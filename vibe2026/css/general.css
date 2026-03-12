@@ -58,6 +58,12 @@ table.program tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
+table.program tr.break {
+    background-color: #e8e8e8 !important;
+    color: #888;
+    font-style: italic;
+}
+
 #markdown-content {
     font-size: 14px;
     font-family: Helvetica;
