@@ -65,8 +65,11 @@
         localStorage.setItem('vibe2026_voted', JSON.stringify(voted));
       }
 
-      // AI screening via Gemini Flash
-      const GEMINI_KEY = 'AIzaSyCENf_O298LVIj28wrZ0_voL93PXbjEZiE';
+      // AI screening via Gemini Flash — key loaded from Firebase (not in source code)
+      var GEMINI_KEY = '';
+      db.ref('config/geminiKey').once('value', function(snap) {
+        GEMINI_KEY = snap.val() || '';
+      });
 
       function showStatus(msg, color) {
         var el = document.getElementById('status-msg');
