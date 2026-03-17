@@ -90,3 +90,89 @@ table.program tr.break {
     color: #00688B;
     text-decoration: none;
 }
+
+/* Topics page */
+.topics-container {
+    width: 580px;
+    text-align: left;
+}
+
+.topic-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.topic-form input {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-family: Helvetica;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.topic-form input:focus {
+    border-color: #00688B;
+}
+
+.topic-form button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: Helvetica;
+    background-color: #00688B;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.topic-form button:hover {
+    background-color: #005570;
+}
+
+.topic-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.vote-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: #999;
+    font-size: 12px;
+    min-width: 44px;
+    line-height: 1.2;
+}
+
+.vote-btn:hover {
+    border-color: #00688B;
+    color: #00688B;
+}
+
+.vote-btn.active {
+    border-color: #00688B;
+    color: #00688B;
+    background-color: #e8f4f8;
+}
+
+.vote-count {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.topic-text {
+    font-size: 14px;
+    font-family: Helvetica;
+    flex: 1;
+}

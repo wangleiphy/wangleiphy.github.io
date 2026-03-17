@@ -1,0 +1,133 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentic AI in Action!</title>
+    <link href="css/general.css" rel="stylesheet" type="text/css"/>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  </head>
+  <body>
+    <center>
+      <h1> Agentic AI in Action! </h1>
+      <h3> Institute of Physics, CAS, Beijing, April 14, 2026 </h3>
+      <hr>
+      <a class="menu" href="index.html">Home</a>
+      <a class="menu" href="program.html">Program</a>
+      <a class="menu" href="topics.html">Vote</a>
+      <br><br>
+
+      <div class="topics-container">
+        <h2>Discussion Topics</h2>
+        <p style="color:#666; margin-bottom:20px;">Submit a one-sentence topic and upvote the ones you'd like to discuss.</p>
+
+        <form id="topic-form" class="topic-form">
+          <input type="text" id="topic-input" placeholder="Type a one-sentence discussion topic..." maxlength="200" required />
+          <button type="submit">Submit</button>
+        </form>
+
+        <div id="topics-list"></div>
+        <p id="empty-msg" style="color:#999; font-style:italic; display:none;">No topics yet. Be the first to submit one!</p>
+      </div>
+
+    </center>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBoXa3ZxUSvtcU7DSQey_Lq5DzETVTA2-o",
+        authDomain: "vibe2026-c118f.firebaseapp.com",
+        databaseURL: "https://vibe2026-c118f-default-rtdb.firebaseio.com",
+        projectId: "vibe2026-c118f",
+        storageBucket: "vibe2026-c118f.firebasestorage.app",
+        messagingSenderId: "760367604455",
+        appId: "1:760367604455:web:50fa1fbcd91981bb93f842"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.database();
+      const topicsRef = db.ref('topics');
+
+      // Track which topics this user has voted on
+      function getVoted() {
+        try {
+          return JSON.parse(localStorage.getItem('vibe2026_voted') || '{}');
+        } catch { return {}; }
+      }
+      function setVoted(id) {
+        const voted = getVoted();
+        voted[id] = true;
+        localStorage.setItem('vibe2026_voted', JSON.stringify(voted));
+      }
+      function unsetVoted(id) {
+        const voted = getVoted();
+        delete voted[id];
+        localStorage.setItem('vibe2026_voted', JSON.stringify(voted));
+      }
+
+      // Submit a new topic
+      document.getElementById('topic-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const input = document.getElementById('topic-input');
+        const text = input.value.trim();
+        if (!text) return;
+
+        topicsRef.push({
+          text: text,
+          votes: 1,
+          time: Date.now()
+        }).then(function(ref) {
+          setVoted(ref.key);
+        });
+        input.value = '';
+      });
+
+      // Toggle vote
+      function toggleVote(id, currentVotes) {
+        const voted = getVoted();
+        if (voted[id]) {
+          topicsRef.child(id).update({ votes: Math.max(0, currentVotes - 1) });
+          unsetVoted(id);
+        } else {
+          topicsRef.child(id).update({ votes: currentVotes + 1 });
+          setVoted(id);
+        }
+      }
+
+      // Render topics in real time
+      topicsRef.on('value', function(snapshot) {
+        const list = document.getElementById('topics-list');
+        const emptyMsg = document.getElementById('empty-msg');
+        const data = snapshot.val();
+
+        if (!data) {
+          list.innerHTML = '';
+          emptyMsg.style.display = 'block';
+          return;
+        }
+        emptyMsg.style.display = 'none';
+
+        // Sort by votes descending, then by time ascending
+        const topics = Object.entries(data)
+          .map(([id, t]) => ({ id, ...t }))
+          .sort((a, b) => b.votes - a.votes || a.time - b.time);
+
+        const voted = getVoted();
+        list.innerHTML = topics.map(function(t) {
+          const active = voted[t.id] ? ' active' : '';
+          return '<div class="topic-item">' +
+            '<button class="vote-btn' + active + '" onclick="toggleVote(\'' + t.id + '\',' + t.votes + ')" title="' + (voted[t.id] ? 'Remove vote' : 'Upvote') + '">' +
+            '▲ <span class="vote-count">' + t.votes + '</span>' +
+            '</button>' +
+            '<span class="topic-text">' + escapeHtml(t.text) + '</span>' +
+            '</div>';
+        }).join('');
+      });
+
+      function escapeHtml(text) {
+        var div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      }
+    </script>
+  </body>
+</html>
