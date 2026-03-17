@@ -94,6 +94,7 @@ table.program tr.break {
 /* Topics page */
 .topics-container {
     width: 580px;
+    margin: 0 auto;
     text-align: left;
 }
 
