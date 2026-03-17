@@ -79,34 +79,51 @@
         setTimeout(function() { el.style.display = 'none'; }, 4000);
       }
 
-      async function screenTopic(text) {
+      // AI screening + dedup in one call
+      // Returns: {action: "new"} | {action: "merge", id: "..."} | {action: "reject"}
+      async function screenAndDedup(text, existingTopics) {
+        var topicsList = existingTopics.map(function(t, i) {
+          return (i + 1) + '. [' + t.id + '] ' + t.text;
+        }).join('\n');
+
+        var prompt =
+          'You are a STRICT content moderator for a scientific workshop called "Agentic AI in Action". ' +
+          'The workshop covers ONLY: AI agents for science, LLMs, coding assistants (Cursor, Claude Code, Copilot), ' +
+          'computational physics, automated research, vibe coding, AI for experiments, machine learning for science.\n\n' +
+          'A user submitted this discussion topic:\n"' + text + '"\n\n';
+
+        if (topicsList) {
+          prompt += 'Existing topics:\n' + topicsList + '\n\n';
+        }
+
+        prompt +=
+          'Rules:\n' +
+          '- If the topic is casual chat, greetings, personal questions, jokes, or NOT about AI/coding/science/research, reply: reject\n' +
+          '- If the topic is similar in meaning to an existing topic (even in a different language), reply: merge [id]\n' +
+          '  where [id] is the ID in brackets of the matching existing topic.\n' +
+          '- If the topic is relevant AND not similar to any existing topic, reply: new\n' +
+          'Reply with ONLY one of: "reject", "merge [id]", or "new".';
+
         var resp = await fetch(
           'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' + GEMINI_KEY,
           {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              contents: [{ parts: [{ text:
-                'You are a STRICT content moderator for a scientific workshop called "Agentic AI in Action". ' +
-                'The workshop covers ONLY these topics: AI agents for science, LLMs, coding assistants (Cursor, Claude Code, Copilot), ' +
-                'computational physics, automated research, vibe coding, AI for experiments, machine learning for science.\n\n' +
-                'A user submitted this discussion topic:\n"' + text + '"\n\n' +
-                'Rules:\n' +
-                '- Reply "no" if the topic is casual chat, greetings, personal questions, jokes, or off-topic.\n' +
-                '- Reply "no" if the topic does NOT clearly relate to AI, coding, science, or research.\n' +
-                '- Reply "no" for things like "what day is it", "who are you", "hello", weather, food, sports, etc.\n' +
-                '- Reply "yes" ONLY if the topic is a genuine discussion question about AI, coding tools, or scientific research.\n' +
-                'Reply with ONLY "yes" or "no".'
-              }] }]
-            })
+            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
           }
         );
         var data = await resp.json();
         var answer = data.candidates[0].content.parts[0].text.trim().toLowerCase();
-        return answer.startsWith('yes');
+
+        if (answer.startsWith('reject')) return { action: 'reject' };
+        if (answer.startsWith('merge')) {
+          var match = answer.match(/merge\s+\[?([^\]\s]+)\]?/);
+          if (match) return { action: 'merge', id: match[1] };
+        }
+        return { action: 'new' };
       }
 
-      // Submit a new topic with AI screening
+      // Submit a new topic with AI screening + dedup
       document.getElementById('topic-form').addEventListener('submit', async function(e) {
         e.preventDefault();
         const input = document.getElementById('topic-input');
@@ -118,8 +135,14 @@
         btn.textContent = '...';
 
         try {
-          var ok = await screenTopic(text);
-          if (ok) {
+          // Get existing topics for dedup
+          var snap = await topicsRef.once('value');
+          var data = snap.val() || {};
+          var existing = Object.entries(data).map(function(e) { return { id: e[0], text: e[1].text }; });
+
+          var result = await screenAndDedup(text, existing);
+
+          if (result.action === 'new') {
             topicsRef.push({
               text: text,
               votes: 1,
@@ -129,6 +152,15 @@
             });
             input.value = '';
             showStatus('Topic submitted!', '#00688B');
+          } else if (result.action === 'merge') {
+            // Upvote the existing similar topic
+            var existingVoted = getVoted();
+            if (!existingVoted[result.id]) {
+              setVoted(result.id);
+              topicsRef.child(result.id).child('votes').transaction(function(v) { return (v || 0) + 1; });
+            }
+            input.value = '';
+            showStatus('Similar topic exists — your vote has been added!', '#00688B');
           } else {
             showStatus('Topic not accepted. Please submit a topic relevant to the workshop.', '#c44');
           }
