@@ -99,9 +99,11 @@
         prompt +=
           'Rules:\n' +
           '- If the topic is casual chat, greetings, personal questions, jokes, or NOT about AI/coding/science/research, reply: reject\n' +
-          '- If the topic is similar in meaning to an existing topic (even in a different language), reply: merge [id]\n' +
-          '  where [id] is the ID in brackets of the matching existing topic.\n' +
-          '- If the topic is relevant AND not similar to any existing topic, reply: new\n' +
+          '- ONLY merge if the new topic is essentially asking the SAME specific question as an existing topic, ' +
+          'just worded differently. Topics that share a broad theme but ask different specific questions should NOT be merged. ' +
+          'For example "How to do research with AI" and "Do researchers still need to learn AI skills" are DIFFERENT topics. ' +
+          'If you decide to merge, reply: merge [id] where [id] is the ID in brackets of the matching topic.\n' +
+          '- If the topic is relevant AND not a near-duplicate of any existing topic, reply: new\n' +
           'Reply with ONLY one of: "reject", "merge [id]", or "new".';
 
         var resp = await fetch(
