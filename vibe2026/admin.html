@@ -15,7 +15,16 @@
     </style>
   </head>
   <body>
-    <div style="text-align:center;">
+    <div id="login-gate" style="text-align:center; margin-top:100px;">
+      <h2>Admin Access</h2>
+      <form id="login-form" style="margin-top:20px;">
+        <input type="password" id="pw-input" placeholder="Password" style="padding:10px 14px; font-size:14px; font-family:Helvetica; border:1px solid #ccc; border-radius:4px;" />
+        <button type="submit" style="padding:10px 20px; font-size:14px; font-family:Helvetica; background:#00688B; color:white; border:none; border-radius:4px; cursor:pointer; margin-left:8px;">Enter</button>
+        <p id="pw-error" style="color:#c44; font-size:13px; display:none; margin-top:10px;">Wrong password.</p>
+      </form>
+    </div>
+
+    <div id="admin-content" style="text-align:center; display:none;">
       <h1>Topic Review</h1>
       <hr>
 
@@ -33,63 +42,89 @@
     </div>
 
     <script>
-      firebase.initializeApp({
-        apiKey: "AIzaSyBoXa3ZxUSvtcU7DSQey_Lq5DzETVTA2-o",
-        authDomain: "vibe2026-c118f.firebaseapp.com",
-        databaseURL: "https://vibe2026-c118f-default-rtdb.firebaseio.com",
-        projectId: "vibe2026-c118f",
-        storageBucket: "vibe2026-c118f.firebasestorage.app",
-        messagingSenderId: "760367604455",
-        appId: "1:760367604455:web:50fa1fbcd91981bb93f842"
+      // Change this to your own password
+      var ADMIN_PASS = 'vibe2026admin';
+      var adminStarted = false;
+
+      document.getElementById('login-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (document.getElementById('pw-input').value === ADMIN_PASS) {
+          unlock();
+        } else {
+          document.getElementById('pw-error').style.display = 'block';
+        }
       });
-      var db = firebase.database();
-      var pendingRef = db.ref('pending');
-      var topicsRef = db.ref('topics');
 
-      function escapeHtml(t) { var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+      if (sessionStorage.getItem('vibe2026_admin') === '1') {
+        unlock();
+      }
 
-      function approve(id) {
-        pendingRef.child(id).once('value', function(s) {
-          var d = s.val();
-          if (d) { topicsRef.push(d); pendingRef.child(id).remove(); }
+      function unlock() {
+        document.getElementById('login-gate').style.display = 'none';
+        document.getElementById('admin-content').style.display = 'block';
+        sessionStorage.setItem('vibe2026_admin', '1');
+        if (!adminStarted) { adminStarted = true; initAdmin(); }
+      }
+
+      function initAdmin() {
+        firebase.initializeApp({
+          apiKey: "AIzaSyBoXa3ZxUSvtcU7DSQey_Lq5DzETVTA2-o",
+          authDomain: "vibe2026-c118f.firebaseapp.com",
+          databaseURL: "https://vibe2026-c118f-default-rtdb.firebaseio.com",
+          projectId: "vibe2026-c118f",
+          storageBucket: "vibe2026-c118f.firebasestorage.app",
+          messagingSenderId: "760367604455",
+          appId: "1:760367604455:web:50fa1fbcd91981bb93f842"
+        });
+        var db = firebase.database();
+        var pendingRef = db.ref('pending');
+        var topicsRef = db.ref('topics');
+
+        function escapeHtml(t) { var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+
+        window.approve = function(id) {
+          pendingRef.child(id).once('value', function(s) {
+            var d = s.val();
+            if (d) { topicsRef.push(d); pendingRef.child(id).remove(); }
+          });
+        };
+        window.reject = function(id) { pendingRef.child(id).remove(); };
+        window.removeApproved = function(id) { topicsRef.child(id).remove(); };
+
+        pendingRef.on('value', function(snap) {
+          var list = document.getElementById('pending-list');
+          var empty = document.getElementById('pending-empty');
+          var data = snap.val();
+          if (!data) { list.innerHTML = ''; empty.style.display = 'block'; return; }
+          empty.style.display = 'none';
+          var items = Object.entries(data).map(function(e) { return {id:e[0], text:e[1].text, time:e[1].time}; })
+            .sort(function(a,b) { return a.time - b.time; });
+          list.innerHTML = items.map(function(t) {
+            return '<div class="topic-item">' +
+              '<span class="topic-text">' + escapeHtml(t.text) + '</span>' +
+              '<button class="admin-btn approve" onclick="approve(\'' + t.id + '\')">Approve</button> ' +
+              '<button class="admin-btn reject" onclick="reject(\'' + t.id + '\')">Reject</button>' +
+              '</div>';
+          }).join('');
+        });
+
+        topicsRef.on('value', function(snap) {
+          var list = document.getElementById('approved-list');
+          var empty = document.getElementById('approved-empty');
+          var data = snap.val();
+          if (!data) { list.innerHTML = ''; empty.style.display = 'block'; return; }
+          empty.style.display = 'none';
+          var items = Object.entries(data).map(function(e) { return {id:e[0], text:e[1].text, votes:e[1].votes, time:e[1].time}; })
+            .sort(function(a,b) { return b.votes - a.votes || a.time - b.time; });
+          list.innerHTML = items.map(function(t) {
+            return '<div class="topic-item">' +
+              '<span style="min-width:30px;text-align:center;color:#00688B;font-weight:bold;">' + t.votes + '</span>' +
+              '<span class="topic-text">' + escapeHtml(t.text) + '</span>' +
+              '<button class="admin-btn reject" onclick="removeApproved(\'' + t.id + '\')">Remove</button>' +
+              '</div>';
+          }).join('');
         });
       }
-      function reject(id) { pendingRef.child(id).remove(); }
-      function removeApproved(id) { topicsRef.child(id).remove(); }
-
-      pendingRef.on('value', function(snap) {
-        var list = document.getElementById('pending-list');
-        var empty = document.getElementById('pending-empty');
-        var data = snap.val();
-        if (!data) { list.innerHTML = ''; empty.style.display = 'block'; return; }
-        empty.style.display = 'none';
-        var items = Object.entries(data).map(function(e) { return {id:e[0], text:e[1].text, time:e[1].time}; })
-          .sort(function(a,b) { return a.time - b.time; });
-        list.innerHTML = items.map(function(t) {
-          return '<div class="topic-item">' +
-            '<span class="topic-text">' + escapeHtml(t.text) + '</span>' +
-            '<button class="admin-btn approve" onclick="approve(\'' + t.id + '\')">Approve</button> ' +
-            '<button class="admin-btn reject" onclick="reject(\'' + t.id + '\')">Reject</button>' +
-            '</div>';
-        }).join('');
-      });
-
-      topicsRef.on('value', function(snap) {
-        var list = document.getElementById('approved-list');
-        var empty = document.getElementById('approved-empty');
-        var data = snap.val();
-        if (!data) { list.innerHTML = ''; empty.style.display = 'block'; return; }
-        empty.style.display = 'none';
-        var items = Object.entries(data).map(function(e) { return {id:e[0], text:e[1].text, votes:e[1].votes, time:e[1].time}; })
-          .sort(function(a,b) { return b.votes - a.votes || a.time - b.time; });
-        list.innerHTML = items.map(function(t) {
-          return '<div class="topic-item">' +
-            '<span style="min-width:30px;text-align:center;color:#00688B;font-weight:bold;">' + t.votes + '</span>' +
-            '<span class="topic-text">' + escapeHtml(t.text) + '</span>' +
-            '<button class="admin-btn reject" onclick="removeApproved(\'' + t.id + '\')">Remove</button>' +
-            '</div>';
-        }).join('');
-      });
     </script>
   </body>
 </html>
