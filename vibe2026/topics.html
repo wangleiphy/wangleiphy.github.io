@@ -144,15 +144,15 @@
         btn.textContent = 'Submit';
       });
 
-      // Toggle vote
+      // Toggle vote — update localStorage BEFORE Firebase to avoid race condition
       function toggleVote(id, currentVotes) {
         const voted = getVoted();
         if (voted[id]) {
-          topicsRef.child(id).update({ votes: Math.max(0, currentVotes - 1) });
           unsetVoted(id);
+          topicsRef.child(id).update({ votes: Math.max(0, currentVotes - 1) });
         } else {
-          topicsRef.child(id).update({ votes: currentVotes + 1 });
           setVoted(id);
+          topicsRef.child(id).update({ votes: currentVotes + 1 });
         }
       }
 
