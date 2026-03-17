@@ -113,11 +113,13 @@
           }
         );
         var data = await resp.json();
-        var answer = data.candidates[0].content.parts[0].text.trim().toLowerCase();
+        var raw = data.candidates[0].content.parts[0].text.trim();
+        var lower = raw.toLowerCase();
 
-        if (answer.startsWith('reject')) return { action: 'reject' };
-        if (answer.startsWith('merge')) {
-          var match = answer.match(/merge\s+\[?([^\]\s]+)\]?/);
+        if (lower.startsWith('reject')) return { action: 'reject' };
+        if (lower.startsWith('merge')) {
+          // Extract ID from the original (not lowercased) response to preserve case
+          var match = raw.match(/[Mm]erge\s+\[?([^\]\s]+)\]?/);
           if (match) return { action: 'merge', id: match[1] };
         }
         return { action: 'new' };
