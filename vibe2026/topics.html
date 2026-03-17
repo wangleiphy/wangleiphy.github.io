@@ -19,7 +19,7 @@
 
       <div class="topics-container">
         <h2>Discussion Topics</h2>
-        <p style="color:#666; margin-bottom:20px;">Submit a one-sentence topic and upvote the ones you'd like to discuss.</p>
+        <p style="color:#666; margin-bottom:20px;">Submit a question and upvote the ones you'd like to discuss.</p>
 
         <form id="topic-form" class="topic-form">
           <input type="text" id="topic-input" placeholder="Type a one-sentence discussion topic..." maxlength="200" required />
@@ -87,7 +87,7 @@
                 'You are a content moderator for a scientific workshop on "Agentic AI in Action" ' +
                 '(topics: AI agents, LLMs, coding assistants, computational science, physics research, automation). ' +
                 'A user submitted this discussion topic:\n\n"' + text + '"\n\n' +
-                'Reply with ONLY "yes" if the topic is relevant to the workshop theme and is not offensive, ' +
+                'Reply with ONLY "yes" if the topic is relevant to the school theme and is not offensive, ' +
                 'spam, or contains sensitive/personal information. Reply with ONLY "no" otherwise.'
               }] }]
             })
@@ -125,16 +125,14 @@
             showStatus('Topic not accepted. Please submit a topic relevant to the workshop.', '#c44');
           }
         } catch (err) {
-          // If AI screening fails, allow the submission
-          topicsRef.push({
+          // If AI screening fails, queue for human review
+          db.ref('pending').push({
             text: text,
             votes: 1,
             time: Date.now()
-          }).then(function(ref) {
-            setVoted(ref.key);
           });
           input.value = '';
-          showStatus('Topic submitted!', '#00688B');
+          showStatus('Topic submitted and pending review.', '#999');
         }
 
         btn.disabled = false;
