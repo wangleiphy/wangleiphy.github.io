@@ -27,6 +27,7 @@
         </form>
 
         <div id="topics-list"></div>
+        <p id="status-msg" style="font-style:italic; display:none;"></p>
         <p id="empty-msg" style="color:#999; font-style:italic; display:none;">No topics yet. Be the first to submit one!</p>
       </div>
 
@@ -64,21 +65,80 @@
         localStorage.setItem('vibe2026_voted', JSON.stringify(voted));
       }
 
-      // Submit a new topic
-      document.getElementById('topic-form').addEventListener('submit', function(e) {
+      // AI screening via Gemini Flash
+      const GEMINI_KEY = 'AIzaSyCENf_O298LVIj28wrZ0_voL93PXbjEZiE';
+
+      function showStatus(msg, color) {
+        var el = document.getElementById('status-msg');
+        el.textContent = msg;
+        el.style.color = color;
+        el.style.display = 'block';
+        setTimeout(function() { el.style.display = 'none'; }, 4000);
+      }
+
+      async function screenTopic(text) {
+        var resp = await fetch(
+          'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' + GEMINI_KEY,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text:
+                'You are a content moderator for a scientific workshop on "Agentic AI in Action" ' +
+                '(topics: AI agents, LLMs, coding assistants, computational science, physics research, automation). ' +
+                'A user submitted this discussion topic:\n\n"' + text + '"\n\n' +
+                'Reply with ONLY "yes" if the topic is relevant to the workshop theme and is not offensive, ' +
+                'spam, or contains sensitive/personal information. Reply with ONLY "no" otherwise.'
+              }] }]
+            })
+          }
+        );
+        var data = await resp.json();
+        var answer = data.candidates[0].content.parts[0].text.trim().toLowerCase();
+        return answer.startsWith('yes');
+      }
+
+      // Submit a new topic with AI screening
+      document.getElementById('topic-form').addEventListener('submit', async function(e) {
         e.preventDefault();
         const input = document.getElementById('topic-input');
+        const btn = document.querySelector('.topic-form button');
         const text = input.value.trim();
         if (!text) return;
 
-        topicsRef.push({
-          text: text,
-          votes: 1,
-          time: Date.now()
-        }).then(function(ref) {
-          setVoted(ref.key);
-        });
-        input.value = '';
+        btn.disabled = true;
+        btn.textContent = '...';
+
+        try {
+          var ok = await screenTopic(text);
+          if (ok) {
+            topicsRef.push({
+              text: text,
+              votes: 1,
+              time: Date.now()
+            }).then(function(ref) {
+              setVoted(ref.key);
+            });
+            input.value = '';
+            showStatus('Topic submitted!', '#00688B');
+          } else {
+            showStatus('Topic not accepted. Please submit a topic relevant to the workshop.', '#c44');
+          }
+        } catch (err) {
+          // If AI screening fails, allow the submission
+          topicsRef.push({
+            text: text,
+            votes: 1,
+            time: Date.now()
+          }).then(function(ref) {
+            setVoted(ref.key);
+          });
+          input.value = '';
+          showStatus('Topic submitted!', '#00688B');
+        }
+
+        btn.disabled = false;
+        btn.textContent = 'Submit';
       });
 
       // Toggle vote
