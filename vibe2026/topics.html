@@ -84,11 +84,16 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               contents: [{ parts: [{ text:
-                'You are a content moderator for a scientific workshop on "Agentic AI in Action" ' +
-                '(topics: AI agents, LLMs, coding assistants, computational science, physics research, automation). ' +
-                'A user submitted this discussion topic:\n\n"' + text + '"\n\n' +
-                'Reply with ONLY "yes" if the topic is relevant to the school theme and is not offensive, ' +
-                'spam, or contains sensitive/personal information. Reply with ONLY "no" otherwise.'
+                'You are a STRICT content moderator for a scientific workshop called "Agentic AI in Action". ' +
+                'The workshop covers ONLY these topics: AI agents for science, LLMs, coding assistants (Cursor, Claude Code, Copilot), ' +
+                'computational physics, automated research, vibe coding, AI for experiments, machine learning for science.\n\n' +
+                'A user submitted this discussion topic:\n"' + text + '"\n\n' +
+                'Rules:\n' +
+                '- Reply "no" if the topic is casual chat, greetings, personal questions, jokes, or off-topic.\n' +
+                '- Reply "no" if the topic does NOT clearly relate to AI, coding, science, or research.\n' +
+                '- Reply "no" for things like "what day is it", "who are you", "hello", weather, food, sports, etc.\n' +
+                '- Reply "yes" ONLY if the topic is a genuine discussion question about AI, coding tools, or scientific research.\n' +
+                'Reply with ONLY "yes" or "no".'
               }] }]
             })
           }
