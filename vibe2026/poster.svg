@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 1700" width="1200" height="1700">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700;900&amp;display=swap');
+      text { font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="1700" fill="#F5D800"/>
+
+  <!-- AI Agent (top-left) -->
+  <g transform="translate(40,135)" fill="none" stroke="#888" stroke-width="2.5" opacity="0.5">
+    <!-- Head -->
+    <rect x="20" y="0" width="40" height="35" rx="8" />
+    <!-- Eyes -->
+    <circle cx="33" cy="15" r="4" fill="#888" stroke="none"/>
+    <circle cx="47" cy="15" r="4" fill="#888" stroke="none"/>
+    <!-- Antenna -->
+    <line x1="40" y1="0" x2="40" y2="-12"/>
+    <circle cx="40" cy="-15" r="4" fill="#888" stroke="none"/>
+    <!-- Mouth / speaker grille -->
+    <line x1="30" y1="26" x2="50" y2="26"/>
+    <!-- Body -->
+    <rect x="22" y="40" width="36" height="30" rx="5"/>
+    <!-- Arms -->
+    <line x1="22" y1="48" x2="8" y2="58"/>
+    <circle cx="5" cy="60" r="4"/>
+    <line x1="58" y1="48" x2="72" y2="58"/>
+    <circle cx="75" cy="60" r="4"/>
+    <!-- Legs -->
+    <line x1="32" y1="70" x2="28" y2="88"/>
+    <line x1="48" y1="70" x2="52" y2="88"/>
+    <!-- Signal waves from antenna -->
+    <path d="M50,-10 Q56,-18 50,-26" stroke-width="1.5"/>
+    <path d="M54,-8 Q62,-20 54,-32" stroke-width="1.5"/>
+  </g>
+
+  <!-- Experiment setup (top-right) -->
+  <g transform="translate(1070,135)" fill="none" stroke="#888" stroke-width="2.5" opacity="0.5">
+    <!-- Erlenmeyer flask -->
+    <path d="M15,0 L15,25 L0,60 L40,60 L25,25 L25,0 Z" stroke-linejoin="round"/>
+    <line x1="12" y1="0" x2="28" y2="0" stroke-linecap="round"/>
+    <!-- Bubbles inside flask -->
+    <circle cx="16" cy="45" r="3" fill="#888" stroke="none"/>
+    <circle cx="24" cy="38" r="2" fill="#888" stroke="none"/>
+    <circle cx="20" cy="50" r="2.5" fill="#888" stroke="none"/>
+    <!-- Tube going right from flask top -->
+    <path d="M25,8 Q38,8 38,20 Q38,30 55,30" stroke-linecap="round"/>
+    <!-- Test tube on the right -->
+    <rect x="55" y="22" width="12" height="38" rx="6"/>
+    <line x1="55" y1="30" x2="67" y2="30" stroke-width="1.5"/>
+    <!-- Liquid level in test tube -->
+    <rect x="57" y="40" width="8" height="16" rx="4" fill="#888" stroke="none" opacity="0.4"/>
+    <!-- Stand / base -->
+    <line x1="72" y1="10" x2="72" y2="65"/>
+    <line x1="62" y1="65" x2="82" y2="65"/>
+    <line x1="72" y1="25" x2="58" y2="25" stroke-width="1.5"/>
+    <!-- Steam/vapor from flask -->
+    <path d="M18,-5 Q15,-15 20,-20" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M24,-5 Q27,-18 22,-25" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="100" text-anchor="middle" font-size="72" font-weight="900" fill="#222" letter-spacing="4">Agentic AI in Action!</text>
+  <!-- Date & Location -->
+  <rect x="250" y="140" width="700" height="60" rx="30" fill="#222"/>
+  <text x="600" y="178" text-anchor="middle" font-size="26" font-weight="700" fill="#F5D800">2026年4月14日  |  中国科学院物理研究所 M234</text>
+
+  <!-- Divider line -->
+  <line x1="60" y1="310" x2="1140" y2="310" stroke="#222" stroke-width="3"/>
+
+  <!-- LEFT COLUMN: Speakers -->
+  <text x="300" y="370" text-anchor="middle" font-size="36" font-weight="900" fill="#222">演 讲 嘉 宾</text>
+  <line x1="180" y1="390" x2="420" y2="390" stroke="#222" stroke-width="2"/>
+
+  <!-- Speaker 1: 戴希 -->
+  <text x="80" y="450" font-size="28" font-weight="700" fill="#222">戴希</text>
+  <text x="80" y="485" font-size="18" fill="#444">09:00-09:30</text>
+
+  <!-- Speaker 2: 李源 -->
+  <text x="80" y="540" font-size="28" font-weight="700" fill="#222">李源</text>
+  <text x="80" y="575" font-size="18" fill="#444">人工智能体与实验型研究：一些打开方式</text>
+  <text x="80" y="600" font-size="18" fill="#444">09:30-10:00</text>
+
+  <!-- Speaker 3: 张士欣 -->
+  <text x="80" y="655" font-size="28" font-weight="700" fill="#222">张士欣</text>
+  <text x="80" y="690" font-size="18" fill="#444">Leveraging TensorCircuit-NG for Agentic</text>
+  <text x="80" y="715" font-size="18" fill="#444">Development and Automated Research</text>
+  <text x="80" y="740" font-size="18" fill="#444">10:20-10:50</text>
+
+  <!-- Speaker 4: 周毅 -->
+  <text x="80" y="795" font-size="28" font-weight="700" fill="#222">周毅</text>
+  <text x="80" y="830" font-size="18" fill="#444">从文献到实现：基于大语言模型的</text>
+  <text x="80" y="855" font-size="18" fill="#444">量子多体算法实现工作流全记录</text>
+  <text x="80" y="880" font-size="18" fill="#444">14:00-14:30</text>
+
+  <!-- Speaker 5: 刘金国 -->
+  <text x="80" y="935" font-size="28" font-weight="700" fill="#222">刘金国</text>
+  <text x="80" y="970" font-size="18" fill="#444">Live demo: Vibe coding done right</text>
+  <text x="80" y="995" font-size="18" fill="#444">14:30-15:30</text>
+
+  <!-- Speaker 6: 张林峰 -->
+  <text x="80" y="1050" font-size="28" font-weight="700" fill="#222">张林峰</text>
+  <text x="80" y="1085" font-size="18" fill="#444">15:50-16:20</text>
+
+  <!-- Speaker 7: 陈锟 -->
+  <text x="80" y="1140" font-size="28" font-weight="700" fill="#222">陈锟</text>
+  <text x="80" y="1175" font-size="18" fill="#444">自然科学的形式化与科研的自动化</text>
+  <text x="80" y="1200" font-size="18" fill="#444">16:20-16:50</text>
+
+  <!-- Speaker 8: 涂佳敏 -->
+  <text x="80" y="1255" font-size="28" font-weight="700" fill="#222">涂佳敏</text>
+  <text x="80" y="1290" font-size="18" fill="#444">实验数据分析的新手入门加速</text>
+  <text x="80" y="1315" font-size="18" fill="#444">17:10-17:25</text>
+
+  <!-- Speaker 9: 柴声都 -->
+  <text x="80" y="1370" font-size="28" font-weight="700" fill="#222">柴声都</text>
+  <text x="80" y="1405" font-size="18" fill="#444">与 Claude Code 协作：构建自动化</text>
+  <text x="80" y="1430" font-size="18" fill="#444">科研工作流的初步探索</text>
+  <text x="80" y="1455" font-size="18" fill="#444">17:25-17:40</text>
+
+  <!-- Vertical divider -->
+  <line x1="580" y1="330" x2="580" y2="1500" stroke="#222" stroke-width="2" stroke-dasharray="8,4"/>
+
+  <!-- RIGHT COLUMN: Discussion Topics -->
+  <text x="880" y="370" text-anchor="middle" font-size="36" font-weight="900" fill="#222">讨 论 话 题</text>
+  <line x1="760" y1="390" x2="1000" y2="390" stroke="#222" stroke-width="2"/>
+
+  <!-- Topic list -->
+  <g font-size="20" fill="#222">
+    <!-- Topic 1: experiments — flask -->
+    <g transform="translate(631,425)">
+      <path d="M6,0 L6,8 L0,22 L18,22 L12,8 L12,0 Z" fill="none" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="4" y1="0" x2="14" y2="0" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <text x="670" y="445" font-size="20" fill="#222">Agentic AI 对实验有用吗？</text>
+
+    <!-- Topic 2: papers & legacy — document icon -->
+    <g transform="translate(628,485)">
+      <rect x="0" y="0" width="16" height="22" rx="2" fill="none" stroke="#222" stroke-width="2"/>
+      <line x1="4" y1="7" x2="12" y2="7" stroke="#222" stroke-width="1.5"/>
+      <line x1="4" y1="11" x2="12" y2="11" stroke="#222" stroke-width="1.5"/>
+      <line x1="4" y1="15" x2="9" y2="15" stroke="#222" stroke-width="1.5"/>
+    </g>
+    <text x="670" y="505" font-size="20" fill="#222">Agentic AI 时代，</text>
+    <text x="670" y="530" font-size="20" fill="#222">什么样的工作能留下来？</text>
+
+    <!-- Topic 3: peer review speed — hourglass -->
+    <g transform="translate(630,565)">
+      <polygon points="0,0 16,0 8,11" fill="none" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+      <polygon points="0,22 16,22 8,11" fill="none" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+    </g>
+    <text x="670" y="585" font-size="20" fill="#222">paper的评价方式如何跟上</text>
+    <text x="670" y="610" font-size="20" fill="#222">Agent的产出速度？</text>
+
+    <!-- Topic 4: coding tools — terminal bracket -->
+    <g transform="translate(627,645)">
+      <rect x="0" y="0" width="22" height="18" rx="3" fill="none" stroke="#222" stroke-width="2"/>
+      <polyline points="4,6 8,10 4,14" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="11" y1="14" x2="17" y2="14" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <text x="670" y="665" font-size="20" fill="#222">Cursor, Claude Code, CodeX</text>
+    <text x="670" y="690" font-size="20" fill="#222">哪一个好？</text>
+
+    <!-- Topic 5: future of research — compass -->
+    <g transform="translate(630,725)">
+      <circle cx="10" cy="10" r="10" fill="none" stroke="#222" stroke-width="2"/>
+      <polygon points="10,2 7,10 10,18 13,10" fill="#222"/>
+    </g>
+    <text x="670" y="745" font-size="20" fill="#222">在agentic AI越来越强的</text>
+    <text x="670" y="770" font-size="20" fill="#222">如今，该怎么做科研</text>
+
+    <!-- Topic 6: intuition vs AI — head with spark -->
+    <g transform="translate(630,805)">
+      <circle cx="10" cy="8" r="8" fill="none" stroke="#222" stroke-width="2"/>
+      <path d="M6,20 Q10,14 14,20" fill="none" stroke="#222" stroke-width="2"/>
+      <path d="M10,3 L11,6 L14,5 L12,8" fill="none" stroke="#222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="670" y="825" font-size="20" fill="#222">对AI的依赖是否会影响</text>
+    <text x="670" y="850" font-size="20" fill="#222">研究人员科研直觉的建立？</text>
+
+    <!-- Topic 7: correctness — checkmark in circle -->
+    <g transform="translate(630,885)">
+      <circle cx="10" cy="10" r="10" fill="none" stroke="#222" stroke-width="2"/>
+      <polyline points="5,10 9,15 16,5" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="670" y="905" font-size="20" fill="#222">怎么保证AI做的结果是对的？</text>
+
+    <!-- Topic 8: beyond coding — arrow breaking out -->
+    <g transform="translate(630,945)">
+      <rect x="0" y="4" width="14" height="16" rx="2" fill="none" stroke="#222" stroke-width="2"/>
+      <line x1="8" y1="12" x2="22" y2="0" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <polyline points="16,0 22,0 22,6" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="670" y="965" font-size="20" fill="#222">Agentic AI 除了编程</text>
+    <text x="670" y="990" font-size="20" fill="#222">还能干什么？</text>
+
+    <!-- Topic 9: OpenClaw — claw bot -->
+    <g transform="translate(627,1025)">
+      <rect x="4" y="10" width="16" height="12" rx="3" fill="none" stroke="#222" stroke-width="2"/>
+      <circle cx="9" cy="15" r="1.5" fill="#222"/>
+      <circle cx="15" cy="15" r="1.5" fill="#222"/>
+      <path d="M2,10 L2,4 Q2,0 6,2" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <path d="M22,10 L22,4 Q22,0 18,2" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <line x1="7" y1="22" x2="5" y2="27" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+      <line x1="17" y1="22" x2="19" y2="27" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <text x="670" y="1045" font-size="20" fill="#222">OpenClaw对科研有用吗？</text>
+
+    <!-- Topic 10: multitasking — grid of dots -->
+    <g transform="translate(630,1088)">
+      <circle cx="3" cy="3" r="3" fill="#222"/>
+      <circle cx="12" cy="3" r="3" fill="#222"/>
+      <circle cx="21" cy="3" r="3" fill="#222"/>
+      <circle cx="3" cy="12" r="3" fill="#222"/>
+      <circle cx="12" cy="12" r="3" fill="#222"/>
+      <circle cx="21" cy="12" r="3" fill="#222"/>
+    </g>
+    <text x="670" y="1105" font-size="20" fill="#222">如何让大脑适应多Agents/</text>
+    <text x="670" y="1130" font-size="20" fill="#222">多项目并行的工作模式?</text>
+  </g>
+
+  <!-- QR Code section -->
+  <rect x="660" y="1170" width="460" height="340" rx="20" fill="#fff" opacity="0.3"/>
+
+  <text x="890" y="1215" text-anchor="middle" font-size="28" font-weight="700" fill="#222">你有什么问题？</text>
+  <text x="890" y="1248" text-anchor="middle" font-size="18" fill="#444">扫码提交/选出你的问题</text>
+
+  <!-- QR Code embed (centered: 890 - 100 = 790) -->
+  <image x="790" y="1268" width="200" height="200" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA9QAAAPUAQAAAABkr0wpAAAGLklEQVR4nO3dS46dOhAA0OIpc+4Osv9lZQewAmfQNv5Bq+nkddTi1ODqgoEjeWSV7fKS4l/F/t8/oyPYbDabzWaz2Ww2m81ms9lsNpvNZrPZbDabzWaz2Ww2m/1v7UhHTE1rvpea2CJS2k6+sh1vrPm5+oHho+VTT+1zNpvNZrPZ7Dvxo71Yt+Ziaf6tW3MZsaaI2F+R+uci9uV4I5WGi4/Gc/uczWaz2Ww2+078GK6nQda6RR6HlUHb0v+rKbT2396OzM5GbvHcPmez2Ww2m82+E+N4bYghg1YvU+yvqAO5OBJqU87tOp7a52w2m81ms9l/1d6XJa9G25elXi7Lz2NxWm1Ix4q37W/Y/2Ow2Ww2m81mfxd7zK8NGwTKtGddjZbmdFvJr8Vbzi0i0tvlxUdLPLXP2Ww2m81msz9t70sT+V7d47mmtCyv9l6+LP9yzq08l1vPPnpif3Gw2Ww2m81mfxe7ya+dZ8H2pewe2JexIbdG3mAw7DyoPxfx1D5ns9lsNpvN/hM758FeR3psbZekpfSrXcTW5twiv1EfGbJq9ctX9lcGm81ms9ls9nexu3q5XaXbtjZuVzl3KIvbvlFb43htne6pl8tms9lsNpv98ejmQ7s5zbzLoCt82xZc25eyraDsLaj1PM7KgMwzo0/tczabzWaz2exbkcbYItps2fzwcM7UdPZUzdLVN2LKw8mvsdlsNpvNZt+393YDZ155Nkx7llprw2RnSr+O+mvlK+2gbesrtp3YXxxsNpvNZrPZ38Vu5kPr3OfZnGaNdJRZi3EGtb5Wp1H3V5TqbMPXntrnbDabzWaz2bdi2m/QTYq2j9R768kj2/HFLiM3Tbc2E69P7XM2m81ms9nsWzEMotqGrR2qtQvR5n/DG/lGN5qzfo3NZrPZbDb7UzHl17a+fX1308Habj9os2rDz5C+M15js9lsNpvN/nDM05TTcKuNs6nQNN2rDfW1di7VeI3NZrPZbDb7wzFNha7n/4bdnpeXw0eHyVP5NTabzWaz2eybMZ4fWvd45v2c6/Z2sfSPLH2V3HZv6f4aK+xexFP7nM1ms9lsNvtWTPm16FeoRcQwkzmdW3WZQZuTbOZD2Ww2m81ms29Gfx7Va06yNa1LU3qtFFfLKbjuGKttLtt2mmR7ap+z2Ww2m81m34opC9atVcuPbFN5jxzl4WkBXG3YjuesX2Oz2Ww2m83+RHQjqKnI7TAL2r6xnQzGtml+9Z3KucZrbDabzWaz2R+I7jyqmPYR5NhfZT50eDjyRGme8Xw7dupVDrSq51bF2STrU/uczWaz2Ww2+1ZMGwLi5GiD7Wiqs6XdvOmQkav3piOrmmTcU/uczWaz2Ww2+1YMk5TvTIAOM57b8Ym1vyz3zgq4mQ9ls9lsNpvNvhtng7HcsF3lzbbj3e18wHcJya+x2Ww2m81m341puBURZ4ccnB3/fl6EbTu+vU77TeXX2Gw2m81ms+/GkBkbFqednTN1OUB7p9DH2v4Yr7HZbDabzWZ/PH5ctuSdomvqzpQqO0Ujot8B+nb2VLs/tG4hzQ+XnxJP7XM2m81ms9nsOzGO12rVjTrmyg3dGQXdMaGpfy41j+RCH6UWSPeVp/Y5m81ms9ls9p0Yx2t5HFbOlEonpddylFxaHEm2UnVt6cZ6JRk3n/z+1D5ns9lsNpvNvhPd+aEREU16LM7zazWD1r5biuYuzUCueWOLOnIr8dQ+Z7PZbDabzb4T4/kGbZRz3KczD+r6tZhOOrgxzHtqn7PZbDabzWbfiW4+tJuwLGOzV3PZnkc1Tpm+xr0F7RtnE6qP7XM2m81ms9nsP7GXt3gdlz/76rd7bk3p17LU4h9DmbX8gT1/LWJNqX70yv7KYLPZbDabzf4u9nU9jxz7Mu43mE5+f1uc9oq6U7R7+NVNlNofymaz2Ww2m30vzk+SGurbbif3Ls6eev+IUecbsNlsNpvNZt+MuZ7HfNmVVDsWqdUqHmX9Wn243bqwbrFYv8Zms9lsNpv96ZiODq2xTg3DKVTnJ4leNLRHUcmvsdlsNpvNZn80lnmY9lWxP7XP2Ww2m81ms9lsNpvNZrPZbDabzWaz2Ww2m81ms9lsNpsd8RvCUBx6RHdssAAAAABJRU5ErkJggg=="/>
+
+  <!-- Bottom divider -->
+  <line x1="60" y1="1540" x2="1140" y2="1540" stroke="#222" stroke-width="3"/>
+
+  <!-- Decorative bottom bar -->
+  <rect x="0" y="1660" width="1200" height="40" fill="#222"/>
+  <text x="600" y="1688" text-anchor="middle" font-size="18" font-weight="700" fill="#F5D800">wangleiphy.github.io/vibe2026</text>
+
+</svg>
