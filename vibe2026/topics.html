@@ -67,8 +67,12 @@
 
       // AI screening via Gemini Flash — key loaded from Firebase (not in source code)
       var GEMINI_KEY = '';
+      var keyReady = false;
+      document.querySelector('.topic-form button').disabled = true;
       db.ref('config/geminiKey').once('value', function(snap) {
         GEMINI_KEY = snap.val() || '';
+        keyReady = true;
+        document.querySelector('.topic-form button').disabled = false;
       });
 
       function showStatus(msg, color) {
@@ -101,8 +105,10 @@
           'Rules:\n' +
           '- If the topic is casual chat, greetings, personal questions, jokes, or NOT about AI/coding/science/research, reply: reject\n' +
           '- ONLY merge if the new topic is essentially asking the SAME specific question as an existing topic, ' +
-          'just worded differently. Topics that share a broad theme but ask different specific questions should NOT be merged. ' +
+          'just worded differently. Topics that share a broad theme or a keyword but ask different specific questions should NOT be merged. ' +
           'For example "How to do research with AI" and "Do researchers still need to learn AI skills" are DIFFERENT topics. ' +
+          '"Is it worth building my own agent workflow" and "Is it worth investing time in training/cultivating agents" are DIFFERENT topics — one is about DIY vs off-the-shelf, the other is about ROI of agent onboarding. ' +
+          'When in doubt, choose "new" over "merge". ' +
           'If you decide to merge, reply: merge [id] where [id] is the ID in brackets of the matching topic.\n' +
           '- If the topic is relevant AND not a near-duplicate of any existing topic, reply: new\n' +
           'Reply with ONLY one of: "reject", "merge [id]", or "new".';
