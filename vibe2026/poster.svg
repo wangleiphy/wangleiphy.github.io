@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 1700" width="1200" height="1700">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 1697" width="1200" height="1697">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700;900&amp;display=swap');
@@ -7,7 +7,7 @@
   </defs>
 
   <!-- Background -->
-  <rect width="1200" height="1700" fill="#F5D800"/>
+  <rect width="1200" height="1697" fill="#F5D800"/>
 
   <!-- AI Agent (top-left) -->
   <g transform="translate(40,135)" fill="none" stroke="#888" stroke-width="2.5" opacity="0.5">
@@ -79,49 +79,55 @@
   <text x="80" y="485" font-size="18" fill="#444">09:00-09:30</text>
 
   <!-- Speaker 2: 李源 -->
-  <text x="80" y="540" font-size="28" font-weight="700" fill="#222">李源</text>
-  <text x="80" y="575" font-size="18" fill="#444">人工智能体与实验型研究：一些打开方式</text>
-  <text x="80" y="600" font-size="18" fill="#444">09:30-10:00</text>
+  <text x="80" y="530" font-size="28" font-weight="700" fill="#222">李源</text>
+  <text x="80" y="565" font-size="18" fill="#444">人工智能体与实验型研究：一些打开方式</text>
+  <text x="80" y="590" font-size="18" fill="#444">09:30-10:00</text>
 
   <!-- Speaker 3: 张士欣 -->
-  <text x="80" y="655" font-size="28" font-weight="700" fill="#222">张士欣</text>
-  <text x="80" y="690" font-size="18" fill="#444">Leveraging TensorCircuit-NG for Agentic</text>
-  <text x="80" y="715" font-size="18" fill="#444">Development and Automated Research</text>
-  <text x="80" y="740" font-size="18" fill="#444">10:20-10:50</text>
+  <text x="80" y="635" font-size="28" font-weight="700" fill="#222">张士欣</text>
+  <text x="80" y="670" font-size="18" fill="#444">Leveraging TensorCircuit-NG for Agentic</text>
+  <text x="80" y="695" font-size="18" fill="#444">Development and Automated Research</text>
+  <text x="80" y="720" font-size="18" fill="#444">10:20-10:50</text>
 
   <!-- Speaker 4: 周毅 -->
-  <text x="80" y="795" font-size="28" font-weight="700" fill="#222">周毅</text>
-  <text x="80" y="830" font-size="18" fill="#444">从文献到实现：基于大语言模型的</text>
-  <text x="80" y="855" font-size="18" fill="#444">量子多体算法实现工作流全记录</text>
-  <text x="80" y="880" font-size="18" fill="#444">14:00-14:30</text>
+  <text x="80" y="765" font-size="28" font-weight="700" fill="#222">周毅</text>
+  <text x="80" y="800" font-size="18" fill="#444">从文献到实现：基于大语言模型的</text>
+  <text x="80" y="825" font-size="18" fill="#444">量子多体算法实现工作流全记录</text>
+  <text x="80" y="850" font-size="18" fill="#444">14:00-14:30</text>
 
   <!-- Speaker 5: 刘金国 -->
-  <text x="80" y="935" font-size="28" font-weight="700" fill="#222">刘金国</text>
-  <text x="80" y="970" font-size="18" fill="#444">Live demo: Vibe coding done right</text>
-  <text x="80" y="995" font-size="18" fill="#444">14:30-15:30</text>
+  <text x="80" y="895" font-size="28" font-weight="700" fill="#222">刘金国</text>
+  <text x="80" y="930" font-size="18" fill="#444">Live demo: Vibe coding done right</text>
+  <text x="80" y="955" font-size="18" fill="#444">14:30-15:30</text>
 
   <!-- Speaker 6: 张林峰 -->
-  <text x="80" y="1050" font-size="28" font-weight="700" fill="#222">张林峰</text>
-  <text x="80" y="1085" font-size="18" fill="#444">15:50-16:20</text>
+  <text x="80" y="1000" font-size="28" font-weight="700" fill="#222">张林峰</text>
+  <text x="80" y="1035" font-size="18" fill="#444">15:50-16:20</text>
 
   <!-- Speaker 7: 陈锟 -->
-  <text x="80" y="1140" font-size="28" font-weight="700" fill="#222">陈锟</text>
-  <text x="80" y="1175" font-size="18" fill="#444">自然科学的形式化与科研的自动化</text>
-  <text x="80" y="1200" font-size="18" fill="#444">16:20-16:50</text>
+  <text x="80" y="1080" font-size="28" font-weight="700" fill="#222">陈锟</text>
+  <text x="80" y="1115" font-size="18" fill="#444">自然科学的形式化与科研的自动化</text>
+  <text x="80" y="1140" font-size="18" fill="#444">16:20-16:50</text>
 
   <!-- Speaker 8: 涂佳敏 -->
-  <text x="80" y="1255" font-size="28" font-weight="700" fill="#222">涂佳敏</text>
-  <text x="80" y="1290" font-size="18" fill="#444">实验数据分析的新手入门加速</text>
-  <text x="80" y="1315" font-size="18" fill="#444">17:10-17:25</text>
+  <text x="80" y="1185" font-size="28" font-weight="700" fill="#222">涂佳敏</text>
+  <text x="80" y="1220" font-size="18" fill="#444">实验数据分析的新手入门加速</text>
+  <text x="80" y="1245" font-size="18" fill="#444">16:50-17:05</text>
 
   <!-- Speaker 9: 柴声都 -->
-  <text x="80" y="1370" font-size="28" font-weight="700" fill="#222">柴声都</text>
-  <text x="80" y="1405" font-size="18" fill="#444">与 Claude Code 协作：构建自动化</text>
-  <text x="80" y="1430" font-size="18" fill="#444">科研工作流的初步探索</text>
-  <text x="80" y="1455" font-size="18" fill="#444">17:25-17:40</text>
+  <text x="80" y="1290" font-size="28" font-weight="700" fill="#222">柴声都</text>
+  <text x="80" y="1325" font-size="18" fill="#444">与 Claude Code 协作：构建自动化</text>
+  <text x="80" y="1350" font-size="18" fill="#444">科研工作流的初步探索</text>
+  <text x="80" y="1375" font-size="18" fill="#444">17:05-17:20</text>
+
+  <!-- Speaker 10: 欧仕刚 -->
+  <text x="80" y="1420" font-size="28" font-weight="700" fill="#222">欧仕刚</text>
+  <text x="80" y="1455" font-size="18" fill="#444">Benchmark, Simulator &amp; Calibration：</text>
+  <text x="80" y="1480" font-size="18" fill="#444">降低idea验证成本的探索</text>
+  <text x="80" y="1505" font-size="18" fill="#444">17:20-17:35</text>
 
   <!-- Vertical divider -->
-  <line x1="580" y1="330" x2="580" y2="1500" stroke="#222" stroke-width="2" stroke-dasharray="8,4"/>
+  <line x1="580" y1="330" x2="580" y2="1530" stroke="#222" stroke-width="2" stroke-dasharray="8,4"/>
 
   <!-- RIGHT COLUMN: Discussion Topics -->
   <text x="880" y="370" text-anchor="middle" font-size="36" font-weight="900" fill="#222">讨 论 话 题</text>
@@ -231,10 +237,10 @@
   <image x="790" y="1268" width="200" height="200" href="data:image/png;base64,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"/>
 
   <!-- Bottom divider -->
-  <line x1="60" y1="1540" x2="1140" y2="1540" stroke="#222" stroke-width="3"/>
+  <line x1="60" y1="1550" x2="1140" y2="1550" stroke="#222" stroke-width="3"/>
 
   <!-- Decorative bottom bar -->
-  <rect x="0" y="1660" width="1200" height="40" fill="#222"/>
-  <text x="600" y="1688" text-anchor="middle" font-size="18" font-weight="700" fill="#F5D800">wangleiphy.github.io/vibe2026</text>
+  <rect x="0" y="1657" width="1200" height="40" fill="#222"/>
+  <text x="600" y="1685" text-anchor="middle" font-size="18" font-weight="700" fill="#F5D800">wangleiphy.github.io/vibe2026</text>
 
 </svg>
