@@ -65,14 +65,22 @@
         localStorage.setItem('vibe2026_voted', JSON.stringify(voted));
       }
 
-      // AI screening via Gemini Flash — key loaded from Firebase (not in source code)
+      // AI screening keys — loaded from Firebase (not in source code)
       var GEMINI_KEY = '';
-      var keyReady = false;
+      var OPENROUTER_KEY = '';
+      var keysLoaded = 0;
       document.querySelector('.topic-form button').disabled = true;
+      function checkKeysReady() {
+        keysLoaded++;
+        if (keysLoaded >= 2) document.querySelector('.topic-form button').disabled = false;
+      }
       db.ref('config/geminiKey').once('value', function(snap) {
         GEMINI_KEY = snap.val() || '';
-        keyReady = true;
-        document.querySelector('.topic-form button').disabled = false;
+        checkKeysReady();
+      });
+      db.ref('config/openrouterKey').once('value', function(snap) {
+        OPENROUTER_KEY = snap.val() || '';
+        checkKeysReady();
       });
 
       function showStatus(msg, color) {
@@ -83,9 +91,8 @@
         setTimeout(function() { el.style.display = 'none'; }, 4000);
       }
 
-      // AI screening + dedup in one call
-      // Returns: {action: "new"} | {action: "merge", id: "..."} | {action: "reject"}
-      async function screenAndDedup(text, existingTopics) {
+      // Build the screening prompt (shared by both AI providers)
+      function buildScreeningPrompt(text, existingTopics) {
         var topicsList = existingTopics.map(function(t, i) {
           return (i + 1) + '. [' + t.id + '] ' + t.text;
         }).join('\n');
@@ -113,6 +120,22 @@
           '- If the topic is relevant AND not a near-duplicate of any existing topic, reply: new\n' +
           'Reply with ONLY one of: "reject", "merge [id]", or "new".';
 
+        return prompt;
+      }
+
+      // Parse AI response text into action
+      function parseScreeningResponse(raw) {
+        var lower = raw.toLowerCase();
+        if (lower.startsWith('reject')) return { action: 'reject' };
+        if (lower.startsWith('merge')) {
+          var match = raw.match(/[Mm]erge\s+\[?([^\]\s]+)\]?/);
+          if (match) return { action: 'merge', id: match[1] };
+        }
+        return { action: 'new' };
+      }
+
+      // Call Gemini Flash
+      async function callGemini(prompt) {
         var resp = await fetch(
           'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' + GEMINI_KEY,
           {
@@ -122,16 +145,41 @@
           }
         );
         var data = await resp.json();
-        var raw = data.candidates[0].content.parts[0].text.trim();
-        var lower = raw.toLowerCase();
+        return data.candidates[0].content.parts[0].text.trim();
+      }
 
-        if (lower.startsWith('reject')) return { action: 'reject' };
-        if (lower.startsWith('merge')) {
-          // Extract ID from the original (not lowercased) response to preserve case
-          var match = raw.match(/[Mm]erge\s+\[?([^\]\s]+)\]?/);
-          if (match) return { action: 'merge', id: match[1] };
+      // Fallback: Call DeepSeek-V3 via OpenRouter
+      async function callOpenRouter(prompt) {
+        var resp = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + OPENROUTER_KEY
+          },
+          body: JSON.stringify({
+            model: 'deepseek/deepseek-chat-v3-0324',
+            messages: [{ role: 'user', content: prompt }],
+            max_tokens: 50
+          })
+        });
+        var data = await resp.json();
+        return data.choices[0].message.content.trim();
+      }
+
+      // AI screening + dedup: try Gemini first, fall back to DeepSeek-V3
+      // Returns: {action: "new"} | {action: "merge", id: "..."} | {action: "reject"}
+      async function screenAndDedup(text, existingTopics) {
+        var prompt = buildScreeningPrompt(text, existingTopics);
+
+        var raw;
+        try {
+          raw = await callGemini(prompt);
+        } catch (e) {
+          console.warn('Gemini failed, falling back to DeepSeek-V3:', e);
+          raw = await callOpenRouter(prompt);
         }
-        return { action: 'new' };
+
+        return parseScreeningResponse(raw);
       }
 
       // Submit a new topic with AI screening + dedup
