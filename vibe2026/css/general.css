@@ -63,6 +63,11 @@ table.program td {
     border-bottom: 1px solid #ddd;
 }
 
+table.program td:first-child,
+table.program td:last-child {
+    white-space: nowrap;
+}
+
 table.program tr:nth-child(even) {
     background-color: #f2f2f2;
 }
