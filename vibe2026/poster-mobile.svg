@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 750 2400" width="750" height="2400">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700;900&amp;display=swap');
+      text { font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="750" height="2400" fill="#F5D800"/>
+
+  <!-- AI Agent (top-left) -->
+  <g transform="translate(30,100) scale(0.8)" fill="none" stroke="#888" stroke-width="2.5" opacity="0.5">
+    <rect x="20" y="0" width="40" height="35" rx="8" />
+    <circle cx="33" cy="15" r="4" fill="#888" stroke="none"/>
+    <circle cx="47" cy="15" r="4" fill="#888" stroke="none"/>
+    <line x1="40" y1="0" x2="40" y2="-12"/>
+    <circle cx="40" cy="-15" r="4" fill="#888" stroke="none"/>
+    <line x1="30" y1="26" x2="50" y2="26"/>
+    <rect x="22" y="40" width="36" height="30" rx="5"/>
+    <line x1="22" y1="48" x2="8" y2="58"/>
+    <circle cx="5" cy="60" r="4"/>
+    <line x1="58" y1="48" x2="72" y2="58"/>
+    <circle cx="75" cy="60" r="4"/>
+    <line x1="32" y1="70" x2="28" y2="88"/>
+    <line x1="48" y1="70" x2="52" y2="88"/>
+    <path d="M50,-10 Q56,-18 50,-26" stroke-width="1.5"/>
+    <path d="M54,-8 Q62,-20 54,-32" stroke-width="1.5"/>
+  </g>
+
+  <!-- Experiment setup (top-right) -->
+  <g transform="translate(670,100) scale(0.8)" fill="none" stroke="#888" stroke-width="2.5" opacity="0.5">
+    <path d="M15,0 L15,25 L0,60 L40,60 L25,25 L25,0 Z" stroke-linejoin="round"/>
+    <line x1="12" y1="0" x2="28" y2="0" stroke-linecap="round"/>
+    <circle cx="16" cy="45" r="3" fill="#888" stroke="none"/>
+    <circle cx="24" cy="38" r="2" fill="#888" stroke="none"/>
+    <circle cx="20" cy="50" r="2.5" fill="#888" stroke="none"/>
+    <path d="M25,8 Q38,8 38,20 Q38,30 55,30" stroke-linecap="round"/>
+    <rect x="55" y="22" width="12" height="38" rx="6"/>
+    <line x1="55" y1="30" x2="67" y2="30" stroke-width="1.5"/>
+    <path d="M18,-5 Q15,-15 20,-20" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M24,-5 Q27,-18 22,-25" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Title -->
+  <text x="375" y="80" text-anchor="middle" font-size="52" font-weight="900" fill="#222" letter-spacing="3">Agentic AI in Action!</text>
+  <!-- Date & Location -->
+  <rect x="120" y="110" width="510" height="50" rx="25" fill="#222"/>
+  <text x="375" y="143" text-anchor="middle" font-size="22" font-weight="700" fill="#F5D800">2026年4月14日  |  中科院物理所 M234</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="220" x2="710" y2="220" stroke="#222" stroke-width="3"/>
+
+  <!-- SPEAKERS SECTION -->
+  <text x="375" y="275" text-anchor="middle" font-size="34" font-weight="900" fill="#222">演 讲 嘉 宾</text>
+  <line x1="260" y1="295" x2="490" y2="295" stroke="#222" stroke-width="2"/>
+
+  <!-- Speaker 1: 戴希 -->
+  <text x="60" y="350" font-size="26" font-weight="700" fill="#222">戴希</text>
+  <text x="690" y="350" text-anchor="end" font-size="18" fill="#444">09:00-09:30</text>
+  <text x="60" y="380" font-size="18" fill="#555">我和agent完成的第一个项目</text>
+
+  <!-- Speaker 2: 李源 -->
+  <text x="60" y="420" font-size="26" font-weight="700" fill="#222">李源</text>
+  <text x="690" y="420" text-anchor="end" font-size="18" fill="#444">09:30-10:00</text>
+  <text x="60" y="450" font-size="18" fill="#555">人工智能体与实验型研究：一些打开方式</text>
+
+  <!-- Coffee Break -->
+  <text x="375" y="500" text-anchor="middle" font-size="18" fill="#666" font-style="italic">☕ Coffee Break</text>
+
+  <!-- Speaker 3: 张士欣 -->
+  <text x="60" y="550" font-size="26" font-weight="700" fill="#222">张士欣</text>
+  <text x="690" y="550" text-anchor="end" font-size="18" fill="#444">10:20-10:50</text>
+  <text x="60" y="580" font-size="18" fill="#555">Leveraging TensorCircuit-NG for Agentic Development</text>
+  <text x="60" y="605" font-size="18" fill="#555">and Automated Research</text>
+
+  <!-- Discussion -->
+  <text x="375" y="660" text-anchor="middle" font-size="18" fill="#666" font-style="italic">10:50-12:00  讨论</text>
+
+  <!-- Lunch Break -->
+  <text x="375" y="710" text-anchor="middle" font-size="18" fill="#666" font-style="italic">🍚 Lunch Break</text>
+
+  <!-- Speaker 4: 周毅 -->
+  <text x="60" y="760" font-size="26" font-weight="700" fill="#222">周毅</text>
+  <text x="690" y="760" text-anchor="end" font-size="18" fill="#444">14:00-14:30</text>
+  <text x="60" y="790" font-size="18" fill="#555">从文献到实现：基于大语言模型的量子多体算法实现工作流全记录</text>
+
+  <!-- Speaker 5: 刘金国 -->
+  <text x="60" y="850" font-size="26" font-weight="700" fill="#222">刘金国</text>
+  <text x="690" y="850" text-anchor="end" font-size="18" fill="#444">14:30-15:30</text>
+  <text x="60" y="880" font-size="18" fill="#555">Live demo: Vibe coding done right</text>
+
+  <!-- Coffee Break -->
+  <text x="375" y="930" text-anchor="middle" font-size="18" fill="#666" font-style="italic">☕ Coffee Break</text>
+
+  <!-- Speaker 6: 张天汉、廖若雪 -->
+  <text x="60" y="980" font-size="26" font-weight="700" fill="#222">张天汉、廖若雪</text>
+  <text x="690" y="980" text-anchor="end" font-size="18" fill="#444">15:50-16:20</text>
+  <text x="60" y="1010" font-size="18" fill="#555">Agentic Infra for Science and Agent-Ready Manuscript</text>
+
+  <!-- Speaker 7: 陈锟 -->
+  <text x="60" y="1050" font-size="26" font-weight="700" fill="#222">陈锟</text>
+  <text x="690" y="1050" text-anchor="end" font-size="18" fill="#444">16:20-16:50</text>
+  <text x="60" y="1080" font-size="18" fill="#555">自然科学的形式化与科研的自动化</text>
+
+  <!-- Speaker 8: 涂佳敏 -->
+  <text x="60" y="1140" font-size="26" font-weight="700" fill="#222">涂佳敏</text>
+  <text x="690" y="1140" text-anchor="end" font-size="18" fill="#444">16:50-17:05</text>
+  <text x="60" y="1170" font-size="18" fill="#555">实验数据分析的新手入门加速</text>
+
+  <!-- Speaker 9: 柴声都 -->
+  <text x="60" y="1230" font-size="26" font-weight="700" fill="#222">柴声都</text>
+  <text x="690" y="1230" text-anchor="end" font-size="18" fill="#444">17:05-17:20</text>
+  <text x="60" y="1260" font-size="18" fill="#555">与 Claude Code 协作：构建自动化科研工作流的初步探索</text>
+
+  <!-- Speaker 10: 欧仕刚 -->
+  <text x="60" y="1320" font-size="26" font-weight="700" fill="#222">欧仕刚</text>
+  <text x="690" y="1320" text-anchor="end" font-size="18" fill="#444">17:20-17:35</text>
+  <text x="60" y="1350" font-size="18" fill="#555">Benchmark, Simulator &amp; Calibration：降低idea验证成本的探索</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="1410" x2="710" y2="1410" stroke="#222" stroke-width="3"/>
+
+  <!-- TOPICS SECTION -->
+  <text x="375" y="1470" text-anchor="middle" font-size="34" font-weight="900" fill="#222">讨 论 话 题</text>
+  <line x1="260" y1="1490" x2="490" y2="1490" stroke="#222" stroke-width="2"/>
+
+  <!-- Topics as a clean numbered list -->
+  <g font-size="22" fill="#222">
+    <circle cx="75" cy="1538" r="14" fill="#222"/>
+    <text x="75" y="1544" text-anchor="middle" font-size="16" font-weight="700" fill="#F5D800">1</text>
+    <text x="100" y="1545" font-size="22">Agentic AI 对实验有用吗？</text>
+
+    <circle cx="75" cy="1588" r="14" fill="#222"/>
+    <text x="75" y="1594" text-anchor="middle" font-size="16" font-weight="700" fill="#F5D800">2</text>
+    <text x="100" y="1595" font-size="22">Agentic AI 时代，什么样的工作能留下来？</text>
+
+    <circle cx="75" cy="1638" r="14" fill="#222"/>
+    <text x="75" y="1644" text-anchor="middle" font-size="16" font-weight="700" fill="#F5D800">3</text>
+    <text x="100" y="1645" font-size="22">AI掌握的技能研究人员还需要学习吗？</text>
+
+    <circle cx="75" cy="1688" r="14" fill="#222"/>
+    <text x="75" y="1694" text-anchor="middle" font-size="16" font-weight="700" fill="#F5D800">4</text>
+    <text x="100" y="1695" font-size="22">Cursor, Claude Code, CodeX 哪一个好？</text>
+
+    <circle cx="75" cy="1738" r="14" fill="#222"/>
+    <text x="75" y="1744" text-anchor="middle" font-size="16" font-weight="700" fill="#F5D800">5</text>
+    <text x="100" y="1745" font-size="22">在agentic AI越来越强的如今，该怎么做科研</text>
+
+    <circle cx="75" cy="1788" r="14" fill="#222"/>
+    <text x="75" y="1794" text-anchor="middle" font-size="16" font-weight="700" fill="#F5D800">6</text>
+    <text x="100" y="1795" font-size="22">对AI的依赖是否会影响科研直觉的建立？</text>
+
+    <circle cx="75" cy="1838" r="14" fill="#222"/>
+    <text x="75" y="1844" text-anchor="middle" font-size="16" font-weight="700" fill="#F5D800">7</text>
+    <text x="100" y="1845" font-size="22">怎么保证AI做的结果是对的？</text>
+
+    <circle cx="75" cy="1888" r="14" fill="#222"/>
+    <text x="75" y="1894" text-anchor="middle" font-size="16" font-weight="700" fill="#F5D800">8</text>
+    <text x="100" y="1895" font-size="22">Agentic AI 除了编程还能干什么？</text>
+
+    <circle cx="75" cy="1938" r="14" fill="#222"/>
+    <text x="75" y="1944" text-anchor="middle" font-size="16" font-weight="700" fill="#F5D800">9</text>
+    <text x="100" y="1945" font-size="22">OpenClaw对科研有用吗？</text>
+
+    <circle cx="75" cy="1988" r="14" fill="#222"/>
+    <text x="75" y="1994" text-anchor="middle" font-size="14" font-weight="700" fill="#F5D800">10</text>
+    <text x="100" y="1995" font-size="22">如何适应多Agents/多项目并行的工作模式?</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="40" y1="2050" x2="710" y2="2050" stroke="#222" stroke-width="2"/>
+
+  <!-- QR Code section -->
+  <text x="375" y="2110" text-anchor="middle" font-size="30" font-weight="700" fill="#222">你有什么问题？</text>
+  <text x="375" y="2145" text-anchor="middle" font-size="20" fill="#444">扫码提交 / 选出你的问题</text>
+
+  <rect x="225" y="2165" width="300" height="300" rx="15" fill="#fff" opacity="0.3"/>
+  <image x="250" y="2175" width="250" height="250" href="data:image/png;base64,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"/>
+
+  <!-- Footer bar -->
+  <rect x="0" y="2360" width="750" height="40" fill="#222"/>
+  <text x="375" y="2388" text-anchor="middle" font-size="18" font-weight="700" fill="#F5D800">wangleiphy.github.io/vibe2026</text>
+
+</svg>

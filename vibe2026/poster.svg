@@ -10,7 +10,7 @@
   <rect width="1200" height="1697" fill="#F5D800"/>
 
   <!-- AI Agent (top-left) -->
-  <g transform="translate(40,135)" fill="none" stroke="#888" stroke-width="2.5" opacity="0.5">
+  <g transform="translate(40,120)" fill="none" stroke="#888" stroke-width="2.5" opacity="0.5">
     <!-- Head -->
     <rect x="20" y="0" width="40" height="35" rx="8" />
     <!-- Eyes -->
@@ -37,7 +37,7 @@
   </g>
 
   <!-- Experiment setup (top-right) -->
-  <g transform="translate(1070,135)" fill="none" stroke="#888" stroke-width="2.5" opacity="0.5">
+  <g transform="translate(1070,120)" fill="none" stroke="#888" stroke-width="2.5" opacity="0.5">
     <!-- Erlenmeyer flask -->
     <path d="M15,0 L15,25 L0,60 L40,60 L25,25 L25,0 Z" stroke-linejoin="round"/>
     <line x1="12" y1="0" x2="28" y2="0" stroke-linecap="round"/>
@@ -64,19 +64,20 @@
   <!-- Title -->
   <text x="600" y="100" text-anchor="middle" font-size="78" font-weight="900" fill="#1a1a1a" letter-spacing="6">Agentic AI in Action!</text>
   <!-- Date & Location -->
-  <rect x="230" y="138" width="740" height="64" rx="32" fill="#1a1a1a"/>
-  <text x="600" y="178" text-anchor="middle" font-size="28" font-weight="700" fill="#F5D800" letter-spacing="1">2026年4月14日  |  中国科学院物理研究所 M234</text>
+  <rect x="230" y="123" width="740" height="64" rx="32" fill="#1a1a1a"/>
+  <text x="600" y="163" text-anchor="middle" font-size="28" font-weight="700" fill="#F5D800" letter-spacing="1">2026年4月14日  |  中国科学院物理研究所 M234</text>
 
   <!-- Divider line -->
-  <line x1="60" y1="310" x2="1140" y2="310" stroke="#1a1a1a" stroke-width="3"/>
+  <line x1="60" y1="285" x2="1140" y2="285" stroke="#1a1a1a" stroke-width="3"/>
 
   <!-- LEFT COLUMN: Speakers -->
-  <text x="300" y="370" text-anchor="middle" font-size="40" font-weight="900" fill="#1a1a1a" letter-spacing="8">演 讲 嘉 宾</text>
-  <line x1="165" y1="392" x2="435" y2="392" stroke="#1a1a1a" stroke-width="2.5"/>
+  <text x="300" y="345" text-anchor="middle" font-size="40" font-weight="900" fill="#1a1a1a" letter-spacing="8">演 讲 嘉 宾</text>
+  <line x1="165" y1="367" x2="435" y2="367" stroke="#1a1a1a" stroke-width="2.5"/>
 
   <!-- Speaker 1: 戴希 -->
-  <text x="80" y="452" font-size="32" font-weight="900" fill="#1a1a1a">戴希</text>
-  <text x="80" y="486" font-size="17" font-weight="600" fill="#777" letter-spacing="1">09:00 – 09:30</text>
+  <text x="80" y="427" font-size="32" font-weight="900" fill="#1a1a1a">戴希</text>
+  <text x="80" y="462" font-size="20" font-weight="500" fill="#333">我和agent完成的第一个项目</text>
+  <text x="80" y="487" font-size="17" font-weight="600" fill="#777" letter-spacing="1">09:00 – 09:30</text>
 
   <!-- Speaker 2: 李源 -->
   <text x="80" y="530" font-size="32" font-weight="900" fill="#1a1a1a">李源</text>
@@ -129,11 +130,11 @@
   <text x="80" y="1555" font-size="17" font-weight="600" fill="#777" letter-spacing="1">17:20 – 17:35</text>
 
   <!-- Vertical divider -->
-  <line x1="580" y1="330" x2="580" y2="1580" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="8,4"/>
+  <line x1="580" y1="305" x2="580" y2="1580" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="8,4"/>
 
   <!-- RIGHT COLUMN: Discussion Topics -->
-  <text x="880" y="370" text-anchor="middle" font-size="40" font-weight="900" fill="#1a1a1a" letter-spacing="8">讨 论 话 题</text>
-  <line x1="745" y1="392" x2="1015" y2="392" stroke="#1a1a1a" stroke-width="2.5"/>
+  <text x="880" y="345" text-anchor="middle" font-size="40" font-weight="900" fill="#1a1a1a" letter-spacing="8">讨 论 话 题</text>
+  <line x1="745" y1="367" x2="1015" y2="367" stroke="#1a1a1a" stroke-width="2.5"/>
 
   <!-- Topic list -->
   <g font-size="22" fill="#1a1a1a">
@@ -154,13 +155,13 @@
     <text x="670" y="507" font-size="22" fill="#1a1a1a">Agentic AI 时代，</text>
     <text x="670" y="534" font-size="22" fill="#1a1a1a">什么样的工作能留下来？</text>
 
-    <!-- Topic 3: peer review speed — hourglass -->
+    <!-- Topic 3: AI skills vs human learning — graduation cap -->
     <g transform="translate(630,568)">
-      <polygon points="0,0 16,0 8,11" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round"/>
-      <polygon points="0,22 16,22 8,11" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round"/>
+      <polygon points="8,0 0,8 8,16 16,8" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="16" y1="8" x2="16" y2="18" stroke="#1a1a1a" stroke-width="2"/>
     </g>
-    <text x="670" y="588" font-size="22" fill="#1a1a1a">paper的评价方式如何跟上</text>
-    <text x="670" y="615" font-size="22" fill="#1a1a1a">Agent的产出速度？</text>
+    <text x="670" y="588" font-size="22" fill="#1a1a1a">AI掌握的技能</text>
+    <text x="670" y="615" font-size="22" fill="#1a1a1a">研究人员还需要学习吗？</text>
 
     <!-- Topic 4: coding tools — terminal bracket -->
     <g transform="translate(630,650)">
