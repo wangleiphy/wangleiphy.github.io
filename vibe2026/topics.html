@@ -25,6 +25,12 @@
           <input type="text" id="topic-input" placeholder="Type a one-sentence discussion topic..." maxlength="200" required />
           <button type="submit">Submit</button>
         </form>
+        <div id="progress-bar-container" style="display:none; margin-top:-12px; margin-bottom:16px; max-width:600px; margin-left:auto; margin-right:auto;">
+          <div style="background:#e0e0e0; border-radius:8px; height:8px; overflow:hidden;">
+            <div id="progress-bar-fill" style="background:#00688B; height:100%; width:0%; border-radius:8px; transition:width 0.4s ease;"></div>
+          </div>
+          <p id="progress-bar-label" style="font-size:0.85em; color:#666; margin:4px 0 0 0; font-style:italic;"></p>
+        </div>
         <p id="status-msg" style="font-style:italic; display:none; margin-top:-16px; margin-bottom:16px;"></p>
 
         <div id="topics-list"></div>
@@ -191,7 +197,19 @@
         if (!text) return;
 
         btn.disabled = true;
-        btn.textContent = '...';
+        btn.style.display = 'none';
+        var progressContainer = document.getElementById('progress-bar-container');
+        var progressFill = document.getElementById('progress-bar-fill');
+        var progressLabel = document.getElementById('progress-bar-label');
+        progressFill.style.width = '0%';
+        progressContainer.style.display = 'block';
+
+        function setProgress(pct, label) {
+          progressFill.style.width = pct + '%';
+          progressLabel.textContent = label;
+        }
+
+        setProgress(15, 'Fetching existing topics…');
 
         try {
           // Get existing topics for dedup
@@ -199,7 +217,9 @@
           var data = snap.val() || {};
           var existing = Object.entries(data).map(function(e) { return { id: e[0], text: e[1].text }; });
 
+          setProgress(40, 'AI screening your topic…');
           var result = await screenAndDedup(text, existing);
+          setProgress(90, 'Almost done…');
 
           if (result.action === 'new') {
             topicsRef.push({
@@ -234,8 +254,12 @@
           showStatus('Topic submitted and pending review.', '#999');
         }
 
-        btn.disabled = false;
-        btn.textContent = 'Submit';
+        setProgress(100, '');
+        setTimeout(function() {
+          progressContainer.style.display = 'none';
+          btn.style.display = '';
+          btn.disabled = false;
+        }, 300);
       });
 
       // Toggle vote — update localStorage BEFORE Firebase to avoid race condition
