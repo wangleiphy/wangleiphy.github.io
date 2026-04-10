@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 1697" width="297mm" height="420mm">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 1800" width="297mm" height="446mm">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=Noto+Sans+SC:wght@400;500;700;900&amp;display=swap');
@@ -7,7 +7,7 @@
   </defs>
 
   <!-- Background -->
-  <rect width="1200" height="1697" fill="#F5D800"/>
+  <rect width="1200" height="1800" fill="#F5D800"/>
 
   <!-- AI Agent (top-left) -->
   <g transform="translate(40,120)" fill="none" stroke="#888" stroke-width="2.5" opacity="0.5">
@@ -112,25 +112,30 @@
   <text x="80" y="1165" font-size="20" font-weight="500" fill="#333">自然科学的形式化与科研的自动化</text>
   <text x="80" y="1190" font-size="17" font-weight="600" fill="#777" letter-spacing="1">16:20 – 16:50</text>
 
-  <!-- Speaker 8: 涂佳敏 -->
-  <text x="80" y="1235" font-size="32" font-weight="900" fill="#1a1a1a">涂佳敏</text>
-  <text x="80" y="1270" font-size="20" font-weight="500" fill="#333">实验数据分析的新手入门加速</text>
+  <!-- Speaker 8: 罗迪 -->
+  <text x="80" y="1235" font-size="32" font-weight="900" fill="#1a1a1a">罗迪</text>
+  <text x="80" y="1270" font-size="20" font-weight="500" fill="#333">通往可验证与纠错的AI物理学家</text>
   <text x="80" y="1295" font-size="17" font-weight="600" fill="#777" letter-spacing="1">16:50 – 17:05</text>
 
-  <!-- Speaker 9: 柴声都 -->
-  <text x="80" y="1340" font-size="32" font-weight="900" fill="#1a1a1a">柴声都</text>
-  <text x="80" y="1375" font-size="20" font-weight="500" fill="#333">与 Claude Code 协作：构建自动化</text>
-  <text x="80" y="1400" font-size="20" font-weight="500" fill="#333">科研工作流的初步探索</text>
-  <text x="80" y="1425" font-size="17" font-weight="600" fill="#777" letter-spacing="1">17:05 – 17:20</text>
+  <!-- Speaker 9: 涂佳敏 -->
+  <text x="80" y="1340" font-size="32" font-weight="900" fill="#1a1a1a">涂佳敏</text>
+  <text x="80" y="1375" font-size="20" font-weight="500" fill="#333">实验数据分析的新手入门加速</text>
+  <text x="80" y="1400" font-size="17" font-weight="600" fill="#777" letter-spacing="1">17:05 – 17:20</text>
 
-  <!-- Speaker 10: 欧仕刚 -->
-  <text x="80" y="1470" font-size="32" font-weight="900" fill="#1a1a1a">欧仕刚</text>
-  <text x="80" y="1505" font-size="20" font-weight="500" fill="#333">Benchmark, Simulator &amp; Calibration：</text>
-  <text x="80" y="1530" font-size="20" font-weight="500" fill="#333">降低idea验证成本的探索</text>
-  <text x="80" y="1555" font-size="17" font-weight="600" fill="#777" letter-spacing="1">17:20 – 17:35</text>
+  <!-- Speaker 10: 柴声都 -->
+  <text x="80" y="1445" font-size="32" font-weight="900" fill="#1a1a1a">柴声都</text>
+  <text x="80" y="1480" font-size="20" font-weight="500" fill="#333">与 Claude Code 协作：构建自动化</text>
+  <text x="80" y="1505" font-size="20" font-weight="500" fill="#333">科研工作流的初步探索</text>
+  <text x="80" y="1530" font-size="17" font-weight="600" fill="#777" letter-spacing="1">17:20 – 17:35</text>
+
+  <!-- Speaker 11: 欧仕刚 -->
+  <text x="80" y="1575" font-size="32" font-weight="900" fill="#1a1a1a">欧仕刚</text>
+  <text x="80" y="1610" font-size="20" font-weight="500" fill="#333">Benchmark, Simulator &amp; Calibration：</text>
+  <text x="80" y="1635" font-size="20" font-weight="500" fill="#333">降低idea验证成本的探索</text>
+  <text x="80" y="1660" font-size="17" font-weight="600" fill="#777" letter-spacing="1">17:35 – 17:50</text>
 
   <!-- Vertical divider -->
-  <line x1="580" y1="305" x2="580" y2="1580" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="8,4"/>
+  <line x1="580" y1="305" x2="580" y2="1690" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="8,4"/>
 
   <!-- RIGHT COLUMN: Discussion Topics -->
   <text x="880" y="345" text-anchor="middle" font-size="40" font-weight="900" fill="#1a1a1a" letter-spacing="8">讨 论 话 题</text>
@@ -143,7 +148,7 @@
       <path d="M6,0 L6,8 L0,22 L18,22 L12,8 L12,0 Z" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round"/>
       <line x1="4" y1="0" x2="14" y2="0" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
     </g>
-    <text x="670" y="446" font-size="22" fill="#1a1a1a">Agentic AI 对实验有用吗？</text>
+    <text x="670" y="446" font-size="22" fill="#1a1a1a">Agentic AI对实验有哪些用处？</text>
 
     <!-- Topic 2: papers & legacy — document icon -->
     <g transform="translate(630,487)">
@@ -240,10 +245,10 @@
   <image x="790" y="1278" width="200" height="200" href="data:image/png;base64,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"/>
 
   <!-- Bottom divider -->
-  <line x1="60" y1="1590" x2="1140" y2="1590" stroke="#1a1a1a" stroke-width="3"/>
+  <line x1="60" y1="1695" x2="1140" y2="1695" stroke="#1a1a1a" stroke-width="3"/>
 
   <!-- Decorative bottom bar -->
-  <rect x="0" y="1657" width="1200" height="40" fill="#1a1a1a"/>
-  <text x="600" y="1685" text-anchor="middle" font-size="20" font-weight="700" fill="#F5D800" letter-spacing="2">wangleiphy.github.io/vibe2026</text>
+  <rect x="0" y="1760" width="1200" height="40" fill="#1a1a1a"/>
+  <text x="600" y="1788" text-anchor="middle" font-size="20" font-weight="700" fill="#F5D800" letter-spacing="2">wangleiphy.github.io/vibe2026</text>
 
 </svg>
