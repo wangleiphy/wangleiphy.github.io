@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "topics": {
+      ".read": true,
+      ".write": true
+    },
+    "pending": {
+      ".read": true,
+      ".write": true
+    },
+    "config": {
+      ".read": true,
+      ".write": false
+    }
+  }
+}
