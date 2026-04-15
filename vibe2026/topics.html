@@ -6,6 +6,32 @@
     <link href="css/general.css" rel="stylesheet" type="text/css"/>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <style>
+      .topics-closed-note {
+        max-width: 600px;
+        margin: 0 auto 24px auto;
+        padding: 14px 18px;
+        background: #f4f7f9;
+        border-left: 4px solid #00688B;
+        border-radius: 4px;
+        color: #333;
+        text-align: left;
+        font-size: 0.95em;
+        line-height: 1.5;
+      }
+      .vote-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2.4em;
+        padding: 4px 10px;
+        background: #eef2f5;
+        color: #00688B;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 0.95em;
+      }
+    </style>
   </head>
   <body>
     <div style="text-align:center;">
@@ -14,27 +40,19 @@
       <hr>
       <a class="menu" href="index.html">Home</a>
       <a class="menu" href="program.html">Program</a>
-      <a class="menu" href="topics.html">Vote</a>
+      <a class="menu" href="topics.html">Topics</a>
       <br><br>
 
       <div class="topics-container">
         <h2>Discussion Topics</h2>
-        <p style="color:#666; margin-bottom:20px;">Submit a question and/or upvote the ones you'd like to discuss.</p>
 
-        <form id="topic-form" class="topic-form">
-          <input type="text" id="topic-input" placeholder="Type a one-sentence discussion topic..." maxlength="200" required />
-          <button type="submit">Submit</button>
-        </form>
-        <div id="progress-bar-container" style="display:none; margin-top:-12px; margin-bottom:16px; max-width:600px; margin-left:auto; margin-right:auto;">
-          <div style="background:#e0e0e0; border-radius:8px; height:8px; overflow:hidden;">
-            <div id="progress-bar-fill" style="background:#00688B; height:100%; width:0%; border-radius:8px; transition:width 0.4s ease;"></div>
-          </div>
-          <p id="progress-bar-label" style="font-size:0.85em; color:#666; margin:4px 0 0 0; font-style:italic;"></p>
+        <div class="topics-closed-note">
+          Voting is now closed &mdash; thanks to everyone who contributed questions and votes.
+          The top-voted topics guided our discussion at the workshop. The full list is preserved below for reference.
         </div>
-        <p id="status-msg" style="font-style:italic; display:none; margin-top:-16px; margin-bottom:16px;"></p>
 
         <div id="topics-list"></div>
-        <p id="empty-msg" style="color:#999; font-style:italic; display:none;">No topics yet. Be the first to submit one!</p>
+        <p id="empty-msg" style="color:#999; font-style:italic; display:none;">No topics were submitted.</p>
       </div>
 
     </div>
@@ -54,228 +72,7 @@
       const db = firebase.database();
       const topicsRef = db.ref('topics');
 
-      // Track which topics this user has voted on
-      function getVoted() {
-        try {
-          return JSON.parse(localStorage.getItem('vibe2026_voted') || '{}');
-        } catch { return {}; }
-      }
-      function setVoted(id) {
-        const voted = getVoted();
-        voted[id] = true;
-        localStorage.setItem('vibe2026_voted', JSON.stringify(voted));
-      }
-      function unsetVoted(id) {
-        const voted = getVoted();
-        delete voted[id];
-        localStorage.setItem('vibe2026_voted', JSON.stringify(voted));
-      }
-
-      // AI screening keys — loaded from Firebase (not in source code)
-      var GEMINI_KEY = '';
-      var OPENROUTER_KEY = '';
-      var keysLoaded = 0;
-      document.querySelector('.topic-form button').disabled = true;
-      function checkKeysReady() {
-        keysLoaded++;
-        if (keysLoaded >= 2) document.querySelector('.topic-form button').disabled = false;
-      }
-      db.ref('config/geminiKey').once('value', function(snap) {
-        GEMINI_KEY = snap.val() || '';
-        checkKeysReady();
-      });
-      db.ref('config/openrouterKey').once('value', function(snap) {
-        OPENROUTER_KEY = snap.val() || '';
-        checkKeysReady();
-      });
-
-      function showStatus(msg, color) {
-        var el = document.getElementById('status-msg');
-        el.textContent = msg;
-        el.style.color = color;
-        el.style.display = 'block';
-        setTimeout(function() { el.style.display = 'none'; }, 4000);
-      }
-
-      // Build the screening prompt (shared by both AI providers)
-      function buildScreeningPrompt(text, existingTopics) {
-        var topicsList = existingTopics.map(function(t, i) {
-          return (i + 1) + '. [' + t.id + '] ' + t.text;
-        }).join('\n');
-
-        var prompt =
-          'You are a content moderator for a scientific workshop called "Agentic AI in Action". ' +
-          'The workshop covers: AI agents for science, LLMs, coding assistants (Cursor, Claude Code, Copilot), ' +
-          'computational physics, automated research, vibe coding, AI for experiments, machine learning for science, ' +
-          'human-AI collaboration, AI workflows, productivity with AI tools, and the impact of AI on research and researchers.\n\n' +
-          'A user submitted this discussion topic:\n"' + text + '"\n\n';
-
-        if (topicsList) {
-          prompt += 'Existing topics:\n' + topicsList + '\n\n';
-        }
-
-        prompt +=
-          'Rules:\n' +
-          '- If the topic is casual chat, greetings, personal questions, jokes, or NOT about AI/coding/science/research, reply: reject\n' +
-          '- ONLY merge if the new topic is essentially asking the SAME specific question as an existing topic, ' +
-          'just worded differently. Topics that share a broad theme or a keyword but ask different specific questions should NOT be merged. ' +
-          'For example "How to do research with AI" and "Do researchers still need to learn AI skills" are DIFFERENT topics. ' +
-          '"Is it worth building my own agent workflow" and "Is it worth investing time in training/cultivating agents" are DIFFERENT topics — one is about DIY vs off-the-shelf, the other is about ROI of agent onboarding. ' +
-          'When in doubt, choose "new" over "merge". ' +
-          'If you decide to merge, reply: merge [id] where [id] is the ID in brackets of the matching topic.\n' +
-          '- If the topic is relevant AND not a near-duplicate of any existing topic, reply: new\n' +
-          'Reply with ONLY one of: "reject", "merge [id]", or "new".';
-
-        return prompt;
-      }
-
-      // Parse AI response text into action
-      function parseScreeningResponse(raw) {
-        var lower = raw.toLowerCase();
-        if (lower.startsWith('reject')) return { action: 'reject' };
-        if (lower.startsWith('merge')) {
-          var match = raw.match(/[Mm]erge\s+\[?([^\]\s]+)\]?/);
-          if (match) return { action: 'merge', id: match[1] };
-        }
-        return { action: 'new' };
-      }
-
-      // Call Gemini Flash
-      async function callGemini(prompt) {
-        var resp = await fetch(
-          'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' + GEMINI_KEY,
-          {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-          }
-        );
-        var data = await resp.json();
-        return data.candidates[0].content.parts[0].text.trim();
-      }
-
-      // Fallback: Call DeepSeek-V3 via OpenRouter
-      async function callOpenRouter(prompt) {
-        var resp = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + OPENROUTER_KEY
-          },
-          body: JSON.stringify({
-            model: 'deepseek/deepseek-chat-v3-0324',
-            messages: [{ role: 'user', content: prompt }],
-            max_tokens: 50
-          })
-        });
-        var data = await resp.json();
-        return data.choices[0].message.content.trim();
-      }
-
-      // AI screening + dedup: try Gemini first, fall back to DeepSeek-V3
-      // Returns: {action: "new"} | {action: "merge", id: "..."} | {action: "reject"}
-      async function screenAndDedup(text, existingTopics) {
-        var prompt = buildScreeningPrompt(text, existingTopics);
-
-        var raw;
-        try {
-          raw = await callGemini(prompt);
-        } catch (e) {
-          console.warn('Gemini failed, falling back to DeepSeek-V3:', e);
-          raw = await callOpenRouter(prompt);
-        }
-
-        return parseScreeningResponse(raw);
-      }
-
-      // Submit a new topic with AI screening + dedup
-      document.getElementById('topic-form').addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const input = document.getElementById('topic-input');
-        const btn = document.querySelector('.topic-form button');
-        const text = input.value.trim();
-        if (!text) return;
-
-        btn.disabled = true;
-        btn.style.display = 'none';
-        var progressContainer = document.getElementById('progress-bar-container');
-        var progressFill = document.getElementById('progress-bar-fill');
-        var progressLabel = document.getElementById('progress-bar-label');
-        progressFill.style.width = '0%';
-        progressContainer.style.display = 'block';
-
-        function setProgress(pct, label) {
-          progressFill.style.width = pct + '%';
-          progressLabel.textContent = label;
-        }
-
-        setProgress(15, 'Fetching existing topics…');
-
-        try {
-          // Get existing topics for dedup
-          var snap = await topicsRef.once('value');
-          var data = snap.val() || {};
-          var existing = Object.entries(data).map(function(e) { return { id: e[0], text: e[1].text }; });
-
-          setProgress(40, 'AI screening your topic…');
-          var result = await screenAndDedup(text, existing);
-          setProgress(90, 'Almost done…');
-
-          if (result.action === 'new') {
-            topicsRef.push({
-              text: text,
-              votes: 1,
-              time: Date.now()
-            }).then(function(ref) {
-              setVoted(ref.key);
-            });
-            input.value = '';
-            showStatus('Topic submitted!', '#00688B');
-          } else if (result.action === 'merge') {
-            // Upvote the existing similar topic
-            var existingVoted = getVoted();
-            if (!existingVoted[result.id]) {
-              setVoted(result.id);
-              topicsRef.child(result.id).child('votes').transaction(function(v) { return (v || 0) + 1; });
-            }
-            input.value = '';
-            showStatus('Similar topic exists — your vote has been added!', '#00688B');
-          } else {
-            showStatus('Topic not accepted. Please submit a topic relevant to the workshop.', '#c44');
-          }
-        } catch (err) {
-          // If AI screening fails, queue for human review
-          db.ref('pending').push({
-            text: text,
-            votes: 1,
-            time: Date.now()
-          });
-          input.value = '';
-          showStatus('Topic submitted and pending review.', '#999');
-        }
-
-        setProgress(100, '');
-        setTimeout(function() {
-          progressContainer.style.display = 'none';
-          btn.style.display = '';
-          btn.disabled = false;
-        }, 300);
-      });
-
-      // Toggle vote — update localStorage BEFORE Firebase to avoid race condition
-      function toggleVote(id, currentVotes) {
-        const voted = getVoted();
-        if (voted[id]) {
-          unsetVoted(id);
-          topicsRef.child(id).update({ votes: Math.max(0, currentVotes - 1) });
-        } else {
-          setVoted(id);
-          topicsRef.child(id).update({ votes: currentVotes + 1 });
-        }
-      }
-
-      // Render topics in real time
-      topicsRef.on('value', function(snapshot) {
+      topicsRef.once('value', function(snapshot) {
         const list = document.getElementById('topics-list');
         const emptyMsg = document.getElementById('empty-msg');
         const data = snapshot.val();
@@ -287,18 +84,15 @@
         }
         emptyMsg.style.display = 'none';
 
-        // Sort by votes descending, then by time ascending
         const topics = Object.entries(data)
           .map(([id, t]) => ({ id, ...t }))
           .sort((a, b) => b.votes - a.votes || a.time - b.time);
 
-        const voted = getVoted();
         list.innerHTML = topics.map(function(t) {
-          const active = voted[t.id] ? ' active' : '';
           return '<div class="topic-item">' +
-            '<button class="vote-btn' + active + '" onclick="toggleVote(\'' + t.id + '\',' + t.votes + ')" title="' + (voted[t.id] ? 'Remove vote' : 'Upvote') + '">' +
-            '▲ <span class="vote-count">' + t.votes + '</span>' +
-            '</button>' +
+            '<span class="vote-badge" title="' + t.votes + ' vote' + (t.votes === 1 ? '' : 's') + '">' +
+            t.votes +
+            '</span>' +
             '<span class="topic-text">' + escapeHtml(t.text) + '</span>' +
             '</div>';
         }).join('');

@@ -2,11 +2,11 @@
   "rules": {
     "topics": {
       ".read": true,
-      ".write": true
+      ".write": false
     },
     "pending": {
       ".read": true,
-      ".write": true
+      ".write": false
     },
     "config": {
       ".read": true,
