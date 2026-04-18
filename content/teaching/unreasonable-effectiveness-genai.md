@@ -32,7 +32,18 @@ The takeaway is that no modality-specific architecture is required — the autor
 
 ## The Untold Secret of Pre-training
 
-<!-- §2: Task 5 -->
+A physicist who wants to find a low-energy configuration has, traditionally, searched $3N$-dimensional configuration space for $\min_X E(X)$. Training a generative model does something different: it searches a much larger *parameter* space for $\min_\theta \mathbb{E}_{X \sim p_\theta(X)}[E(X)]$. On the surface this is strictly harder. In practice it is easier, and understanding why is the second surprise.
+
+$$\min_\theta\; \mathbb{E}_{X \sim p_\theta(X)}\!\left[E(X)\right]
+\qquad \text{vs.} \qquad \min_X\; E(X)$$
+
+The left-hand side lives in a parameter space that can be hundreds of millions of dimensions, yet is empirically smooth and largely free of the traps that plague physical energy landscapes.[^5] <!-- footnote 5: Li et al. loss landscape --> The right-hand side lives in a $3N$-dimensional configuration space that is, for any non-trivial system, rugged and crowded with metastable minima — the standard obstruction that motivates replica exchange, parallel tempering, and every other scheme physicists have devised to escape local traps.
+
+**Conjecture.** Pre-training does two things simultaneously, and it is the combination that accounts for its surprising power. First, it provides a good *System 1* — borrowing Kahneman's terminology, System 1 is the fast, intuitive mode of cognition; System 2 is the slow, deliberative mode — in the form of a sampler $p_\theta$ that already concentrates probability mass near low-energy, high-quality configurations. When System 1 is good, far less System 2 effort (explicit energy minimization, exhaustive search, rejection sampling) is needed to obtain useful outputs. Second, and more subtly, pre-training learns a representation in which the downstream policy landscape — the objective seen by fine-tuning or reinforcement learning — is itself smoother and simpler than it would be in raw configuration space. Fine-tuning then navigates a gentler terrain.
+
+These two mechanisms are distinct but reinforce each other. A good prior from pre-training reduces the effective search volume; a smooth policy landscape means gradient descent on that smaller volume converges reliably rather than getting stuck. Neither claim is a theorem. The evidence is empirical: fine-tuning a pre-trained model consistently succeeds with far less data and compute than training from scratch on the same downstream task. The conjecture is that landscape geometry, not merely prior knowledge, is a key part of the explanation.
+
+Physicists familiar with variational Monte Carlo (VMC) or tensor-network methods will feel a familiar discomfort here. In those frameworks, every additional variational parameter incurs a cost: a more flexible ansatz introduces more variational degrees of freedom, raising the risk of over-fitting a finite Monte Carlo sample and worsening the bias-variance trade-off. The community has learned to be parsimonious — adding parameters is never free. Pre-training appears to invert this intuition. Over-parameterized neural networks, trained on broad corpora, generalize *better* as they grow, not worse. The regime where more parameters help rather than hurt is not a quirk to be explained away — it is the operative regime of modern generative AI, and it demands a rethinking of the bias-variance intuitions computational physicists carry from their training.
 
 ## The Unreasonable Effectiveness of $y \sim p_\theta(y \mid x)$
 
