@@ -85,4 +85,12 @@ The three surprises in this post — universal autoregressive factorization, smo
 
 ## References
 
-<!-- References: filled by citation-verification task (footnotes [^1]-[^5]) -->
+[^1]: Tian, Jiang, Yuan, Peng, and Wang, "Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction", arXiv:2404.02905 (2024). https://arxiv.org/abs/2404.02905
+
+[^2]: Billera, Oresten, Stalmarck, Sato, Kaduk, and Murrell, "The Continuous Language of Protein Structure", bioRxiv:10.1101/2024.05.11.593685 (2024). https://www.biorxiv.org/content/10.1101/2024.05.11.593685
+
+[^3]: Cao, Luo, Lv, and Wang, "Space Group Informed Transformer for Crystalline Materials Generation", arXiv:2403.15734 (2024). https://arxiv.org/abs/2403.15734
+
+[^4]: Wu, Wang, and Zhang, "Solving Statistical Mechanics Using Variational Autoregressive Networks", arXiv:1809.10606 (2018). https://arxiv.org/abs/1809.10606
+
+[^5]: Li, Xu, Taylor, Studer, and Goldstein, "Visualizing the Loss Landscape of Neural Nets", arXiv:1712.09913 (2017). https://arxiv.org/abs/1712.09913
