@@ -6,7 +6,11 @@
 
 ---
 
-In 1960, Eugene Wigner marveled at "The Unreasonable Effectiveness of Mathematics in the Natural Sciences" — the uncanny fact that abstract structures invented by mathematicians turn out to describe physical reality with startling precision. Almost fifty years later, Halevy, Norvig, and Pereira wrote a sequel of sorts: "The Unreasonable Effectiveness of Data," arguing that simple models trained on enough data beat carefully engineered ones. This post is another installment in that series, written from a physicist's angle. The protagonist this time is generative AI.
+An autoregressive model factorizes the joint probability distribution of a high-dimensional variable $X = (x_1, x_2, \ldots, x_N)$ into a product of low-dimensional conditional factors, using the chain rule of probability:
+
+$$p(X) = p(x_1)\,p(x_2 \mid x_1)\,p(x_3 \mid x_1, x_2) \cdots$$
+
+Each factor $p(x_i \mid x_{<i})$ is far easier to model than the full joint — for a language model, $x_i$ is a single token drawn from a finite vocabulary, rather than a combinatorially large sequence. Because each factor is separately normalized, the joint is normalized by construction, and sampling reduces to drawing one variable at a time in order. Predicting a conditional distribution is classically called a *regression* task, so iterating this prediction along a sequence is "auto-regression." GPT — Generative Pre-Trained Transformer — is an autoregressive model of exactly this kind, and the same recipe applies to anything one can serialize into a sequence: text, images, crystals, board positions, spin configurations.
 
 Here is the puzzle. A modern generative AI system is, mechanically, a learned probability distribution $p_\theta$ over sequences of tokens, pixels, atomic coordinates, or control pulses. At inference time you just sample: $y \sim p_\theta(y \mid x)$. There is nothing obviously special about that operation. And yet these systems paint photorealistic images of parrots, fold proteins to atomic accuracy, propose stable crystal structures, drive laboratory qubits through calibration routines, and write working code on demand. Why should sampling from a learned distribution do all that?
 
@@ -14,11 +18,7 @@ This post unpacks three surprises. First, the autoregressive factorization that 
 
 ## Autoregressive Models Beyond Language
 
-Language models work by factorizing the joint distribution over a token sequence using the chain rule of probability:
-
-$$p(X) = p(x_1)\,p(x_2 \mid x_1)\,p(x_3 \mid x_1, x_2) \cdots$$
-
-The key realization is that this factorization does not care what the tokens are. *Language* becomes a token sequence, a token sequence becomes a bitstream, and a bitstream can represent *anything*. Whatever digital information you can store on a disk, transmit over a network, or read off a sensor is, at some layer of abstraction, a bitstream — text, images, audio, molecular geometries, experimental traces, control pulses, compiled binaries. The autoregressive predictor acts on that layer. So the class of things one can model autoregressively is, in principle, the class of things one can digitally represent at all — extraordinarily general.
+The chain-rule factorization above was invented for language, where each $x_i$ is the next word given its predecessors. The key realization is that this factorization does not care what the tokens are. *Language* becomes a token sequence, a token sequence becomes a bitstream, and a bitstream can represent *anything*. Whatever digital information you can store on a disk, transmit over a network, or read off a sensor is, at some layer of abstraction, a bitstream — text, images, audio, molecular geometries, experimental traces, control pulses, compiled binaries. The autoregressive predictor acts on that layer. So the class of things one can model autoregressively is, in principle, the class of things one can digitally represent at all — extraordinarily general.
 
 **Images.** There is more than one way to serialize an image into a sequence. Visual autoregressive modeling (VAR) reformulates image generation as "next-scale prediction": instead of generating pixels left-to-right, the model predicts a sequence of progressively higher-resolution token maps, each conditioned on all coarser scales that came before.[^1] JPEG-LM goes further and skips the image tokenizer entirely — it trains a language model directly on the raw bytes of a JPEG file, treating the already-compressed image as just another byte sequence to predict one token at a time.[^2] The two approaches differ only in what "token" means. In both cases, the autoregressive machinery is preserved exactly, and coherent images fall out of the same chain-rule predictor that handles text.
 
@@ -41,11 +41,15 @@ There is a concrete geometric reason to expect this, and it is sharpest when we 
 
 ## The Unreasonable Effectiveness of $y \sim p_\theta(y \mid x)$
 
-In deployment, the parameters $\theta$ are frozen — the weights never change after training ends. Only the context $x$ varies from one task to the next. This sounds unremarkable. It is enough.
+When deployment as an LLM, the parameters $\theta$ of the autoregressive model are frozen. The weights never change after training ends. Only the context $x$ varies from one task to the next. This sounds unremarkable. Yet, it is extremely powerful.
+
+We have all seen the power of GPT firsthand: the same frozen model answers questions, drafts prose, translates text, and writes code — each task differs only in $x$. Moreover, the agentic harness amplifies this power by embedding the sampler in an outer loop that can observe, act, and iterate rather than reply once and stop.
 
 Briefly, an agent wraps this sampler in a loop: **observe** the environment, **reason**, **act** via a tool, **verify** the outcome. The context window is exactly the $x$ above — it holds the current goal, the plan, recent outputs, error messages, and whatever has been retrieved. For the full picture see [*AI Agents and Your Research*](teaching-post.html?p=ai-agent-research).
 
 The striking point is the *breadth* of work this loop handles with a single frozen model. The same $p_\theta$ writes prose, debugs code, drives a browser, navigates a terminal — and, increasingly, runs real experiments on real instruments. In each case only $x$ is changing.
+
+The inner engine is chain-of-thought: letting the sampler emit intermediate reasoning tokens before committing to a final answer turns $p_\theta(y \mid x)$ into a search procedure, with planning and deliberation distilled from the reasoning-shaped traces seen in training. The agent loop then wraps that search in external feedback — reflection at the tool level compounding deliberation at the token level.
 
 As a concrete example, the *Agentic AI in Action!* school at IOP in April 2026 filled the institute's largest lecture hall for the full day. The draw was simple: agentic AI is useful, and it is fun to watch. Live demonstrations ran through the day — agents skimming literature through a terminal, sketching numerical experiments, iterating on results in a single session — and the audience stayed for every one.
 
