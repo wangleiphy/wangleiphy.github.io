@@ -2,6 +2,7 @@
 
 ## 2026
 
+- [The Unreasonable Effectiveness of Generative AI, April 2026](teaching-post.html?p=unreasonable-effectiveness-genai)
 - [AI Agents and Your Research, IOP, January 2026](teaching-post.html?p=ai-agent-research)
 
 ## 2025
