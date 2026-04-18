@@ -2,7 +2,7 @@
 
 ## 2026
 
-- [The Unreasonable Effectiveness of Autoregressive Modeling, April 2026](teaching-post.html?p=unreasonable-effectiveness-genai)
+- [The Unreasonable Effectiveness of Autoregressive Models, April 2026](teaching-post.html?p=unreasonable-effectiveness-ar)
 - [AI Agents and Your Research, IOP, January 2026](teaching-post.html?p=ai-agent-research)
 
 ## 2025
