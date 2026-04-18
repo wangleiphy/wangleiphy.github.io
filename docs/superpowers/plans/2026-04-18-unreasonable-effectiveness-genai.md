@@ -2,7 +2,39 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Publish a ~2,000–2,500-word essay at `content/teaching/unreasonable-effectiveness-genai.md`, linked from `content/teaching.md`, making the case that generative AI is general-purpose scientific machinery unified by a variational free-energy calculation.
+## AMENDMENT 2026-04-18 (supersedes relevant sections below)
+
+Per author direction after plan was drafted, the post ships with **three sections**, not four:
+
+- **§1** Autoregressive models beyond language (unchanged)
+- **§2** The untold secret of pre-training (unchanged)
+- **§3** The unreasonable effectiveness of $y \sim p_\theta(y \mid x)$ (unchanged)
+- ~~**§4** Generative AI: from Bit to It~~ — **DROPPED**. The variational-free-energy unification is saved for a future post.
+
+Consequences that cascade through the tasks below:
+- The **goal** is now: make the case that generative AI is general-purpose scientific machinery, via three concrete surprises. The variational-free-energy unification is no longer the keystone; the coda carries the synthesis instead.
+- **Task 1 (citation verification) is deferred to the end**, and only covers §1 and §2 citations (5 footnotes total: `[^1]`–`[^5]`). No §4 footnotes.
+- **Task 7 (§4 writing) is DELETED.** Do not execute it.
+- **Task 3 (intro)**: the roadmap sentence promises three surprises, not four. The intro may still *tease* the variational-math thread in one line, but only as forward-looking, and the post does not deliver it.
+- **Task 8 (coda)**: the coda absorbs the synthesis role. It closes by naming generative modeling as a first-class computational method, alongside MC / VMC / tensor networks.
+
+Revised task order (execution sequence):
+1. Task 2 — Scaffold (three section placeholders, not four)
+2. Task 3 — Intro (roadmap = 3 surprises)
+3. Task 4 — §1 AR beyond language (footnotes `[^1]`–`[^4]`, placeholder bodies)
+4. Task 5 — §2 pre-training secret (footnote `[^5]`, placeholder body)
+5. Task 6 — §3 frozen $p_\theta$ (no footnotes)
+6. Task 8 — Coda (no references to §4; no `## References` body yet)
+7. Task 1 — Citation verification (run NOW, after writing; only 5 footnotes)
+8. Task 8 (continuation) — Fill `## References` with verified strings from Task 1
+9. Task 9 — Link from teaching.md
+10. Task 10 — Final verification and cleanup
+
+Sections §1–§3 and Task 2 / 3 / 4 / 5 / 6 / 8 / 9 / 10 otherwise follow the pre-amendment text. Ignore everywhere Task 7 appears. Ignore everywhere §4 appears.
+
+---
+
+**Goal:** Publish a ~1,500–2,000-word essay at `content/teaching/unreasonable-effectiveness-genai.md`, linked from `content/teaching.md`, making the case that generative AI is general-purpose scientific machinery via three concrete surprises: universal representation, tractable optimization, and a frozen model that suffices.
 
 **Architecture:** A single Markdown file rendered client-side by `teaching-post.html?p=unreasonable-effectiveness-genai`. Math via KaTeX (inline `$...$`, display `$$...$$`), footnotes via `marked-footnote`. No new HTML, no new CSS, no build step.
 
