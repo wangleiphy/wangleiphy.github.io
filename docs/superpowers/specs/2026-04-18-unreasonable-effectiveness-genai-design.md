@@ -110,8 +110,8 @@ control of laboratory hardware.
   $x$ varied per task.
 - Concrete example: Shigang Ou (IOP / DP Tech / BAQIS) — qubit vibe
   calibration and control. An agent drives the measurement–fit–update
-  cycle on a real quantum device. (Author to confirm reference/URL for
-  citation.)
+  cycle on a real quantum device. Described as **ongoing work**, no
+  external URL/preprint cited.
 - Brief, self-contained recap of what an agent is — enough that a reader
   who hasn't seen `ai-agent-research.md` can follow. One-line pointer to
   that post for the fuller mechanics.
@@ -132,9 +132,10 @@ free-energy / Bayesian-posterior minimization.
     \| q_\mathrm{prior})$. Refs: OpenAI (InstructGPT), DeepSeek (exact
     citations to verify). Everyday analogy: a detective writing "… the
     murderer is ___".
-  - **Nature's cost function.** $F[\rho] = E - T S$. Refs: Xie et al., JML
-    '21; SciPost Physics '23 (exact titles/DOIs to verify; author has
-    these).
+  - **Nature's cost function.** $F[\rho] = E - T S$. Refs:
+    - Xie et al., JML '21 — verification target:
+      https://global-sci.com/index.php/jml/article/view/13175
+    - SciPost Physics '23 (title/DOI to verify at writing time).
   - **Materials inverse design.** $p(X|y) \propto p(X)\,p(y|X)$. Refs:
     Cao et al., arXiv:2403.15734 and arXiv:2504.02367.
 - The three share one master form: minimize an energy-like term plus an
@@ -166,9 +167,9 @@ rather than guess.
 
 - **New:** `content/teaching/unreasonable-effectiveness-genai.md` — the post.
 - **Modified:** `content/teaching.md` — one new list entry linking to the post.
-- **Optional, not blocking:** a small SVG diagram visualizing the §4
-  "three faces of one calculation." Can be added in a follow-up pass; the
-  post stands on prose alone if the SVG is skipped.
+- **Follow-up (not part of initial commit):** a small SVG diagram visualizing
+  the §4 "three faces of one calculation." The initial post ships in prose;
+  the diagram is added in a later pass.
 
 ## Out of scope
 
@@ -182,12 +183,10 @@ rather than guess.
   families** beyond mentions in passing. Keeping the scope tight around AR
   and the variational unification.
 
-## Open questions for the author
+## Open questions — resolved
 
-1. Should the optional SVG for §4 be part of the initial commit, or a
-   follow-up?
-2. For §3, should the Shigang Ou qubit-calibration example reference a
-   public write-up (URL/preprint), or be described as "ongoing work at
-   IOP / DP Tech / BAQIS"?
-3. Any Xie et al. citations (JML '21, SciPost '23) the author wants to
-   supply directly rather than have me look up?
+1. **SVG for §4:** follow-up pass, not part of the initial post commit.
+2. **Shigang Ou §3 example:** describe as ongoing work; no external URL.
+3. **Xie et al. JML '21:** verification target is
+   https://global-sci.com/index.php/jml/article/view/13175. SciPost Physics
+   '23 citation to be resolved at writing time.
