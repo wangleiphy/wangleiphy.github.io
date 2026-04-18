@@ -77,7 +77,24 @@
             }
 
             const markdown = await response.text();
-            const html = marked.parse(markdown);
+
+            // Protect math spans from markdown processing (marked would otherwise
+            // interpret underscores inside $...$ as italic delimiters).
+            const mathBlocks = [];
+            let protectedMd = markdown.replace(/\$\$([\s\S]+?)\$\$/g, (_, m) => {
+                mathBlocks.push({delim: '$$', content: m});
+                return `@@MATHBLOCK${mathBlocks.length - 1}@@`;
+            });
+            protectedMd = protectedMd.replace(/\$([^\$\n]+?)\$/g, (_, m) => {
+                mathBlocks.push({delim: '$', content: m});
+                return `@@MATHBLOCK${mathBlocks.length - 1}@@`;
+            });
+
+            let html = marked.parse(protectedMd);
+            html = html.replace(/@@MATHBLOCK(\d+)@@/g, (_, i) => {
+                const b = mathBlocks[+i];
+                return `${b.delim}${b.content}${b.delim}`;
+            });
 
             container.style.opacity = '0';
             container.innerHTML = html;

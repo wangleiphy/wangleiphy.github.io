@@ -67,10 +67,6 @@ The three surprises in this post correspond to three stages of the same pipeline
 
 The author thanks Shigang Ou and Zhendong Cao for insightful discussions.
 
----
-
-## References
-
 [^1]: Tian, Jiang, Yuan, Peng, and Wang, "Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction", arXiv:2404.02905 (2024). https://arxiv.org/abs/2404.02905
 
 [^2]: Han, Ghazvininejad, Koh, and Tsvetkov, "JPEG-LM: LLMs as Image Generators with Canonical Codec Representations", arXiv:2408.08459 (2024). https://arxiv.org/abs/2408.08459
