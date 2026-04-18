@@ -1,4 +1,4 @@
-# The Unreasonable Effectiveness of Autoregressive Modeling
+# The Unreasonable Effectiveness of Autoregressive Models
 
 *Lei Wang and AI Agent*
 
@@ -10,11 +10,11 @@ An autoregressive model factorizes the joint probability distribution of a high-
 
 $$p(X) = p(x_1)\,p(x_2 \mid x_1)\,p(x_3 \mid x_1, x_2) \cdots$$
 
-Each factor $p(x_i \mid x_{<i})$ is far easier to model than the full joint — for a language model, $x_i$ is a single token drawn from a finite vocabulary, rather than one of combinatorially many full sequences. Because each factor is separately normalized, the joint is normalized by construction, and sampling reduces to drawing one variable at a time in order. Predicting a conditional distribution is classically called a *regression* task, so iterating this prediction along a sequence is "auto-regression." GPT — Generative Pre-Trained Transformer — is an autoregressive model of exactly this kind, and the same recipe applies to anything one can serialize into a sequence: text, images, crystals, board positions, spin configurations.
+Each factor $p(x_i \mid x_{<i})$ is far easier to model than the full joint — for a language model, $x_i$ is a single token drawn from a finite vocabulary, rather than one of combinatorially many full sequences. Because each factor is separately normalized, the joint probability is normalized by construction, and sampling reduces to drawing one variable at a time in order. Predicting a conditional distribution is classically called a *regression* task, so iterating this prediction along a sequence is "auto-regression." GPT — Generative Pre-Trained Transformer — is an autoregressive model of exactly this kind, and the same recipe applies to anything one can serialize into a sequence: text, images, crystals, spin configurations.[^6]
 
-Here is the puzzle. A modern generative AI system is, mechanically, a learned probability distribution $p_\theta$ over sequences of tokens, pixels, atomic coordinates, or control pulses. At inference time you just sample: $X \sim p_\theta(X \mid y)$, where $y$ is whatever context the model is conditioned on. There is nothing obviously special about that operation. And yet these systems paint photorealistic images of parrots, fold proteins to atomic accuracy, propose stable crystal structures, drive laboratory qubits through calibration routines, and write working code on demand. Why should sampling from a learned distribution do all that?
+Here is the puzzle. A modern generative AI system is, mechanically, a learned probability distribution $p_\theta$ over sequences of tokens. At inference time you just sample: $X \sim p_\theta(X \mid y)$, where $y$ is whatever context the model is conditioned on. There is nothing obviously special about that operation. And yet these systems paint photorealistic images of parrots, fold proteins to atomic accuracy, propose stable crystal structures, drive laboratory qubits through calibration routines, and write working code on demand. Why should sampling from a learned distribution do all that?
 
-This post unpacks three surprises. First, the autoregressive factorization that makes language models work turns out to be universal — the same recipe applies across radically different scientific modalities. Second, finding good parameters $\theta$ in a vast, high-dimensional space is, counterintuitively, *easier* than searching configuration space directly. Third, once $\theta$ is frozen you do not need to retrain anything: varying only the context $y$ is enough to steer the model toward real scientific tasks.
+This post unpacks three aspects of the unreasonable effectiveness of autoregressive models. First, the autoregressive factorization that makes language models work turns out to be universal — the same recipe applies across radically different scientific modalities. Second, after data-driven pretraining, finding good parameters $\theta$ in a vast, high-dimensional space is, counterintuitively, *easier* than searching configuration space directly. Third, varying only the context $y$ is surprisingly powerful to steer the model with fixed $\theta$ to solve real scientific tasks, from writing code to driving laboratory experiments.
 
 ## Autoregression Generalizes Beyond Language
 
@@ -76,3 +76,5 @@ The author thanks Shigang Ou and Zhendong Cao for insightful discussions.
 [^4]: Cao, Ou, and Wang, "CrystalFormer-CSP: Thinking Fast and Slow for Crystal Structure Prediction", arXiv:2512.18251 (2025). https://arxiv.org/abs/2512.18251
 
 [^5]: Yuksekgonul, Koceja, Li, Bianchi, McCaleb, Wang, Kautz, Choi, Zou, Guestrin, and Sun, "Learning to Discover at Test Time", arXiv:2601.16175 (2026). https://arxiv.org/abs/2601.16175
+
+[^6]: Wu, Wang, and Zhang, "Solving Statistical Mechanics Using Variational Autoregressive Networks", Physical Review Letters 122, 080602 (2019). https://arxiv.org/abs/1809.10606
