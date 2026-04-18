@@ -41,9 +41,7 @@ There is a concrete geometric reason to expect this. A single neural-network par
 
 ## The Unreasonable Effectiveness of $y \sim p_\theta(y \mid x)$
 
-$$y \sim p_\theta(y \mid x)$$
-
-In deployment, $p_\theta$ is frozen — the weights never change after training ends. Only the context $x$ varies from one task to the next. This sounds unremarkable. It is enough.
+In deployment, the parms of $p_\theta$ are frozen — the weights never change after training ends. Only the context $x$ varies from one task to the next. This sounds unremarkable. It is enough.
 
 Briefly, an agent wraps this sampler in a loop: **observe** the environment, **reason**, **act** via a tool, **verify** the outcome. The context window is exactly the $x$ above — it holds the current goal, the plan, recent outputs, error messages, and whatever has been retrieved. For the full picture see [*AI Agents and Your Research*](teaching-post.html?p=ai-agent-research).
 
@@ -52,8 +50,8 @@ The striking point is the *breadth* of work this loop handles with a single froz
 A concrete classroom example: the *Agentic AI in Action!* school held at IOP in April 2026 filled the institute's largest lecture hall for the full day. Graduate students wrapped frozen models in thin agent loops and treated writing, reading, and running research code as one continuous conversation — skimming literature through the terminal, sketching numerical experiments, and iterating on results in a single session. The point came through clearly at an event like this: agentic AI is useful, and it is fun.
 
 <div style="display: flex; gap: 1em; align-items: flex-start; flex-wrap: wrap; margin: 1.5em 0;">
-  <img src="vibe2026-poster.png" alt="Agentic AI in Action! school poster" style="max-height: 420px; width: auto;">
-  <img src="vibe2026-auditorium.jpg" alt="IOP lecture hall packed for the Agentic AI in Action! school" style="max-height: 420px; width: auto; max-width: 100%; flex: 1; min-width: 240px;">
+  <img src="vibe2026-poster.png" alt="Agentic AI in Action! school poster" style="height: 420px; width: auto;">
+  <img src="vibe2026-auditorium.jpg" alt="IOP lecture hall packed for the Agentic AI in Action! school" style="height: 420px; width: auto;">
 </div>
 
 The reach extends past the keyboard. Shigang Ou (IOP / DP Tech / BAQIS) is pursuing ongoing work in which an AI agent drives superconducting-qubit calibration directly. For a time-Rabi experiment, the agent writes a pulse schedule, submits it to the control electronics, waits for the oscillation trace, fits the Rabi curve to extract the $\pi$-pulse width, updates the parameter, and submits a verification shot — iterating until calibration converges. Throughout, $p_\theta$ never changes. What changes is only $x$: the conversation history, the latest code, the returned trace, the decision to proceed or retry. The physicist's intuition is that running an experiment requires a trained experimentalist who knows the instrument, the failure modes, and the relevant physics. What this demonstrates is that much of that competence can be encoded in context and iterated at inference time.
