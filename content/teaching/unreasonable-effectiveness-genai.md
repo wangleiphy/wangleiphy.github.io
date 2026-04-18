@@ -75,4 +75,14 @@ Wigner marveled that mathematics, developed with no particular application in mi
 
 ## Coda
 
-<!-- coda: Task 8 -->
+Generative modeling now belongs on the same shelf as Monte Carlo sampling, variational wavefunctions, and tensor networks — not as a curiosity borrowed from machine learning but as a first-class computational method for physicists. What unites all four? Each, in its own guise, parameterizes a probability distribution and then minimizes an expectation with respect to that distribution. Monte Carlo estimates the expectation by sampling; variational methods minimize it analytically over a chosen ansatz; tensor networks compress it into a tractable factored form. Generative AI does the same thing on a neural-network substrate, at a scale and across a breadth of modalities that none of the earlier methods reached. The substrate is new; the mathematical core is not.
+
+The three surprises in this post — universal autoregressive factorization, smooth loss landscapes in parameter space, and frozen-weight agents that close experimental loops — each pull on the same thread. That thread, traced carefully, leads to a variational free-energy principle that appears to unite nature's cost function, post-training objectives, and inverse design in a single framework. Following it is a subject for a future post.
+
+**Further reading.** The author's 2025 lecture [Autoregressive model: alphabets, actions, and atoms](lectures/AAA-hangzhou2025.pdf) covers the material in §1 in depth, including worked examples for each scientific domain. For readers who want to pursue the variational-math thread, the 2022 summer-school talk [Unlocking the power of the variational free-energy principle with deep generative models](lectures/deepvariationalfreenergy-MLCMP.pdf) develops the connection between free-energy minimization and generative training. The companion post [AI Agents and Your Research](teaching-post.html?p=ai-agent-research) is prerequisite reading for §3, covering the agent loop and tool-use patterns in more detail.
+
+---
+
+## References
+
+<!-- References: filled by citation-verification task (footnotes [^1]-[^5]) -->
