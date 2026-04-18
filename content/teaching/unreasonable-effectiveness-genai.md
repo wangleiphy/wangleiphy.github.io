@@ -1,6 +1,6 @@
 # The Unreasonable Effectiveness of Generative AI
 
-*Lei Wang*
+*Lei Wang and AI Agent*
 
 *April 2026*
 
@@ -24,7 +24,7 @@ The key realization is that this factorization does not care what the tokens are
 
 **Crystals.** Crystalformer treats crystal structure generation as an autoregressive process over atomic sites: atoms are placed one at a time, with each placement conditioned on the space group, lattice parameters, and all previously placed atoms.[^3] The discrete symmetry constraints of crystallography enter naturally as conditioning information, and the model learns to respect them without any hand-engineered symmetry enforcement.
 
-The takeaway is that no modality-specific architecture is required — the autoregressive machinery transports across domains. This stands in contrast to the tradition in computational physics of building bespoke tools for each problem: tensor networks for spin systems, density functional theory for electronic structure, classical force fields for biomolecular dynamics. Each of those frameworks embeds hard-won physical intuition but is largely confined to its own domain. The same transformer, trained autoregressively on a different kind of sequence, can render a photorealistic landscape or propose a stable crystal. That is the first of this post's three surprises.
+The takeaway is that no modality-specific architecture is required — the autoregressive machinery transports across domains. This stands in contrast to the tradition in computational physics of building bespoke tools for each problem: tensor networks for spin systems, density functional theory for electronic structure, classical force fields for biomolecular dynamics. Each of those frameworks embeds hard-won physical intuition but is largely confined to its own domain. The same transformer, trained autoregressively on a different kind of sequence, can render a photorealistic landscape or propose a stable crystal — and a range of other scientific objects besides; an earlier [lecture](lectures/AAA-hangzhou2025.pdf) walks through several more. That is the first of this post's three surprises.
 
 ## The Untold Secret of Pre-training
 
@@ -33,11 +33,11 @@ A physicist who wants to find a low-energy configuration has, traditionally, sea
 $$\min_\theta\; \mathbb{E}_{X \sim p_\theta(X)}\!\left[E(X)\right]
 \qquad \text{vs.} \qquad \min_X\; E(X)$$
 
-The left-hand side lives in a parameter space that can be hundreds of millions of dimensions, yet is empirically smooth and largely free of the traps that plague physical energy landscapes.[^4] The right-hand side lives in a $3N$-dimensional configuration space that is, for any non-trivial system, rugged and crowded with metastable minima — the standard obstruction that motivates replica exchange, parallel tempering, and every other scheme physicists have devised to escape local traps.
+The left-hand side lives in a parameter space that can be hundreds of millions of dimensions, yet is empirically smooth and largely free of the traps that plague physical energy landscapes. The right-hand side lives in a $3N$-dimensional configuration space that is, for any non-trivial system, rugged and crowded with metastable minima — the standard obstruction that motivates replica exchange, parallel tempering, and every other scheme physicists have devised to escape local traps.
 
 **Conjecture.** Pre-training does two things at once, and it is the combination that matters. First, it provides a good *System 1* — in Kahneman's terminology, System 1 is the fast, intuitive mode of cognition; System 2 is the slow, deliberative mode. Here System 1 is the sampler $p_\theta$, which already concentrates probability mass near low-energy, high-quality configurations. When System 1 is good, far less System 2 effort (explicit energy minimization, exhaustive search, rejection sampling) is needed to obtain useful outputs. Second, and more subtly, pre-training learns a representation in which the downstream policy landscape — the objective seen by fine-tuning or reinforcement learning — is itself smoother than it would be in raw configuration space. Fine-tuning navigates a gentler terrain than direct energy minimization ever did.
 
-There is a concrete geometric reason to expect this. A single neural-network parameter typically controls many output variables at once: changing it perturbs many atomic coordinates, or many pixel predictions, in a coordinated way. A step in parameter space is therefore a *nonlocal* move in configuration space, and nonlocal moves can cross energy barriers that local atomic perturbations cannot. Recent work on crystal-structure prediction makes this concrete — reinforcement fine-tuning of a pretrained generative model navigates through exactly these nonlocal moves, and reaches stable structures that random-restart energy minimization would miss.[^5] The old physicist's intuition, that every extra parameter is another degree of freedom to be paid for, is not wrong in general. It is simply measuring the wrong thing. What matters is the geometry of the landscape the optimizer actually sees, and pre-training changes that geometry.
+There is a concrete geometric reason to expect this. A single neural-network parameter typically controls many output variables at once: changing it perturbs many atomic coordinates, or many pixel predictions, in a coordinated way. A step in parameter space is therefore a *nonlocal* move in configuration space, and nonlocal moves can cross energy barriers that local atomic perturbations cannot. Recent work on crystal-structure prediction makes this concrete — reinforcement fine-tuning of a pretrained generative model navigates through exactly these nonlocal moves, and reaches stable structures that random-restart energy minimization would miss.[^4] The old physicist's intuition, that every extra parameter is another degree of freedom to be paid for, is not wrong in general. It is simply measuring the wrong thing. What matters is the geometry of the landscape the optimizer actually sees, and pre-training changes that geometry.
 
 ## The Unreasonable Effectiveness of $y \sim p_\theta(y \mid x)$
 
@@ -45,35 +45,27 @@ $$y \sim p_\theta(y \mid x)$$
 
 In deployment, $p_\theta$ is frozen — the weights never change after training ends. Only the context $x$ varies from one task to the next. This sounds unremarkable. It is enough.
 
-### What is an AI agent?
+Briefly, an agent wraps this sampler in a loop: **observe** the environment, **reason**, **act** via a tool, **verify** the outcome. The context window is exactly the $x$ above — it holds the current goal, the plan, recent outputs, error messages, and whatever has been retrieved. For the full picture see [*AI Agents and Your Research*](teaching-post.html?p=ai-agent-research).
 
-A raw language model does one thing: it samples $y$ from $p_\theta(y \mid x)$ and stops. An agent extends that sampler into a persistent loop. At each step the agent **observes** the current state of its environment — a file, a terminal output, a measurement trace — **reasons** about what to do next, **acts** by invoking a tool, and **verifies** whether the action achieved its goal before proceeding. This observe–reason–act–verify loop can repeat dozens of times inside a single task.
+The striking point is the *breadth* of work this loop handles with a single frozen model. The same $p_\theta$ writes prose, debugs code, drives a browser, navigates a terminal — and, increasingly, runs real experiments on real instruments. In each case only $x$ is changing.
 
-The tools are what connect the loop to the real world: code execution, file read and write, web search, or any hardware interface that accepts a programmatic call. Between tool calls the agent's context window — the $x$ in the equation above — serves as working memory. It holds the current goal, the plan, the recent outputs, the error messages, and whatever background the agent has retrieved. Nothing persists outside that window; each new sample from $p_\theta$ draws on exactly what $x$ contains.
+A concrete classroom example: the *vibe-coding-for-computational-physics* workshop held at IOP in April 2026. Graduate students wrapped frozen models in thin agent loops and treated writing, reading, and running research code as one continuous conversation — skimming literature through the terminal, sketching numerical experiments, and iterating on results in a single session.
 
-See also [*AI Agents and Your Research*](teaching-post.html?p=ai-agent-research) for a fuller treatment of the agent loop.
+![Poster for the vibe-coding-for-computational-physics workshop](/vibe2026/poster.png)
 
-### Qubit calibration as a case study
+![A workshop session: an agent using a knowledge-base search tool, IOP, April 2026](vibe2026-auditorium.png)
 
-Shigang Ou (IOP / DP Tech / BAQIS) is pursuing ongoing work in which an AI agent operates inside a superconducting qubit calibration workflow. The setup is roughly as follows. The agent is given access to three kinds of resources: experiment-recipe code that constructs pulse sequences, a hardware interface that submits those sequences to the control electronics, and measurement traces that come back from the readout chain. With these tools in hand the agent can plan and execute a calibration routine autonomously.
+The reach extends past the keyboard. Shigang Ou (IOP / DP Tech / BAQIS) is pursuing ongoing work in which an AI agent drives superconducting-qubit calibration directly. For a time-Rabi experiment, the agent writes a pulse schedule, submits it to the control electronics, waits for the oscillation trace, fits the Rabi curve to extract the $\pi$-pulse width, updates the parameter, and submits a verification shot — iterating until calibration converges. Throughout, $p_\theta$ never changes. What changes is only $x$: the conversation history, the latest code, the returned trace, the decision to proceed or retry. The physicist's intuition is that running an experiment requires a trained experimentalist who knows the instrument, the failure modes, and the relevant physics. What this demonstrates is that much of that competence can be encoded in context and iterated at inference time.
 
-Consider a time-Rabi experiment to locate the $\pi$-pulse width. The agent writes the pulse schedule, submits it to hardware, waits for the oscillation trace to return, fits the Rabi curve to extract the half-period, updates the pulse parameter, and submits a verification shot. If the updated pulse produces the expected population inversion it moves to the next calibration step; if not, it diagnoses the discrepancy and iterates. Throughout this closed loop, $p_\theta$ never changes. What changes — step by step, tool call by tool call — is $x$: the conversation history grows to include the latest code, the returned trace, the fit result, and the decision to proceed or retry.
-
-The physicist's intuition is that running an experiment requires a trained experimentalist who knows the instrument, the failure modes, and the relevant physics. What this work demonstrates is that much of that competence can be encoded in context and iterated at inference time.
-
-### The unreasonable part
-
-The third surprise, then, is a kind of inversion of the first two. Autoregressive factorization turned out to be universal across modalities. Pre-training turned out to navigate parameter space more smoothly than direct configuration-space search. Now we find that a frozen $p_\theta$, steered only through $x$, can act as an experimentalist, a programmer, and a scientific reasoner — without any retraining, without any gradient update at deployment time. The heavy lifting that one might have expected to require domain-specific fine-tuning is instead performed at the level of context and tool calls.
-
-Wigner marveled that mathematics, developed with no particular application in mind, nevertheless describes physical reality. The parallel here is that a distribution trained to predict the next token, with no particular laboratory in mind, nevertheless closes the loop on a qubit calibration experiment. That is the unreasonable part.
+That is the third surprise. A frozen $p_\theta$, steered only through $x$, can write, code, use a computer, and run an experiment — without a single gradient update at deployment time. Wigner marveled that mathematics, developed with no particular application in mind, nevertheless describes physical reality. The parallel here is that a distribution trained to predict the next token, with no particular laboratory in mind, nevertheless closes the loop on a qubit calibration experiment. That is the unreasonable part.
 
 ## Coda
 
-Generative modeling now belongs on the same shelf as Monte Carlo sampling, variational wavefunctions, and tensor networks — a first-class computational method for physicists, not a curiosity borrowed from machine learning. What unites all four? Each parameterizes a probability distribution and minimizes an expectation with respect to it. Monte Carlo estimates that expectation by sampling; variational methods minimize it over a chosen ansatz; tensor networks compress it into a tractable factored form. Generative AI does the same thing on a neural-network substrate, at a scale and across modalities none of the earlier methods reached. The substrate is new; the mathematical core is not.
+The three surprises in this post — universal autoregressive factorization, smooth loss landscapes in parameter space, and frozen-weight agents that close experimental loops — each pull on the same thread. Traced carefully, that thread leads to a variational free-energy principle connecting nature's cost function, post-training objectives, and inverse design. An earlier [summer-school lecture](lectures/deepvariationalfreenergy-MLCMP.pdf) develops the variational side of this connection in more detail. Following the full thread is a subject for a future post.
 
-The three surprises in this post — universal autoregressive factorization, smooth loss landscapes in parameter space, and frozen-weight agents that close experimental loops — each pull on the same thread. Traced carefully, that thread leads to a variational free-energy principle connecting nature's cost function, post-training objectives, and inverse design. Following it is a subject for a future post.
+## Acknowledgments
 
-**Further reading.** The author's 2025 lecture [Autoregressive model: alphabets, actions, and atoms](lectures/AAA-hangzhou2025.pdf) covers the material in §1 in depth with worked examples across scientific domains. For readers who want to pursue the variational-math thread, the 2022 summer-school talk [Unlocking the power of the variational free-energy principle with deep generative models](lectures/deepvariationalfreenergy-MLCMP.pdf) develops the connection between free-energy minimization and generative training. The companion post [AI Agents and Your Research](teaching-post.html?p=ai-agent-research) is prerequisite reading for §3.
+The author thanks Shigang Ou and Zhendong Cao for insightful discussions.
 
 ---
 
@@ -85,6 +77,4 @@ The three surprises in this post — universal autoregressive factorization, smo
 
 [^3]: Cao, Luo, Lv, and Wang, "Space Group Informed Transformer for Crystalline Materials Generation", arXiv:2403.15734 (2024). https://arxiv.org/abs/2403.15734
 
-[^4]: Li, Xu, Taylor, Studer, and Goldstein, "Visualizing the Loss Landscape of Neural Nets", arXiv:1712.09913 (2017). https://arxiv.org/abs/1712.09913
-
-[^5]: Cao, Ou, and Wang, "CrystalFormer-CSP: Thinking Fast and Slow for Crystal Structure Prediction", arXiv:2512.18251 (2025). https://arxiv.org/abs/2512.18251
+[^4]: Cao, Ou, and Wang, "CrystalFormer-CSP: Thinking Fast and Slow for Crystal Structure Prediction", arXiv:2512.18251 (2025). https://arxiv.org/abs/2512.18251
