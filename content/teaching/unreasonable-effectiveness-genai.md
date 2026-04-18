@@ -47,7 +47,7 @@ Briefly, an agent wraps this sampler in a loop: **observe** the environment, **r
 
 The striking point is the *breadth* of work this loop handles with a single frozen model. The same $p_\theta$ writes prose, debugs code, drives a browser, navigates a terminal — and, increasingly, runs real experiments on real instruments. In each case only $x$ is changing.
 
-As a concrete classroom example, the *Agentic AI in Action!* school at IOP in April 2026 filled the institute's largest lecture hall for the full day. Graduate students wrapped frozen models in thin agent loops and treated writing, reading, and running research code as one continuous conversation — skimming literature through the terminal, sketching numerical experiments, and iterating on results in a single session. The point came through clearly at an event like this: agentic AI is useful, and it is fun.
+As a concrete example, the *Agentic AI in Action!* school at IOP in April 2026 filled the institute's largest lecture hall for the full day. The draw was simple: agentic AI is useful, and it is fun to watch. Live demonstrations ran through the day — agents skimming literature through a terminal, sketching numerical experiments, iterating on results in a single session — and the audience stayed for every one.
 
 <div style="display: flex; gap: 1em; align-items: flex-start; flex-wrap: wrap; margin: 1.5em 0;">
   <img src="vibe2026-poster.png" alt="Agentic AI in Action! school poster" style="height: 420px; width: auto;">
