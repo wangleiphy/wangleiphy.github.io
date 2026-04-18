@@ -1,4 +1,4 @@
-# The Unreasonable Effectiveness of Generative AI
+# The Unreasonable Effectiveness of Autoregressive Models
 
 *Lei Wang and AI Agent*
 
