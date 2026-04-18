@@ -51,9 +51,13 @@ The striking point is the *breadth* of work this loop handles with a single froz
 
 A concrete classroom example: the *vibe-coding-for-computational-physics* workshop held at IOP in April 2026. Graduate students wrapped frozen models in thin agent loops and treated writing, reading, and running research code as one continuous conversation — skimming literature through the terminal, sketching numerical experiments, and iterating on results in a single session.
 
-![Poster for the vibe-coding-for-computational-physics workshop](/vibe2026/poster.png)
-
-![A workshop session: an agent using a knowledge-base search tool, IOP, April 2026](vibe2026-auditorium.png)
+<div style="display: flex; gap: 1em; align-items: flex-start; flex-wrap: wrap; margin: 1.5em 0;">
+  <img src="vibe2026-poster.png" alt="Vibe-coding-for-computational-physics workshop poster" style="max-height: 420px; width: auto;">
+  <figure style="margin: 0; flex: 1; min-width: 240px;">
+    <img src="vibe2026-auditorium.jpg" alt="IOP lecture hall packed for the workshop" style="max-height: 420px; width: auto; max-width: 100%;">
+    <figcaption style="margin-top: 0.4em;"><em>The largest lecture hall at IOP — full house all day.</em></figcaption>
+  </figure>
+</div>
 
 The reach extends past the keyboard. Shigang Ou (IOP / DP Tech / BAQIS) is pursuing ongoing work in which an AI agent drives superconducting-qubit calibration directly. For a time-Rabi experiment, the agent writes a pulse schedule, submits it to the control electronics, waits for the oscillation trace, fits the Rabi curve to extract the $\pi$-pulse width, updates the parameter, and submits a verification shot — iterating until calibration converges. Throughout, $p_\theta$ never changes. What changes is only $x$: the conversation history, the latest code, the returned trace, the decision to proceed or retry. The physicist's intuition is that running an experiment requires a trained experimentalist who knows the instrument, the failure modes, and the relevant physics. What this demonstrates is that much of that competence can be encoded in context and iterated at inference time.
 
@@ -61,7 +65,7 @@ That is the third surprise. A frozen $p_\theta$, steered only through $x$, can w
 
 ## Coda
 
-The three surprises in this post — universal autoregressive factorization, smooth loss landscapes in parameter space, and frozen-weight agents that close experimental loops — each pull on the same thread. Traced carefully, that thread leads to a variational free-energy principle connecting nature's cost function, post-training objectives, and inverse design. An earlier [summer-school lecture](lectures/deepvariationalfreenergy-MLCMP.pdf) develops the variational side of this connection in more detail. Following the full thread is a subject for a future post.
+The three surprises in this post correspond to three stages of the same pipeline: **representation** — an autoregressive model turns any bitstream into a tractable probability distribution (§1); **optimization** — pre-training navigates the parameter landscape more smoothly than direct configuration-space search (§2); and **sampling** — a frozen $p_\theta$, steered only through context, is enough to act on the real world (§3). How these three stages are unified by a single variational free-energy principle is a subject for a future post; an earlier [summer-school lecture](lectures/deepvariationalfreenergy-MLCMP.pdf) covers the variational side in the meantime.
 
 ## Acknowledgments
 
