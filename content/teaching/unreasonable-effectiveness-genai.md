@@ -47,7 +47,31 @@ Physicists familiar with variational Monte Carlo (VMC) or tensor-network methods
 
 ## The Unreasonable Effectiveness of $y \sim p_\theta(y \mid x)$
 
-<!-- §3: Task 6 -->
+$$y \sim p_\theta(y \mid x)$$
+
+In deployment, $p_\theta$ is frozen — the weights never change after training ends. Only the context $x$ varies from one task to the next. This sounds unremarkable. It is enough.
+
+### What is an AI agent?
+
+A raw language model does one thing: it samples $y$ from $p_\theta(y \mid x)$ and stops. An agent extends that sampler into a persistent loop. At each step the agent **observes** the current state of its environment — a file, a terminal output, a measurement trace — **reasons** about what to do next, **acts** by invoking a tool, and **verifies** whether the action achieved its goal before proceeding. This observe–reason–act–verify loop can repeat dozens of times inside a single task.
+
+The tools are what connect the loop to the real world: code execution, file read and write, web search, or any hardware interface that accepts a programmatic call. Between tool calls the agent's context window — the $x$ in the equation above — serves as working memory. It holds the current goal, the plan, the recent outputs, the error messages, and whatever background the agent has retrieved. Nothing persists outside that window; each new sample from $p_\theta$ draws on exactly what $x$ contains.
+
+See also [*AI Agents and Your Research*](teaching-post.html?p=ai-agent-research) for a fuller treatment of the agent loop.
+
+### Qubit calibration as a case study
+
+Shigang Ou (IOP / DP Tech / BAQIS) is pursuing ongoing work in which an AI agent operates inside a superconducting qubit calibration workflow. The setup is roughly as follows. The agent is given access to three kinds of resources: experiment-recipe code that constructs pulse sequences, a hardware interface that submits those sequences to the control electronics, and measurement traces that come back from the readout chain. With these tools in hand the agent can plan and execute a calibration routine autonomously.
+
+Consider a time-Rabi experiment to locate the $\pi$-pulse width. The agent writes the pulse schedule, submits it to hardware, waits for the oscillation trace to return, fits the Rabi curve to extract the half-period, updates the pulse parameter, and submits a verification shot. If the updated pulse produces the expected population inversion it moves to the next calibration step; if not, it diagnoses the discrepancy and iterates. Throughout this closed loop, $p_\theta$ never changes. What changes — step by step, tool call by tool call — is $x$: the conversation history grows to include the latest code, the returned trace, the fit result, and the decision to proceed or retry.
+
+The physicist's intuition is that running an experiment requires a trained experimentalist who knows the instrument, the failure modes, and the relevant physics. What this work demonstrates is that much of that competence can be encoded in context and iterated at inference time.
+
+### The unreasonable part
+
+The third surprise, then, is a kind of inversion of the first two. Autoregressive factorization turned out to be universal across modalities. Pre-training turned out to navigate parameter space more smoothly than direct configuration-space search. Now we find that a frozen $p_\theta$, steered only through $x$, can act as an experimentalist, a programmer, and a scientific reasoner — without any retraining, without any gradient update at deployment time. The heavy lifting that one might have expected to require domain-specific fine-tuning is instead performed at the level of context and tool calls.
+
+Wigner marveled that mathematics, developed with no particular application in mind, nevertheless describes physical reality. The parallel here is that a distribution trained to predict the next token, with no particular laboratory in mind, nevertheless closes the loop on a qubit calibration experiment. That is the unreasonable part.
 
 ## Coda
 
