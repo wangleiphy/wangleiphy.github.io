@@ -6,11 +6,11 @@
 
 ---
 
-In a time-Rabi experiment, an AI agent can write a pulse schedule, submit it to the control electronics, wait for the oscillation trace, fit the Rabi curve to extract the $\pi$-pulse width, update the parameter, and submit a verification shot. Throughout deployment, the model parameters do not change. Only the context changes: the conversation history, the latest code, the returned trace, and the decision to proceed or retry.
+In a time-Rabi experiment[^rabi], an AI agent can write a pulse schedule, submit it to the control electronics, wait for the oscillation trace, fit the Rabi curve to extract the $\pi$-pulse width, update the parameter, and submit a verification shot. Throughout deployment, the model parameters do not change. Only the context changes: the conversation history, the latest code, the returned trace, and the decision to proceed or retry.
 
 ![An AI agent driving superconducting-qubit calibration: code -> instrument -> Rabi trace -> update.](qubit-calibration-loop.png)
 
-At the mechanical level, this system is still just conditional sampling from an autoregressive model: a learned probability distribution over sequences of tokens. Why should such a simple operation be able to close the loop on a real experiment?
+At the mechanical level, this system is still just conditional sampling from an autoregressive model: a learned probability distribution over sequences of tokens.
 
 An autoregressive model factorizes the joint probability distribution of a high-dimensional variable $X = (x_1, x_2, \ldots, x_N)$ into a product of low-dimensional conditional factors, using the chain rule of probability:
 
@@ -22,7 +22,7 @@ The broader puzzle reaches far beyond qubit calibration. At inference time you j
 
 This post unpacks three aspects of the unreasonable effectiveness of autoregressive models. First, the autoregressive factorization that makes language models work turns out to be universal — the same recipe applies across radically different scientific modalities. Second, after data-driven pretraining, finding good parameters $\theta$ in a vast, high-dimensional space is, counterintuitively, *easier* than searching configuration space directly. Third, varying only the context $y$ is surprisingly powerful to steer the model with fixed $\theta$ to solve real scientific tasks, from writing code to driving laboratory experiments.
 
-## Next-Token Prediction Beyond Language
+## Next-token prediction beyond language
 
 The chain-rule factorization above is well suited to language, where each $x_i$ is the next token given its predecessors. However, the factorization does not care what the tokens are. *Language* becomes a token sequence the moment a tokenizer chops a character stream into a finite vocabulary of discrete pieces. A token sequence is essentially a bitstream because each token is an integer, and every integer is a bit pattern. And whatever you can store on a disk, transmit over a network, or read off a sensor is, at some layer of abstraction, a bitstream — text, images, audio, molecular geometries, experimental traces, control pulses. Therefore, autoregressive models apply to, in principle, **anything**.
 
@@ -32,7 +32,7 @@ The chain-rule factorization above is well suited to language, where each $x_i$ 
 
 **Crystals.** Crystalformer treats crystal structure generation as an autoregressive process over atomic sites: atoms are placed one at a time, with each placement conditioned on the space group, lattice parameters, and all previously placed atoms.[^4] The discrete symmetry constraints of crystallography enter naturally into the tokenization, and the model learns to respect them without any hand-engineered symmetry enforcement.
 
-The takeaway is that no modality-specific generative principle is required — the autoregressive machinery transports across domains. The same transformer, trained autoregressively on a different kind of sequence, can render a photorealistic landscape or propose a stable crystal, among many other scientific objects. An earlier [lecture](lectures/AAA-hangzhou2025.pdf) walks through several more.
+The takeaway is that no modality-specific generative principle is required — the autoregressive machinery transports across domains. The same transformer, trained autoregressively on a different kind of sequence, can render a photorealistic landscape or propose a stable crystal, among many other scientific objects. An earlier [lecture on autoregressive models for alphabets, actions, and atoms](lectures/AAA-hangzhou2025.pdf) walks through several more, and prefigures the three themes of this post.
 
 ## Pre-training simplifies the landscape
 
@@ -59,7 +59,7 @@ When deployed as an LLM, the parameters $\theta$ of the autoregressive model are
 
 We have all seen the power of GPT firsthand: the same frozen model answers questions, drafts prose, translates text, writes code, debugs programs, drives a browser, navigates a terminal — and, increasingly, runs real experiments on real instruments.
 
-An agentic harness amplifies this further by wrapping the sampler in a loop: **observe** the environment, **reason**, **act** via tool use, **verify** the outcome. Internal reasoning traces extend $y$ with deliberation; tool use extends $y$ with external information; reflection extends $y$ with feedback. All three are just ways of building up the context $y$. In the end, agentic AI still carries out conditional sampling $X \sim p_\theta(X \mid y)$.
+An [agentic harness](teaching-post.html?p=ai-agent-research) amplifies this further by wrapping the sampler in a loop: **observe** the environment, **reason**, **act** via tool use, **verify** the outcome. Reasoning, tool use, and reflection all extend $y$ — with deliberation, external information, and feedback respectively. All three are just ways of building up the context $y$. In the end, agentic AI still carries out conditional sampling $X \sim p_\theta(X \mid y)$.
 
 Return to the time-Rabi loop from the opening: the agent driving it is exactly $X \sim p_\theta(X \mid y)$ wrapped in a harness. Code becomes an experimental action, the measured trace becomes new context, and the next sampled action updates the calibration. The physicist's intuition is that running an experiment requires a trained experimentalist who knows the instrument, the failure modes, and the relevant physics. Yet much of that competence can be encoded in context and iterated at inference time.
 
@@ -84,3 +84,5 @@ Thanks Shigang Ou and Zhendong Cao for insightful discussions.
 [^5]: Cao, Ou, and Wang, "CrystalFormer-CSP: Thinking Fast and Slow for Crystal Structure Prediction", arXiv:2512.18251 (2025). https://arxiv.org/abs/2512.18251
 
 [^6]: Yuksekgonul, Koceja, Li, Bianchi, McCaleb, Wang, Kautz, Choi, Zou, Guestrin, and Sun, "Learning to Discover at Test Time", arXiv:2601.16175 (2026). https://arxiv.org/abs/2601.16175
+
+[^rabi]: This experiment was carried out by Shigang Ou (IOP) at BAQIS during his internship at DP Technology.
