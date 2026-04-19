@@ -99,6 +99,11 @@ table.program tr.break {
     text-indent: 0;
 }
 
+#markdown-content img {
+    max-width: 100%;
+    height: auto;
+}
+
 #markdown-content a {
     font-size: 14px;
     color: #00688B;
