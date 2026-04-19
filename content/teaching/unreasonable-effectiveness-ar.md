@@ -18,7 +18,7 @@ This post unpacks three aspects of the unreasonable effectiveness of autoregress
 
 ## Next-token-prediction besides language
 
-The chain-rule factorization above suits well for language, where each $x_i$ is the next token given its predecessors. However, the factorization does not care what are these tokens. *Language* becomes a token sequence the moment a tokenizer chops a character stream into a finite vocabulary of discrete pieces. A token sequence is enssentially a bitstream because each token is an integer, and every integer is a bit pattern. And whatever you can store on a disk, transmit over a network, or read off a sensor is, at some layer of abstraction, a bitstream — text, images, audio, molecular geometries, experimental traces, control pulses. Therefore, autoregerssive models applies to, in principle, **anything**.
+The chain-rule factorization above suits well for language, where each $x_i$ is the next token given its predecessors. However, the factorization does not care what are these tokens. *Language* becomes a token sequence the moment a tokenizer chops a character stream into a finite vocabulary of discrete pieces. A token sequence is essentially a bitstream because each token is an integer, and every integer is a bit pattern. And whatever you can store on a disk, transmit over a network, or read off a sensor is, at some layer of abstraction, a bitstream — text, images, audio, molecular geometries, experimental traces, control pulses. Therefore, autoregressive models apply to, in principle, **anything**.
 
 ![From an image to its JPEG bytes to a further autoregressive compression (JPEG-LM).](bitstream-diagram.png)
 
@@ -30,26 +30,22 @@ The takeaway is that no modality-specific architecture is required — the autor
 
 ## Pre-training simplifies the landscape
 
-Modern AI training comes in two stages — **pretraining** fits the parameters $\theta$ by maximum likelihood on data, and **post-training** (RLHF/RLVR) then shifts $\theta$ toward a task-specific reward $\min_\theta \mathbb{E}_{X \sim p_\theta(X)}[E(X)]$.
+Modern AI training comes in two stages — **pretraining** fits the parameters $\theta$ by maximum likelihood on data, and **post-training** (RLHF/RLVR) then shifts $\theta$ toward a task-specific reward $\min_\theta \mathbb{E}_{X \sim p_\theta(X)}[E(X)]$. Two recent works demonstrate the recipe on scientific problems. CrystalFormer-CSP reinforcement-fine-tunes a pretrained crystal-generation model to find stable crystal structures that direct energy minimization misses.[^5] Test-time reinforcement learning updates $\theta$ during inference to find high-quality solutions across domains from mathematics to GPU kernels, outperforming direct search over the answer space.[^6]
 
-Two recent works demonstrate the recipe on scientific problems. CrystalFormer-CSP reinforcement-fine-tunes a pretrained crystal-generation model to locate stable crystal structures that random-restart energy minimization misses.[^5] Test-time reinforcement learning updates $\theta$ during inference to find high-quality solutions across domains from mathematics to computational biology, outperforming direct search over the answer space.[^6]
+Why should this work at all? The pretrained model has hundreds of millions to billions of parameters $\theta$, yet the configuration space where a physicist traditionally searches for $\min_X E(X)$ has tens to thousands of dimensions — orders of magnitude smaller. Optimizing $\theta$ should be strictly harder. Yet in practice it is easier. That is the second surprise.
 
-Why should this work at all? The pretrained model has hundreds of millions to billions of parameters $\theta$, yet the configuration space where a physicist traditionally searches for $\min_X E(X)$ has tens to thousands of dimensions — orders of magnitude smaller.
+**Conjecture.** Pre-training learns a representation in which the downstream policy landscape — the objective seen by fine-tuning — is simpler than the raw configuration-space energy landscape.
 
 $$\min_\theta\; \mathbb{E}_{X \sim p_\theta(X)}\!\left[E(X)\right]
 \qquad \text{vs.} \qquad \min_X\; E(X)$$
-
-Optimizing $\theta$ should be strictly harder. Yet in practice it is easier. That is the second surprise.
-
-**Conjecture.** Pre-training learns a representation in which the downstream policy landscape — the objective seen by fine-tuning — is simpler than the raw configuration-space energy landscape.
 
 ![Parameter landscape (left) vs. configuration landscape (right).](loss-landscape.png)
 
 The parameter landscape (left) can be hundreds of millions of dimensions wide yet is empirically smooth and largely free of the traps that plague physical energy landscapes. The configuration landscape (right) is, for any non-trivial system, rugged and crowded with metastable minima — the standard obstruction that motivates replica exchange, parallel tempering, and every scheme physicists have devised to escape local traps.
 
-The reason is that each $\theta$ controls nonlocal, physically meaningful degrees of freedom rather than individual coordinates. In CrystalFormer-CSP, the parameters effectively move coordination polyhedra around, not lone atoms; fine-tuning navigates a landscape of chemically plausible motifs rather than raw $3N$-dimensional atomic positions. In test-time reinforcement learning, the parameters move program motifs — reasoning patterns, proof templates, subroutines — rather than individual tokens; fine-tuning navigates a landscape of solution strategies. In both cases a policy-gradient step in $\theta$-space is a coordinated, nonlocal move in configuration space, and nonlocal moves can cross barriers that local energy minimization cannot.
+The reason is that each $\theta$ controls nonlocal, physically meaningful degrees of freedom rather than individual coordinates. In CrystalFormer-CSP, the parameters effectively move coordination polyhedra around, not lone atoms; fine-tuning navigates a landscape of chemically plausible motifs rather than raw $3N$-dimensional atomic positions. In test-time reinforcement learning, the parameters move program motifs — reasoning patterns, proof templates, subroutines — rather than individual tokens; fine-tuning navigates a landscape of solution strategies. In both cases a policy-gradient step in $\theta$-space is a coordinated, nonlocal move in configuration space, and nonlocal moves can cross barriers that local energy minimization cannot. 
 
-What matters is the geometry of the landscape the optimizer actually sees, and pre-training changes that geometry.
+In the end, what matters is the geometry of the landscape the optimizer actually sees, not the dimensionality. Representation learning via pre-training changes that geometry.
 
 ## Context alone steers the agent
 
