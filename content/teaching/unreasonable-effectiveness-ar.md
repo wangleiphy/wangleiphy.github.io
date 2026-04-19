@@ -6,7 +6,7 @@
 
 ---
 
-In a time-Rabi experiment[^rabi], an AI agent can write a pulse schedule, submit it to the control electronics, wait for the oscillation trace, fit the Rabi curve to extract the $\pi$-pulse width, update the parameter, and submit a verification shot. Throughout deployment, the model parameters do not change. Only the context changes: the conversation history, the latest code, the returned trace, and the decision to proceed or retry.
+In a qubit calibration experiment[^rabi], an AI agent can write a pulse schedule, submit it to the control electronics, wait for the oscillation trace, fit the Rabi curve to extract the $\pi$-pulse width, update the parameter, and submit a verification shot. Throughout deployment, the model parameters do not change. Only the context changes: the conversation history, the latest code, the returned trace, and the decision to proceed or retry.
 
 ![An AI agent driving superconducting-qubit calibration: code -> instrument -> Rabi trace -> update.](qubit-calibration-loop.png)
 
