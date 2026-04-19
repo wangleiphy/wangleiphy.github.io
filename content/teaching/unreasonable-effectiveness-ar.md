@@ -67,7 +67,7 @@ That is the third surprise. A frozen autoregressive model, steered only through 
 
 ## Coda
 
-The three surprises correspond to three roles of autoregressive models. As representation, autoregression provides general-purpose machinery for modeling distributions over sequences. As optimization, pretraining may reshape the search problem so that fine-tuning a policy becomes easier than searching raw configuration space. As sampling, a frozen $p_\theta$, guided only by context, can interact with [the](https://x.com/karpathy/status/2005067301511630926?s=20) [real](https://x.com/andreasklinger/status/2033850814515564673?s=20) [world](https://x.com/AnthropicAI/status/1938630294807957804): code, tools, instruments, and physical systems. The mystery is not that next-token prediction is universal in principle; it is that, with the right representations and data, it becomes useful in practice.
+The three surprises in this post correspond to three aspects of autoregressive models: **representation** — the autoregressive architecture turns out to be general-purpose machinery for modeling probability distributions over bitstreams; **optimization** — representation learning via pre-training may reshape the parameter landscape so that policy gradients may win over direct configuration-space optimization; and **sampling** — a frozen $p_\theta$, steered only through context, is able to interact with [the](https://x.com/karpathy/status/2005067301511630926?s=20) [real](https://x.com/andreasklinger/status/2033850814515564673?s=20) [world](https://x.com/AnthropicAI/status/1938630294807957804). It is hard not to wonder whether autoregressive modeling is capturing some truth about our Universe.
 
 ## Acknowledgments
 
