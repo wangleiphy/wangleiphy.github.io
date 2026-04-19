@@ -55,15 +55,15 @@ In the end, what matters is the geometry of the landscape the optimizer actually
 
 ## Context alone steers the agent
 
-When deployed as an LLM, the parameters $\theta$ of the autoregressive model are frozen. Only the context $y$ varies from one task to the next. This sounds unremarkable. Yet it is extremely powerful.
+When deployed as an LLM, the parameters $\theta$ of the autoregressive model are frozen. Only the context $y$ varies from one task to the next. This sounds unremarkable. Yet the same frozen model answers questions, drafts prose, writes code, debugs programs, drives a browser, navigates a terminal — and, increasingly, runs real experiments on real instruments.
 
-We have all seen the power of GPT firsthand: the same frozen model answers questions, drafts prose, translates text, writes code, debugs programs, drives a browser, navigates a terminal — and, increasingly, runs real experiments on real instruments.
+An [agentic harness](teaching-post.html?p=ai-agent-research) amplifies this by wrapping the sampler in a loop: **observe** the environment, **reason**, **act** via tool use, **verify** the outcome. Reasoning, tool use, and reflection all extend $y$ — with deliberation, external information, and feedback respectively. In the end, agentic AI still carries out conditional sampling $X \sim p_\theta(X \mid y)$.
 
-An [agentic harness](teaching-post.html?p=ai-agent-research) amplifies this further by wrapping the sampler in a loop: **observe** the environment, **reason**, **act** via tool use, **verify** the outcome. Reasoning, tool use, and reflection all extend $y$ — with deliberation, external information, and feedback respectively. All three are just ways of building up the context $y$. In the end, agentic AI still carries out conditional sampling $X \sim p_\theta(X \mid y)$.
+Return to the time-Rabi loop from the opening. The agent driving it is exactly this sampler wrapped in a harness. Code becomes an experimental action, the measured trace becomes new context, and the next sampled action updates the calibration — all in pure text. The agent reads raw numerical traces, writes fitting code, and reasons about the results; no vision model is involved. A recent benchmark, QCalEval, evaluates how well vision-language models interpret calibration *plots*: images of the same oscillation traces and spectroscopy maps that our agent handles as arrays.[^7] Current VLMs see visual features but lack the domain knowledge to diagnose them reliably, and fine-tuning or rich in-context demonstrations are needed to close the gap. An agent with programmatic access to the instrument already has the data; routing it through a plotting pipeline and a vision encoder is a lossy detour.
 
-Return to the time-Rabi loop from the opening: the agent driving it is exactly $X \sim p_\theta(X \mid y)$ wrapped in a harness. Code becomes an experimental action, the measured trace becomes new context, and the next sampled action updates the calibration. The physicist's intuition is that running an experiment requires a trained experimentalist who knows the instrument, the failure modes, and the relevant physics. Yet much of that competence can be encoded in context and iterated at inference time.
+One might object that writing a calibration loop for each experiment is ad hoc. However, the protocol for a successful calibration — what to sweep, what constitutes a good fit, when to retry — can be written once as a *skill*: a reusable block of instructions that the agent loads into its context on demand. A Rabi calibration skill, a T1 measurement skill, a spectroscopy skill — each encodes the domain knowledge that QCalEval finds missing from zero-shot VLMs. And skills are just text appended to $y$.
 
-That is the third surprise. A frozen autoregressive model, steered only through $y$, can write, code, use a computer, and run an experiment — without a single gradient update at deployment time. A distribution trained to predict the next token, with no particular laboratory in mind, nevertheless closes the loop on a qubit calibration experiment.
+That is the third surprise. A frozen autoregressive model, steered only through $y$, can write code, use a computer, and run a qubit calibration experiment — no gradient update, no vision encoder, no modality-specific module.
 
 ## Coda
 
@@ -86,3 +86,5 @@ Thanks Shigang Ou and Zhendong Cao for insightful discussions.
 [^6]: Yuksekgonul, Koceja, Li, Bianchi, McCaleb, Wang, Kautz, Choi, Zou, Guestrin, and Sun, "Learning to Discover at Test Time", arXiv:2601.16175 (2026). https://arxiv.org/abs/2601.16175
 
 [^rabi]: This experiment was carried out by Shigang Ou (IOP) at BAQIS during his internship at DP Technology.
+
+[^7]: Cao, Zhang, et al., "QCalEval: Benchmarking Vision-Language Models for Quantum Calibration Plot Understanding" (2026). https://research.nvidia.com/publication/2026-04_qcaleval-benchmarking-vision-language-models-quantum-calibration-plot
