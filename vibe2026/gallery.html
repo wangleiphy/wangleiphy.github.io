@@ -1,14 +1,13 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agentic AI in Action!</title>
     <link href="css/general.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
-
   <body>
     <center>
-
       <h1> Agentic AI in Action! </h1>
       <h3> Institute of Physics, CAS, Beijing, April 14, 2026 </h3>
       <hr>
@@ -18,21 +17,18 @@
       <a class="menu" href="gallery.html">Gallery</a>
       <br><br>
 
-      <br>
+      <br><br>
 
-      <h3 align="left" class="content-width">Location</h3>
-
-      <p align="left" class="content-width">
-        M234, Institute of Physics, Chinese Academy of Sciences
-      </p>
-
-      <h3 align="left" class="content-width">Useful Links</h3>
-
-      <p align="left" class="content-width">
-        <a href="https://missing.csail.mit.edu/2026/agentic-coding/">The Missing Semester - Agentic Coding</a><br>
-      </p>
+      <div id="markdown-content" align="left" class="content-width"></div>
 
     </center>
 
+    <script>
+      fetch('content/gallery.md')
+        .then(r => r.text())
+        .then(md => {
+          document.getElementById('markdown-content').innerHTML = marked.parse(md);
+        });
+    </script>
   </body>
 </html>
