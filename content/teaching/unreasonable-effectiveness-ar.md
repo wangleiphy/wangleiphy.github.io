@@ -18,9 +18,9 @@ $$p(X) = p(x_1)\,p(x_2 \mid x_1)\,p(x_3 \mid x_1, x_2) \cdots$$
 
 Each factor $p(x_i \mid x_{<i})$ is far easier to model than the full joint — for a language model, $x_i$ is a single token drawn from a finite vocabulary, rather than one of combinatorially many full sequences. Because each factor is separately normalized, the joint probability is normalized by construction, and sampling reduces to drawing one variable at a time in order. Predicting a conditional distribution is classically called a *regression* task, so iterating this prediction along a sequence is "auto-regression." GPT — Generative Pre-Trained Transformer — is an autoregressive model of exactly this kind, and the same recipe applies to anything one can serialize into a sequence: text, images, crystals, spin configurations.[^1]
 
-The broader puzzle reaches far beyond qubit calibration. At inference time you just sample from the learned model $p_\theta$: $X \sim p_\theta(X \mid y)$, where $y$ is whatever context the model is conditioned on. There is nothing obviously special about that operation. And yet these systems paint photorealistic images of parrots, fold proteins to atomic accuracy, propose stable crystal structures, drive laboratory qubits through calibration routines, and write working code on demand. Why should sampling from a learned distribution do all that?
+The broader puzzle reaches far beyond qubit calibration. At inference time you just sample from the learned model $p_\theta$: $X \sim p_\theta(X \mid y)$, where $y$ is whatever context the model is conditioned on. There is nothing obviously special about that operation. And yet these systems paint photorealistic images of parrots, propose stable crystal structures, and write working code on demand. Why should sampling from a learned distribution do all that?
 
-This post unpacks three aspects of the unreasonable effectiveness of autoregressive models. First, the autoregressive factorization that makes language models work turns out to be universal — the same recipe applies across radically different scientific modalities. Second, after data-driven pretraining, finding good parameters $\theta$ in a vast, high-dimensional space is, counterintuitively, *easier* than searching configuration space directly. Third, varying only the context $y$ is surprisingly powerful to steer the model with fixed $\theta$ to solve real scientific tasks, from writing code to driving laboratory experiments.
+This post unpacks three aspects of the unreasonable effectiveness of autoregressive models. First, the autoregressive factorization that makes language models work turns out to be universal — the same recipe applies across radically different modalities. Second, after data-driven pretraining, finding good parameters $\theta$ in a vast, high-dimensional space is, counterintuitively, *easier* than searching directly in the configuration space. Third, varying only the context $y$ is surprisingly powerful to steer the model with fixed $\theta$ to solve real scientific tasks, from writing code to driving laboratory experiments.
 
 ## Next-token prediction beyond language
 
@@ -71,7 +71,7 @@ The three surprises in this post correspond to three aspects of autoregressive m
 
 ## Acknowledgments
 
-Thanks Shigang Ou and Zhendong Cao for insightful discussions.
+Thanks Shigang Ou,  Zhendong Cao and Pan Zhang for discussions and collaborations.
 
 [^1]: Wu, Wang, and Zhang, "Solving Statistical Mechanics Using Variational Autoregressive Networks", Physical Review Letters 122, 080602 (2019). https://arxiv.org/abs/1809.10606
 
