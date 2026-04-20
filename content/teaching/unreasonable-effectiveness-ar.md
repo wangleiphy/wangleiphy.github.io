@@ -6,7 +6,7 @@
 
 ---
 
-In an automatic qubit calibration experiment, an AI agent can write a pulse schedule, submit it to the control electronics, wait for the oscillation trace, fit the Rabi curve to extract the $\pi$-pulse width, update the parameter, and submit a verification shot. Throughout deployment, the model parameters do not change. Only the context changes: the conversation history, the latest code, the returned trace, and the decision to proceed or retry.
+In an automatic qubit calibration experiment, an AI agent can write a pulse schedule, submit it to the control electronics, wait for the oscillation trace, fit the Rabi curve to extract the $\pi$-pulse width, update the parameter, and submit a verification shot. Throughout deployment, the parameters of the large language model (LLM) inside the agent do not change. Only the context changes: the conversation history, the latest code, the returned trace, and the decision to proceed or retry.
 
 ![An AI agent driving superconducting-qubit calibration: code -> instrument -> Rabi trace -> update.](qubit-calibration-loop.png)
 
@@ -40,18 +40,16 @@ Many modern generative systems separate pretraining from post-training — **pre
 
 Why should this work at all? The pretrained model has hundreds of millions to billions of parameters $\theta$, yet the configuration space where a physicist traditionally searches for $\min_X E(X)$ has tens to thousands of dimensions — orders of magnitude smaller. By a naive dimensional argument, optimizing $\theta$ ought to be harder. Yet in practice it is easier — SGD on $10^{10}$-parameter models finds meaningful structures, while global optimization in a few thousand dimensions struggles. That is the second surprise.
 
-**Our conjecture.** Pre-training learns a representation in which the downstream policy landscape — the objective seen by fine-tuning — is simpler than the raw configuration-space energy landscape.
+**Our conjecture.** Pre-training learns a representation in which the downstream policy landscape — the objective seen by policy gradient based fine-tuning — is simpler than the raw configuration-space energy landscape.
 
 $$\min_\theta\; \mathbb{E}_{X \sim p_\theta(X)}\!\left[E(X)\right]
 \qquad \text{vs.} \qquad \min_X\; E(X)$$
 
 ![Parameter landscape (left) vs. configuration landscape (right).](loss-landscape.png)
 
-The parameter landscape (left) lives in a space with hundreds of millions of dimensions yet is empirically navigable by SGD, in contrast to the traps that plague physical energy landscapes. The configuration landscape (right) is, for any non-trivial system, rugged and crowded with metastable minima — the standard obstruction that motivates replica exchange, parallel tempering, and every scheme physicists have devised to escape local traps.
+The parameter landscape (left) lives in a space with hundreds of millions of dimensions yet is empirically navigable by SGD, in contrast to the traps that plague physical energy landscapes. The configuration landscape (right) is, for any non-trivial system, rugged and crowded with metastable minima — the standard obstruction that motivates replica exchange, parallel tempering, particle sward optimization and every scheme physicists have devised to escape local traps.
 
-The reason is that coordinated directions in $\theta$-space can control nonlocal, physically meaningful degrees of freedom rather than individual coordinates. In CrystalFormer-CSP, these directions effectively move coordination polyhedra around, not lone atoms; fine-tuning navigates a landscape of chemically plausible motifs rather than raw $3N$-dimensional atomic positions. In test-time reinforcement learning, they move program motifs — reasoning patterns, proof templates, subroutines — rather than individual tokens; fine-tuning navigates a landscape of solution strategies. In both cases a policy-gradient step in $\theta$-space is a coordinated, nonlocal move in configuration space, and nonlocal moves can cross barriers that local energy minimization cannot.
-
-In the end, what matters is the geometry of the landscape the optimizer actually sees, not the dimensionality. Representation learning via pre-training changes that geometry.
+The reason is that coordinated directions in $\theta$-space can control nonlocal, physically meaningful degrees of freedom rather than individual coordinates. In CrystalFormer-CSP, these directions effectively move coordination polyhedra around, not lone atoms; fine-tuning navigates a landscape of chemically plausible motifs rather than raw $3N$-dimensional atomic positions. In test-time reinforcement learning, they move program motifs — reasoning patterns, proof templates, subroutines — rather than individual directives; fine-tuning navigates a landscape of solution strategies. In both cases a policy-gradient step in $\theta$-space is a coordinated, nonlocal move in configuration space, and nonlocal moves can cross barriers that local energy minimization cannot. What matters is the geometry of the landscape the optimizer actually sees, not its dimensionality — and pre-training is what reshapes that geometry.
 
 ## Context alone steers the agent
 
