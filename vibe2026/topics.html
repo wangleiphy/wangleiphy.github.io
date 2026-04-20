@@ -94,10 +94,19 @@
             '<span class="vote-badge" title="' + t.votes + ' vote' + (t.votes === 1 ? '' : 's') + '">' +
             t.votes +
             '</span>' +
-            '<span class="topic-text">' + escapeHtml(t.text) + '</span>' +
+            '<span class="topic-text">' + escapeHtml(fixTypos(t.text)) + '</span>' +
             '</div>';
         }).join('');
       });
+
+      // Display-only correction for voice-to-text slips in stored topics
+      // ("看你滋" → "卡脖子"). The Firebase record is preserved as submitted.
+      var TYPO_FIXES = { '看你滋': '卡脖子' };
+      function fixTypos(text) {
+        var out = text;
+        for (var k in TYPO_FIXES) { out = out.split(k).join(TYPO_FIXES[k]); }
+        return out;
+      }
 
       function escapeHtml(text) {
         var div = document.createElement('div');
