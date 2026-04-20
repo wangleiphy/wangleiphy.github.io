@@ -6,7 +6,7 @@
 
 ---
 
-In an automatic qubit calibration experiment[^rabi], an AI agent can write a pulse schedule, submit it to the control electronics, wait for the oscillation trace, fit the Rabi curve to extract the $\pi$-pulse width, update the parameter, and submit a verification shot. Throughout deployment, the model parameters do not change. Only the context changes: the conversation history, the latest code, the returned trace, and the decision to proceed or retry.
+In an automatic qubit calibration experiment, an AI agent can write a pulse schedule, submit it to the control electronics, wait for the oscillation trace, fit the Rabi curve to extract the $\pi$-pulse width, update the parameter, and submit a verification shot. Throughout deployment, the model parameters do not change. Only the context changes: the conversation history, the latest code, the returned trace, and the decision to proceed or retry.
 
 ![An AI agent driving superconducting-qubit calibration: code -> instrument -> Rabi trace -> update.](qubit-calibration-loop.png)
 
@@ -84,7 +84,5 @@ Thanks Shigang Ou,  Zhendong Cao and Pan Zhang for discussions and collaboration
 [^5]: Cao, Ou, and Wang, "CrystalFormer-CSP: Thinking Fast and Slow for Crystal Structure Prediction", arXiv:2512.18251 (2025). https://arxiv.org/abs/2512.18251
 
 [^6]: Yuksekgonul, Koceja, Li, Bianchi, McCaleb, Wang, Kautz, Choi, Zou, Guestrin, and Sun, "Learning to Discover at Test Time", arXiv:2601.16175 (2026). https://arxiv.org/abs/2601.16175
-
-[^rabi]: This experiment was carried out by Shigang Ou (IOP) at BAQIS during his internship at DP Technology.
 
 [^7]: Cao, Pancotti, Lubowe, Svore, Kyoseva, Stanwyck, Costa, Zhang, Mantilla Calderon, and Aspuru-Guzik, "QCalEval: Benchmarking Vision-Language Models for Quantum Calibration Plot Understanding" (NVIDIA, April 2026). https://research.nvidia.com/publication/2026-04_qcaleval-benchmarking-vision-language-models-quantum-calibration-plot
