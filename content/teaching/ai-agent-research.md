@@ -17,18 +17,20 @@ Mathematically, this amounts to sampling the response $y$ from the conditional d
 An **AI agent** extends the raw LLM to address these limitations:
 
 ```
-Agent = LLM + Tools + Memory + Autonomy
+Agent = LLM + Tools + Memory + Feedback
 ```
 
 - **Tools**: Interact with the environment—read/write files, execute code, search the web, run tests
 - **Memory**: Manage context within sessions and persist knowledge across sessions
-- **Autonomy**: Observe outcomes, decide next steps, iterate toward a goal
+- **Feedback**: Observe outcomes, verify against reality, decide next steps, iterate toward a goal
 
 The key is the **reflection cycle**: **Observe → Reason → Act → Verify → Repeat**.
 
 ![Agent Loop](agent-loop.svg)
 
 Unlike a chatbot that responds once and waits, an agent operates in a loop. After taking an action, it observes the result (Did the code run? Did the test pass? What error appeared?), reasons about what to do next, and continues. This is where **verification** enters: the agent can check its own work by running tests, examining outputs, or comparing against expected results. **Context management** also becomes crucial—the agent must decide what information to keep in its limited context window: the current goal, execution plan, relevant code, error messages, and lessons learned. This observe-act-verify loop, combined with careful context management, is what transforms a one-shot predictor into something that can actually *get things done*.
+
+Note that autonomy is not a fourth ingredient in the equation above, but a dial: how many turns of this loop the agent runs before you look at the result. Where you set it depends on the task and on your own experience—I return to this when discussing the "center of mass" of human-AI collaboration.
 
 ## What Can Agents Do for Your Research?
 
@@ -61,7 +63,7 @@ To get the most out of AI agents, some engineering practices are useful. Then, y
 
 Agile development encompasses several core engineering practices—documentation, automated testing, and version control—woven into iterative development cycles.[^1] In the era of AI agents, these practices become even more essential, but for interesting new reasons.
 
-**Test-Driven Development (TDD)—verifications for AI.** Traditionally, TDD ensures code correctness by writing tests before implementation—catching bugs early and enabling confident refactoring. With AI agents, this practice becomes even more critical. AI-generated code is not automatically correct; the only way to trust it is to **test it**. You can build confidence and trust in AI incrementally: unit tests for functions, integration tests for modules, end-to-end tests for the full pipeline, and validation against known benchmarks.
+**Test-Driven Development (TDD)—verifications for AI.** Traditionally, TDD ensures code correctness by writing tests before implementation—catching bugs early and enabling confident refactoring. With AI agents, this practice becomes even more critical. AI-generated code is not automatically correct; the only way to trust it is to **test it**. Tests are where the feedback term becomes concrete: they are the signal the agent loops on, and writing them well is how you decide what "correct" means. You can build confidence and trust in AI incrementally: unit tests for functions, integration tests for modules, end-to-end tests for the full pipeline, and validation against known benchmarks.
 
 **Documentation — context for Humans AND AI.** In Agile, documentation keeps team members aligned on project structure, workflows, and conventions. With AI agents, documentation takes on a new role: it becomes the AI's long-term memory. Documents such as `CLAUDE.md` tell the AI agent about project goals, key files, and gotchas. AI reads those files to provide contexts in future sessions. 
 
@@ -101,6 +103,8 @@ The following [two suggestions](https://youtu.be/iF9iV4xponk?t=1069) by Boris Ch
 - **Delegate entirely**: routine tasks where AI handles everything
 - **Collaborate**: tasks where you and AI work together
 - **Lead yourself**: tasks too nuanced or novel for AI to handle alone
+
+These three categories are three settings of the autonomy dial. The feedback loop runs in all of them; what changes is who closes it.
 
 It takes practice to gain the wisdom to know the difference between these categories. But only in this way can you freely control the CoM of human-AI collaboration and maximize your productivity. Perhaps that is where the next generation will spend their 10,000 hours! 
 
