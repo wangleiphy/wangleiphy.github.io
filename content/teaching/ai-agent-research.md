@@ -30,8 +30,6 @@ The key is the **reflection cycle**: **Observe → Reason → Act → Verify →
 
 Unlike a chatbot that responds once and waits, an agent operates in a loop. After taking an action, it observes the result (Did the code run? Did the test pass? What error appeared?), reasons about what to do next, and continues. This is where **verification** enters: the agent can check its own work by running tests, examining outputs, or comparing against expected results. **Context management** also becomes crucial—the agent must decide what information to keep in its limited context window: the current goal, execution plan, relevant code, error messages, and lessons learned. This observe-act-verify loop, combined with careful context management, is what transforms a one-shot predictor into something that can actually *get things done*.
 
-Note that autonomy is not a fourth ingredient in the equation above, but a dial: how many turns of this loop the agent runs before you look at the result. Where you set it depends on the task and on your own experience—I return to this when discussing the "center of mass" of human-AI collaboration.
-
 ## What Can Agents Do for Your Research?
 
 Current AI agents (Cursor, Claude Code, Codex, etc) are remarkably useful for computational research. Here's what they can help with:
@@ -103,8 +101,6 @@ The following [two suggestions](https://youtu.be/iF9iV4xponk?t=1069) by Boris Ch
 - **Delegate entirely**: routine tasks where AI handles everything
 - **Collaborate**: tasks where you and AI work together
 - **Lead yourself**: tasks too nuanced or novel for AI to handle alone
-
-These three categories are three settings of the autonomy dial. The feedback loop runs in all of them; what changes is who closes it.
 
 It takes practice to gain the wisdom to know the difference between these categories. But only in this way can you freely control the CoM of human-AI collaboration and maximize your productivity. Perhaps that is where the next generation will spend their 10,000 hours! 
 
