@@ -2,6 +2,7 @@
 
 ## 2026
 
+- [LLM and Agentic AI, Harnessing Quantum 2026, Hefei, July 2026](https://giggleliu.github.io/summer-school-2026/): [slides](lectures/LLM-Agent.pdf)
 - [Generative models for physicists, Interplay between Neural and Tensor Networks, Grenoble, July 2026](https://neural-tensor.sciencesconf.org/): [part 1: autoregressive models](lectures/GenerativeModels-Grenoble2026-AR.pdf), [part 2: flow & diffusion models](lectures/GenerativeModels-Grenoble2026-Flow.pdf)
 - [The Unreasonable Effectiveness of Autoregressive Models, April 2026](teaching-post.html?p=unreasonable-effectiveness-ar)
 - [AI Agents and Your Research, IOP, January 2026](teaching-post.html?p=ai-agent-research)
