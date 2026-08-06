@@ -172,7 +172,7 @@ class MarkdownLoader {
         
         const markdownMap = {
             'talks': 'content/talks.md',
-            'teaching': 'content/teaching.md',
+            'writings': 'content/writings.md',
             'conferences': 'content/conferences.md',
             'index': 'content/profile.md',
             '': 'content/profile.md'

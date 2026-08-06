@@ -67,7 +67,7 @@ Overall, I find the advice in the timeless [The Pragmatic Programmer](https://ww
 
 ### Interaction Habits
 
-Despite what folklore suggests, LLMs and the agents built around them are not truly "black boxes"—both can be understood. [This tutorial](https://wangleiphy.github.io/teaching.html#aaa-hangzhou2025) explains how autoregressive generative models work, while [learn-claude-code](https://github.com/shareAI-lab/learn-claude-code) shows how to build an agent from scratch in ~50 lines of code. Understanding these mechanisms reveals good habits for using AI agents effectively. 
+Despite what folklore suggests, LLMs and the agents built around them are not truly "black boxes"—both can be understood. [This tutorial](https://wangleiphy.github.io/talks.html#aaa-hangzhou2025) explains how autoregressive generative models work, while [learn-claude-code](https://github.com/shareAI-lab/learn-claude-code) shows how to build an agent from scratch in ~50 lines of code. Understanding these mechanisms reveals good habits for using AI agents effectively. 
 
 **From "?" to "!".**  You can always start by asking questions—either to gain understanding yourself or to provide AI agents the necessary context. This step also aligns and calibrates the AI system: if things go wrong, it may already show up in this step. Some AI agents have an explicit "Ask" mode—use it. Once you are confident about yourself and the agent, you can send imperative commands to let AI complete tasks. 
 

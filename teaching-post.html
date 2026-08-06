@@ -19,10 +19,10 @@
 <body>
     <header>
         <div class="hero">
-            <h1>Teaching</h1>
+            <h1>Writings</h1>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="teaching.html">All Materials</a>
+                <a href="writings.html">Writings</a>
                 <a href="talks.html">Talks</a>
                 <a href="conferences.html">Events</a>
             </nav>
@@ -47,7 +47,7 @@
         const postName = params.get('p');
 
         if (!postName) {
-            container.innerHTML = '<p>No material specified. <a href="teaching.html">View all materials</a></p>';
+            container.innerHTML = '<p>No material specified. <a href="writings.html">View all writings</a></p>';
             return;
         }
 
@@ -146,7 +146,7 @@
                 <div class="error-message">
                     <h2>Error Loading Material</h2>
                     <p>${error.message}</p>
-                    <p><a href="teaching.html">← Back to all materials</a></p>
+                    <p><a href="writings.html">← Back to writings</a></p>
                 </div>
             `;
         }
