@@ -41,17 +41,13 @@ Current AI agents (Cursor, Claude Code, Codex, etc) are remarkably useful for co
 - **Analysis**: Compute statistics, analyse results via different angles
 - **Reporting**: Summarize research logs 
 
-Let's see this in action. We ask an AI agent to compute the [Hofstadter Butterfly](https://en.wikipedia.org/wiki/Hofstadter%27s_butterfly)—the fractal energy spectrum of electrons on a 2D lattice in a magnetic field.
+Let's see this in action with three examples, one from each stage of research: reading, computing, and writing.
 
-The workflow demonstrates:
+**Reading papers.** You can simply ask an LLM to pick out papers for you from the daily arXiv listing. But the recommendations get much better once you teach it your taste—either softly, by describing your interests in natural language, or programmatically, by letting the agent build a tool for you. My [paper_recommender](https://github.com/wangleiphy/paper_recommender/) does the latter: it embeds the papers I have tagged as favorites together with my own arXiv papers, and recommends new papers by semantic similarity. The key is customization: everyone shares the same LLM, but the preferences encoded in your context make the recommendations yours.
 
-1. **Read** → Understand the Harper equation from Hofstadter's 1976 paper
-2. **Plan** → Design the parameter sweep over magnetic flux values
-3. **Implement** → Write ~200 lines of Python (hofstadter.py)
-4. **Test** → Run 9 unit tests, all passing
-5. **Run** → Compute spectrum for q_max=50 in ~2 seconds
-6. **Visualize** → Generate the butterfly plot
-7. **Summarize** → Write a report about its findings.
+**Running simulations.** As an exercise, we ask an agent to run Sandvik's stochastic series expansion (SSE) code [ssebasic.f90](https://physics.bu.edu/~sandvik/vietri/sse/ssebasic.f90) for the 2D Heisenberg antiferromagnet. A subtle compiler-related bug sneaks into the random number generator: the code compiles cleanly, yet silently produces wrong results. What saves the day is that the code comes with detailed [documentation](https://physics.bu.edu/~sandvik/programs/ssebasic/ssebasic.html) and published [benchmark results](https://physics.bu.edu/~sandvik/vietri/sse/results.html)—the former gives the agent the context to understand the program, and the latter lets it verify the outputs and catch the bug. Contexts and benchmarks are as valuable as the code itself.
+
+**Writing papers.** Given enough context—research notes, code, and results—current models can produce a decent paper draft in one shot. Nevertheless, skills distilled from experienced researchers, such as this [paper-review-checklist](https://github.com/QuantumBFS/claude-code-skills/tree/main/plugins/paper-review-checklist), still sharpen the draft. And a fresh-eyes reviewer—a subagent that reads the draft without any of the conversation context—catches the common error of notation used before it is defined, and helps to tune the presentation.
 
 ## Working Effectively with AI Agents
 
