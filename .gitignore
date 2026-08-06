@@ -21,3 +21,4 @@ Thumbs.db
 
 # Node modules (if ever used)
 node_modules/
+.playwright-mcp/
