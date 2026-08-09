@@ -50,11 +50,25 @@ With that toolkit in hand, look back at $F[\rho] = E - TS$ and notice how many p
 
 **Atomic-scale thermodynamics.** Neural autoregressive ansätze for the many-body density matrix, optimized directly against the variational free energy, give non-perturbative access to the thermodynamics of the homogeneous electron liquid,[^2] the structure of quantum solids,[^3] and the equation of state of dense hydrogen relevant for giant-planet interiors.[^4] In each case there is no training dataset. The objective $F[\rho]$ is handed to you by Nature; you minimize it by sampling from $q_\theta$, scoring with the Hamiltonian, and back-propagating.
 
+![Minimizing Nature's cost function with generative AI: the electron liquid, dense hydrogen, and quantum solids, all handled by the same variational free-energy machinery.](neural-canonical-transformation.png)
+
+The ansatz contains a language model in disguise. The variational density matrix factorizes as $\rho = \sum_{K} U \,|\Phi_K\rangle\, p_K \,\langle \Phi_K|\, U^\dagger$: a classical probability $p_K$ over which single-particle orbitals are occupied, and a unitary $U$ that dresses the bare basis states into interacting ones. The probability $p_K$ is an autoregressive model over occupied orbitals — for the electron liquid, a "sentence" whose tokens are momenta. The unitary $U$, meanwhile, is realized as a normalizing flow between particle and quasiparticle coordinates — and that flow has a physics ancestor. In 1956, Feynman and Cohen improved the trial wavefunction of liquid helium by displacing each particle's coordinate by a function of its neighbors' positions, a device they called backflow.[^8] Iterate the displacement and you have a deep residual network; take the continuum limit and you have a neural ODE, which is a continuous normalizing flow. The machinery that overcomes Feynman's 1987 objections descends in part from an ansatz Feynman wrote down three decades before raising them.
+
+![Feynman and Cohen's 1956 backflow, iterated, becomes a deep residual network — the ancestor of the permutation-equivariant flows in neural variational density matrices.](feynman-backflow.png)
+
+The same machinery settles a textbook question about solid lithium: is the ground-state structure bcc or fcc? The two structures are separated by a fraction of a meV per atom, and lithium's light nuclei oscillate with large amplitude, so quantum anharmonicity matters. A neural canonical transformation for lattice dynamics — an autoregressive model over roughly ten million phonon excited states of ~500 atoms, composed with a normalizing flow — resolves the competition directly in the free energy: quantum anharmonicity stabilizes bcc, and the predicted bcc–fcc transition at 1 GPa lands near 140 K, inside the experimental window of 100–160 K, where earlier estimates ranged from 185 to 260 K.[^3]
+
+![Free-energy resolution of the bcc–fcc competition in solid lithium: the Gibbs free-energy difference crosses zero near 140 K at 1 GPa.](lithium-bcc-fcc.png)
+
+Warm dense hydrogen pushes the construction one level deeper. Between the plasma and the molecular liquid, protons are classical while electrons are quantum degenerate, so the calculation jointly optimizes three nested generative models: a normalizing flow for the proton positions, an autoregressive model for the electron energy levels given the protons, and another flow for the electron states themselves.[^4] The resulting Hugoniot curve — the locus of states reached by shock compression — runs through the Z-machine and laser experiments, a handshake between theory and experiment in a regime where earlier ab initio methods scattered. The equation of state feeds directly into the hydrodynamic simulations of giant-planet interiors and inertial-confinement fusion.
+
+![The dense hydrogen Hugoniot from three jointly-optimized generative models, compared against shock-compression experiments and earlier ab initio methods.](hydrogen-hugoniot.png)
+
 **LLM post-training.** The RL fine-tuning objective
 
 $$\mathcal{F}[q_\theta] = \mathbb{E}_{X \sim q_\theta(X)}\!\left[-r(X)\right] + \tau\,\mathrm{KL}\!\left(q_\theta(X) \,\|\, p(X)\right)$$
 
-is $E - TS$ with $E = -r$ and entropy measured *relative* to the pre-trained reference $p(X)$ at temperature $\tau$. Minimizing it produces a distribution that concentrates probability on high-reward trajectories without collapsing onto a single mode — which is exactly what a thermal state does, concentrating on low-energy configurations without collapsing onto the ground state. Pre-training provides the prior $p$; post-training tilts that prior by a Boltzmann factor $e^{r/\tau}$.
+is $E - TS$ with $E = -r$ and entropy measured *relative* to the pre-trained reference $p(X)$ at temperature $\tau$. Minimizing it produces a distribution that concentrates probability on high-reward trajectories without collapsing onto a single mode — which is exactly what a thermal state does, concentrating on low-energy configurations without collapsing onto the ground state. Pre-training provides the prior $p$; post-training tilts that prior by a Boltzmann factor $e^{r/\tau}$. The two phases are two sides of the same coin, distinguished by the direction of a KL divergence: pre-training minimizes the forward $\mathrm{KL}(\text{data} \,\|\, p)$, pulling the model toward the world, while post-training minimizes the reverse $\mathrm{KL}(q \,\|\, p\,e^{r/\tau})$, pulling the model toward a Boltzmann-tilted version of itself.
 
 **Materials inverse design.** Bayes' rule,
 
@@ -64,7 +78,19 @@ is another face of the same object. Sampling from the posterior is variationally
 
 $$\mathbb{E}_{X \sim q_\theta(X)}\!\left[-\ln p(y|X)\right] + \mathrm{KL}\!\left(q_\theta(X) \,\|\, p(X)\right),$$
 
-i.e., an energy that rewards good predicted properties $y$ and a KL that keeps $q_\theta$ close to the prior of physically plausible structures. CrystalFormer-RL does exactly this, reinforcement-fine-tuning a pre-trained space-group–informed transformer prior[^5] to produce crystals maximizing the product of band gap and dielectric constant.[^6] Starting from a generic crystal generator, the procedure discovers candidates such as $\mathrm{Cs}_2\mathrm{LiLuF}_6$ and $\mathrm{CsCaF}_3$ with $E_g > 6.9\,\mathrm{eV}$ and $\varepsilon_{\mathrm{elec}} > 2.3$ — both above the convex hull and absent from the training distribution.
+i.e., an energy that rewards good predicted properties $y$ and a KL that keeps $q_\theta$ close to the prior of physically plausible structures.
+
+A picture makes the division of labor plain. The prior $p(X)$, trained on the world's known crystals, puts most of its probability on ordinary materials — gold is common, diamond is rare. The likelihood switches on only where the target property holds. Their product concentrates the posterior on the rare structures that are both chemically sensible and functionally right.
+
+![Bayes' rule for inverse design: the prior favors common materials, the likelihood selects the target property, and the posterior concentrates on structures that satisfy both.](bayes-gold-diamond.png)
+
+The prior is not a decoration. Google's DeepDream experiment of 2015 showed what likelihood maximization does without one: ascend the gradient of $p(\text{dog} \mid \text{pixels})$ over raw pixels and you do not get a photograph of a dog — you get a hallucinated sky full of dog faces, an image the classifier loves and no camera would produce. The KL term is what keeps generated crystals on the manifold of plausible chemistry rather than in the adversarial corners of the property predictor, just as the KL regularizer in LLM post-training keeps the fine-tuned model from collapsing onto degenerate, reward-hacked outputs.[^9]
+
+CrystalFormer-RL does exactly this, reinforcement-fine-tuning a pre-trained space-group–informed transformer prior[^5] to produce crystals maximizing the product of band gap and dielectric constant.[^6] The two properties fundamentally conflict — wider gaps generally come with smaller dielectric constants — which is what makes the search nontrivial. Starting from a generic crystal generator, the procedure discovers candidates such as $\mathrm{Cs}_2\mathrm{LiLuF}_6$ and $\mathrm{CsCaF}_3$ with $E_g > 6.9\,\mathrm{eV}$ and $\varepsilon_{\mathrm{elec}} > 2.3$ — both above the convex hull and absent from the training distribution.
+
+![Reinforcement fine-tuning of CrystalFormer: the reward, band gap times dielectric constant, climbs as the sampler tilts toward crystals such as Cs₂LiLuF₆ and CsCaF₃.](crystalformer-rl.png)
+
+The same functional also runs in the direction of analysis rather than synthesis. Reinterpret the reward as goodness-of-fit to a measured X-ray diffraction pattern, and crystal-structure determination becomes maximum-entropy inference with a learned crystal prior — a welcome reformulation, since the fit landscape is demonstrably too rough for gradient descent.[^10]
 
 Three problems, three communities, one minimization. The objective is $E - TS$; the prior differs (a pre-trained LLM, a Hamiltonian, a crystal generator); the energy differs (negative reward, Hamiltonian expectation, negative log-likelihood); the sampler is always an autoregressive $q_\theta$. Same objective, same model class, same algorithm.
 
@@ -92,8 +118,14 @@ The author thanks Zhendong Cao, Hao Xie, and Shigang Ou for discussions that sha
 
 [^4]: Dense hydrogen equation of state: *Physical Review Letters* (2023) and *Physical Review Letters* (2026).
 
-[^5]: Cao, Luo, Lv, and Wang, "Space Group Informed Transformer for Crystalline Materials Generation", arXiv:2403.15734 (2024). https://arxiv.org/abs/2403.15734
+[^5]: Cao, Luo, Lv, and Wang, "Space Group Informed Transformer for Crystalline Materials Generation", Science Bulletin (2025). https://arxiv.org/abs/2403.15734
 
 [^6]: Cao and Wang, "CrystalFormer-RL", *Physical Review B* (2026). Code: https://github.com/deepmodeling/crystalformer
 
 [^7]: J. A. Wheeler, "Information, Physics, Quantum: The Search for Links" (1989).
+
+[^8]: Feynman and Cohen, "Energy Spectrum of the Excitations in Liquid Helium", Physical Review 102, 1189 (1956).
+
+[^9]: Korbak, Perez, and Buckley, "RL with KL penalties is better viewed as Bayesian inference", arXiv:2205.11275 (2022). https://arxiv.org/abs/2205.11275
+
+[^10]: Segal, Subramanian, Li, Miller, and Gómez-Bombarelli, "The loss landscape of powder X-ray diffraction-based structure optimization is too rough for gradient descent", Digital Discovery (2026). https://doi.org/10.1039/d6dd00017g
