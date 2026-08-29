@@ -1,4 +1,4 @@
-# Variational Free Energy: Nature's Cost Function and Large Language Models
+# Variational Free Energy: from Nature's Cost Function to Large Language Models
 
 *Lei Wang*
 
@@ -111,10 +111,6 @@ Whether one is computing the free energy of a quantum solid, post-training a lan
 ## Acknowledgments
 
 The author thanks Zhendong Cao, Hao Xie, and Shigang Ou for discussions that shaped the perspective in this post.
-
----
-
-## References
 
 [^1]: Transcript of R. P. Feynman's 1987 talk, *Difficulties in Applying the Variational Principle to Quantum Field Theories*. The 1981 quotation is from *Simulating Physics with Computers*, Int. J. Theor. Phys. 21, 467 (1982).
 
