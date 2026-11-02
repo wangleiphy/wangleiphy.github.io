@@ -26,6 +26,8 @@ Read it from top to bottom and it is a short history of his group:
 
 ![One slide from each period](slides-by-era.png)
 
+The turn from Monte Carlo to machine learning has a date. In June 2016 Lei Wang posted his first machine learning paper, *Discovering Phase Transitions with Unsupervised Learning* (arXiv:1606.00318), as its sole author. It is cited on 16 different slides, shown in 22 talks between December 2016 and February 2022.
+
 Two rows break the pattern. Monte Carlo never disappears: it stays at 2–7% every year after its peak. Free energy stays at 0–4% until 2021, then jumps to 7% in 2022 and 13% in 2023, and has stayed at 8–9% since. It is the one term that runs through all of the recent talks.
 
 ## The Cast Changes from Dirac to Hinton to Feynman
@@ -53,6 +55,14 @@ Along the way, the content was replaced completely:
 The copies made in 2017 still contain 55% of the original slides on average. By 2018 it is 4%, and from 2020 on, essentially nothing. The original talk came back twice, in a 2019 talk at IOP (71%) and in a talk in Seattle in February 2022 (55%), and then disappeared for good. Like the ship of Theseus, the file stayed while every plank was replaced.
 
 The recent talks live in two newer files. The neural canonical transformation talk moved into a new file in April 2022 (green); the same file now also carries the free energy minimization talk. The generative AI talk started as a new file on 26 October 2022 (blue). It took 83% of its slides from a talk on the deep variational free energy approach given the month before, and has since produced 58 decks: generative AI for science, CrystalFormer, the Nobel 2024 talks, the lectures on generative models, and the talks on LLMs and agents. The arrows in the tree show where each new family of talks took its first slides.
+
+## Born Machines Were Named on a Slide
+
+Lei Wang introduced the name in 2017, in a talk at CSRC titled *Artificial Intelligence and Quantum Physics*. On the slide it is still in quotation marks, as a new word: next to Boltzmann machines, where the probability of a configuration is a Boltzmann weight, stand "Born" machines, where it is the squared amplitude of a quantum state.
+
+![The slide that introduced "Born" machines, 2017](born-machines-slide-2017.png)
+
+The file of that talk was saved again in 2018, so the earliest dated copy of the slide in the folder is from a talk saved on 13 November 2017, *Generative Modeling: From Boltzmann Machines to Born Machines*. The name reached the title of a paper a month later: *Information Perspective to Probabilistic Modeling: Boltzmann Machines versus Born Machines*, by Song Cheng, Jing Chen and Lei Wang, posted on 12 December 2017 (arXiv:1712.04144). The slide went on to appear in seven decks.
 
 ## The Most Traveled Slide Reversed Its Arrows
 
