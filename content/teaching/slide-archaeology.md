@@ -30,7 +30,7 @@ The turn from Monte Carlo to machine learning can be dated. In June 2016 Lei Wan
 
 Two rows do not follow the diagonal. Monte Carlo never disappears: after its peak it stays at 2–7% every year. Free energy goes the other way. It sits at 0–4% until 2021, jumps to 7% in 2022 and 13% in 2023, and has stayed at 8–9% since. It is the one term that runs through all of the recent talks.
 
-The systems changed along with the methods. In 2015, 26% of the shown slides mention the Ising, Hubbard or Heisenberg model; since 2022 it has been 3% or less. Real matter took their place: first the electron gas and dense hydrogen, then solid lithium in 2024 and high-pressure water ice in 2025. Before 2021 these appear on fewer than 0.3% of the slides; since 2022, on 7–15% every year.
+The systems changed along with the methods. In 2015, 26% of the shown slides mention the Ising, Hubbard or Heisenberg model; since 2022 it has been 3% or less. Real matter took their place: first the electron gas and dense hydrogen, then solid lithium in 2024 and high-pressure water ice in 2025. Before 2021 such systems are on fewer than 0.3% of the slides; since 2022 they are on 7–15% every year.
 
 ## The Cast Changes from Dirac to Hinton to Feynman
 
@@ -68,7 +68,7 @@ The name reached the title of a paper that December: *Information Perspective to
 
 ## Tensor Networks Were the Bridge
 
-From 2017 to 2020 Lei Wang's work ran along one thread: neural networks, tensor networks and quantum circuits. The talks follow about a year behind. Slides naming at least two of the three make up at most about 1% of what he showed before 2018, then 7.7% in 2018, 9.9% in 2019 and 10.8% in 2020. They stay at 7.5% in 2021 and fall below 4% from 2022 on.
+From 2017 to 2020 Lei Wang's work ran along one thread: neural networks, tensor networks and quantum circuits. The talks trail the papers by about a year. Slides naming at least two of the three make up about 1% or less of what he showed before 2018, then 7.7% in 2018, 9.9% in 2019 and 10.8% in 2020. They stay at 7.5% in 2021 and fall below 4% from 2022 on.
 
 One picture carries the thread: a tensor network in the middle, with one arrow to neural networks and another to quantum circuits. It was shown in 24 talks between 2018 and 2023.
 
@@ -93,11 +93,11 @@ In 2018 the red arrows point from the map out to tensor networks and quantum cir
 
 ## Three Directions Turned Out to Be One
 
-On 1 November 2022, a month before ChatGPT was released, Lei Wang spoke at a CAS forum at Yanqi Lake. His summary slide named three directions for generative AI in science: a scientific language model, matter inverse design, and Nature's cost function, the free energy $F = E - TS$. Four years later, the last slide of his talk in Tokyo has the same three under one line: same objective, same model, same algorithm.
+On 1 November 2022, a month before ChatGPT was released, Lei Wang spoke at a Chinese Academy of Sciences forum by Yanqi Lake. His summary slide named three directions for generative AI in science: a scientific language model, matter inverse design, and Nature's cost function, the free energy $F = E - TS$. Four years later, the last slide of his talk in Tokyo has the same three under one line: same objective, same model, same algorithm.
 
 ![The summary slide in 2022 and in 2026](three-fields-2022-2026.png)
 
-In between, versions of the 2022 slide were shown in 28 talks, while its title changed from *Generative AI for Science* to *for Matter* and then to *for It*, after Wheeler's "It from Bit". The language model is now LLM post-training, and under Nature's cost function sit three tiles in periodic-table style: the electron, hydrogen and lithium. In an October 2026 talk he went through the list again. The first point came true; the second is lively but has not yet really landed; on the third, his own group still walks alone. The last line on that slide reads: "In fact, the three points say the same thing."
+In between, versions of the 2022 slide were shown in 28 talks, while its title changed from *Generative AI for Science* to *for Matter* and then to *for It*, after Wheeler's "It from Bit". On the 2026 slide the language model has become LLM post-training, and under Nature's cost function sit three tiles in periodic-table style: the electron, hydrogen and lithium. In an October 2026 talk he went through the list again. The first point came true; the second is lively but has not yet really landed; on the third, his own group still walks alone. The last line on that slide reads: "In fact, the three points say the same thing."
 
 ## Most Slides Last a Year, a Few Last a Decade
 
