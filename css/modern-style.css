@@ -491,6 +491,28 @@ img {
     margin: var(--spacing-lg) 0;
 }
 
+#markdown-content table {
+    border-collapse: collapse;
+    margin: var(--spacing-md) auto;
+    font-size: 0.92em;
+    display: block;
+    overflow-x: auto;
+    width: fit-content;
+    max-width: 100%;
+}
+
+#markdown-content th,
+#markdown-content td {
+    padding: 0.35rem 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#markdown-content th {
+    border-bottom: 2px solid var(--border-color);
+    font-weight: 600;
+    background: var(--bg-secondary);
+}
+
 /* Supplementary Links Styling (links in brackets) */
 #markdown-content .content-list li {
     line-height: 1.8;

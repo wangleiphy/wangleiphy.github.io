@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 360" font-family="-apple-system, Helvetica, Arial, sans-serif">
+<rect width="860" height="360" fill="#ffffff" rx="10"/>
+<line x1="70" y1="310.0" x2="830" y2="310.0" stroke="#e5e7eb"/>
+<text x="62.0" y="310.0" font-size="12.5" fill="#6b7280" text-anchor="end" font-weight="normal" dominant-baseline="middle">0%</text>
+<line x1="70" y1="240.0" x2="830" y2="240.0" stroke="#e5e7eb"/>
+<text x="62.0" y="240.0" font-size="12.5" fill="#6b7280" text-anchor="end" font-weight="normal" dominant-baseline="middle">25%</text>
+<line x1="70" y1="170.0" x2="830" y2="170.0" stroke="#e5e7eb"/>
+<text x="62.0" y="170.0" font-size="12.5" fill="#6b7280" text-anchor="end" font-weight="normal" dominant-baseline="middle">50%</text>
+<line x1="70" y1="100.0" x2="830" y2="100.0" stroke="#e5e7eb"/>
+<text x="62.0" y="100.0" font-size="12.5" fill="#6b7280" text-anchor="end" font-weight="normal" dominant-baseline="middle">75%</text>
+<line x1="70" y1="30.0" x2="830" y2="30.0" stroke="#e5e7eb"/>
+<text x="62.0" y="30.0" font-size="12.5" fill="#6b7280" text-anchor="end" font-weight="normal" dominant-baseline="middle">100%</text>
+<text x="143.1" y="330.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2017</text>
+<line x1="106.5" y1="30" x2="106.5" y2="310" stroke="#e5e7eb"/>
+<text x="216.2" y="330.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2018</text>
+<line x1="179.6" y1="30" x2="179.6" y2="310" stroke="#e5e7eb"/>
+<text x="289.2" y="330.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2019</text>
+<line x1="252.7" y1="30" x2="252.7" y2="310" stroke="#e5e7eb"/>
+<text x="362.3" y="330.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2020</text>
+<line x1="325.8" y1="30" x2="325.8" y2="310" stroke="#e5e7eb"/>
+<text x="435.4" y="330.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2021</text>
+<line x1="398.8" y1="30" x2="398.8" y2="310" stroke="#e5e7eb"/>
+<text x="508.5" y="330.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2022</text>
+<line x1="471.9" y1="30" x2="471.9" y2="310" stroke="#e5e7eb"/>
+<text x="581.5" y="330.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2023</text>
+<line x1="545.0" y1="30" x2="545.0" y2="310" stroke="#e5e7eb"/>
+<text x="654.6" y="330.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2024</text>
+<line x1="618.1" y1="30" x2="618.1" y2="310" stroke="#e5e7eb"/>
+<text x="727.7" y="330.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2025</text>
+<line x1="691.2" y1="30" x2="691.2" y2="310" stroke="#e5e7eb"/>
+<text x="800.8" y="330.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2026</text>
+<line x1="764.2" y1="30" x2="764.2" y2="310" stroke="#e5e7eb"/>
+<polyline points="103.1,30.0 133.7,156.2 216.4,299.7 290.4,302.7 371.3,310.0 412.1,309.7 518.7,284.9 583.3,308.6 716.1,310.0 811.8,310.0" fill="none" stroke="#2a78d6" stroke-width="2"/>
+<circle cx="103.1" cy="30.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_Taiwan: 100%</title></circle>
+<circle cx="114.3" cy="109.1" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_Macao: 72%</title></circle>
+<circle cx="117.5" cy="100.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_Tsinghua: 75%</title></circle>
+<circle cx="118.7" cy="88.8" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_Dali: 79%</title></circle>
+<circle cx="119.5" cy="136.1" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_ITP: 62%</title></circle>
+<circle cx="125.7" cy="158.2" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_USTC: 54%</title></circle>
+<circle cx="127.1" cy="158.2" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_BNU: 54%</title></circle>
+<circle cx="127.7" cy="162.2" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_ZJU: 53%</title></circle>
+<circle cx="128.5" cy="160.8" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_Jinhua: 53%</title></circle>
+<circle cx="131.1" cy="170.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>ML-UCAS: 50%</title></circle>
+<circle cx="140.0" cy="163.6" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_SUSTech: 52%</title></circle>
+<circle cx="141.0" cy="143.1" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_ICQM: 60%</title></circle>
+<circle cx="141.2" cy="163.6" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_SJTU: 52%</title></circle>
+<circle cx="145.2" cy="163.6" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_Fudan: 52%</title></circle>
+<circle cx="158.2" cy="167.5" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_CSRC-long: 51%</title></circle>
+<circle cx="169.8" cy="298.8" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>BornMachine-Anqing: 4%</title></circle>
+<circle cx="181.8" cy="292.9" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>BornMachine-HK: 6%</title></circle>
+<circle cx="182.6" cy="285.3" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>BornMachine-Chengdu: 9%</title></circle>
+<circle cx="187.2" cy="186.5" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_Xiaan: 44%</title></circle>
+<circle cx="197.0" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>BornMachine-APS18: 0%</title></circle>
+<circle cx="197.4" cy="305.9" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralRG-TNSAA: 1%</title></circle>
+<circle cx="199.4" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralRG-Anqing: 0%</title></circle>
+<circle cx="201.4" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralRG-ITP: 0%</title></circle>
+<circle cx="203.0" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralRG-CCQ: 0%</title></circle>
+<circle cx="215.2" cy="307.2" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralRG-Dresden: 1%</title></circle>
+<circle cx="219.2" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>BornMachine-YFA: 0%</title></circle>
+<circle cx="223.2" cy="307.3" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralRG-KITS: 1%</title></circle>
+<circle cx="227.6" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralRG-HZ: 0%</title></circle>
+<circle cx="227.6" cy="307.3" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralRG-Shanxi: 1%</title></circle>
+<circle cx="230.0" cy="307.3" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralRG-JPS: 1%</title></circle>
+<circle cx="237.0" cy="307.4" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralRG-APS: 1%</title></circle>
+<circle cx="243.2" cy="296.7" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>AIQ-CSRC: 5%</title></circle>
+<circle cx="243.2" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>BornMachine-PIL_: 0%</title></circle>
+<circle cx="245.6" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>DL-CSRC: 0%</title></circle>
+<circle cx="250.0" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>MongeAmpere-Liyang: 0%</title></circle>
+<circle cx="271.7" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>DL-Zhuhai: 0%</title></circle>
+<circle cx="272.1" cy="305.6" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>QMPS-Liyang: 2%</title></circle>
+<circle cx="272.3" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>MongeAmpere-JLU: 0%</title></circle>
+<circle cx="272.3" cy="307.7" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_CSRC-short: 1%</title></circle>
+<circle cx="272.5" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>MongeAmpere-LZU: 0%</title></circle>
+<circle cx="272.9" cy="305.7" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>QMPS-Chongqing: 2%</title></circle>
+<circle cx="274.7" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>QMPS-RUC: 0%</title></circle>
+<circle cx="275.7" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>BornMachine-Nanjing: 0%</title></circle>
+<circle cx="276.1" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>DL-Marburg: 0%</title></circle>
+<circle cx="276.3" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>BornMachine-IOP: 0%</title></circle>
+<circle cx="277.9" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>MongeAmpere-Tinghua: 0%</title></circle>
+<circle cx="279.5" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>QMPS-Tencent: 0%</title></circle>
+<circle cx="281.7" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>SSSS-4-DLApplication: 0%</title></circle>
+<circle cx="281.9" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>SSSS-1-DLReview: 0%</title></circle>
+<circle cx="283.9" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>SSSS-3-DiffProgm: 0%</title></circle>
+<circle cx="286.5" cy="305.8" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>QMPS-IOP: 1%</title></circle>
+<circle cx="293.5" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>MongeAmpere-CapitalNormalU: 0%</title></circle>
+<circle cx="293.7" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>MongeAmpere-IOP: 0%</title></circle>
+<circle cx="295.5" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>DL-SZU: 0%</title></circle>
+<circle cx="295.5" cy="111.1" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>ML_IOP: 71%</title></circle>
+<circle cx="300.3" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>3-Generative: 0%</title></circle>
+<circle cx="301.7" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralCT-ISSP: 0%</title></circle>
+<circle cx="301.9" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>2-Secrets: 0%</title></circle>
+<circle cx="302.1" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralCT-Fudan: 0%</title></circle>
+<circle cx="307.7" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralCT-Tokyo: 0%</title></circle>
+<circle cx="311.5" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralCT-ITP: 0%</title></circle>
+<circle cx="315.5" cy="307.2" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralRG-TsinghuaIAS: 1%</title></circle>
+<circle cx="316.9" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralCT-Huawei: 0%</title></circle>
+<circle cx="322.7" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>diffProgram-Beihang: 0%</title></circle>
+<circle cx="325.3" cy="307.6" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralRG-IOP: 1%</title></circle>
+<circle cx="328.0" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>Yao-IOP: 0%</title></circle>
+<circle cx="328.8" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralCT-PKU: 0%</title></circle>
+<circle cx="363.4" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>diffProgram-MLCMP: 0%</title></circle>
+<circle cx="365.4" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>diffProgram-SCUT: 0%</title></circle>
+<circle cx="369.2" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>diffProgram-Tokyo: 0%</title></circle>
+<circle cx="372.4" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>Physics_and_Computer: 0%</title></circle>
+<circle cx="372.6" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>Tropical-JuliaCN: 0%</title></circle>
+<circle cx="373.2" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>Tropical-JZ: 0%</title></circle>
+<circle cx="375.2" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>diffProgram-LZU: 0%</title></circle>
+<circle cx="380.8" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>diffProgram-Tokyo: 0%</title></circle>
+<circle cx="383.6" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>diffProgram-Fugaku: 0%</title></circle>
+<circle cx="385.0" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>diffProgram-CUNY: 0%</title></circle>
+<circle cx="386.0" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralCT-IMECH: 0%</title></circle>
+<circle cx="391.4" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>diffProgram-DIAS: 0%</title></circle>
+<circle cx="394.0" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>王磊-岗位聘任: 0%</title></circle>
+<circle cx="401.0" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralCT-IOP: 0%</title></circle>
+<circle cx="401.0" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>diffProgram-QTML: 0%</title></circle>
+<circle cx="401.2" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>DL-ISSP: 0%</title></circle>
+<circle cx="402.2" cy="307.5" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>QMBC-Baidu: 1%</title></circle>
+<circle cx="403.6" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralCT-Yukawa: 0%</title></circle>
+<circle cx="403.6" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>交叉: 0%</title></circle>
+<circle cx="403.8" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>diffProgram-PI: 0%</title></circle>
+<circle cx="405.0" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>Matthias: 0%</title></circle>
+<circle cx="408.8" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>SciMLw:oData-IOP: 0%</title></circle>
+<circle cx="409.7" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralCT-CCQ: 0%</title></circle>
+<circle cx="410.3" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>Tropical-SIAM: 0%</title></circle>
+<circle cx="415.1" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>HKUST: 0%</title></circle>
+<circle cx="415.3" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>Tropical-IPAM: 0%</title></circle>
+<circle cx="419.5" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>Tropical-Liyang: 0%</title></circle>
+<circle cx="423.3" cy="307.5" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralRG-WQC: 1%</title></circle>
+<circle cx="424.5" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>MongeAmpere-PKU: 0%</title></circle>
+<circle cx="457.5" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>BornMachine-AQL: 0%</title></circle>
+<circle cx="483.5" cy="159.4" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_Seattle: 54%</title></circle>
+<circle cx="488.7" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>雁栖湖: 0%</title></circle>
+<circle cx="531.5" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>BornMachine-Dresden: 0%</title></circle>
+<circle cx="531.9" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>GenerativeAI-RUC: 0%</title></circle>
+<circle cx="535.3" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>diffProgram-AQL: 0%</title></circle>
+<circle cx="541.3" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>deepvariationalfreenergy-MLCMP: 0%</title></circle>
+<circle cx="554.0" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>MongeAmpere-SIGMAI: 0%</title></circle>
+<circle cx="580.8" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>1-Intro: 0%</title></circle>
+<circle cx="615.2" cy="305.8" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>QMPS-Tsinghua: 2%</title></circle>
+<circle cx="702.2" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>BornMachine-TNSAA: 0%</title></circle>
+<circle cx="730.0" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>BornMachine-USTC: 0%</title></circle>
+<circle cx="811.8" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>SciMLw:oData-Zhiyuan: 0%</title></circle>
+<text x="112.9" y="30.0" font-size="13" fill="#111827" text-anchor="start" font-weight="600" dominant-baseline="middle">RBM talk, Taiwan, Dec 2016</text>
+<circle cx="580" cy="30.0" r="4.5" fill="#eb6834"/><text x="590.0" y="30.0" font-size="13" fill="#4b5563" text-anchor="start" font-weight="normal" dominant-baseline="middle">one copy of the file</text>
+<line x1="720" y1="30.0" x2="742" y2="30.0" stroke="#2a78d6" stroke-width="2"/><text x="748.0" y="30.0" font-size="13" fill="#4b5563" text-anchor="start" font-weight="normal" dominant-baseline="middle">yearly mean</text>
+<text x="70.0" y="352.0" font-size="12.5" fill="#6b7280" text-anchor="start" font-weight="normal" dominant-baseline="middle">Share of each deck’s distinct slides that come from the December 2016 original (109 copies of one file).</text>
+</svg>

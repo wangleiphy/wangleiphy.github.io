@@ -1,0 +1,374 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 792" font-family="-apple-system, Helvetica, Arial, sans-serif">
+<defs><marker id="ah" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0 0, 7 3, 0 6" fill="#94a3b8"/></marker></defs>
+<rect width="880" height="792" fill="#fafafa" rx="10"/>
+<line x1="228.0" y1="42" x2="228.0" y2="700" stroke="#e5e7eb"/>
+<text x="252.3" y="34" font-size="13" fill="#4b5563" text-anchor="middle">2014</text>
+<line x1="276.6" y1="42" x2="276.6" y2="700" stroke="#e5e7eb"/>
+<text x="300.9" y="34" font-size="13" fill="#4b5563" text-anchor="middle">2015</text>
+<line x1="325.2" y1="42" x2="325.2" y2="700" stroke="#e5e7eb"/>
+<text x="349.5" y="34" font-size="13" fill="#4b5563" text-anchor="middle">2016</text>
+<line x1="373.8" y1="42" x2="373.8" y2="700" stroke="#e5e7eb"/>
+<text x="398.2" y="34" font-size="13" fill="#4b5563" text-anchor="middle">2017</text>
+<line x1="422.5" y1="42" x2="422.5" y2="700" stroke="#e5e7eb"/>
+<text x="446.8" y="34" font-size="13" fill="#4b5563" text-anchor="middle">2018</text>
+<line x1="471.1" y1="42" x2="471.1" y2="700" stroke="#e5e7eb"/>
+<text x="495.4" y="34" font-size="13" fill="#4b5563" text-anchor="middle">2019</text>
+<line x1="519.7" y1="42" x2="519.7" y2="700" stroke="#e5e7eb"/>
+<text x="544.0" y="34" font-size="13" fill="#4b5563" text-anchor="middle">2020</text>
+<line x1="568.3" y1="42" x2="568.3" y2="700" stroke="#e5e7eb"/>
+<text x="592.6" y="34" font-size="13" fill="#4b5563" text-anchor="middle">2021</text>
+<line x1="616.9" y1="42" x2="616.9" y2="700" stroke="#e5e7eb"/>
+<text x="641.2" y="34" font-size="13" fill="#4b5563" text-anchor="middle">2022</text>
+<line x1="665.5" y1="42" x2="665.5" y2="700" stroke="#e5e7eb"/>
+<text x="689.8" y="34" font-size="13" fill="#4b5563" text-anchor="middle">2023</text>
+<line x1="714.2" y1="42" x2="714.2" y2="700" stroke="#e5e7eb"/>
+<text x="738.5" y="34" font-size="13" fill="#4b5563" text-anchor="middle">2024</text>
+<line x1="762.8" y1="42" x2="762.8" y2="700" stroke="#e5e7eb"/>
+<text x="787.1" y="34" font-size="13" fill="#4b5563" text-anchor="middle">2025</text>
+<line x1="811.4" y1="42" x2="811.4" y2="700" stroke="#e5e7eb"/>
+<text x="835.7" y="34" font-size="13" fill="#4b5563" text-anchor="middle">2026</text>
+<line x1="860.0" y1="42" x2="860.0" y2="700" stroke="#e5e7eb"/>
+<rect x="8" y="50.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
+<text x="218" y="62.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">QMC talks <tspan fill="#6b7280">20</tspan></text>
+<line x1="269.0" y1="62.5" x2="367.2" y2="62.5" stroke="#cbd5e1" stroke-width="2"/>
+<text x="218" y="87.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Fidelity susceptibility <tspan fill="#6b7280">4</tspan></text>
+<line x1="284.6" y1="87.5" x2="366.5" y2="87.5" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="8" y="100.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
+<text x="218" y="112.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">RBM for Monte Carlo <tspan fill="#6b7280">17</tspan></text>
+<line x1="371.6" y1="112.5" x2="624.6" y2="112.5" stroke="#cbd5e1" stroke-width="2"/>
+<text x="218" y="137.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">ML for physics <tspan fill="#6b7280">3</tspan></text>
+<line x1="390.2" y1="137.5" x2="499.6" y2="137.5" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="8" y="150.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
+<text x="218" y="162.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Born machines <tspan fill="#6b7280">12</tspan></text>
+<line x1="415.9" y1="162.5" x2="788.6" y2="162.5" stroke="#cbd5e1" stroke-width="2"/>
+<text x="218" y="187.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Neural RG <tspan fill="#6b7280">14</tspan></text>
+<line x1="434.3" y1="187.5" x2="602.2" y2="187.5" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="8" y="200.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
+<text x="218" y="212.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Deep learning lectures <tspan fill="#6b7280">5</tspan></text>
+<line x1="466.4" y1="212.5" x2="569.9" y2="212.5" stroke="#cbd5e1" stroke-width="2"/>
+<text x="218" y="237.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Monge–Ampère flow <tspan fill="#6b7280">8</tspan></text>
+<line x1="469.3" y1="237.5" x2="671.5" y2="237.5" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="8" y="250.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
+<text x="218" y="262.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Quantum circuits / VQE <tspan fill="#6b7280">6</tspan></text>
+<line x1="484.0" y1="262.5" x2="712.3" y2="262.5" stroke="#cbd5e1" stroke-width="2"/>
+<text x="218" y="287.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">SSSS lectures <tspan fill="#6b7280">5</tspan></text>
+<line x1="487.7" y1="287.5" x2="639.7" y2="287.5" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="8" y="300.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
+<text x="218" y="312.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Neural canonical transf. <tspan fill="#6b7280">31</tspan></text>
+<line x1="503.7" y1="312.5" x2="851.8" y2="312.5" stroke="#cbd5e1" stroke-width="2"/>
+<text x="218" y="337.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Differentiable programming <tspan fill="#6b7280">18</tspan></text>
+<line x1="517.7" y1="337.5" x2="659.1" y2="337.5" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="8" y="350.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
+<text x="218" y="362.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Tropical tensor networks <tspan fill="#6b7280">5</tspan></text>
+<line x1="550.8" y1="362.5" x2="582.0" y2="362.5" stroke="#cbd5e1" stroke-width="2"/>
+<text x="218" y="387.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Lectures 2021 <tspan fill="#6b7280">9</tspan></text>
+<line x1="580.0" y1="387.5" x2="646.7" y2="387.5" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="8" y="400.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
+<text x="218" y="412.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Coulomb gas / FermiFlow <tspan fill="#6b7280">12</tspan></text>
+<line x1="590.5" y1="412.5" x2="807.0" y2="412.5" stroke="#cbd5e1" stroke-width="2"/>
+<text x="218" y="437.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">AI for science <tspan fill="#6b7280">3</tspan></text>
+<line x1="651.4" y1="437.5" x2="659.4" y2="437.5" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="8" y="450.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
+<text x="218" y="462.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Deep variational free energy <tspan fill="#6b7280">6</tspan></text>
+<line x1="653.0" y1="462.5" x2="754.9" y2="462.5" stroke="#cbd5e1" stroke-width="2"/>
+<text x="218" y="487.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Generative AI for science <tspan fill="#6b7280">36</tspan></text>
+<line x1="656.6" y1="487.5" x2="851.8" y2="487.5" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="8" y="500.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
+<text x="218" y="512.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Dense hydrogen <tspan fill="#6b7280">8</tspan></text>
+<line x1="679.4" y1="512.5" x2="746.0" y2="512.5" stroke="#cbd5e1" stroke-width="2"/>
+<text x="218" y="537.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">CrystalFormer <tspan fill="#6b7280">14</tspan></text>
+<line x1="723.2" y1="537.5" x2="842.7" y2="537.5" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="8" y="550.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
+<text x="218" y="562.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Nobel 2024 <tspan fill="#6b7280">2</tspan></text>
+<line x1="764.9" y1="562.5" x2="790.3" y2="562.5" stroke="#cbd5e1" stroke-width="2"/>
+<text x="218" y="587.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Generative models lectures <tspan fill="#6b7280">4</tspan></text>
+<line x1="790.5" y1="587.5" x2="840.8" y2="587.5" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="8" y="600.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
+<text x="218" y="612.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Sampling (QIS) <tspan fill="#6b7280">2</tspan></text>
+<line x1="794.0" y1="612.5" x2="794.4" y2="612.5" stroke="#cbd5e1" stroke-width="2"/>
+<text x="218" y="637.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Free energy minimization <tspan fill="#6b7280">6</tspan></text>
+<line x1="808.8" y1="637.5" x2="851.8" y2="637.5" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="8" y="650.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
+<text x="218" y="662.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">LLM and agents <tspan fill="#6b7280">2</tspan></text>
+<line x1="845.2" y1="662.5" x2="851.3" y2="662.5" stroke="#cbd5e1" stroke-width="2"/>
+<text x="218" y="687.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Physics at the dawn of AGI <tspan fill="#6b7280">1</tspan></text>
+<line x1="851.0" y1="687.5" x2="851.0" y2="687.5" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M 387.2 112.5 C 376.2 125.0, 380.2 131.5, 388.2 131.5" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#ah)"/>
+<path d="M 431.3 162.5 C 420.3 175.0, 424.3 181.5, 432.3 181.5" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#ah)"/>
+<path d="M 466.3 212.5 C 455.3 225.0, 459.3 231.5, 467.3 231.5" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#ah)"/>
+<path d="M 514.7 212.5 C 503.7 275.0, 507.7 331.5, 515.7 331.5" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#ah)"/>
+<path d="M 577.0 337.5 C 566.0 362.5, 570.0 381.5, 578.0 381.5" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#ah)"/>
+<path d="M 587.5 312.5 C 576.5 362.5, 580.5 406.5, 588.5 406.5" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#ah)"/>
+<path d="M 650.0 387.5 C 639.0 425.0, 643.0 456.5, 651.0 456.5" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#ah)"/>
+<path d="M 653.6 462.5 C 642.6 475.0, 646.6 481.5, 654.6 481.5" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#ah)"/>
+<path d="M 761.9 487.5 C 750.9 525.0, 754.9 556.5, 762.9 556.5" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#ah)"/>
+<path d="M 787.5 487.5 C 776.5 537.5, 780.5 581.5, 788.5 581.5" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#ah)"/>
+<path d="M 805.8 312.5 C 794.8 475.0, 798.8 631.5, 806.8 631.5" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#ah)"/>
+<path d="M 842.2 587.5 C 831.2 625.0, 835.2 656.5, 843.2 656.5" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#ah)"/>
+<path d="M 848.0 662.5 C 837.0 675.0, 841.0 681.5, 849.0 681.5" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#ah)"/>
+<circle cx="367.2" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>2016青千 (2016-11-11)</title></circle>
+<circle cx="358.6" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>AnalyticalContinuation (2016-09-08)</title></circle>
+<circle cx="277.3" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Arosa15 (2015-01-06)</title></circle>
+<circle cx="309.1" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>BEC15 (2015-09-02)</title></circle>
+<circle cx="340.3" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>CSRC (2016-04-23)</title></circle>
+<circle cx="295.4" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Cologne (2015-05-22)</title></circle>
+<circle cx="349.2" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>ErdosNumber (2016-06-29)</title></circle>
+<circle cx="366.5" cy="87.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>FS-CUHK (2016-11-06)</title></circle>
+<circle cx="364.9" cy="87.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>FS-IOP (2016-10-25)</title></circle>
+<circle cx="341.9" cy="87.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>FS-USTC (2016-05-05)</title></circle>
+<circle cx="284.6" cy="87.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>FS (2015-03-02)</title></circle>
+<circle cx="298.7" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Fribourg (2015-06-16)</title></circle>
+<circle cx="280.5" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>JudoDiagram (2015-01-30)</title></circle>
+<circle cx="639.7" cy="287.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>SSSS-2-GenerativeModels (2022-06-21)</title></circle>
+<circle cx="487.7" cy="287.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>SSSS-Challenge (2019-05-06)</title></circle>
+<circle cx="351.7" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Wuhan16 (2016-07-18)</title></circle>
+<circle cx="608.1" cy="387.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>1-RL (2021-10-27)</title></circle>
+<circle cx="608.1" cy="387.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>2-DP (2021-10-27)</title></circle>
+<circle cx="600.9" cy="387.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>1-SciML (2021-09-03)</title></circle>
+<circle cx="612.1" cy="387.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>2-Flow (2021-11-26)</title></circle>
+<circle cx="594.5" cy="387.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>3-DP (2021-07-17)</title></circle>
+<circle cx="600.5" cy="387.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>2lessons (2021-08-31)</title></circle>
+<circle cx="362.9" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>QMC (2016-10-10)</title></circle>
+<circle cx="328.6" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>QMCLectures (2016-01-26)</title></circle>
+<circle cx="269.0" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>QSIT14 (2014-11-05)</title></circle>
+<circle cx="328.7" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>QSITtemplate (2016-01-27)</title></circle>
+<circle cx="304.6" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Seattle15 (2015-07-30)</title></circle>
+<circle cx="601.6" cy="387.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>2021夏令营 (2021-09-08)</title></circle>
+<circle cx="580.0" cy="387.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>2lessons (2021-03-30)</title></circle>
+<circle cx="651.4" cy="437.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>AISI-Future (2022-09-17)</title></circle>
+<circle cx="659.4" cy="437.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>AISI-NSFC (2022-11-16)</title></circle>
+<circle cx="657.0" cy="437.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>AISI-UCAS (2022-10-29)</title></circle>
+<circle cx="642.9" cy="412.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Coulomb_gas-APS22 (2022-07-15)</title></circle>
+<circle cx="591.9" cy="412.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Coulomb_gas-ByteDance (2021-06-27)</title></circle>
+<circle cx="597.6" cy="412.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Coulomb_gas-CCP21 (2021-08-09)</title></circle>
+<circle cx="593.1" cy="412.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Coulomb_gas-DLAP (2021-07-06)</title></circle>
+<circle cx="657.8" cy="412.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Coulomb_gas-EEMD (2022-11-04)</title></circle>
+<circle cx="645.3" cy="412.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Coulomb_gas-Gorlitz (2022-08-02)</title></circle>
+<circle cx="649.4" cy="412.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Coulomb_gas-Haiwei (2022-09-02)</title></circle>
+<circle cx="590.5" cy="412.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Coulomb_gas-IOP (2021-06-17)</title></circle>
+<circle cx="645.3" cy="412.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Coulomb_gas-Jinan (2022-08-02)</title></circle>
+<circle cx="688.7" cy="412.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Coulomb_gas-Liyang (2023-06-24)</title></circle>
+<circle cx="807.0" cy="412.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Coulomb_gas-QiZhi (2025-11-29)</title></circle>
+<circle cx="620.0" cy="412.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Coulomb_gas-TNSAA (2022-01-24)</title></circle>
+<circle cx="706.0" cy="487.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>GenerativeAI-ICQM (2023-11-01)</title></circle>
+<circle cx="681.5" cy="487.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>GenerativeAI-Suzhou (2023-05-01)</title></circle>
+<circle cx="704.8" cy="487.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>GenerativeAI-UCAS (2023-10-23)</title></circle>
+<circle cx="308.0" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Glasgow (2015-08-25)</title></circle>
+<circle cx="364.4" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Hangzhou16 (2016-10-21)</title></circle>
+<circle cx="465.3" cy="137.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>ML-CMP (2018-11-19)</title></circle>
+<circle cx="306.2" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Munich15 (2015-08-11)</title></circle>
+<circle cx="590.8" cy="312.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>NeuralCT-LSEC (2021-06-19)</title></circle>
+<circle cx="582.9" cy="312.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>NeuralCT-SJTU (2021-04-21)</title></circle>
+<circle cx="583.1" cy="312.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>NeuralCT-WLU (2021-04-22)</title></circle>
+<circle cx="602.2" cy="187.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>NeuralRG-Qindao (2021-09-13)</title></circle>
+<circle cx="646.7" cy="387.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>SciML-iChem (2022-08-13)</title></circle>
+<circle cx="318.7" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>Trento (2015-11-13)</title></circle>
+<circle cx="299.1" cy="62.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>TsingHua (2015-06-19)</title></circle>
+<circle cx="754.9" cy="462.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>deepvariationalfreenergy-FHI (2024-11-02)</title></circle>
+<circle cx="658.6" cy="462.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>deepvariationalfreenergy-PKU (2022-11-10)</title></circle>
+<circle cx="653.0" cy="462.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>deepvariationalfreenergy-RUC (2022-09-29)</title></circle>
+<circle cx="704.0" cy="462.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>deepvariationalfreenergy-SpaML23 (2023-10-17)</title></circle>
+<circle cx="606.5" cy="337.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>diffProgram-CCNU (2021-10-15)</title></circle>
+<circle cx="619.3" cy="337.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>diffProgram-DP (2022-01-19)</title></circle>
+<circle cx="585.7" cy="337.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>diffProgram-Huawei (2021-05-12)</title></circle>
+<circle cx="608.1" cy="337.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>diffProgram-Huawei2 (2021-10-27)</title></circle>
+<circle cx="609.4" cy="337.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>diffProgram-JZ (2021-11-06)</title></circle>
+<circle cx="606.8" cy="337.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>diffProgram-Tongji (2021-10-17)</title></circle>
+<circle cx="709.7" cy="512.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>hydrogen-Hualien (2023-11-29)</title></circle>
+<circle cx="704.7" cy="512.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>hydrogen-Jinan (2023-10-22)</title></circle>
+<circle cx="708.3" cy="512.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>hydrogen-Kyoto (2023-11-18)</title></circle>
+<circle cx="695.9" cy="512.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>hydrogen-PI (2023-08-17)</title></circle>
+<circle cx="729.1" cy="512.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>hydrogen-Shantou (2024-04-22)</title></circle>
+<circle cx="746.0" cy="512.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>hydrogen-Tsinghua (2024-08-27)</title></circle>
+<circle cx="729.1" cy="512.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>hydrogen-iMech (2024-04-22)</title></circle>
+<circle cx="714.0" cy="462.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>deepvariationalfreenergy-suzhou (2023-12-31)</title></circle>
+<circle cx="679.4" cy="512.5" r="4.6" fill="#9ca3af" stroke="#fff" stroke-width="1"><title>hydrogen-fuzhou (2023-04-15)</title></circle>
+<circle cx="851.0" cy="687.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>AGI-Physics (2026-10-26)</title></circle>
+<circle cx="851.3" cy="662.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>LLM-Agent-IOP (2026-10-28)</title></circle>
+<circle cx="466.4" cy="212.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>DL-CSRC (2018-11-27)</title></circle>
+<circle cx="486.6" cy="212.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>DL-Marburg (2019-04-28)</title></circle>
+<circle cx="499.6" cy="212.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>DL-SZU (2019-08-03)</title></circle>
+<circle cx="483.7" cy="212.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>DL-Zhuhai (2019-04-06)</title></circle>
+<circle cx="840.8" cy="587.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>1-AAA (2026-08-10)</title></circle>
+<circle cx="840.4" cy="587.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>2-Flow (2026-08-07)</title></circle>
+<circle cx="790.5" cy="587.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>1-AAA (2025-07-28)</title></circle>
+<circle cx="845.2" cy="662.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>LLM-Agent (2026-09-12)</title></circle>
+<circle cx="569.9" cy="212.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>DL-ISSP (2021-01-13)</title></circle>
+<circle cx="503.7" cy="312.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralCT-ISSP (2019-09-03)</title></circle>
+<circle cx="390.2" cy="137.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>ML-UCAS (2017-05-04)</title></circle>
+<circle cx="490.5" cy="287.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>SSSS-1-DLReview (2019-05-27)</title></circle>
+<circle cx="491.8" cy="287.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>SSSS-3-DiffProgm (2019-06-06)</title></circle>
+<circle cx="490.4" cy="287.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>SSSS-4-DLApplication (2019-05-26)</title></circle>
+<circle cx="775.8" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-chengdu2 (2025-04-09)</title></circle>
+<circle cx="834.4" cy="587.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>AAA-hangzhou2025 (2026-06-23)</title></circle>
+<circle cx="507.7" cy="312.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralCT-Tokyo (2019-10-03)</title></circle>
+<circle cx="548.6" cy="337.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>diffProgram-Tokyo (2020-08-05)</title></circle>
+<circle cx="836.0" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-westlake (2026-07-05)</title></circle>
+<circle cx="729.2" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-Kyoto (2024-04-23)</title></circle>
+<circle cx="399.5" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_Fudan (2017-07-13)</title></circle>
+<circle cx="434.0" cy="162.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>BornMachine-APS18 (2018-03-29)</title></circle>
+<circle cx="607.3" cy="162.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>BornMachine-AQL (2021-10-21)</title></circle>
+<circle cx="415.9" cy="162.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>BornMachine-Anqing (2017-11-13)</title></circle>
+<circle cx="424.5" cy="162.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>BornMachine-Chengdu (2018-01-16)</title></circle>
+<circle cx="656.6" cy="162.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>BornMachine-Dresden (2022-10-26)</title></circle>
+<circle cx="423.9" cy="162.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>BornMachine-HK (2018-01-12)</title></circle>
+<circle cx="486.8" cy="162.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>BornMachine-IOP (2019-04-29)</title></circle>
+<circle cx="486.4" cy="162.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>BornMachine-Nanjing (2019-04-26)</title></circle>
+<circle cx="464.8" cy="162.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>BornMachine-PIL_ (2018-11-15)</title></circle>
+<circle cx="770.1" cy="162.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>BornMachine-TNSAA (2025-02-25)</title></circle>
+<circle cx="788.6" cy="162.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>BornMachine-USTC (2025-07-14)</title></circle>
+<circle cx="448.8" cy="162.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>BornMachine-YFA (2018-07-18)</title></circle>
+<circle cx="735.8" cy="537.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>CrystalFormer-BNU (2024-06-12)</title></circle>
+<circle cx="736.4" cy="537.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>CrystalFormer-Beihang (2024-06-16)</title></circle>
+<circle cx="753.6" cy="537.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>CrystalFormer-ByteDance (2024-10-23)</title></circle>
+<circle cx="723.2" cy="537.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>CrystalFormer-DP (2024-03-09)</title></circle>
+<circle cx="727.7" cy="537.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>CrystalFormer-HKUST (2024-04-12)</title></circle>
+<circle cx="836.1" cy="537.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>CrystalFormer-Huairou (2026-07-06)</title></circle>
+<circle cx="733.3" cy="537.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>CrystalFormer-ICQM (2024-05-24)</title></circle>
+<circle cx="742.5" cy="537.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>CrystalFormer-IOP (2024-08-01)</title></circle>
+<circle cx="840.5" cy="537.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>CrystalFormer-ITP (2026-08-08)</title></circle>
+<circle cx="842.7" cy="537.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>CrystalFormer-Jinan (2026-08-24)</title></circle>
+<circle cx="734.1" cy="537.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>CrystalFormer-SJTU (2024-05-30)</title></circle>
+<circle cx="822.7" cy="537.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>CrystalFormer-Singapore (2026-03-27)</title></circle>
+<circle cx="823.1" cy="537.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>CrystalFormer-Tianjin (2026-03-30)</title></circle>
+<circle cx="726.8" cy="537.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>CrystalFormer-Tokyo (2024-04-05)</title></circle>
+<circle cx="671.0" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-ADL (2023-02-11)</title></circle>
+<circle cx="709.6" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-ByteDance (2023-11-28)</title></circle>
+<circle cx="758.2" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-ByteDance2 (2024-11-27)</title></circle>
+<circle cx="828.7" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-CUHKSZ (2026-05-11)</title></circle>
+<circle cx="752.0" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-Chengdu (2024-10-11)</title></circle>
+<circle cx="663.0" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-DP (2022-12-13)</title></circle>
+<circle cx="656.6" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-DP2 (2022-10-26)</title></circle>
+<circle cx="769.4" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-ETH (2025-02-20)</title></circle>
+<circle cx="851.8" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-Fudan (2026-11-01)</title></circle>
+<circle cx="791.4" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-HKUST-GZ (2025-08-04)</title></circle>
+<circle cx="745.4" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-Huhhot (2024-08-23)</title></circle>
+<circle cx="733.7" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-ICT (2024-05-27)</title></circle>
+<circle cx="741.3" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-IOP (2024-07-23)</title></circle>
+<circle cx="715.4" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-JLU (2024-01-10)</title></circle>
+<circle cx="722.8" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-LZU (2024-03-06)</title></circle>
+<circle cx="774.7" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-LiaoNing (2025-04-01)</title></circle>
+<circle cx="777.9" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-Liyang (2025-04-25)</title></circle>
+<circle cx="656.9" cy="487.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>GenerativeAI-RUC (2022-10-28)</title></circle>
+<circle cx="837.2" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-RUC2 (2026-07-14)</title></circle>
+<circle cx="743.8" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-SJTU (2024-08-11)</title></circle>
+<circle cx="825.4" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-ShanghaiTech (2026-04-16)</title></circle>
+<circle cx="738.8" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-Shantou (2024-07-04)</title></circle>
+<circle cx="791.1" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-Slab (2025-08-02)</title></circle>
+<circle cx="809.4" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-Tsinghua (2025-12-17)</title></circle>
+<circle cx="813.0" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-Tsinghua2 (2026-01-13)</title></circle>
+<circle cx="777.5" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-UCAS2 (2025-04-22)</title></circle>
+<circle cx="826.4" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-UCAS3 (2026-04-24)</title></circle>
+<circle cx="842.5" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-USTC (2026-08-23)</title></circle>
+<circle cx="838.5" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-iHEP (2026-07-24)</title></circle>
+<circle cx="819.6" cy="487.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>GenerativeAI-xiangshan (2026-03-04)</title></circle>
+<circle cx="499.6" cy="137.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>ML_IOP (2019-08-03)</title></circle>
+<circle cx="498.2" cy="237.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>MongeAmpere-CapitalNormalU (2019-07-24)</title></circle>
+<circle cx="498.4" cy="237.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>MongeAmpere-IOP (2019-07-25)</title></circle>
+<circle cx="484.1" cy="237.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>MongeAmpere-JLU (2019-04-09)</title></circle>
+<circle cx="484.3" cy="237.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>MongeAmpere-LZU (2019-04-10)</title></circle>
+<circle cx="469.3" cy="237.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>MongeAmpere-Liyang (2018-12-19)</title></circle>
+<circle cx="585.3" cy="237.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>MongeAmpere-PKU (2021-05-09)</title></circle>
+<circle cx="671.5" cy="237.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>MongeAmpere-SIGMAI (2023-02-15)</title></circle>
+<circle cx="487.8" cy="237.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>MongeAmpere-Tinghua (2019-05-07)</title></circle>
+<circle cx="825.6" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-AISI (2026-04-18)</title></circle>
+<circle cx="575.5" cy="312.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralCT-CCQ (2021-02-24)</title></circle>
+<circle cx="851.8" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-Dresden (2026-11-01)</title></circle>
+<circle cx="504.0" cy="312.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralCT-Fudan (2019-09-05)</title></circle>
+<circle cx="780.9" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-Fudan2 (2025-05-17)</title></circle>
+<circle cx="630.8" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-HUST (2022-04-15)</title></circle>
+<circle cx="513.8" cy="312.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralCT-Huawei (2019-11-18)</title></circle>
+<circle cx="823.2" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-IAPCM (2026-03-31)</title></circle>
+<circle cx="559.8" cy="312.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralCT-IMECH (2020-10-28)</title></circle>
+<circle cx="569.8" cy="312.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralCT-IOP (2021-01-12)</title></circle>
+<circle cx="510.2" cy="312.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralCT-ITP (2019-10-22)</title></circle>
+<circle cx="793.5" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-Liyang (2025-08-20)</title></circle>
+<circle cx="823.6" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-Naha (2026-04-03)</title></circle>
+<circle cx="793.5" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-Ningbo (2025-08-20)</title></circle>
+<circle cx="790.9" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-PI (2025-07-31)</title></circle>
+<circle cx="521.7" cy="312.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralCT-PKU (2020-01-16)</title></circle>
+<circle cx="755.1" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-PKU2 (2024-11-04)</title></circle>
+<circle cx="834.7" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-Paris (2026-06-25)</title></circle>
+<circle cx="806.0" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-SJTU2 (2025-11-22)</title></circle>
+<circle cx="760.7" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-Singapore (2024-12-16)</title></circle>
+<circle cx="806.2" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-Taiwwan (2025-11-23)</title></circle>
+<circle cx="755.7" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-Tokyo2 (2024-11-08)</title></circle>
+<circle cx="804.8" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-Tsinghua (2025-11-13)</title></circle>
+<circle cx="707.6" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-UCAS (2023-11-13)</title></circle>
+<circle cx="771.0" cy="312.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>NeuralCT-USTC (2025-03-04)</title></circle>
+<circle cx="571.5" cy="312.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralCT-Yukawa (2021-01-25)</title></circle>
+<circle cx="460.7" cy="187.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralRG-APS (2018-10-15)</title></circle>
+<circle cx="435.6" cy="187.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralRG-Anqing (2018-04-10)</title></circle>
+<circle cx="438.0" cy="187.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralRG-CCQ (2018-04-28)</title></circle>
+<circle cx="446.2" cy="187.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralRG-Dresden (2018-06-28)</title></circle>
+<circle cx="454.4" cy="187.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralRG-HZ (2018-08-29)</title></circle>
+<circle cx="519.4" cy="187.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralRG-IOP (2019-12-30)</title></circle>
+<circle cx="437.0" cy="187.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralRG-ITP (2018-04-20)</title></circle>
+<circle cx="456.0" cy="187.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralRG-JPS (2018-09-10)</title></circle>
+<circle cx="451.5" cy="187.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralRG-KITS (2018-08-07)</title></circle>
+<circle cx="454.4" cy="187.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralRG-Shanxi (2018-08-29)</title></circle>
+<circle cx="434.3" cy="187.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralRG-TNSAA (2018-03-31)</title></circle>
+<circle cx="512.9" cy="187.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralRG-TsinghuaIAS (2019-11-11)</title></circle>
+<circle cx="584.5" cy="187.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>NeuralRG-WQC (2021-05-03)</title></circle>
+<circle cx="790.3" cy="562.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>Nobel2024-IOP (2025-07-27)</title></circle>
+<circle cx="764.9" cy="562.5" r="4.6" fill="#2a78d6" stroke="#fff" stroke-width="1"><title>Nobel2024-Liyang (2025-01-17)</title></circle>
+<circle cx="794.4" cy="612.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>QIS-Chengdu (2025-08-27)</title></circle>
+<circle cx="794.0" cy="612.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>QIS-Haikou (2025-08-24)</title></circle>
+<circle cx="484.5" cy="262.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>QMPS-Chongqing (2019-04-12)</title></circle>
+<circle cx="493.6" cy="262.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>QMPS-IOP (2019-06-19)</title></circle>
+<circle cx="484.0" cy="262.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>QMPS-Liyang (2019-04-08)</title></circle>
+<circle cx="485.7" cy="262.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>QMPS-RUC (2019-04-21)</title></circle>
+<circle cx="488.9" cy="262.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>QMPS-Tencent (2019-05-15)</title></circle>
+<circle cx="712.3" cy="262.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>QMPS-Tsinghua (2023-12-18)</title></circle>
+<circle cx="387.6" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_BNU (2017-04-14)</title></circle>
+<circle cx="408.2" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_CSRC-long (2017-09-16)</title></circle>
+<circle cx="484.1" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_CSRC-short (2019-04-09)</title></circle>
+<circle cx="382.0" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_Dali (2017-03-03)</title></circle>
+<circle cx="396.7" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_ICQM (2017-06-22)</title></circle>
+<circle cx="382.5" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_ITP (2017-03-07)</title></circle>
+<circle cx="388.5" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_Jinhua (2017-04-21)</title></circle>
+<circle cx="379.0" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_Macao (2017-02-09)</title></circle>
+<circle cx="396.9" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_SJTU (2017-06-23)</title></circle>
+<circle cx="396.1" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_SUSTech (2017-06-17)</title></circle>
+<circle cx="624.6" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_Seattle (2022-02-28)</title></circle>
+<circle cx="371.6" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_Taiwan (2016-12-14)</title></circle>
+<circle cx="381.2" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_Tsinghua (2017-02-25)</title></circle>
+<circle cx="386.6" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_USTC (2017-04-07)</title></circle>
+<circle cx="427.5" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_Xiaan (2018-02-08)</title></circle>
+<circle cx="388.0" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_ZJU (2017-04-17)</title></circle>
+<circle cx="579.2" cy="362.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>Tropical-IPAM (2021-03-24)</title></circle>
+<circle cx="551.2" cy="362.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>Tropical-JZ (2020-08-25)</title></circle>
+<circle cx="550.8" cy="362.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>Tropical-JuliaCN (2020-08-22)</title></circle>
+<circle cx="582.0" cy="362.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>Tropical-Liyang (2021-04-14)</title></circle>
+<circle cx="575.9" cy="362.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>Tropical-SIAM (2021-02-27)</title></circle>
+<circle cx="663.1" cy="462.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>deepvariationalfreenergy-MLCMP (2022-12-14)</title></circle>
+<circle cx="659.1" cy="337.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>diffProgram-AQL (2022-11-14)</title></circle>
+<circle cx="517.7" cy="337.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>diffProgram-Beihang (2019-12-17)</title></circle>
+<circle cx="559.1" cy="337.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>diffProgram-CUNY (2020-10-23)</title></circle>
+<circle cx="563.3" cy="337.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>diffProgram-DIAS (2020-11-24)</title></circle>
+<circle cx="558.2" cy="337.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>diffProgram-Fugaku (2020-10-16)</title></circle>
+<circle cx="552.6" cy="337.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>diffProgram-LZU (2020-09-04)</title></circle>
+<circle cx="544.7" cy="337.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>diffProgram-MLCMP (2020-07-07)</title></circle>
+<circle cx="571.6" cy="337.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>diffProgram-PI (2021-01-26)</title></circle>
+<circle cx="569.8" cy="337.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>diffProgram-QTML (2021-01-12)</title></circle>
+<circle cx="546.0" cy="337.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>diffProgram-SCUT (2020-07-17)</title></circle>
+<circle cx="556.3" cy="337.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>diffProgram-Tokyo (2020-10-02)</title></circle>
+<circle cx="808.8" cy="637.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>minF-NJU (2025-12-13)</title></circle>
+<circle cx="843.1" cy="637.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>minF-SJTU (2026-08-27)</title></circle>
+<circle cx="851.8" cy="637.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>minF-Tokyo (2026-11-01)</title></circle>
+<circle cx="825.5" cy="637.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>minF-ZGC (2026-04-17)</title></circle>
+<circle cx="842.3" cy="637.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>minF-ZGC2 (2026-08-21)</title></circle>
+<circle cx="850.4" cy="637.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>minF-ZGC3 (2026-10-21)</title></circle>
+<circle cx="228" cy="726" r="5" fill="#eb6834"/><text x="238" y="726" font-size="13.5" fill="#1f2937" dominant-baseline="middle">the Dec 2016 file</text>
+<circle cx="383" cy="726" r="5" fill="#2a78d6"/><text x="393" y="726" font-size="13.5" fill="#1f2937" dominant-baseline="middle">the Oct 2022 file</text>
+<circle cx="538" cy="726" r="5" fill="#1baf7a"/><text x="548" y="726" font-size="13.5" fill="#1f2937" dominant-baseline="middle">the Apr 2022 file</text>
+<circle cx="693" cy="726" r="5" fill="#9ca3af"/><text x="703" y="726" font-size="13.5" fill="#1f2937" dominant-baseline="middle">other files</text>
+<path d="M 224 748 l 22 0" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#ah)"/><text x="254" y="748" font-size="13.5" fill="#1f2937" dominant-baseline="middle">a new talk family starts from slides of an older one</text>
+<text x="228" y="770" font-size="12" fill="#6b7280">Each dot is one Keynote deck at its last-modified date (≈ the talk); 253 of 308 decks shown.</text>
+<circle cx="371.6" cy="112.5" r="8" fill="none" stroke="#eb6834" stroke-width="2"/>
+<text x="383.6" y="99.5" font-size="12.5" font-weight="600" fill="#eb6834" text-anchor="start" dominant-baseline="middle">Dec 2016: one file begins</text>
+<circle cx="630.8" cy="312.5" r="8" fill="none" stroke="#1baf7a" stroke-width="2"/>
+<text x="618.8" y="299.5" font-size="12.5" font-weight="600" fill="#1baf7a" text-anchor="end" dominant-baseline="middle">Apr 2022: new file</text>
+<circle cx="656.6" cy="487.5" r="8" fill="none" stroke="#2a78d6" stroke-width="2"/>
+<text x="644.6" y="474.5" font-size="12.5" font-weight="600" fill="#2a78d6" text-anchor="end" dominant-baseline="middle">Oct 2022: new file</text>
+</svg>

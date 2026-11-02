@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 360" font-family="-apple-system, Helvetica, Arial, sans-serif">
+<rect width="860" height="360" fill="#ffffff" rx="10"/>
+<line x1="70" y1="314.0" x2="830" y2="314.0" stroke="#e5e7eb"/>
+<text x="62.0" y="314.0" font-size="12.5" fill="#6b7280" text-anchor="end" font-weight="normal" dominant-baseline="middle">0%</text>
+<line x1="70" y1="249.5" x2="830" y2="249.5" stroke="#e5e7eb"/>
+<text x="62.0" y="249.5" font-size="12.5" fill="#6b7280" text-anchor="end" font-weight="normal" dominant-baseline="middle">25%</text>
+<line x1="70" y1="185.0" x2="830" y2="185.0" stroke="#e5e7eb"/>
+<text x="62.0" y="185.0" font-size="12.5" fill="#6b7280" text-anchor="end" font-weight="normal" dominant-baseline="middle">50%</text>
+<line x1="70" y1="120.5" x2="830" y2="120.5" stroke="#e5e7eb"/>
+<text x="62.0" y="120.5" font-size="12.5" fill="#6b7280" text-anchor="end" font-weight="normal" dominant-baseline="middle">75%</text>
+<line x1="70" y1="56.0" x2="830" y2="56.0" stroke="#e5e7eb"/>
+<text x="62.0" y="56.0" font-size="12.5" fill="#6b7280" text-anchor="end" font-weight="normal" dominant-baseline="middle">100%</text>
+<rect x="76.0" y="122.9" width="57.1" height="191.1" fill="#9ec5f4" stroke="#fff" stroke-width="2"><title>2016, made that year: 74% of 243 shown slides</title></rect>
+<rect x="76.0" y="56.0" width="57.1" height="66.9" fill="#3987e5" stroke="#fff" stroke-width="2"><title>2016, the year before: 26% of 243 shown slides</title></rect>
+<rect x="76.0" y="56.0" width="57.1" height="0.0" fill="#184f95" stroke="#fff" stroke-width="2"><title>2016, two or more years earlier: 0% of 243 shown slides</title></rect>
+<text x="104.5" y="300.0" font-size="12.5" fill="#111827" text-anchor="middle" font-weight="600" dominant-baseline="middle">74%</text>
+<text x="104.5" y="334.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2016</text>
+<rect x="145.1" y="146.8" width="57.1" height="167.2" fill="#9ec5f4" stroke="#fff" stroke-width="2"><title>2017, made that year: 65% of 736 shown slides</title></rect>
+<rect x="145.1" y="61.6" width="57.1" height="85.2" fill="#3987e5" stroke="#fff" stroke-width="2"><title>2017, the year before: 33% of 736 shown slides</title></rect>
+<rect x="145.1" y="56.0" width="57.1" height="5.6" fill="#184f95" stroke="#fff" stroke-width="2"><title>2017, two or more years earlier: 2% of 736 shown slides</title></rect>
+<text x="173.6" y="300.0" font-size="12.5" fill="#111827" text-anchor="middle" font-weight="600" dominant-baseline="middle">65%</text>
+<text x="173.6" y="334.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2017</text>
+<rect x="214.2" y="77.8" width="57.1" height="236.2" fill="#9ec5f4" stroke="#fff" stroke-width="2"><title>2018, made that year: 92% of 687 shown slides</title></rect>
+<rect x="214.2" y="63.1" width="57.1" height="14.6" fill="#3987e5" stroke="#fff" stroke-width="2"><title>2018, the year before: 6% of 687 shown slides</title></rect>
+<rect x="214.2" y="56.0" width="57.1" height="7.1" fill="#184f95" stroke="#fff" stroke-width="2"><title>2018, two or more years earlier: 3% of 687 shown slides</title></rect>
+<text x="242.7" y="300.0" font-size="12.5" fill="#111827" text-anchor="middle" font-weight="600" dominant-baseline="middle">92%</text>
+<text x="242.7" y="334.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2018</text>
+<rect x="283.3" y="126.1" width="57.1" height="187.9" fill="#9ec5f4" stroke="#fff" stroke-width="2"><title>2019, made that year: 73% of 1332 shown slides</title></rect>
+<rect x="283.3" y="67.8" width="57.1" height="58.3" fill="#3987e5" stroke="#fff" stroke-width="2"><title>2019, the year before: 23% of 1332 shown slides</title></rect>
+<rect x="283.3" y="56.0" width="57.1" height="11.8" fill="#184f95" stroke="#fff" stroke-width="2"><title>2019, two or more years earlier: 5% of 1332 shown slides</title></rect>
+<text x="311.8" y="300.0" font-size="12.5" fill="#111827" text-anchor="middle" font-weight="600" dominant-baseline="middle">73%</text>
+<text x="311.8" y="334.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2019</text>
+<rect x="352.4" y="206.3" width="57.1" height="107.7" fill="#9ec5f4" stroke="#fff" stroke-width="2"><title>2020, made that year: 42% of 623 shown slides</title></rect>
+<rect x="352.4" y="68.4" width="57.1" height="137.9" fill="#3987e5" stroke="#fff" stroke-width="2"><title>2020, the year before: 53% of 623 shown slides</title></rect>
+<rect x="352.4" y="56.0" width="57.1" height="12.4" fill="#184f95" stroke="#fff" stroke-width="2"><title>2020, two or more years earlier: 5% of 623 shown slides</title></rect>
+<text x="380.9" y="300.0" font-size="12.5" fill="#111827" text-anchor="middle" font-weight="600" dominant-baseline="middle">42%</text>
+<text x="380.9" y="334.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2020</text>
+<rect x="421.5" y="179.7" width="57.1" height="134.3" fill="#9ec5f4" stroke="#fff" stroke-width="2"><title>2021, made that year: 52% of 1621 shown slides</title></rect>
+<rect x="421.5" y="135.3" width="57.1" height="44.4" fill="#3987e5" stroke="#fff" stroke-width="2"><title>2021, the year before: 17% of 1621 shown slides</title></rect>
+<rect x="421.5" y="56.0" width="57.1" height="79.3" fill="#184f95" stroke="#fff" stroke-width="2"><title>2021, two or more years earlier: 31% of 1621 shown slides</title></rect>
+<text x="450.0" y="300.0" font-size="12.5" fill="#111827" text-anchor="middle" font-weight="600" dominant-baseline="middle">52%</text>
+<text x="450.0" y="71.0" font-size="12.5" fill="#ffffff" text-anchor="middle" font-weight="600" dominant-baseline="middle">31%</text>
+<text x="450.0" y="334.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2021</text>
+<rect x="490.5" y="151.8" width="57.1" height="162.2" fill="#9ec5f4" stroke="#fff" stroke-width="2"><title>2022, made that year: 63% of 891 shown slides</title></rect>
+<rect x="490.5" y="112.8" width="57.1" height="39.1" fill="#3987e5" stroke="#fff" stroke-width="2"><title>2022, the year before: 15% of 891 shown slides</title></rect>
+<rect x="490.5" y="56.0" width="57.1" height="56.8" fill="#184f95" stroke="#fff" stroke-width="2"><title>2022, two or more years earlier: 22% of 891 shown slides</title></rect>
+<text x="519.1" y="300.0" font-size="12.5" fill="#111827" text-anchor="middle" font-weight="600" dominant-baseline="middle">63%</text>
+<text x="519.1" y="71.0" font-size="12.5" fill="#ffffff" text-anchor="middle" font-weight="600" dominant-baseline="middle">22%</text>
+<text x="519.1" y="334.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2022</text>
+<rect x="559.6" y="187.3" width="57.1" height="126.7" fill="#9ec5f4" stroke="#fff" stroke-width="2"><title>2023, made that year: 49% of 680 shown slides</title></rect>
+<rect x="559.6" y="103.0" width="57.1" height="84.2" fill="#3987e5" stroke="#fff" stroke-width="2"><title>2023, the year before: 33% of 680 shown slides</title></rect>
+<rect x="559.6" y="56.0" width="57.1" height="47.0" fill="#184f95" stroke="#fff" stroke-width="2"><title>2023, two or more years earlier: 18% of 680 shown slides</title></rect>
+<text x="588.2" y="300.0" font-size="12.5" fill="#111827" text-anchor="middle" font-weight="600" dominant-baseline="middle">49%</text>
+<text x="588.2" y="71.0" font-size="12.5" fill="#ffffff" text-anchor="middle" font-weight="600" dominant-baseline="middle">18%</text>
+<text x="588.2" y="334.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2023</text>
+<rect x="628.7" y="130.3" width="57.1" height="183.7" fill="#9ec5f4" stroke="#fff" stroke-width="2"><title>2024, made that year: 71% of 1427 shown slides</title></rect>
+<rect x="628.7" y="89.6" width="57.1" height="40.7" fill="#3987e5" stroke="#fff" stroke-width="2"><title>2024, the year before: 16% of 1427 shown slides</title></rect>
+<rect x="628.7" y="56.0" width="57.1" height="33.6" fill="#184f95" stroke="#fff" stroke-width="2"><title>2024, two or more years earlier: 13% of 1427 shown slides</title></rect>
+<text x="657.3" y="300.0" font-size="12.5" fill="#111827" text-anchor="middle" font-weight="600" dominant-baseline="middle">71%</text>
+<text x="657.3" y="71.0" font-size="12.5" fill="#ffffff" text-anchor="middle" font-weight="600" dominant-baseline="middle">13%</text>
+<text x="657.3" y="334.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2024</text>
+<rect x="697.8" y="157.3" width="57.1" height="156.7" fill="#9ec5f4" stroke="#fff" stroke-width="2"><title>2025, made that year: 61% of 1281 shown slides</title></rect>
+<rect x="697.8" y="113.4" width="57.1" height="43.9" fill="#3987e5" stroke="#fff" stroke-width="2"><title>2025, the year before: 17% of 1281 shown slides</title></rect>
+<rect x="697.8" y="56.0" width="57.1" height="57.4" fill="#184f95" stroke="#fff" stroke-width="2"><title>2025, two or more years earlier: 22% of 1281 shown slides</title></rect>
+<text x="726.4" y="300.0" font-size="12.5" fill="#111827" text-anchor="middle" font-weight="600" dominant-baseline="middle">61%</text>
+<text x="726.4" y="71.0" font-size="12.5" fill="#ffffff" text-anchor="middle" font-weight="600" dominant-baseline="middle">22%</text>
+<text x="726.4" y="334.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2025</text>
+<rect x="766.9" y="242.6" width="57.1" height="71.4" fill="#9ec5f4" stroke="#fff" stroke-width="2"><title>2026, made that year: 28% of 1806 shown slides</title></rect>
+<rect x="766.9" y="132.7" width="57.1" height="109.9" fill="#3987e5" stroke="#fff" stroke-width="2"><title>2026, the year before: 43% of 1806 shown slides</title></rect>
+<rect x="766.9" y="56.0" width="57.1" height="76.7" fill="#184f95" stroke="#fff" stroke-width="2"><title>2026, two or more years earlier: 30% of 1806 shown slides</title></rect>
+<text x="795.5" y="300.0" font-size="12.5" fill="#111827" text-anchor="middle" font-weight="600" dominant-baseline="middle">28%</text>
+<text x="795.5" y="71.0" font-size="12.5" fill="#ffffff" text-anchor="middle" font-weight="600" dominant-baseline="middle">30%</text>
+<text x="795.5" y="334.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2026</text>
+<rect x="70" y="18" width="14" height="14" rx="2" fill="#9ec5f4"/><text x="90.0" y="25.0" font-size="13" fill="#4b5563" text-anchor="start" font-weight="normal" dominant-baseline="middle">slide made that year</text>
+<rect x="320" y="18" width="14" height="14" rx="2" fill="#3987e5"/><text x="340.0" y="25.0" font-size="13" fill="#4b5563" text-anchor="start" font-weight="normal" dominant-baseline="middle">slide the year before</text>
+<rect x="570" y="18" width="14" height="14" rx="2" fill="#184f95"/><text x="590.0" y="25.0" font-size="13" fill="#4b5563" text-anchor="start" font-weight="normal" dominant-baseline="middle">slide two or more years earlier</text>
+</svg>
