@@ -2,7 +2,7 @@
 
 ## Group Meetings
 
-- [Group Meetings Records](https://code.itp.ac.cn/codes/groupmeeting/)
+- [Group Meetings Records](https://gitlab.itp.ac.cn/codes/groupmeeting/)
 
 ## Organized Events
 
