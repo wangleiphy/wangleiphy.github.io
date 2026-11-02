@@ -64,6 +64,23 @@ Lei Wang introduced the name in 2017, in a talk at CSRC titled *Artificial Intel
 
 The file of that talk was saved again in 2018, so the earliest dated copy of the slide in the folder is from a talk saved on 13 November 2017, *Generative Modeling: From Boltzmann Machines to Born Machines*. The name reached the title of a paper a month later: *Information Perspective to Probabilistic Modeling: Boltzmann Machines versus Born Machines*, by Song Cheng, Jing Chen and Lei Wang, posted on 12 December 2017 (arXiv:1712.04144). The slide went on to appear in seven decks.
 
+## Tensor Networks Were the Bridge
+
+Lei Wang's work from 2017 to 2020 ran along one thread: neural networks, tensor networks and quantum circuits. In the talks it shows up a year later. Slides naming at least two of the three are at most about 1% of what he showed before 2018. They rise to 7.7% in 2018, 9.9% in 2019 and 10.8% in 2020, stay at 7.5% in 2021, and fall below 4% from 2022 on.
+
+One picture carries the thread. A tensor network, drawn as $\Psi$, sits in the middle, with one arrow to neural networks and probabilistic graphical models and another to quantum circuits. It first appeared in July 2018 under the title *"Quantising" Machine Learning with Tensor Networks*, became *Tensor network as a bridge* in 2019, and by December 2019 carried a quotation from Mario Szegedy: "Tensor network is 21 century's matrix." The three versions are in 51 decks and were shown in 24 talks, the last in June 2023.
+
+![Three versions of the tensor network bridge](tensor-network-bridge-slides.png)
+
+Each span of the bridge is a paper he coauthored, and each is cited on the slides: restricted Boltzmann machines are tensor network states (2017), matrix product states are generative models (2017), quantum circuits are generative models (2018), and tensor networks can be differentiated like neural networks (2019).
+
+| slides | talks | arXiv | paper |
+|---:|---:|---|---|
+| 11 | 23 | 1701.04831 | Equivalence of restricted Boltzmann machines and tensor network states |
+| 18 | 16 | 1709.01662 | Unsupervised Generative Modeling Using Matrix Product States |
+| 13 | 15 | 1804.04168 | Differentiable Learning of Quantum Circuit Born Machine |
+| 19 | 28 | 1903.09650 | Differentiable Programming Tensor Networks |
+
 ## The Most Traveled Slide Reversed Its Arrows
 
 The slide that appears in the most decks, 106 of them across 21 talk families, is a map of generative models adapted from Ian Goodfellow's NIPS tutorial. Its ancestor first appeared in 2018, in a talk on Born machines.
