@@ -30,6 +30,8 @@ The turn from Monte Carlo to machine learning can be dated. In June 2016 Lei Wan
 
 Two rows do not follow the diagonal. Monte Carlo never disappears: after its peak it stays at 2–7% every year. Free energy goes the other way. It sits at 0–4% until 2021, jumps to 7% in 2022 and 13% in 2023, and has stayed at 8–9% since. It is the one term that runs through all of the recent talks.
 
+The systems changed along with the methods. In 2015, 26% of the shown slides mention the Ising, Hubbard or Heisenberg model; since 2022 it has been 3% or less. Real matter took their place: first the electron gas and dense hydrogen, then solid lithium in 2024 and high-pressure water ice in 2025. Before 2021 these appear on fewer than 0.3% of the slides; since 2022, on 7–15% every year.
+
 ## The Cast Changes from Dirac to Hinton to Feynman
 
 The names on the slides tell the same story.
@@ -88,6 +90,14 @@ The slide that appears in the most decks, 106 of them across 21 talk families, i
 ![The same map in 2018 and in 2026](physics-genes-2018-2026.png)
 
 In 2018 the red arrows point from the map out to tensor networks and quantum circuits: physics can supply new kinds of generative models. In 2026 tensor networks and quantum circuits are still at the edges, now with the 2018 papers cited under them, but the red highlights have moved to the autoregressive model and the flow model, and diffusion models have been added. The message is now the reverse: these machine learning models can be put to work on physics. The map stayed the same; the arrows turned around.
+
+## Three Directions Turned Out to Be One
+
+On 1 November 2022, a month before ChatGPT was released, Lei Wang spoke at a CAS forum at Yanqi Lake. His summary slide named three directions for generative AI in science: a scientific language model, matter inverse design, and Nature's cost function, the free energy $F = E - TS$. Four years later, the last slide of his talk in Tokyo has the same three under one line: same objective, same model, same algorithm.
+
+![The summary slide in 2022 and in 2026](three-fields-2022-2026.png)
+
+In between, versions of the 2022 slide were shown in 28 talks, while its title changed from *Generative AI for Science* to *for Matter* and then to *for It*, after Wheeler's "It from Bit". The language model is now LLM post-training, and under Nature's cost function sit three tiles in periodic-table style: the electron, hydrogen and lithium. In an October 2026 talk he went through the list again. The first point came true; the second is lively but has not yet really landed; on the third, his own group still walks alone. The last line on that slide reads: "In fact, the three points say the same thing."
 
 ## Most Slides Last a Year, a Few Last a Decade
 
@@ -182,4 +192,4 @@ In 2016, physics and neural networks took two slides. Since 2022, they take one.
 
 *How the numbers were made.* Dates are the files' last-modified dates, which for a talk deck is usually the day of the talk. "Shown" means not skipped. Terms and names are counted on text read from the slide images with Apple's Vision OCR, so pure pictures are invisible to the counts. Two slides count as the same if their thumbnails nearly coincide and they share most of their words; an edited slide counts as new. File lineages use Keynote's `documentUUID`, or `stableDocumentUUID` for files saved by recent versions; both survive copying. arXiv titles and author lists were taken from the arXiv API.
 
-*Acknowledgments.* I thank Lei Wang for opening his Keynote folder to me, and for the questions that turned an index into this post: how his research shifted, and whether there was a hidden thread. His insistence on digging deeper led to the file lineages, the stowaways and slides 43 and 44, and his feedback made the text readable. Any misreading of twelve years of slides is mine.
+*Acknowledgments.* I thank Lei Wang for opening his Keynote folder to me, and for the questions that turned an index into this post: how his research shifted, and whether there was a hidden thread. His insistence on digging deeper led to the file lineages, the stowaways and slides 43 and 44, and his feedback made the text readable. Several threads here came from his pointers: his first machine learning paper, the CSRC talk where Born machines were named, the bridge from neural networks through tensor networks to quantum circuits, the 2022 Yanqi Lake slide and its 2026 counterpart, and the turn from lattice models to hydrogen, lithium and ice. Any misreading of twelve years of slides is mine.
