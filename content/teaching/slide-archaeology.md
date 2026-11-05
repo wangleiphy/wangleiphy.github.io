@@ -46,7 +46,7 @@ Keynote stores a document identifier inside every file, and copies of the file k
 
 ![Talk family tree. Each dot is a deck; the color marks the file it was copied from.](talk-family-tree.svg)
 
-The orange dots are all copies of one file. It started as a talk in Taiwan in December 2016, [*Machine Learning for Many-Body Physics*](talks/RBM_Taiwan.pdf), about training a restricted Boltzmann machine to propose Monte Carlo updates. The file was then copied from talk to talk, 109 decks in all. Its copies became the talks on Born machines, neural renormalization group, the deep learning lectures, Monge–Ampère flow, quantum circuits, differentiable programming, tropical tensor networks and the first neural canonical transformations. The last copies were made in 2025 and 2026.
+The orange dots are all copies of one file. It started as a talk in Taiwan in December 2016, [*Machine Learning for Many-Body Physics*](talks/RBM_Taiwan.pdf), about training a restricted Boltzmann machine to propose Monte Carlo updates. The file was then copied from talk to talk, 109 decks in all. Its copies became the talks on [Born machines](talks/BornMachine-Dresden.pdf), [neural renormalization group](talks/NeuralRG-Dresden.pdf), the [deep learning lectures](lectures/DL-Marburg.pdf), [Monge–Ampère flow](talks/MongeAmpere-Tinghua.pdf), [quantum circuits](talks/QMPS-Tsinghua.pdf), [differentiable programming](talks/diffProgram-PI.pdf), tropical tensor networks and the [first neural canonical transformations](talks/NeuralCT-Tokyo.pdf). The last copies were made in 2025 and 2026.
 
 ![The first slide of the December 2016 talk, and of a 2025 talk saved in the same file](rbm-file-then-and-now.png)
 
@@ -56,11 +56,11 @@ Along the way, the content was replaced completely:
 
 The copies made in 2017 still contain 55% of the original slides on average. By 2018 it is 4%, and from 2020 on, essentially nothing. The original talk came back once, in a 2019 talk at IOP (71%), and then disappeared for good. Like the ship of Theseus, the file stayed while every plank was replaced.
 
-The recent talks live in two newer files. The neural canonical transformation talk moved into a new file in April 2022 (green), which now also carries the free energy minimization talk. The generative AI talk started as a new file on 26 October 2022 (blue). It took 83% of its slides from a talk on the deep variational free energy approach given the month before, and has since produced 58 decks: generative AI for science, CrystalFormer, the Nobel 2024 talks, the lectures on generative models, and the talks on LLMs and agents. The arrows in the tree show where each new family of talks took its first slides.
+The recent talks live in two newer files. The [neural canonical transformation talk](talks/NeuralCT-Paris.pdf) moved into a new file in April 2022 (green), which now also carries the [free energy minimization talk](talks/minF-NJU.pdf). The generative AI talk started as a new file on 26 October 2022 (blue). It took 83% of its slides from a talk on the deep variational free energy approach given the month before, and has since produced 58 decks: [generative AI for science](lectures/GenerativeAI-ADL.pdf), [CrystalFormer](talks/CrystalFormer-Tokyo.pdf), the Nobel 2024 talks, the [lectures on generative models](lectures/GenerativeModels-Grenoble2026-AR.pdf), and the [talks on LLMs and agents](lectures/LLM-Agent-IOP.pdf). The arrows in the tree show where each new family of talks took its first slides.
 
 ## Born Machines Were Named on a Slide
 
-In 2017, in a talk at CSRC titled *Artificial Intelligence and Quantum Physics*, Lei Wang set two kinds of generative models side by side. In a Boltzmann machine the probability of a configuration is a Boltzmann weight; in a "Born" machine it is the squared amplitude of a quantum state. On the slide the new name still wears quotation marks.
+In 2017, in a talk at CSRC titled [*Artificial Intelligence and Quantum Physics*](talks/AIQ-CSRC.pdf), Lei Wang set two kinds of generative models side by side. In a Boltzmann machine the probability of a configuration is a Boltzmann weight; in a "Born" machine it is the squared amplitude of a quantum state. On the slide the new name still wears quotation marks.
 
 ![The slide that introduced "Born" machines, 2017](born-machines-slide-2017.png)
 

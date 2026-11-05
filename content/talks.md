@@ -67,6 +67,7 @@
 
 ## 2016
 
+- [Machine Learning for Many-Body Physics, Taiwan, 2016 Dec](talks/RBM_Taiwan.pdf)
 - [From Fidelity Susceptibility to Recommender Engines, CUHK, HongKong, 2016 Nov](talks/FS-CUHK.pdf)
 - [New adventures of QMC for fermions, UCAS, Beijing, 2016 Aug](lectures/LCTQMC-UCAS16.pdf)
 - [Simulation of Hubbard Models in the Era of Synthetic Gauge Field, Wuhan, 2016 July](talks/Wuhan16.pdf)
