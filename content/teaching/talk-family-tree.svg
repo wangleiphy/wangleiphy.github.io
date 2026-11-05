@@ -35,7 +35,7 @@
 <line x1="284.6" y1="87.5" x2="366.5" y2="87.5" stroke="#cbd5e1" stroke-width="2"/>
 <rect x="8" y="100.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
 <text x="218" y="112.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">RBM for Monte Carlo <tspan fill="#6b7280">17</tspan></text>
-<line x1="371.6" y1="112.5" x2="624.6" y2="112.5" stroke="#cbd5e1" stroke-width="2"/>
+<line x1="371.6" y1="112.5" x2="484.1" y2="112.5" stroke="#cbd5e1" stroke-width="2"/>
 <text x="218" y="137.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">ML for physics <tspan fill="#6b7280">3</tspan></text>
 <line x1="390.2" y1="137.5" x2="499.6" y2="137.5" stroke="#cbd5e1" stroke-width="2"/>
 <rect x="8" y="150.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
@@ -87,7 +87,7 @@
 <text x="218" y="612.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Sampling (QIS) <tspan fill="#6b7280">2</tspan></text>
 <line x1="794.0" y1="612.5" x2="794.4" y2="612.5" stroke="#cbd5e1" stroke-width="2"/>
 <text x="218" y="637.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">Free energy minimization <tspan fill="#6b7280">6</tspan></text>
-<line x1="808.8" y1="637.5" x2="851.8" y2="637.5" stroke="#cbd5e1" stroke-width="2"/>
+<line x1="808.8" y1="637.5" x2="852.0" y2="637.5" stroke="#cbd5e1" stroke-width="2"/>
 <rect x="8" y="650.0" width="864" height="25" fill="#f1f5f9" rx="3"/>
 <text x="218" y="662.5" font-size="14" fill="#111827" text-anchor="end" dominant-baseline="middle">LLM and agents <tspan fill="#6b7280">2</tspan></text>
 <line x1="845.2" y1="662.5" x2="851.3" y2="662.5" stroke="#cbd5e1" stroke-width="2"/>
@@ -330,7 +330,7 @@
 <circle cx="379.0" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_Macao (2017-02-09)</title></circle>
 <circle cx="396.9" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_SJTU (2017-06-23)</title></circle>
 <circle cx="396.1" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_SUSTech (2017-06-17)</title></circle>
-<circle cx="624.6" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_Seattle (2022-02-28)</title></circle>
+<circle cx="383.6" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_Seattle (2017-03-15)</title></circle>
 <circle cx="371.6" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_Taiwan (2016-12-14)</title></circle>
 <circle cx="381.2" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_Tsinghua (2017-02-25)</title></circle>
 <circle cx="386.6" cy="112.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>RBM_USTC (2017-04-07)</title></circle>
@@ -355,7 +355,7 @@
 <circle cx="556.3" cy="337.5" r="4.6" fill="#eb6834" stroke="#fff" stroke-width="1"><title>diffProgram-Tokyo (2020-10-02)</title></circle>
 <circle cx="808.8" cy="637.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>minF-NJU (2025-12-13)</title></circle>
 <circle cx="843.1" cy="637.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>minF-SJTU (2026-08-27)</title></circle>
-<circle cx="851.8" cy="637.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>minF-Tokyo (2026-11-01)</title></circle>
+<circle cx="852.0" cy="637.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>minF-Tokyo (2026-11-02)</title></circle>
 <circle cx="825.5" cy="637.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>minF-ZGC (2026-04-17)</title></circle>
 <circle cx="842.3" cy="637.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>minF-ZGC2 (2026-08-21)</title></circle>
 <circle cx="850.4" cy="637.5" r="4.6" fill="#1baf7a" stroke="#fff" stroke-width="1"><title>minF-ZGC3 (2026-10-21)</title></circle>

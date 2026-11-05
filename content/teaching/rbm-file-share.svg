@@ -30,12 +30,13 @@
 <line x1="691.2" y1="30" x2="691.2" y2="310" stroke="#e5e7eb"/>
 <text x="800.8" y="330.0" font-size="12.5" fill="#6b7280" text-anchor="middle" font-weight="normal" dominant-baseline="middle">2026</text>
 <line x1="764.2" y1="30" x2="764.2" y2="310" stroke="#e5e7eb"/>
-<polyline points="103.1,30.0 133.7,156.2 216.4,299.7 290.4,302.7 371.3,310.0 412.1,309.7 518.7,284.9 583.3,308.6 716.1,310.0 811.8,310.0" fill="none" stroke="#2a78d6" stroke-width="2"/>
+<polyline points="103.1,30.0 132.9,156.4 216.4,299.7 290.4,302.7 371.3,310.0 412.1,309.7 525.8,310.0 583.3,308.6 716.1,310.0 811.8,310.0" fill="none" stroke="#2a78d6" stroke-width="2"/>
 <circle cx="103.1" cy="30.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_Taiwan: 100%</title></circle>
 <circle cx="114.3" cy="109.1" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_Macao: 72%</title></circle>
 <circle cx="117.5" cy="100.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_Tsinghua: 75%</title></circle>
 <circle cx="118.7" cy="88.8" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_Dali: 79%</title></circle>
 <circle cx="119.5" cy="136.1" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_ITP: 62%</title></circle>
+<circle cx="121.1" cy="159.4" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_Seattle: 54%</title></circle>
 <circle cx="125.7" cy="158.2" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_USTC: 54%</title></circle>
 <circle cx="127.1" cy="158.2" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_BNU: 54%</title></circle>
 <circle cx="127.7" cy="162.2" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_ZJU: 53%</title></circle>
@@ -128,7 +129,6 @@
 <circle cx="423.3" cy="307.5" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>NeuralRG-WQC: 1%</title></circle>
 <circle cx="424.5" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>MongeAmpere-PKU: 0%</title></circle>
 <circle cx="457.5" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>BornMachine-AQL: 0%</title></circle>
-<circle cx="483.5" cy="159.4" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>RBM_Seattle: 54%</title></circle>
 <circle cx="488.7" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>雁栖湖: 0%</title></circle>
 <circle cx="531.5" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>BornMachine-Dresden: 0%</title></circle>
 <circle cx="531.9" cy="310.0" r="4.5" fill="#eb6834" fill-opacity="0.85" stroke="#fff" stroke-width="1"><title>GenerativeAI-RUC: 0%</title></circle>

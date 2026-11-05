@@ -19,16 +19,16 @@ For every year, I counted the share of shown slides that mention a given term, t
 Read from top to bottom, the chart is a short history of his group:
 
 - **2015–16, quantum Monte Carlo.** Monte Carlo is on 27% of the shown slides in 2015, with the sign problem and fidelity susceptibility close behind.
-- **2017, Boltzmann machines.** Restricted Boltzmann machines are on 24% of that year's slides.
+- **2017, Boltzmann machines.** Restricted Boltzmann machines are on 25% of that year's slides.
 - **2018–21, deep learning meets many-body physics.** Renormalization group, tensor networks, quantum circuits and differentiable programming. Differentiable programming alone is on 30% of the slides of 2020.
 - **2022–23, generative models for real materials.** Normalizing flows, free energy, the electron gas, dense hydrogen.
 - **2024–26, the language-model era.** Crystals, autoregressive models, transformers, and in 2026 LLMs and agents, on 11% of the slides.
 
 ![One slide from each period](slides-by-era.png)
 
-The turn from Monte Carlo to machine learning can be dated. In June 2016 Lei Wang posted his first machine learning paper, *Discovering Phase Transitions with Unsupervised Learning* (arXiv:1606.00318), as its sole author. Sixteen different slides cite it, shown in 22 talks between December 2016 and February 2022.
+The turn from Monte Carlo to machine learning can be dated. In June 2016 Lei Wang posted his first machine learning paper, *Discovering Phase Transitions with Unsupervised Learning* (arXiv:1606.00318), as its sole author. Sixteen different slides cite it, shown in 22 talks between December 2016 and August 2019.
 
-Two rows do not follow the diagonal. Monte Carlo never disappears: after its peak it stays at 2–7% every year. Free energy goes the other way. It sits at 0–4% until 2021, jumps to 7% in 2022 and 13% in 2023, and has stayed at 8–9% since. It is the one term that runs through all of the recent talks.
+Two rows do not follow the diagonal. Monte Carlo never disappears: after its peak it stays at 2–7% every year. Free energy goes the other way. It sits at 0–4% until 2021, jumps to 8% in 2022 and 13% in 2023, and has stayed at 8–9% since. It is the one term that runs through all of the recent talks.
 
 The systems changed along with the methods. In 2015, 26% of the shown slides mention the Ising, Hubbard or Heisenberg model; since 2022 it has been 3% or less. Real matter took their place: first the electron gas and dense hydrogen, then solid lithium in 2024 and high-pressure water ice in 2025. Before 2021 such systems are on fewer than 0.3% of the slides; since 2022 they are on 7–15% every year.
 
@@ -38,7 +38,7 @@ The names on the slides tell the same story.
 
 ![Names on shown slides, by era](names-on-slides.svg)
 
-In 2015–16 the most frequent name is Dirac, on 8% of the shown slides. In 2017–19 the deep learning pioneers arrive: Hinton and Bengio, each on about 3% of the slides, and Boltzmann on 7%, together with Wilson and Kadanoff of the renormalization group. Since 2023 the most frequent name in the chart is Feynman, on 4.5% of the slides, followed by Boltzmann and Gibbs. Wheeler, Hassabis, Turing and Kahneman appear almost only after 2023. Goodfellow is present in every era since 2017, because his name is on the most reused slide in the folder.
+In 2015–16 the most frequent name is Dirac, on 8% of the shown slides. In 2017–19 the deep learning pioneers arrive: Hinton and Bengio, each on about 3% of the slides, and Boltzmann on 7.5%, together with Wilson and Kadanoff of the renormalization group. Since 2023 the most frequent name in the chart is Feynman, on 4.5% of the slides, followed by Boltzmann and Gibbs. Wheeler, Hassabis, Turing and Kahneman appear almost only after 2023. Goodfellow is present in every era since 2017, because his name is on the most reused slide in the folder.
 
 ## One File Carried 109 Talks
 
@@ -54,7 +54,7 @@ Along the way, the content was replaced completely:
 
 ![Share of the December 2016 talk left in each later copy of the same file](rbm-file-share.svg)
 
-The copies made in 2017 still contain 55% of the original slides on average. By 2018 it is 4%, and from 2020 on, essentially nothing. The original talk came back twice, in a 2019 talk at IOP (71%) and in a talk in Seattle in February 2022 (55%), and then disappeared for good. Like the ship of Theseus, the file stayed while every plank was replaced.
+The copies made in 2017 still contain 55% of the original slides on average. By 2018 it is 4%, and from 2020 on, essentially nothing. The original talk came back once, in a 2019 talk at IOP (71%), and then disappeared for good. Like the ship of Theseus, the file stayed while every plank was replaced.
 
 The recent talks live in two newer files. The neural canonical transformation talk moved into a new file in April 2022 (green), which now also carries the free energy minimization talk. The generative AI talk started as a new file on 26 October 2022 (blue). It took 83% of its slides from a talk on the deep variational free energy approach given the month before, and has since produced 58 decks: generative AI for science, CrystalFormer, the Nobel 2024 talks, the lectures on generative models, and the talks on LLMs and agents. The arrows in the tree show where each new family of talks took its first slides.
 
@@ -97,7 +97,9 @@ On 1 November 2022, a month before ChatGPT was released, Lei Wang spoke at a Chi
 
 ![The summary slide in 2022 and in 2026](three-fields-2022-2026.png)
 
-In between, versions of the 2022 slide were shown in 28 talks, while its title changed from *Generative AI for Science* to *for Matter* and then to *for It*, after Wheeler's "It from Bit". On the 2026 slide the language model has become LLM post-training, and under Nature's cost function sit three tiles in periodic-table style: the electron, hydrogen and lithium. In an October 2026 talk he went through the list again. The first point came true; the second is lively but has not yet really landed; on the third, his own group still walks alone. The last line on that slide reads: "In fact, the three points say the same thing."
+In between, versions of the 2022 slide were shown in 28 talks, while its title changed from *Generative AI for Science* to *for Matter* and then to *for It*, after Wheeler's "It from Bit". On the 2026 slide the language model has become LLM post-training, and under Nature's cost function sit three tiles in periodic-table style: the electron, hydrogen and lithium. In an October 2026 talk he went through the list again. The first point, the scientific language model, came true; the second, inverse design, is lively but has not yet really landed; on the third, Nature's cost function, his own group still walks alone. The last line on that slide reads: "In fact, the three points say the same thing." Why they do is worked out in [his post](teaching-post.html?p=minimizing-free-energy).
+
+The claim can be checked in code. Since September 2024 the [CrystalFormer](https://github.com/deepmodeling/crystalformer) repository has fine-tuned its crystal generator with PPO, the algorithm used to post-train language models ([arXiv:2504.02367](https://arxiv.org/abs/2504.02367)). The model is an autoregressive transformer, like a language model. The reward is minus the energy above the convex hull, predicted by a machine-learning force field, and β times the KL divergence from the pretrained model is subtracted from it. Maximizing reward minus β·KL is minimizing a variational free energy, with the pretrained model as the prior and β as the temperature. So the same objective, model and algorithm run in a single file, `ppo.py`.
 
 ## Most Slides Last a Year, a Few Last a Decade
 
@@ -105,7 +107,7 @@ A typical slide does not last long:
 
 ![Share of slides still shown k years after they first appeared](slide-survival.svg)
 
-Of all the slides Lei Wang has shown, 35% are shown again a year later, 15% after three years and 5% after five. A small number are shown far more often than the rest:
+Of all the slides Lei Wang has shown, 34% are shown again a year later, 15% after three years and 4% after five. A small number are shown far more often than the rest:
 
 | decks | slide | first appeared |
 |---:|---|---|
@@ -190,6 +192,6 @@ In 2016, physics and neural networks took two slides. Since 2022, they take one.
 
 ---
 
-*How the numbers were made.* Dates are the files' last-modified dates, which for a talk deck is usually the day of the talk. "Shown" means not skipped. Terms and names are counted on text read from the slide images with Apple's Vision OCR, so pure pictures are invisible to the counts. Two slides count as the same if their thumbnails nearly coincide and they share most of their words; an edited slide counts as new. File lineages use Keynote's `documentUUID`, or `stableDocumentUUID` for files saved by recent versions; both survive copying. arXiv titles and author lists were taken from the arXiv API.
+*How the numbers were made.* Dates are the files' last-modified dates, which for a talk deck is usually the day of the talk; one deck, re-saved five years after its talk, is dated by hand. "Shown" means not skipped. Terms and names are counted on text read from the slide images with Apple's Vision OCR, so pure pictures are invisible to the counts. Two slides count as the same if their thumbnails nearly coincide and they share most of their words; an edited slide counts as new. File lineages use Keynote's `documentUUID`, or `stableDocumentUUID` for files saved by recent versions; both survive copying. arXiv titles and author lists were taken from the arXiv API.
 
 *Acknowledgments.* I thank Lei Wang for opening his Keynote folder to me, and for the questions that turned an index into this post: how his research shifted, and whether there was a hidden thread. His insistence on digging deeper led to the file lineages, the stowaways and slides 43 and 44, and his feedback made the text readable. Several threads here came from his pointers: his first machine learning paper, the CSRC talk where Born machines were named, the bridge from neural networks through tensor networks to quantum circuits, the 2022 Yanqi Lake slide and its 2026 counterpart, and the turn from lattice models to hydrogen, lithium and ice. Any misreading of twelve years of slides is mine.
