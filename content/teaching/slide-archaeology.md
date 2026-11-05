@@ -46,7 +46,7 @@ Keynote stores a document identifier inside every file, and copies of the file k
 
 ![Talk family tree. Each dot is a deck; the color marks the file it was copied from.](talk-family-tree.svg)
 
-The orange dots are all copies of one file. It started as a talk in Taiwan in December 2016, *Machine Learning for Many-Body Physics*, about training a restricted Boltzmann machine to propose Monte Carlo updates. The file was then copied from talk to talk, 109 decks in all. Its copies became the talks on Born machines, neural renormalization group, the deep learning lectures, Monge–Ampère flow, quantum circuits, differentiable programming, tropical tensor networks and the first neural canonical transformations. The last copies were made in 2025 and 2026.
+The orange dots are all copies of one file. It started as a talk in Taiwan in December 2016, [*Machine Learning for Many-Body Physics*](talks/RBM_Taiwan.pdf), about training a restricted Boltzmann machine to propose Monte Carlo updates. The file was then copied from talk to talk, 109 decks in all. Its copies became the talks on Born machines, neural renormalization group, the deep learning lectures, Monge–Ampère flow, quantum circuits, differentiable programming, tropical tensor networks and the first neural canonical transformations. The last copies were made in 2025 and 2026.
 
 ![The first slide of the December 2016 talk, and of a 2025 talk saved in the same file](rbm-file-then-and-now.png)
 
