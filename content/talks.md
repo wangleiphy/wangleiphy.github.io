@@ -2,6 +2,7 @@
 
 ## 2026
 
+- [Free Energy Minimization: from Nature to LLM, Sophia Symposium: Coevolution of AI and Physics, Tokyo, November 2026](https://sites.google.com/view/tomiohtsukiwebsite/sophia-symposium-coevolution-of-ai-and-physics): [slides](talks/minF-Tokyo.pdf)
 - [LLM and Agentic AI, guest lecture for the graduate course "AI-Empowered Physics Research: Tools, Methods and Frontiers", IOP CAS, September 2026](lectures/LLM-Agent-IOP.pdf)
 - [CrystalFormer, Jinan, August 2026](talks/CrystalFormer-Jinan.pdf)
 - [Generative AI: from Bit to It, Summer school on Electronic Structure Theory and Methods, USTC, August 2026](lectures/GenerativeAI-USTC.pdf) ([recording](https://www.koushare.com/live/details/52942))

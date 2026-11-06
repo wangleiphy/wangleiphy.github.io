@@ -93,7 +93,7 @@ In 2018 the red arrows point from the map out to tensor networks and quantum cir
 
 ## Three Directions Turned Out to Be One
 
-On 1 November 2022, a month before ChatGPT was released, Lei Wang spoke at a Chinese Academy of Sciences forum by Yanqi Lake. His summary slide named three directions for generative AI in science: a scientific language model, matter inverse design, and Nature's cost function, the free energy $F = E - TS$. Four years later, the last slide of his talk in Tokyo has the same three under one line: same objective, same model, same algorithm.
+On 1 November 2022, a month before ChatGPT was released, Lei Wang spoke at a Chinese Academy of Sciences forum by Yanqi Lake. His summary slide named three directions for generative AI in science: a scientific language model, matter inverse design, and Nature's cost function, the free energy $F = E - TS$. Four years later, the last slide of his [talk in Tokyo](talks/minF-Tokyo.pdf) has the same three under one line: same objective, same model, same algorithm.
 
 ![The summary slide in 2022 and in 2026](three-fields-2022-2026.png)
 
