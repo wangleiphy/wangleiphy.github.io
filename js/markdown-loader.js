@@ -165,9 +165,11 @@ class MarkdownLoader {
     }
 
     /**
-     * Talks entries are written as three lines (title, venue line, links),
-     * which marked renders as one <li> with <br> separators. Wrap each line
-     * so the title, the venue line and the link buttons can be styled.
+     * Talks entries are written as "**Title** [slides](...) [recording](...)"
+     * followed by a venue line (whose event name may link to the event page),
+     * and for multi-part lectures one "Part N, topic: [slides](...)" line per part.
+     * marked renders an entry as one <li> with <br> separators; wrap each line
+     * so the title, the link buttons and the venue line can be styled.
      * @param {HTMLElement} container - Container element
      */
     formatTalkList(container) {
@@ -185,7 +187,29 @@ class MarkdownLoader {
                 item.textContent = '';
                 lines.forEach((nodes, i) => {
                     const line = document.createElement('div');
-                    line.className = i === 0 ? 'talk-title' : (i === 1 ? 'talk-meta' : 'talk-links');
+                    if (i === 0) {
+                        // Title line: title text, then its links as buttons
+                        line.className = 'talk-title';
+                        const buttons = document.createElement('span');
+                        buttons.className = 'talk-buttons';
+                        nodes.forEach(node => {
+                            if (node.nodeName === 'SPAN' && node.id && !node.textContent) {
+                                // Anchor like <span id="..."></span>: keep the id on the entry
+                                item.id = node.id;
+                            } else if (node.nodeName === 'A') {
+                                node.classList.add('talk-link');
+                                buttons.appendChild(node);
+                            } else if (node.nodeType !== Node.TEXT_NODE || node.textContent.trim()) {
+                                line.appendChild(node);
+                            }
+                        });
+                        if (buttons.childNodes.length) {
+                            line.appendChild(buttons);
+                        }
+                        item.appendChild(line);
+                        return;
+                    }
+                    line.className = i === 1 ? 'talk-meta' : 'talk-buttons talk-parts';
                     nodes.forEach(node => {
                         if (i >= 2 && node.nodeType === Node.TEXT_NODE) {
                             // Text in a link line is a part label, e.g. "Part 1, topic:"

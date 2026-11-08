@@ -589,17 +589,29 @@ body.post #markdown-content h1 + p + p em {
     margin-top: 0.15rem;
 }
 
-#markdown-content .talk-list .talk-links {
+#markdown-content .talk-list .talk-title {
     display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.3rem 0.6rem;
+}
+
+#markdown-content .talk-list .talk-buttons {
+    display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 0.35rem 0.4rem;
-    margin-top: 0.45rem;
-    font-size: 0.85em;
+    font-size: 0.8em;
+    font-weight: normal;
 }
 
-#markdown-content .talk-list .talk-links + .talk-links {
-    margin-top: 0.3rem;
+#markdown-content .talk-list .talk-parts {
+    display: flex;
+    margin-top: 0.35rem;
+}
+
+#markdown-content .talk-list .talk-meta + .talk-parts {
+    margin-top: 0.45rem;
 }
 
 #markdown-content .talk-list .talk-part {
@@ -607,9 +619,9 @@ body.post #markdown-content h1 + p + p em {
     margin-right: 0.1rem;
 }
 
-#markdown-content .talk-list li .talk-links a.talk-link {
+#markdown-content .talk-list li .talk-buttons a.talk-link {
     display: inline-block;
-    padding: 0.08rem 0.65rem;
+    padding: 0.05rem 0.6rem;
     border: 1px solid var(--border-color);
     border-radius: 999px;
     background: var(--bg-secondary);
@@ -619,10 +631,21 @@ body.post #markdown-content h1 + p + p em {
     text-decoration: none;
 }
 
-#markdown-content .talk-list li .talk-links a.talk-link:hover {
+#markdown-content .talk-list li .talk-buttons a.talk-link:hover {
     border-color: var(--secondary-color);
     background: var(--bg-color);
     color: var(--link-hover);
+}
+
+#markdown-content .talk-list li .talk-meta a {
+    color: var(--secondary-color);
+    font-size: 1em;
+    text-decoration: none;
+}
+
+#markdown-content .talk-list li .talk-meta a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
 }
 
 /* Footnote Styling */
