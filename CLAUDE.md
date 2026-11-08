@@ -12,13 +12,14 @@ Personal academic website for Lei Wang (Computational Quantum Physicist, IOP CAS
 
 ```
 content/                  ← Edit these to update website content
-├── talks.md              → talks.html
-├── teaching.md           → teaching.html (list of materials)
-├── teaching/             ← Individual teaching materials (.md)
+├── talks.md              → talks.html (talks and lectures, one chronological list)
+├── writings.md           → writings.html (list of essays)
+├── teaching/             ← Individual essays (.md), shown via teaching-post.html
 │   └── ai-agent-research.md
 └── conferences.md        → conferences.html
 
 teaching-post.html        ← Viewer for content/teaching/*.md (via ?p= parameter)
+teaching.html, lectures.html ← Redirects to talks.html, kept so old links keep working
 index.html                ← Homepage (static HTML, not Markdown-driven)
 
 js/markdown-loader.js     ← Fetches and renders Markdown via marked.js
@@ -38,20 +39,26 @@ python -m http.server 8000
 
 ## Content Format
 
+`content/talks.md`: each entry is two lines: the title followed by its links, then the venue line. `formatTalkList` in `js/markdown-loader.js` turns the title-line links into buttons.
+
 ```markdown
 ## 2025
-- [Talk Title, Location, Date](talks/filename.pdf)
-- [Lecture Title](lectures/slides.pdf) ([notes](lectures/notes.pdf), [video](https://url))
+- **Talk Title** [slides](talks/filename.pdf) [notes](lectures/notes.pdf) [recording](https://url) [code](https://url) [materials](https://url)
+  [Event name](https://event-page), place, Month YYYY
 ```
 
-## Teaching Materials (Markdown-based)
+Use only these button labels, in this order, and full month names. Link the event name only when there is an event page. A multi-part lecture puts its buttons on extra lines after the venue line, one per part (`Part 1, topic: [slides](...) [recording](...)`).
 
-To add a new markdown-based teaching material:
+## Writings (Markdown-based)
+
+To add a new essay:
 1. Create `content/teaching/my-topic.md`
-2. Add entry in `content/teaching.md`:
+2. Add an entry in `content/writings.md`:
    ```markdown
-   - [Topic Title](teaching-post.html?p=my-topic)
+   - [Topic Title, Month Year](teaching-post.html?p=my-topic)
    ```
+
+Post URLs stay at `teaching-post.html?p=...` even though the list page is now Writings, because printed QR codes point to them.
 
 ## Deployment
 
