@@ -130,6 +130,12 @@ class MarkdownLoader {
             }
         });
 
+        // Talks page: split each entry into title / venue line / link buttons
+        const page = window.location.pathname.split('/').pop().replace('.html', '');
+        if (page === 'talks') {
+            this.formatTalkList(container);
+        }
+
         // Process headings
         const headings = container.querySelectorAll('h2, h3');
         headings.forEach(heading => {
@@ -154,6 +160,50 @@ class MarkdownLoader {
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
+            });
+        });
+    }
+
+    /**
+     * Talks entries are written as three lines (title, venue line, links),
+     * which marked renders as one <li> with <br> separators. Wrap each line
+     * so the title, the venue line and the link buttons can be styled.
+     * @param {HTMLElement} container - Container element
+     */
+    formatTalkList(container) {
+        container.querySelectorAll('ul.content-list').forEach(list => {
+            list.classList.add('talk-list');
+            list.querySelectorAll(':scope > li').forEach(item => {
+                const lines = [[]];
+                Array.from(item.childNodes).forEach(node => {
+                    if (node.nodeName === 'BR') {
+                        lines.push([]);
+                    } else {
+                        lines[lines.length - 1].push(node);
+                    }
+                });
+                item.textContent = '';
+                lines.forEach((nodes, i) => {
+                    const line = document.createElement('div');
+                    line.className = i === 0 ? 'talk-title' : (i === 1 ? 'talk-meta' : 'talk-links');
+                    nodes.forEach(node => {
+                        if (i >= 2 && node.nodeType === Node.TEXT_NODE) {
+                            // Text in a link line is a part label, e.g. "Part 1, topic:"
+                            if (node.textContent.trim()) {
+                                const label = document.createElement('span');
+                                label.className = 'talk-part';
+                                label.textContent = node.textContent.trim();
+                                line.appendChild(label);
+                            }
+                        } else {
+                            if (i >= 2 && node.nodeName === 'A') {
+                                node.classList.add('talk-link');
+                            }
+                            line.appendChild(node);
+                        }
+                    });
+                    item.appendChild(line);
+                });
             });
         });
     }
