@@ -39,7 +39,7 @@ python -m http.server 8000
 
 ## Content Format
 
-`content/talks.md`: each entry is two lines: the title followed by its links, then the venue line. `formatTalkList` in `js/markdown-loader.js` turns the title-line links into buttons.
+`content/talks.md`: each entry is two lines: the title followed by its links, then the venue line. `formatEntryList` in `js/markdown-loader.js` turns the title-line links into buttons.
 
 ```markdown
 ## 2025
@@ -49,13 +49,16 @@ python -m http.server 8000
 
 Use only these button labels, in this order, and full month names. Link the event name only when there is an event page. A multi-part lecture puts its buttons on extra lines after the venue line, one per part (`Part 1, topic: [slides](...) [recording](...)`).
 
+`content/writings.md` and `content/conferences.md` use the same two-line layout with the title as the link: `- **[Title](url)**`, then the place and date line.
+
 ## Writings (Markdown-based)
 
 To add a new essay:
 1. Create `content/teaching/my-topic.md`
 2. Add an entry in `content/writings.md`:
    ```markdown
-   - [Topic Title, Month Year](teaching-post.html?p=my-topic)
+   - **[Topic Title](teaching-post.html?p=my-topic)**
+     Month YYYY
    ```
 
 Post URLs stay at `teaching-post.html?p=...` even though the list page is now Writings, because printed QR codes point to them.

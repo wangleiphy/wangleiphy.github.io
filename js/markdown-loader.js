@@ -130,10 +130,10 @@ class MarkdownLoader {
             }
         });
 
-        // Talks page: split each entry into title / venue line / link buttons
+        // List pages: split each entry into title / venue line / link buttons
         const page = window.location.pathname.split('/').pop().replace('.html', '');
-        if (page === 'talks') {
-            this.formatTalkList(container);
+        if (['talks', 'writings', 'conferences'].includes(page)) {
+            this.formatEntryList(container);
         }
 
         // Process headings
@@ -165,16 +165,18 @@ class MarkdownLoader {
     }
 
     /**
-     * Talks entries are written as "**Title** [slides](...) [recording](...)"
-     * followed by a venue line (whose event name may link to the event page),
+     * List entries (Talks, Writings, Events) are written as a title line,
+     * "**Title** [slides](...) [recording](...)" or "**[Title](url)**",
+     * followed by a venue/date line (whose event name may link to the event page),
      * and for multi-part lectures one "Part N, topic: [slides](...)" line per part.
+     * Links after the title become buttons; a link inside the bold title stays a link.
      * marked renders an entry as one <li> with <br> separators; wrap each line
      * so the title, the link buttons and the venue line can be styled.
      * @param {HTMLElement} container - Container element
      */
-    formatTalkList(container) {
+    formatEntryList(container) {
         container.querySelectorAll('ul.content-list').forEach(list => {
-            list.classList.add('talk-list');
+            list.classList.add('entry-list');
             list.querySelectorAll(':scope > li').forEach(item => {
                 const lines = [[]];
                 Array.from(item.childNodes).forEach(node => {
@@ -189,15 +191,15 @@ class MarkdownLoader {
                     const line = document.createElement('div');
                     if (i === 0) {
                         // Title line: title text, then its links as buttons
-                        line.className = 'talk-title';
+                        line.className = 'entry-title';
                         const buttons = document.createElement('span');
-                        buttons.className = 'talk-buttons';
+                        buttons.className = 'entry-buttons';
                         nodes.forEach(node => {
                             if (node.nodeName === 'SPAN' && node.id && !node.textContent) {
                                 // Anchor like <span id="..."></span>: keep the id on the entry
                                 item.id = node.id;
                             } else if (node.nodeName === 'A') {
-                                node.classList.add('talk-link');
+                                node.classList.add('entry-link');
                                 buttons.appendChild(node);
                             } else if (node.nodeType !== Node.TEXT_NODE || node.textContent.trim()) {
                                 line.appendChild(node);
@@ -209,19 +211,19 @@ class MarkdownLoader {
                         item.appendChild(line);
                         return;
                     }
-                    line.className = i === 1 ? 'talk-meta' : 'talk-buttons talk-parts';
+                    line.className = i === 1 ? 'entry-meta' : 'entry-buttons entry-parts';
                     nodes.forEach(node => {
                         if (i >= 2 && node.nodeType === Node.TEXT_NODE) {
                             // Text in a link line is a part label, e.g. "Part 1, topic:"
                             if (node.textContent.trim()) {
                                 const label = document.createElement('span');
-                                label.className = 'talk-part';
+                                label.className = 'entry-part';
                                 label.textContent = node.textContent.trim();
                                 line.appendChild(label);
                             }
                         } else {
                             if (i >= 2 && node.nodeName === 'A') {
-                                node.classList.add('talk-link');
+                                node.classList.add('entry-link');
                             }
                             line.appendChild(node);
                         }
@@ -247,29 +249,12 @@ class MarkdownLoader {
         const markdownMap = {
             'talks': 'content/talks.md',
             'writings': 'content/writings.md',
-            'conferences': 'content/conferences.md',
-            'index': 'content/profile.md',
-            '': 'content/profile.md'
+            'conferences': 'content/conferences.md'
         };
 
         const mdPath = markdownMap[page] || null;
         console.log('Markdown path:', mdPath);
         return mdPath;
-    }
-
-    /**
-     * Get page title based on markdown file
-     * @param {string} page - Page name
-     * @returns {string} Page title
-     */
-    static getPageTitle(page) {
-        const titles = {
-            'talks': 'Research Talks',
-            'lectures': 'Lectures & Teaching',
-            'conferences': 'Conferences & Events',
-            'index': 'Welcome'
-        };
-        return titles[page] || 'Lei Wang';
     }
 
     /**

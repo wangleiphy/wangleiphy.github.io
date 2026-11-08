@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Teaching Material by Lei Wang">
-    <title>Teaching - Lei Wang</title>
+    <meta name="description" content="Writings by Lei Wang">
+    <title>Writings - Lei Wang</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link href="css/modern-style.css" rel="stylesheet">
     <!-- Marked.js for Markdown parsing (self-hosted: CDNs are unreachable from WeChat/mainland browsers) -->
@@ -39,14 +39,14 @@
     </footer>
 
     <script>
-    // Teaching post viewer - renders markdown from ?p= query parameter
+    // Essay viewer - renders markdown from ?p= query parameter
     async function loadPost() {
         const container = document.getElementById('markdown-content');
         const params = new URLSearchParams(window.location.search);
         const postName = params.get('p');
 
         if (!postName) {
-            container.innerHTML = '<p>No material specified. <a href="writings.html">View all writings</a></p>';
+            container.innerHTML = '<p>No essay specified. <a href="writings.html">View all writings</a></p>';
             return;
         }
 
@@ -72,7 +72,7 @@
 
             const response = await fetch(`content/teaching/${postName}.md`);
             if (!response.ok) {
-                throw new Error(`Material not found: ${postName}`);
+                throw new Error(`Essay not found: ${postName}`);
             }
 
             const markdown = await response.text();
@@ -143,7 +143,7 @@
         } catch (error) {
             container.innerHTML = `
                 <div class="error-message">
-                    <h2>Error Loading Material</h2>
+                    <h2>Error Loading Essay</h2>
                     <p>${error.message}</p>
                     <p><a href="writings.html">← Back to writings</a></p>
                 </div>
