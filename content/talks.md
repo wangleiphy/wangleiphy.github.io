@@ -56,6 +56,7 @@
 - [Tensor Networks for Generative Modeling, RIKEN R-CCS, 2018 Dec](talks/BornMachine-TNSAA.pdf)
 - [Deep Learning for Computational Scientists, CSRC, Beijing, 2018 Nov](lectures/DL-CSRC.pdf) ([tutorial codes](https://github.com/wangleiphy/dl4csrc))
 - [Generative Models for Physicists, ITP, Beijing, 2018 Oct](lectures/GenerativeModels_PIL.pdf) ([lecture note](lectures/PILtutorial.pdf))
+- [Neural Network Renormalization Group, APS Physics Next: Machine Learning, Riverhead, NY, 2018 Oct](talks/NeuralRG-APS.pdf) ([recording](https://www.youtube.com/watch?v=J6dWzMsBm80))
 - [Neural Network Renormalization Group, MPI-PKS, 2018 June](talks/NeuralRG-Dresden.pdf)
 - [From Boltzmann Machines to Born Machines, MPI-PKS, 2018 June](talks/BornMachine-Dresden.pdf)
 - [Deep Learning and Quantum Many-Body Computation, Marburg, 2018 Feb](lectures/DL-Marburg.pdf) ([lecture note](lectures/DL.pdf), [tutorial codes](https://github.com/GiggleLiu/marburg))
