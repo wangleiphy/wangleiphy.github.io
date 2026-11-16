@@ -11,6 +11,8 @@ starting with "Part 1, topic:".
 
 ## 2026
 
+- **Physics at the Dawn of AGI: Some Thoughts** [slides](talks/AGI-Physics.pdf)
+  [PHYSICS FOR AI² FOR PHYSICS Workshop](https://www.cpsjournals.cn/index/news/detail/58822), Tsinghua University, Beijing, November 2026
 - **Free Energy Minimization: from Nature to LLM** [slides](talks/minF-Tokyo.pdf)
   [Sophia Symposium: Coevolution of AI and Physics](https://sites.google.com/view/tomiohtsukiwebsite/sophia-symposium-coevolution-of-ai-and-physics), Tokyo, November 2026
 - **LLM and Agentic AI** [slides](lectures/LLM-Agent-IOP.pdf)
