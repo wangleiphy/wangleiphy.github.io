@@ -11,6 +11,8 @@ starting with "Part 1, topic:".
 
 ## 2026
 
+- **Physics at the Dawn of AGI: Some Thoughts** [slides](talks/AGI-Physics-chunhui.pdf)
+  [第二届理论科学与通用人工智能发展及教学创新研讨会](https://indico.ihep.ac.cn/event/31426/overview), Beijing, November 2026
 - **Physics at the Dawn of AGI: Some Thoughts** [slides](talks/AGI-Physics.pdf)
   [PHYSICS FOR AI² FOR PHYSICS Workshop](https://www.cpsjournals.cn/index/news/detail/58822), Tsinghua University, Beijing, November 2026
 - **Free Energy Minimization: from Nature to LLM** [slides](talks/minF-Tokyo.pdf)
